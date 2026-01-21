@@ -10,6 +10,147 @@ const FRAME_KIT = {
 
 const frameKit = JSON.parse(JSON.stringify(FRAME_KIT));
 
+const EMBEDDED_MANIFEST = {
+  defaultId: 'iPhone_17_pro_max-cosmic_orange-portrait',
+  frames: [
+    {
+      cornerRadius: 201,
+      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 373, x: 489, y: 112 },
+      id: 'iPhone_17-black-portrait',
+      label: 'iPhone 17 • Black',
+      outputSize: { height: 2760, width: 1350 },
+      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
+      src: 'frame assets/iPhone_17-black-portrait.png'
+    },
+    {
+      cornerRadius: 201,
+      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 373, x: 489, y: 112 },
+      id: 'iPhone_17-lavender-portrait',
+      label: 'iPhone 17 • Lavender',
+      outputSize: { height: 2760, width: 1350 },
+      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
+      src: 'frame assets/iPhone_17-lavender-portrait.png'
+    },
+    {
+      cornerRadius: 201,
+      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 373, x: 489, y: 112 },
+      id: 'iPhone_17-mist_blue-portrait',
+      label: 'iPhone 17 • Mist Blue',
+      outputSize: { height: 2760, width: 1350 },
+      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
+      src: 'frame assets/iPhone_17-mist_blue-portrait.png'
+    },
+    {
+      cornerRadius: 201,
+      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 373, x: 489, y: 112 },
+      id: 'iPhone_17-sage-portrait',
+      label: 'iPhone 17 • Sage',
+      outputSize: { height: 2760, width: 1350 },
+      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
+      src: 'frame assets/iPhone_17-sage-portrait.png'
+    },
+    {
+      cornerRadius: 201,
+      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 373, x: 489, y: 112 },
+      id: 'iPhone_17-white-portrait',
+      label: 'iPhone 17 • White',
+      outputSize: { height: 2760, width: 1350 },
+      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
+      src: 'frame assets/iPhone_17-white-portrait.png'
+    },
+    {
+      cornerRadius: 199,
+      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 372, x: 489, y: 112 },
+      id: 'iPhone_17_pro-cosmic_orange-portrait',
+      label: 'iPhone 17 Pro • Cosmic Orange',
+      outputSize: { height: 2760, width: 1350 },
+      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
+      src: 'frame assets/iPhone_17_pro-cosmic_orange-portrait.png'
+    },
+    {
+      cornerRadius: 199,
+      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 372, x: 489, y: 112 },
+      id: 'iPhone_17_pro-deep_blue-portrait',
+      label: 'iPhone 17 Pro • Deep Blue',
+      outputSize: { height: 2760, width: 1350 },
+      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
+      src: 'frame assets/iPhone_17_pro-deep_blue-portrait.png'
+    },
+    {
+      cornerRadius: 199,
+      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 372, x: 489, y: 112 },
+      id: 'iPhone_17_pro-silver-portrait',
+      label: 'iPhone 17 Pro • Silver',
+      outputSize: { height: 2760, width: 1350 },
+      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
+      src: 'frame assets/iPhone_17_pro-silver-portrait.png'
+    },
+    {
+      cornerRadius: 200,
+      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 372, x: 549, y: 110 },
+      id: 'iPhone_17_pro_max-cosmic_orange-portrait',
+      label: 'iPhone 17 Pro Max • Cosmic Orange',
+      outputSize: { height: 3000, width: 1470 },
+      screenRect: { height: 2868, width: 1320, x: 75, y: 66 },
+      src: 'frame assets/iPhone_17_pro_max-cosmic_orange-portrait.png'
+    },
+    {
+      cornerRadius: 200,
+      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 372, x: 549, y: 110 },
+      id: 'iPhone_17_pro_max-deep_blue-portrait',
+      label: 'iPhone 17 Pro Max • Deep Blue',
+      outputSize: { height: 3000, width: 1470 },
+      screenRect: { height: 2868, width: 1320, x: 75, y: 66 },
+      src: 'frame assets/iPhone_17_pro_max-deep_blue-portrait.png'
+    },
+    {
+      cornerRadius: 200,
+      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 372, x: 549, y: 110 },
+      id: 'iPhone_17_pro_max-silver-portrait',
+      label: 'iPhone 17 Pro Max • Silver',
+      outputSize: { height: 3000, width: 1470 },
+      screenRect: { height: 2868, width: 1320, x: 75, y: 66 },
+      src: 'frame assets/iPhone_17_pro_max-silver-portrait.png'
+    },
+    {
+      cornerRadius: 199,
+      dynamicIsland: { height: 108, padding: 4, radius: 54, width: 373, x: 504, y: 133 },
+      id: 'iPhone_air-cloud_white-portrait',
+      label: 'iPhone Air • Cloud White',
+      outputSize: { height: 2880, width: 1380 },
+      screenRect: { height: 2736, width: 1260, x: 60, y: 72 },
+      src: 'frame assets/iPhone_air-cloud_white-portrait.png'
+    },
+    {
+      cornerRadius: 199,
+      dynamicIsland: { height: 108, padding: 4, radius: 54, width: 373, x: 504, y: 133 },
+      id: 'iPhone_air-light_gold-portrait',
+      label: 'iPhone Air • Light Gold',
+      outputSize: { height: 2880, width: 1380 },
+      screenRect: { height: 2736, width: 1260, x: 60, y: 72 },
+      src: 'frame assets/iPhone_air-light_gold-portrait.png'
+    },
+    {
+      cornerRadius: 199,
+      dynamicIsland: { height: 108, padding: 4, radius: 54, width: 373, x: 504, y: 133 },
+      id: 'iPhone_air-sly_blue-portrait',
+      label: 'iPhone Air • Sly Blue',
+      outputSize: { height: 2880, width: 1380 },
+      screenRect: { height: 2736, width: 1260, x: 60, y: 72 },
+      src: 'frame assets/iPhone_air-sly_blue-portrait.png'
+    },
+    {
+      cornerRadius: 199,
+      dynamicIsland: { height: 108, padding: 4, radius: 54, width: 373, x: 504, y: 133 },
+      id: 'iPhone_air-space_black-portrait',
+      label: 'iPhone Air • Space Black',
+      outputSize: { height: 2880, width: 1380 },
+      screenRect: { height: 2736, width: 1260, x: 60, y: 72 },
+      src: 'frame assets/iPhone_air-space_black-portrait.png'
+    }
+  ]
+};
+
 const TEMPLATE_DEFAULTS = {
   canvas: { width: 1470, height: 3000 },
   device: { scale: 0.9, offsetX: 0, offsetY: 220 },
@@ -249,6 +390,11 @@ function syncFrameInputs() {
 }
 
 async function loadManifest() {
+  if (location.protocol === 'file:') {
+    await applyManifest(EMBEDDED_MANIFEST);
+    return;
+  }
+
   try {
     const response = await fetch('frame-manifest.json', { cache: 'no-store' });
     if (!response.ok) {
@@ -256,20 +402,22 @@ async function loadManifest() {
     }
     const manifest = await response.json();
     if (!manifest.frames?.length) {
-      return;
+      throw new Error('Manifest empty');
     }
-    state.manifest = manifest;
-    populateFrameSelect(manifest.frames, manifest.defaultId);
-    const defaultFrame = manifest.frames.find((item) => item.id === manifest.defaultId) || manifest.frames[0];
-    await applyFrame(defaultFrame);
+    await applyManifest(manifest);
   } catch (error) {
-    elements.status.textContent = 'Using default frame';
-    elements.frameSelect.innerHTML = '';
-    const option = document.createElement('option');
-    option.value = 'default';
-    option.textContent = 'Default frame';
-    option.selected = true;
-    elements.frameSelect.appendChild(option);
+    if (EMBEDDED_MANIFEST?.frames?.length) {
+      await applyManifest(EMBEDDED_MANIFEST);
+      elements.status.textContent = 'Using embedded frames';
+    } else {
+      elements.status.textContent = 'Using default frame';
+      elements.frameSelect.innerHTML = '';
+      const option = document.createElement('option');
+      option.value = 'default';
+      option.textContent = 'Default frame';
+      option.selected = true;
+      elements.frameSelect.appendChild(option);
+    }
   }
 }
 
@@ -284,6 +432,13 @@ function populateFrameSelect(frames, defaultId) {
     }
     elements.frameSelect.appendChild(option);
   });
+}
+
+async function applyManifest(manifest) {
+  state.manifest = manifest;
+  populateFrameSelect(manifest.frames, manifest.defaultId);
+  const defaultFrame = manifest.frames.find((item) => item.id === manifest.defaultId) || manifest.frames[0];
+  await applyFrame(defaultFrame);
 }
 
 async function applyFrame(frame) {
