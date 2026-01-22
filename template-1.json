@@ -5,12 +5,9 @@
   "device": { "scale": 0.9, "offsetX": 0, "offsetY": 220 },
   "text": {
     "title": "Build your vocabulary",
-    "subtitle": "Scan any page, learn words instantly.",
     "titleSize": 96,
-    "subtitleSize": 44,
     "align": "center",
     "color": "#1f1b16",
-    "subtitleColor": "#4b4037",
     "maxWidth": 1200,
     "lineHeight": 1.1
   },

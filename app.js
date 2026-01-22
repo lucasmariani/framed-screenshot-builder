@@ -260,11 +260,8 @@ const TEMPLATE_DEFAULTS = {
   device: { scale: 0.9, offsetX: 0, offsetY: 220 },
   text: {
     title: 'Build your vocabulary',
-    subtitle: 'Scan any page, learn words instantly.',
     titleSize: 96,
-    subtitleSize: 44,
     color: '#1f1b16',
-    subtitleColor: '#4b4037',
     align: 'center',
     maxWidth: 1200,
     lineHeight: 1.1
@@ -275,7 +272,6 @@ const TEMPLATE_DEFAULTS = {
 const state = {
   mode: 'frame',
   backgroundMode: 'gradient',
-  prefix: '',
   locale: '',
   images: [],
   frame: null,
@@ -292,22 +288,13 @@ const elements = {
   downloadAll: document.getElementById('download-all'),
   clear: document.getElementById('clear'),
   frameSelect: document.getElementById('frame-select'),
-  prefix: document.getElementById('prefix'),
   locale: document.getElementById('locale'),
   templateControls: document.getElementById('template-controls'),
-  screenX: document.getElementById('screen-x'),
-  screenY: document.getElementById('screen-y'),
-  screenW: document.getElementById('screen-w'),
-  screenH: document.getElementById('screen-h'),
-  cornerRadius: document.getElementById('corner-radius'),
   canvasWidth: document.getElementById('canvas-width'),
   canvasHeight: document.getElementById('canvas-height'),
   headline: document.getElementById('headline'),
-  subheadline: document.getElementById('subheadline'),
   headlineSize: document.getElementById('headline-size'),
-  subheadlineSize: document.getElementById('subheadline-size'),
   textColor: document.getElementById('text-color'),
-  subtextColor: document.getElementById('subtext-color'),
   deviceScale: document.getElementById('device-scale'),
   deviceOffset: document.getElementById('device-offset'),
   bgColor: document.getElementById('bg-color')
@@ -375,14 +362,9 @@ function wireEvents() {
     });
   });
 
-  elements.prefix.addEventListener('input', (event) => {
-    state.prefix = event.target.value.trim();
-    renderAll();
-  });
-
   elements.locale.addEventListener('input', (event) => {
     state.locale = event.target.value.trim();
-    renderAll();
+    updateAllFilenameDisplays();
   });
 
   elements.frameSelect.addEventListener('change', async (event) => {
@@ -391,31 +373,6 @@ function wireEvents() {
     if (frame) {
       await applyFrame(frame);
     }
-  });
-
-  elements.screenX.addEventListener('input', (event) => {
-    frameKit.screenRect.x = clampNumber(event.target.value, 0, frameKit.outputSize.width, FRAME_KIT.screenRect.x);
-    renderAll();
-  });
-
-  elements.screenY.addEventListener('input', (event) => {
-    frameKit.screenRect.y = clampNumber(event.target.value, 0, frameKit.outputSize.height, FRAME_KIT.screenRect.y);
-    renderAll();
-  });
-
-  elements.screenW.addEventListener('input', (event) => {
-    frameKit.screenRect.width = clampNumber(event.target.value, 1, frameKit.outputSize.width, FRAME_KIT.screenRect.width);
-    renderAll();
-  });
-
-  elements.screenH.addEventListener('input', (event) => {
-    frameKit.screenRect.height = clampNumber(event.target.value, 1, frameKit.outputSize.height, FRAME_KIT.screenRect.height);
-    renderAll();
-  });
-
-  elements.cornerRadius.addEventListener('input', (event) => {
-    frameKit.cornerRadius = clampNumber(event.target.value, 0, 1000, FRAME_KIT.cornerRadius);
-    renderAll();
   });
 
   elements.canvasWidth.addEventListener('input', (event) => {
@@ -433,28 +390,13 @@ function wireEvents() {
     renderAll();
   });
 
-  elements.subheadline.addEventListener('input', (event) => {
-    template.text.subtitle = event.target.value;
-    renderAll();
-  });
-
   elements.headlineSize.addEventListener('input', (event) => {
     template.text.titleSize = clampNumber(event.target.value, 10, 400, TEMPLATE_DEFAULTS.text.titleSize);
     renderAll();
   });
 
-  elements.subheadlineSize.addEventListener('input', (event) => {
-    template.text.subtitleSize = clampNumber(event.target.value, 10, 200, TEMPLATE_DEFAULTS.text.subtitleSize);
-    renderAll();
-  });
-
   elements.textColor.addEventListener('input', (event) => {
     template.text.color = event.target.value;
-    renderAll();
-  });
-
-  elements.subtextColor.addEventListener('input', (event) => {
-    template.text.subtitleColor = event.target.value;
     renderAll();
   });
 
@@ -481,11 +423,8 @@ function syncTemplateInputs() {
   elements.canvasWidth.value = template.canvas.width;
   elements.canvasHeight.value = template.canvas.height;
   elements.headline.value = template.text.title;
-  elements.subheadline.value = template.text.subtitle;
   elements.headlineSize.value = template.text.titleSize;
-  elements.subheadlineSize.value = template.text.subtitleSize;
   elements.textColor.value = template.text.color;
-  elements.subtextColor.value = template.text.subtitleColor;
   elements.deviceScale.value = template.device.scale;
   elements.deviceOffset.value = template.device.offsetY;
   elements.bgColor.value = template.background.solid;
@@ -493,14 +432,7 @@ function syncTemplateInputs() {
 }
 
 function syncFrameInputs() {
-  if (!elements.screenX) {
-    return;
-  }
-  elements.screenX.value = frameKit.screenRect.x;
-  elements.screenY.value = frameKit.screenRect.y;
-  elements.screenW.value = frameKit.screenRect.width;
-  elements.screenH.value = frameKit.screenRect.height;
-  elements.cornerRadius.value = frameKit.cornerRadius;
+  // No-op: screen rect inputs removed from the UI.
 }
 
 async function loadManifest() {
@@ -573,7 +505,8 @@ async function handleFiles(fileList) {
   const images = await Promise.all(files.map(loadImageFromFile));
   const newItems = images.map((image, index) => ({
     image,
-    name: files[index].name
+    name: files[index].name,
+    screenName: ''
   }));
   state.images = state.images.concat(newItems);
   elements.status.textContent = `${state.images.length} screenshot(s) loaded`;
@@ -589,11 +522,12 @@ function renderAll() {
     return;
   }
 
+  const filenames = computeFilenames();
   state.images.forEach((item, index) => {
     const framedCanvas = renderFramed(item.image);
     const output = state.mode === 'template' ? renderTemplate(framedCanvas) : framedCanvas;
-    const filename = buildFilename(index, state.images.length);
-    const card = renderPreviewCard(output, filename);
+    const filename = filenames[index];
+    const card = renderPreviewCard(output, item, index, filename);
     elements.previewGrid.appendChild(card);
     state.outputs.push({ canvas: output, name: filename });
   });
@@ -681,17 +615,6 @@ function renderTemplate(framedCanvas) {
     fontFamily: '"Bodoni 72", "Didot", "Times New Roman", serif'
   });
 
-  drawWrappedText(ctx, template.text.subtitle, {
-    x: canvas.width / 2,
-    y: topPadding + template.text.titleSize * template.text.lineHeight * 1.8,
-    maxWidth,
-    fontSize: template.text.subtitleSize,
-    color: template.text.subtitleColor,
-    align: template.text.align,
-    lineHeight: 1.2,
-    fontFamily: '"Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif'
-  });
-
   return canvas;
 }
 
@@ -725,9 +648,10 @@ function drawWrappedText(ctx, text, options) {
   });
 }
 
-function renderPreviewCard(canvas, filename) {
+function renderPreviewCard(canvas, item, index, filename) {
   const card = document.createElement('div');
   card.className = 'preview-card';
+  card.dataset.index = `${index}`;
 
   const preview = document.createElement('canvas');
   preview.width = canvas.width;
@@ -738,11 +662,36 @@ function renderPreviewCard(canvas, filename) {
   name.className = 'name';
   name.textContent = filename;
 
+  const actions = document.createElement('div');
+  actions.className = 'card-actions';
+
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.className = 'screen-name-input';
+  input.placeholder = 'Screen name';
+  input.value = item.screenName ?? '';
+  input.addEventListener('input', () => {
+    item.screenName = input.value.trim();
+    updateAllFilenameDisplays();
+  });
+
   const button = document.createElement('button');
   button.textContent = 'Download';
-  button.addEventListener('click', () => downloadCanvas(canvas, filename));
+  button.addEventListener('click', () => {
+    const currentName = state.outputs[index]?.name ?? filename;
+    downloadCanvas(canvas, currentName);
+  });
 
-  card.append(preview, name, button);
+  const removeButton = document.createElement('button');
+  removeButton.className = 'remove';
+  removeButton.textContent = 'Remove';
+  removeButton.addEventListener('click', () => {
+    state.images.splice(index, 1);
+    renderAll();
+  });
+
+  actions.append(button, removeButton);
+  card.append(preview, name, input, actions);
   return card;
 }
 
@@ -908,13 +857,12 @@ function isSafari() {
   return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 }
 
-function buildFilename(index, total) {
+function buildBaseKey(item) {
   const frameBase = getFrameBaseName();
-  const userText = state.prefix ? `_${state.prefix}` : '';
+  const screenName = item.screenName ? `_${item.screenName}` : '';
   const localeText = state.locale ? `_${state.locale}` : '';
-  const number = total > 1 ? `_${index + 1}` : '';
   const suffix = state.mode === 'template' ? '_template1' : '';
-  const raw = `${frameBase}${userText}${localeText}${suffix}${number}.png`;
+  const raw = `${frameBase}${screenName}${localeText}${suffix}`;
   return sanitizeFilename(raw);
 }
 
@@ -927,6 +875,43 @@ function getFrameBaseName() {
 
 function sanitizeFilename(name) {
   return name.replace(/[^a-zA-Z0-9-_.]+/g, '_');
+}
+
+function computeFilenames() {
+  const baseKeys = state.images.map((item) => buildBaseKey(item));
+  const counts = new Map();
+  baseKeys.forEach((key) => counts.set(key, (counts.get(key) ?? 0) + 1));
+  const seen = new Map();
+
+  return baseKeys.map((key) => {
+    const count = counts.get(key) ?? 1;
+    if (count <= 1) {
+      return `${key}.png`;
+    }
+    const next = (seen.get(key) ?? 0) + 1;
+    seen.set(key, next);
+    return `${key}_${next}.png`;
+  });
+}
+
+function updateAllFilenameDisplays() {
+  const filenames = computeFilenames();
+  const cards = elements.previewGrid.querySelectorAll('.preview-card');
+  cards.forEach((card) => {
+    const index = Number(card.dataset.index);
+    const item = state.images[index];
+    if (!item) {
+      return;
+    }
+    const nameEl = card.querySelector('.name');
+    const next = filenames[index];
+    if (nameEl) {
+      nameEl.textContent = next;
+    }
+    if (state.outputs[index]) {
+      state.outputs[index].name = next;
+    }
+  });
 }
 
 function clearAll() {
