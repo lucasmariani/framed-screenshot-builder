@@ -40,7 +40,9 @@
             <label>Output mode</label>
             <div class="segmented">
               <button class="segmented-btn active" data-mode="frame">Frame only</button>
-              <button class="segmented-btn" data-mode="template">Template 1</button>
+              <button class="segmented-btn" data-mode="template1">Template 1</button>
+              <button class="segmented-btn" data-mode="template2">Template 2</button>
+              <button class="segmented-btn" data-mode="template3">Template 3</button>
             </div>
           </div>
 
@@ -55,20 +57,14 @@
 
         <div class="template-controls" id="template-controls">
           <h3>Template settings</h3>
-          <div class="control-row two">
-            <div>
-              <label for="canvas-width">Canvas width</label>
-              <input id="canvas-width" type="number" min="1" />
-            </div>
-            <div>
-              <label for="canvas-height">Canvas height</label>
-              <input id="canvas-height" type="number" min="1" />
-            </div>
-          </div>
-
           <div class="control-row">
             <label for="headline">Headline</label>
             <input id="headline" type="text" />
+          </div>
+
+          <div class="control-row subtitle-controls">
+            <label for="subheadline">Subheadline</label>
+            <input id="subheadline" type="text" placeholder="Short supporting line" />
           </div>
 
           <div class="control-row two">
@@ -76,9 +72,26 @@
               <label for="headline-size">Headline size</label>
               <input id="headline-size" type="number" min="10" />
             </div>
+          </div>
+
+          <div class="control-row two subtitle-controls">
+            <div>
+              <label for="subheadline-size">Subheadline size</label>
+              <input id="subheadline-size" type="number" min="10" />
+            </div>
+          </div>
+
+          <div class="control-row two">
             <div>
               <label for="text-color">Headline color</label>
               <input id="text-color" type="color" />
+            </div>
+          </div>
+
+          <div class="control-row two subtitle-controls">
+            <div>
+              <label for="subtext-color">Subheadline color</label>
+              <input id="subtext-color" type="color" />
             </div>
           </div>
 

@@ -211,6 +211,7 @@ h1 {
   border-radius: 999px;
   border: 1px solid var(--border);
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .segmented-btn {
@@ -221,6 +222,10 @@ h1 {
   font-size: 13px;
   cursor: pointer;
   color: var(--muted);
+}
+
+.subtitle-controls {
+  display: none;
 }
 
 .segmented-btn.active {

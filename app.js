@@ -8,6 +8,7 @@ const FRAME_KIT = {
 };
 
 const frameKit = JSON.parse(JSON.stringify(FRAME_KIT));
+const OUTPUT_SIZE = { width: 1320, height: 2868 };
 
 const EMBEDDED_MANIFEST = {
   "defaultId": "iPhone_17_pro_max-cosmic_orange-portrait",
@@ -255,24 +256,69 @@ const EMBEDDED_MANIFEST = {
   ]
 };
 
-const TEMPLATE_DEFAULTS = {
-  canvas: { width: 1470, height: 3000 },
-  device: { scale: 0.9, offsetX: 0, offsetY: 220 },
-  text: {
-    title: 'Build your vocabulary',
-    titleSize: 96,
-    color: '#1f1b16',
-    align: 'center',
-    maxWidth: 1200,
-    lineHeight: 1.1
+const TEMPLATE_DEFINITIONS = {
+  template1: {
+    id: 'template1',
+    name: 'Template 1',
+    showSubtitle: false,
+    device: { scale: 0.9, offsetX: 0, offsetY: 220 },
+    text: {
+      title: 'Build your vocabulary',
+      titleSize: 96,
+      color: '#1f1b16',
+      fontFamily: '"Bodoni 72", "Didot", "Times New Roman", serif',
+      align: 'center',
+      maxWidth: 1200,
+      lineHeight: 1.1
+    },
+    background: { type: 'gradient', colors: ['#f7f1ea', '#e8efe9'], solid: '#f7f1ea' }
   },
-  background: { type: 'gradient', colors: ['#f7f1ea', '#e8efe9'], solid: '#f7f1ea' }
+  template2: {
+    id: 'template2',
+    name: 'Template 2',
+    showSubtitle: true,
+    device: { scale: 0.92, offsetX: 0, offsetY: 540 },
+    text: {
+      title: 'Your vocabulary',
+      subtitle: 'Captured from any page, ready to learn.',
+      titleSize: 92,
+      subtitleSize: 44,
+      color: '#1f1b16',
+      subtitleColor: '#4b4037',
+      fontFamily: '"Bodoni 72", "Didot", "Times New Roman", serif',
+      subtitleFontFamily: '"Bodoni 72", "Didot", "Times New Roman", serif',
+      align: 'center',
+      maxWidth: 1200,
+      lineHeight: 1.1,
+      topPadding: 180,
+      subtitleSpacing: 32
+    },
+    background: { type: 'gradient', colors: ['#f7f1ea', '#e8efe9'], solid: '#f7f1ea' }
+  },
+  template3: {
+    id: 'template3',
+    name: 'Template 3',
+    showSubtitle: false,
+    device: { scale: 0.92, offsetX: 0, offsetY: 540 },
+    text: {
+      title: 'Your vocabulary',
+      titleSize: 104,
+      color: '#1f1b16',
+      fontFamily: '"Bodoni 72", "Didot", "Times New Roman", serif',
+      align: 'center',
+      maxWidth: 1200,
+      lineHeight: 1.1,
+      topPadding: 200
+    },
+    background: { type: 'gradient', colors: ['#f7f1ea', '#e8efe9'], solid: '#f7f1ea' }
+  }
 };
 
 const state = {
   mode: 'frame',
   backgroundMode: 'gradient',
   locale: '',
+  templateId: 'template1',
   images: [],
   frame: null,
   manifest: null,
@@ -290,23 +336,31 @@ const elements = {
   frameSelect: document.getElementById('frame-select'),
   locale: document.getElementById('locale'),
   templateControls: document.getElementById('template-controls'),
-  canvasWidth: document.getElementById('canvas-width'),
-  canvasHeight: document.getElementById('canvas-height'),
   headline: document.getElementById('headline'),
+  subheadline: document.getElementById('subheadline'),
   headlineSize: document.getElementById('headline-size'),
+  subheadlineSize: document.getElementById('subheadline-size'),
   textColor: document.getElementById('text-color'),
+  subtextColor: document.getElementById('subtext-color'),
   deviceScale: document.getElementById('device-scale'),
   deviceOffset: document.getElementById('device-offset'),
-  bgColor: document.getElementById('bg-color')
+  bgColor: document.getElementById('bg-color'),
+  subtitleControls: document.querySelectorAll('.subtitle-controls')
 };
 
-const template = JSON.parse(JSON.stringify(TEMPLATE_DEFAULTS));
+const templates = JSON.parse(JSON.stringify(TEMPLATE_DEFINITIONS));
+
+function currentTemplate() {
+  return templates[state.templateId];
+}
 
 init();
 
 async function init() {
   syncTemplateInputs();
   syncFrameInputs();
+  updateSubtitleVisibility();
+  elements.templateControls.style.display = state.mode === 'template' ? 'grid' : 'none';
 
   await loadManifest();
   if (!state.manifest) {
@@ -346,8 +400,16 @@ function wireEvents() {
     button.addEventListener('click', () => {
       document.querySelectorAll('[data-mode]').forEach((btn) => btn.classList.remove('active'));
       button.classList.add('active');
-      state.mode = button.dataset.mode;
+      const mode = button.dataset.mode;
+      if (mode === 'frame') {
+        state.mode = 'frame';
+      } else {
+        state.mode = 'template';
+        state.templateId = mode;
+      }
       elements.templateControls.style.display = state.mode === 'template' ? 'grid' : 'none';
+      updateSubtitleVisibility();
+      syncTemplateInputs();
       renderAll();
     });
   });
@@ -357,7 +419,7 @@ function wireEvents() {
       document.querySelectorAll('[data-bg]').forEach((btn) => btn.classList.remove('active'));
       button.classList.add('active');
       state.backgroundMode = button.dataset.bg;
-      template.background.type = state.backgroundMode;
+      currentTemplate().background.type = state.backgroundMode;
       renderAll();
     });
   });
@@ -375,43 +437,48 @@ function wireEvents() {
     }
   });
 
-  elements.canvasWidth.addEventListener('input', (event) => {
-    template.canvas.width = clampNumber(event.target.value, 1, 10000, TEMPLATE_DEFAULTS.canvas.width);
-    renderAll();
-  });
-
-  elements.canvasHeight.addEventListener('input', (event) => {
-    template.canvas.height = clampNumber(event.target.value, 1, 10000, TEMPLATE_DEFAULTS.canvas.height);
-    renderAll();
-  });
-
   elements.headline.addEventListener('input', (event) => {
-    template.text.title = event.target.value;
+    currentTemplate().text.title = event.target.value;
+    renderAll();
+  });
+
+  elements.subheadline.addEventListener('input', (event) => {
+    currentTemplate().text.subtitle = event.target.value;
     renderAll();
   });
 
   elements.headlineSize.addEventListener('input', (event) => {
-    template.text.titleSize = clampNumber(event.target.value, 10, 400, TEMPLATE_DEFAULTS.text.titleSize);
+    currentTemplate().text.titleSize = clampNumber(event.target.value, 10, 400, currentTemplate().text.titleSize);
+    renderAll();
+  });
+
+  elements.subheadlineSize.addEventListener('input', (event) => {
+    currentTemplate().text.subtitleSize = clampNumber(event.target.value, 10, 200, currentTemplate().text.subtitleSize ?? 44);
     renderAll();
   });
 
   elements.textColor.addEventListener('input', (event) => {
-    template.text.color = event.target.value;
+    currentTemplate().text.color = event.target.value;
+    renderAll();
+  });
+
+  elements.subtextColor.addEventListener('input', (event) => {
+    currentTemplate().text.subtitleColor = event.target.value;
     renderAll();
   });
 
   elements.deviceScale.addEventListener('input', (event) => {
-    template.device.scale = clampNumber(event.target.value, 0.6, 1.2, TEMPLATE_DEFAULTS.device.scale);
+    currentTemplate().device.scale = clampNumber(event.target.value, 0.6, 1.2, currentTemplate().device.scale);
     renderAll();
   });
 
   elements.deviceOffset.addEventListener('input', (event) => {
-    template.device.offsetY = clampNumber(event.target.value, -2000, 2000, TEMPLATE_DEFAULTS.device.offsetY);
+    currentTemplate().device.offsetY = clampNumber(event.target.value, -2000, 2000, currentTemplate().device.offsetY);
     renderAll();
   });
 
   elements.bgColor.addEventListener('input', (event) => {
-    template.background.solid = event.target.value;
+    currentTemplate().background.solid = event.target.value;
     renderAll();
   });
 
@@ -420,15 +487,23 @@ function wireEvents() {
 }
 
 function syncTemplateInputs() {
-  elements.canvasWidth.value = template.canvas.width;
-  elements.canvasHeight.value = template.canvas.height;
-  elements.headline.value = template.text.title;
-  elements.headlineSize.value = template.text.titleSize;
-  elements.textColor.value = template.text.color;
+  const template = currentTemplate();
+  elements.headline.value = template.text.title ?? '';
+  elements.subheadline.value = template.text.subtitle ?? '';
+  elements.headlineSize.value = template.text.titleSize ?? 96;
+  elements.subheadlineSize.value = template.text.subtitleSize ?? 44;
+  elements.textColor.value = template.text.color ?? '#1f1b16';
+  elements.subtextColor.value = template.text.subtitleColor ?? '#4b4037';
   elements.deviceScale.value = template.device.scale;
   elements.deviceOffset.value = template.device.offsetY;
   elements.bgColor.value = template.background.solid;
-  elements.templateControls.style.display = 'none';
+}
+
+function updateSubtitleVisibility() {
+  const template = currentTemplate();
+  elements.subtitleControls.forEach((el) => {
+    el.style.display = template.showSubtitle ? 'grid' : 'none';
+  });
 }
 
 function syncFrameInputs() {
@@ -494,23 +569,42 @@ async function applyFrame(frame) {
   frameKit.screenRect = frame.screenRect ?? FRAME_KIT.screenRect;
   frameKit.cornerRadius = frame.cornerRadius ?? FRAME_KIT.cornerRadius;
   syncFrameInputs();
-  state.frame = await loadImage(encodeURI(frameKit.frameSrc));
-  elements.status.textContent = `Frame loaded: ${frameKit.device}`;
-  renderAll();
+  try {
+    state.frame = await loadImage(encodeURI(frameKit.frameSrc));
+    elements.status.textContent = `Frame loaded: ${frameKit.device}`;
+    renderAll();
+  } catch (error) {
+    elements.status.textContent = `Failed to load frame: ${frameKit.device}`;
+  }
 }
 
 async function handleFiles(fileList) {
   elements.status.textContent = 'Loading screenshots...';
   const files = Array.from(fileList);
-  const images = await Promise.all(files.map(loadImageFromFile));
-  const newItems = images.map((image, index) => ({
-    image,
-    name: files[index].name,
-    screenName: ''
-  }));
-  state.images = state.images.concat(newItems);
-  elements.status.textContent = `${state.images.length} screenshot(s) loaded`;
-  renderAll();
+  const results = await Promise.allSettled(files.map(loadImageFromFile));
+  const newItems = [];
+  let failed = 0;
+  results.forEach((result, index) => {
+    if (result.status === 'fulfilled') {
+      newItems.push({
+        image: result.value,
+        name: files[index].name,
+        screenName: ''
+      });
+    } else {
+      failed += 1;
+    }
+  });
+
+  if (newItems.length) {
+    state.images = state.images.concat(newItems);
+    renderAll();
+  }
+
+  const total = state.images.length;
+  elements.status.textContent = failed
+    ? `${total} screenshot(s) loaded, ${failed} failed`
+    : `${total} screenshot(s) loaded`;
 }
 
 function renderAll() {
@@ -525,11 +619,17 @@ function renderAll() {
   const filenames = computeFilenames();
   state.images.forEach((item, index) => {
     const framedCanvas = renderFramed(item.image);
-    const output = state.mode === 'template' ? renderTemplate(framedCanvas) : framedCanvas;
+    const renderedCanvas = state.mode === 'template' ? renderTemplate(framedCanvas) : framedCanvas;
+    const finalOutput = normalizeOutputCanvas(renderedCanvas, {
+      width: OUTPUT_SIZE.width,
+      height: OUTPUT_SIZE.height,
+      mode: 'contain',
+      background: state.mode === 'template' ? currentTemplate().background : null
+    });
     const filename = filenames[index];
-    const card = renderPreviewCard(output, item, index, filename);
+    const card = renderPreviewCard(finalOutput, item, index, filename);
     elements.previewGrid.appendChild(card);
-    state.outputs.push({ canvas: output, name: filename });
+    state.outputs.push({ canvas: finalOutput, name: filename });
   });
 
   elements.count.textContent = `${state.outputs.length} processed`;
@@ -578,9 +678,10 @@ function roundedRectPath(ctx, x, y, width, height, radius) {
 }
 
 function renderTemplate(framedCanvas) {
+  const template = currentTemplate();
   const canvas = document.createElement('canvas');
-  canvas.width = template.canvas.width;
-  canvas.height = template.canvas.height;
+  canvas.width = OUTPUT_SIZE.width;
+  canvas.height = OUTPUT_SIZE.height;
   const ctx = canvas.getContext('2d');
 
   if (template.background.type === 'gradient') {
@@ -601,7 +702,7 @@ function renderTemplate(framedCanvas) {
 
   ctx.drawImage(framedCanvas, deviceX, deviceY, deviceWidth, deviceHeight);
 
-  const topPadding = Math.max(96, Math.round(canvas.height * 0.06));
+  const topPadding = template.text.topPadding ?? Math.max(96, Math.round(canvas.height * 0.06));
   const maxWidth = Math.min(template.text.maxWidth, canvas.width - 120);
 
   drawWrappedText(ctx, template.text.title, {
@@ -612,10 +713,68 @@ function renderTemplate(framedCanvas) {
     color: template.text.color,
     align: template.text.align,
     lineHeight: template.text.lineHeight,
-    fontFamily: '"Bodoni 72", "Didot", "Times New Roman", serif'
+    fontFamily: template.text.fontFamily ?? '"Bodoni 72", "Didot", "Times New Roman", serif'
   });
 
+  if (template.showSubtitle && template.text.subtitle) {
+    const spacing = template.text.subtitleSpacing ?? Math.round(template.text.titleSize * 0.6);
+    drawWrappedText(ctx, template.text.subtitle, {
+      x: canvas.width / 2,
+      y: topPadding + template.text.titleSize * template.text.lineHeight + spacing,
+      maxWidth,
+      fontSize: template.text.subtitleSize ?? 44,
+      color: template.text.subtitleColor ?? '#4b4037',
+      align: template.text.align,
+      lineHeight: 1.2,
+      fontFamily: template.text.subtitleFontFamily ?? template.text.fontFamily ?? '"Bodoni 72", "Didot", "Times New Roman", serif'
+    });
+  }
+
   return canvas;
+}
+
+function normalizeOutputCanvas(sourceCanvas, options = {}) {
+  const width = options.width ?? OUTPUT_SIZE.width;
+  const height = options.height ?? OUTPUT_SIZE.height;
+  const mode = options.mode ?? 'contain';
+  const background = options.background ?? null;
+
+  if (sourceCanvas.width === width && sourceCanvas.height === height) {
+    return sourceCanvas;
+  }
+
+  const canvas = document.createElement('canvas');
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext('2d');
+  ctx.imageSmoothingQuality = 'high';
+
+  if (background) {
+    fillCanvasBackground(ctx, width, height, background);
+  }
+
+  const scale = mode === 'cover'
+    ? Math.max(width / sourceCanvas.width, height / sourceCanvas.height)
+    : Math.min(width / sourceCanvas.width, height / sourceCanvas.height);
+  const drawWidth = sourceCanvas.width * scale;
+  const drawHeight = sourceCanvas.height * scale;
+  const drawX = (width - drawWidth) / 2;
+  const drawY = (height - drawHeight) / 2;
+
+  ctx.drawImage(sourceCanvas, drawX, drawY, drawWidth, drawHeight);
+  return canvas;
+}
+
+function fillCanvasBackground(ctx, width, height, background) {
+  if (background.type === 'gradient') {
+    const gradient = ctx.createLinearGradient(0, 0, width, height);
+    gradient.addColorStop(0, background.colors[0]);
+    gradient.addColorStop(1, background.colors[1]);
+    ctx.fillStyle = gradient;
+  } else {
+    ctx.fillStyle = background.solid;
+  }
+  ctx.fillRect(0, 0, width, height);
 }
 
 function drawWrappedText(ctx, text, options) {
@@ -861,7 +1020,7 @@ function buildBaseKey(item) {
   const frameBase = getFrameBaseName();
   const screenName = item.screenName ? `_${item.screenName}` : '';
   const localeText = state.locale ? `_${state.locale}` : '';
-  const suffix = state.mode === 'template' ? '_template1' : '';
+  const suffix = state.mode === 'template' ? `_${state.templateId}` : '';
   const raw = `${frameBase}${screenName}${localeText}${suffix}`;
   return sanitizeFilename(raw);
 }
