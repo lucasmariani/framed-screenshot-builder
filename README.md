@@ -7,7 +7,7 @@ Local-only, client-side mockup tool for 6.9" iPhone frames. Drag screenshots in,
 - Open `index.html` in a browser, or serve the folder locally:
   - `python3 -m http.server` (then visit `http://localhost:8000`)
 - Drop screenshots into the UI.
-- Switch between **Frame only** and **Template 1**.
+- Switch between **Frame only** and templates.
 - Click **Download all**.
 
 Notes:
@@ -31,6 +31,6 @@ swiftc -module-cache-path /tmp/swift-module-cache tools/generate_frame_manifest.
 
 Update the `FRAME_KIT` constants in `app.js` only if you change the fallback `frame.png`.
 
-## Template 1
+## Templates
 
-Template output size is configurable in the UI. If you need App Store Connect sizes, set the canvas width/height in the template settings and re-render.
+Template outputs are fixed at **1320 x 2868**. All previews and downloads are normalized to this size.
