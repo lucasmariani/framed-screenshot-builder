@@ -4,149 +4,253 @@ const FRAME_KIT = {
   outputSize: { width: 1470, height: 3000 },
   screenRect: { x: 76, y: 60, width: 1318, height: 2866 },
   cornerRadius: 234,
-  dynamicIsland: { x: 549, y: 150, width: 372, height: 67, radius: 34, padding: 4 },
   scaleMode: 'cover'
 };
 
 const frameKit = JSON.parse(JSON.stringify(FRAME_KIT));
 
 const EMBEDDED_MANIFEST = {
-  defaultId: 'iPhone_17_pro_max-cosmic_orange-portrait',
-  frames: [
+  "defaultId": "iPhone_17_pro_max-cosmic_orange-portrait",
+  "frames": [
     {
-      cornerRadius: 201,
-      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 373, x: 489, y: 112 },
-      id: 'iPhone_17-black-portrait',
-      label: 'iPhone 17 • Black',
-      outputSize: { height: 2760, width: 1350 },
-      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
-      src: 'frame assets/iPhone_17-black-portrait.png'
+      "cornerRadius": 201,
+      "id": "iPhone_17-black-portrait",
+      "label": "iPhone 17 \u2022 Black",
+      "outputSize": {
+        "height": 2760,
+        "width": 1350
+      },
+      "screenRect": {
+        "height": 2622,
+        "width": 1206,
+        "x": 72,
+        "y": 69
+      },
+      "src": "assets/iPhone_17-black-portrait.png"
     },
     {
-      cornerRadius: 201,
-      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 373, x: 489, y: 112 },
-      id: 'iPhone_17-lavender-portrait',
-      label: 'iPhone 17 • Lavender',
-      outputSize: { height: 2760, width: 1350 },
-      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
-      src: 'frame assets/iPhone_17-lavender-portrait.png'
+      "cornerRadius": 201,
+      "id": "iPhone_17-lavender-portrait",
+      "label": "iPhone 17 \u2022 Lavender",
+      "outputSize": {
+        "height": 2760,
+        "width": 1350
+      },
+      "screenRect": {
+        "height": 2622,
+        "width": 1206,
+        "x": 72,
+        "y": 69
+      },
+      "src": "assets/iPhone_17-lavender-portrait.png"
     },
     {
-      cornerRadius: 201,
-      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 373, x: 489, y: 112 },
-      id: 'iPhone_17-mist_blue-portrait',
-      label: 'iPhone 17 • Mist Blue',
-      outputSize: { height: 2760, width: 1350 },
-      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
-      src: 'frame assets/iPhone_17-mist_blue-portrait.png'
+      "cornerRadius": 201,
+      "id": "iPhone_17-mist_blue-portrait",
+      "label": "iPhone 17 \u2022 Mist Blue",
+      "outputSize": {
+        "height": 2760,
+        "width": 1350
+      },
+      "screenRect": {
+        "height": 2622,
+        "width": 1206,
+        "x": 72,
+        "y": 69
+      },
+      "src": "assets/iPhone_17-mist_blue-portrait.png"
     },
     {
-      cornerRadius: 201,
-      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 373, x: 489, y: 112 },
-      id: 'iPhone_17-sage-portrait',
-      label: 'iPhone 17 • Sage',
-      outputSize: { height: 2760, width: 1350 },
-      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
-      src: 'frame assets/iPhone_17-sage-portrait.png'
+      "cornerRadius": 201,
+      "id": "iPhone_17-sage-portrait",
+      "label": "iPhone 17 \u2022 Sage",
+      "outputSize": {
+        "height": 2760,
+        "width": 1350
+      },
+      "screenRect": {
+        "height": 2622,
+        "width": 1206,
+        "x": 72,
+        "y": 69
+      },
+      "src": "assets/iPhone_17-sage-portrait.png"
     },
     {
-      cornerRadius: 201,
-      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 373, x: 489, y: 112 },
-      id: 'iPhone_17-white-portrait',
-      label: 'iPhone 17 • White',
-      outputSize: { height: 2760, width: 1350 },
-      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
-      src: 'frame assets/iPhone_17-white-portrait.png'
+      "cornerRadius": 201,
+      "id": "iPhone_17-white-portrait",
+      "label": "iPhone 17 \u2022 White",
+      "outputSize": {
+        "height": 2760,
+        "width": 1350
+      },
+      "screenRect": {
+        "height": 2622,
+        "width": 1206,
+        "x": 72,
+        "y": 69
+      },
+      "src": "assets/iPhone_17-white-portrait.png"
     },
     {
-      cornerRadius: 199,
-      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 372, x: 489, y: 112 },
-      id: 'iPhone_17_pro-cosmic_orange-portrait',
-      label: 'iPhone 17 Pro • Cosmic Orange',
-      outputSize: { height: 2760, width: 1350 },
-      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
-      src: 'frame assets/iPhone_17_pro-cosmic_orange-portrait.png'
+      "cornerRadius": 199,
+      "id": "iPhone_17_pro-cosmic_orange-portrait",
+      "label": "iPhone 17 Pro \u2022 Cosmic Orange",
+      "outputSize": {
+        "height": 2760,
+        "width": 1350
+      },
+      "screenRect": {
+        "height": 2622,
+        "width": 1206,
+        "x": 72,
+        "y": 69
+      },
+      "src": "assets/iPhone_17_pro-cosmic_orange-portrait.png"
     },
     {
-      cornerRadius: 199,
-      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 372, x: 489, y: 112 },
-      id: 'iPhone_17_pro-deep_blue-portrait',
-      label: 'iPhone 17 Pro • Deep Blue',
-      outputSize: { height: 2760, width: 1350 },
-      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
-      src: 'frame assets/iPhone_17_pro-deep_blue-portrait.png'
+      "cornerRadius": 199,
+      "id": "iPhone_17_pro-deep_blue-portrait",
+      "label": "iPhone 17 Pro \u2022 Deep Blue",
+      "outputSize": {
+        "height": 2760,
+        "width": 1350
+      },
+      "screenRect": {
+        "height": 2622,
+        "width": 1206,
+        "x": 72,
+        "y": 69
+      },
+      "src": "assets/iPhone_17_pro-deep_blue-portrait.png"
     },
     {
-      cornerRadius: 199,
-      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 372, x: 489, y: 112 },
-      id: 'iPhone_17_pro-silver-portrait',
-      label: 'iPhone 17 Pro • Silver',
-      outputSize: { height: 2760, width: 1350 },
-      screenRect: { height: 2622, width: 1206, x: 72, y: 69 },
-      src: 'frame assets/iPhone_17_pro-silver-portrait.png'
+      "cornerRadius": 199,
+      "id": "iPhone_17_pro-silver-portrait",
+      "label": "iPhone 17 Pro \u2022 Silver",
+      "outputSize": {
+        "height": 2760,
+        "width": 1350
+      },
+      "screenRect": {
+        "height": 2622,
+        "width": 1206,
+        "x": 72,
+        "y": 69
+      },
+      "src": "assets/iPhone_17_pro-silver-portrait.png"
     },
     {
-      cornerRadius: 200,
-      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 372, x: 549, y: 110 },
-      id: 'iPhone_17_pro_max-cosmic_orange-portrait',
-      label: 'iPhone 17 Pro Max • Cosmic Orange',
-      outputSize: { height: 3000, width: 1470 },
-      screenRect: { height: 2868, width: 1320, x: 75, y: 66 },
-      src: 'frame assets/iPhone_17_pro_max-cosmic_orange-portrait.png'
+      "cornerRadius": 200,
+      "id": "iPhone_17_pro_max-cosmic_orange-portrait",
+      "label": "iPhone 17 Pro Max \u2022 Cosmic Orange",
+      "outputSize": {
+        "height": 3000,
+        "width": 1470
+      },
+      "screenRect": {
+        "height": 2868,
+        "width": 1320,
+        "x": 75,
+        "y": 66
+      },
+      "src": "assets/iPhone_17_pro_max-cosmic_orange-portrait.png"
     },
     {
-      cornerRadius: 200,
-      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 372, x: 549, y: 110 },
-      id: 'iPhone_17_pro_max-deep_blue-portrait',
-      label: 'iPhone 17 Pro Max • Deep Blue',
-      outputSize: { height: 3000, width: 1470 },
-      screenRect: { height: 2868, width: 1320, x: 75, y: 66 },
-      src: 'frame assets/iPhone_17_pro_max-deep_blue-portrait.png'
+      "cornerRadius": 200,
+      "id": "iPhone_17_pro_max-deep_blue-portrait",
+      "label": "iPhone 17 Pro Max \u2022 Deep Blue",
+      "outputSize": {
+        "height": 3000,
+        "width": 1470
+      },
+      "screenRect": {
+        "height": 2868,
+        "width": 1320,
+        "x": 75,
+        "y": 66
+      },
+      "src": "assets/iPhone_17_pro_max-deep_blue-portrait.png"
     },
     {
-      cornerRadius: 200,
-      dynamicIsland: { height: 107, padding: 4, radius: 53, width: 372, x: 549, y: 110 },
-      id: 'iPhone_17_pro_max-silver-portrait',
-      label: 'iPhone 17 Pro Max • Silver',
-      outputSize: { height: 3000, width: 1470 },
-      screenRect: { height: 2868, width: 1320, x: 75, y: 66 },
-      src: 'frame assets/iPhone_17_pro_max-silver-portrait.png'
+      "cornerRadius": 200,
+      "id": "iPhone_17_pro_max-silver-portrait",
+      "label": "iPhone 17 Pro Max \u2022 Silver",
+      "outputSize": {
+        "height": 3000,
+        "width": 1470
+      },
+      "screenRect": {
+        "height": 2868,
+        "width": 1320,
+        "x": 75,
+        "y": 66
+      },
+      "src": "assets/iPhone_17_pro_max-silver-portrait.png"
     },
     {
-      cornerRadius: 199,
-      dynamicIsland: { height: 108, padding: 4, radius: 54, width: 373, x: 504, y: 133 },
-      id: 'iPhone_air-cloud_white-portrait',
-      label: 'iPhone Air • Cloud White',
-      outputSize: { height: 2880, width: 1380 },
-      screenRect: { height: 2736, width: 1260, x: 60, y: 72 },
-      src: 'frame assets/iPhone_air-cloud_white-portrait.png'
+      "cornerRadius": 199,
+      "id": "iPhone_air-cloud_white-portrait",
+      "label": "iPhone Air \u2022 Cloud White",
+      "outputSize": {
+        "height": 2880,
+        "width": 1380
+      },
+      "screenRect": {
+        "height": 2736,
+        "width": 1260,
+        "x": 60,
+        "y": 72
+      },
+      "src": "assets/iPhone_air-cloud_white-portrait.png"
     },
     {
-      cornerRadius: 199,
-      dynamicIsland: { height: 108, padding: 4, radius: 54, width: 373, x: 504, y: 133 },
-      id: 'iPhone_air-light_gold-portrait',
-      label: 'iPhone Air • Light Gold',
-      outputSize: { height: 2880, width: 1380 },
-      screenRect: { height: 2736, width: 1260, x: 60, y: 72 },
-      src: 'frame assets/iPhone_air-light_gold-portrait.png'
+      "cornerRadius": 199,
+      "id": "iPhone_air-light_gold-portrait",
+      "label": "iPhone Air \u2022 Light Gold",
+      "outputSize": {
+        "height": 2880,
+        "width": 1380
+      },
+      "screenRect": {
+        "height": 2736,
+        "width": 1260,
+        "x": 60,
+        "y": 72
+      },
+      "src": "assets/iPhone_air-light_gold-portrait.png"
     },
     {
-      cornerRadius: 199,
-      dynamicIsland: { height: 108, padding: 4, radius: 54, width: 373, x: 504, y: 133 },
-      id: 'iPhone_air-sly_blue-portrait',
-      label: 'iPhone Air • Sly Blue',
-      outputSize: { height: 2880, width: 1380 },
-      screenRect: { height: 2736, width: 1260, x: 60, y: 72 },
-      src: 'frame assets/iPhone_air-sly_blue-portrait.png'
+      "cornerRadius": 199,
+      "id": "iPhone_air-sky_blue-portrait",
+      "label": "iPhone Air \u2022 Sky Blue",
+      "outputSize": {
+        "height": 2880,
+        "width": 1380
+      },
+      "screenRect": {
+        "height": 2736,
+        "width": 1260,
+        "x": 60,
+        "y": 72
+      },
+      "src": "assets/iPhone_air-sky_blue-portrait.png"
     },
     {
-      cornerRadius: 199,
-      dynamicIsland: { height: 108, padding: 4, radius: 54, width: 373, x: 504, y: 133 },
-      id: 'iPhone_air-space_black-portrait',
-      label: 'iPhone Air • Space Black',
-      outputSize: { height: 2880, width: 1380 },
-      screenRect: { height: 2736, width: 1260, x: 60, y: 72 },
-      src: 'frame assets/iPhone_air-space_black-portrait.png'
+      "cornerRadius": 199,
+      "id": "iPhone_air-space_black-portrait",
+      "label": "iPhone Air \u2022 Space Black",
+      "outputSize": {
+        "height": 2880,
+        "width": 1380
+      },
+      "screenRect": {
+        "height": 2736,
+        "width": 1260,
+        "x": 60,
+        "y": 72
+      },
+      "src": "assets/iPhone_air-space_black-portrait.png"
     }
   ]
 };
@@ -172,6 +276,7 @@ const state = {
   mode: 'frame',
   backgroundMode: 'gradient',
   prefix: '',
+  locale: '',
   images: [],
   frame: null,
   manifest: null,
@@ -188,6 +293,7 @@ const elements = {
   clear: document.getElementById('clear'),
   frameSelect: document.getElementById('frame-select'),
   prefix: document.getElementById('prefix'),
+  locale: document.getElementById('locale'),
   templateControls: document.getElementById('template-controls'),
   screenX: document.getElementById('screen-x'),
   screenY: document.getElementById('screen-y'),
@@ -271,6 +377,11 @@ function wireEvents() {
 
   elements.prefix.addEventListener('input', (event) => {
     state.prefix = event.target.value.trim();
+    renderAll();
+  });
+
+  elements.locale.addEventListener('input', (event) => {
+    state.locale = event.target.value.trim();
     renderAll();
   });
 
@@ -382,6 +493,9 @@ function syncTemplateInputs() {
 }
 
 function syncFrameInputs() {
+  if (!elements.screenX) {
+    return;
+  }
   elements.screenX.value = frameKit.screenRect.x;
   elements.screenY.value = frameKit.screenRect.y;
   elements.screenW.value = frameKit.screenRect.width;
@@ -447,8 +561,6 @@ async function applyFrame(frame) {
   frameKit.outputSize = frame.outputSize ?? FRAME_KIT.outputSize;
   frameKit.screenRect = frame.screenRect ?? FRAME_KIT.screenRect;
   frameKit.cornerRadius = frame.cornerRadius ?? FRAME_KIT.cornerRadius;
-  frameKit.dynamicIsland = frame.dynamicIsland ?? FRAME_KIT.dynamicIsland;
-
   syncFrameInputs();
   state.frame = await loadImage(encodeURI(frameKit.frameSrc));
   elements.status.textContent = `Frame loaded: ${frameKit.device}`;
@@ -459,10 +571,11 @@ async function handleFiles(fileList) {
   elements.status.textContent = 'Loading screenshots...';
   const files = Array.from(fileList);
   const images = await Promise.all(files.map(loadImageFromFile));
-  state.images = images.map((image, index) => ({
+  const newItems = images.map((image, index) => ({
     image,
     name: files[index].name
   }));
+  state.images = state.images.concat(newItems);
   elements.status.textContent = `${state.images.length} screenshot(s) loaded`;
   renderAll();
 }
@@ -476,10 +589,10 @@ function renderAll() {
     return;
   }
 
-  state.images.forEach((item) => {
+  state.images.forEach((item, index) => {
     const framedCanvas = renderFramed(item.image);
     const output = state.mode === 'template' ? renderTemplate(framedCanvas) : framedCanvas;
-    const filename = buildFilename(item.name);
+    const filename = buildFilename(index, state.images.length);
     const card = renderPreviewCard(output, filename);
     elements.previewGrid.appendChild(card);
     state.outputs.push({ canvas: output, name: filename });
@@ -510,21 +623,6 @@ function renderFramed(sourceImage) {
   ctx.fill();
   ctx.restore();
 
-  // Mask out the screenshot's dynamic island so the frame's island is clean.
-  if (frameKit.dynamicIsland) {
-    const island = frameKit.dynamicIsland;
-    const pad = island.padding ?? 0;
-    ctx.fillStyle = '#000';
-    roundedRectPath(
-      ctx,
-      island.x - pad,
-      island.y - pad,
-      island.width + pad * 2,
-      island.height + pad * 2,
-      island.radius + pad
-    );
-    ctx.fill();
-  }
   ctx.drawImage(state.frame, 0, 0, canvas.width, canvas.height);
 
   return canvas;
@@ -653,7 +751,7 @@ async function downloadAll() {
     return;
   }
 
-  if (window.showDirectoryPicker) {
+  if (window.showDirectoryPicker && location.protocol !== 'file:') {
     try {
       const directoryHandle = await window.showDirectoryPicker();
       for (const output of state.outputs) {
@@ -666,28 +764,31 @@ async function downloadAll() {
       elements.status.textContent = `Saved ${state.outputs.length} file(s)`;
       return;
     } catch (error) {
-      elements.status.textContent = 'Download cancelled';
-      return;
+      elements.status.textContent = 'Folder save unavailable, downloading files...';
     }
   }
 
-  elements.status.textContent = 'Downloading files...';
-  state.outputs.forEach((output, index) => {
-    setTimeout(() => {
-      downloadCanvas(output.canvas, output.name);
-    }, index * 200);
-  });
+  elements.status.textContent = 'Preparing archive...';
+  try {
+    await downloadAllAsTar();
+    elements.status.textContent = `Downloaded ${state.outputs.length} file(s)`;
+  } catch (error) {
+    elements.status.textContent = 'Archive failed, downloading individually...';
+    state.outputs.forEach((output) => downloadCanvas(output.canvas, output.name));
+  }
 }
 
 function downloadCanvas(canvas, filename) {
+  if (isSafari()) {
+    downloadCanvasDataUrl(canvas, filename);
+    return;
+  }
   canvasToBlob(canvas).then((blob) => {
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(link.href);
+    if (!blob) {
+      downloadCanvasDataUrl(canvas, filename);
+      return;
+    }
+    downloadBlob(blob, filename);
   });
 }
 
@@ -695,12 +796,137 @@ function canvasToBlob(canvas) {
   return new Promise((resolve) => canvas.toBlob(resolve, 'image/png'));
 }
 
-function buildFilename(originalName) {
-  const base = originalName.replace(/\.[^/.]+$/, '');
-  const safe = base.replace(/[^a-zA-Z0-9-_]+/g, '_');
-  const prefix = state.prefix ? `${state.prefix}_` : '';
-  const suffix = state.mode === 'template' ? 'framed_template1' : 'framed';
-  return `${prefix}${safe}__${suffix}.png`;
+function downloadCanvasDataUrl(canvas, filename) {
+  const dataUrl = canvas.toDataURL('image/png');
+  const link = document.createElement('a');
+  link.href = dataUrl;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+}
+
+function downloadBlob(blob, filename) {
+  const link = document.createElement('a');
+  const url = URL.createObjectURL(blob);
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+async function downloadAllAsTar() {
+  const entries = await Promise.all(
+    state.outputs.map(async (output) => {
+      const blob = await canvasToBlob(output.canvas);
+      if (blob) {
+        const buffer = await blob.arrayBuffer();
+        return { name: output.name, data: new Uint8Array(buffer) };
+      }
+      const dataUrl = output.canvas.toDataURL('image/png');
+      return { name: output.name, data: dataUrlToUint8(dataUrl) };
+    })
+  );
+
+  const tarData = buildTar(entries);
+  const tarName = `framed_screenshots_${new Date().toISOString().replace(/[:.]/g, '-')}.tar`;
+  downloadBlob(new Blob([tarData], { type: 'application/x-tar' }), tarName);
+}
+
+function buildTar(entries) {
+  const blocks = [];
+  entries.forEach((entry) => {
+    const header = new Uint8Array(512);
+    writeString(header, 0, 100, entry.name);
+    writeString(header, 100, 8, writeOctal(0o644, 8));
+    writeString(header, 108, 8, writeOctal(0, 8));
+    writeString(header, 116, 8, writeOctal(0, 8));
+    writeString(header, 124, 12, writeOctal(entry.data.length, 12));
+    writeString(header, 136, 12, writeOctal(Math.floor(Date.now() / 1000), 12));
+    writeString(header, 148, 8, '        ');
+    writeString(header, 156, 1, '0');
+    writeString(header, 257, 6, 'ustar');
+    writeString(header, 263, 2, '00');
+
+    let sum = 0;
+    for (let i = 0; i < header.length; i += 1) {
+      sum += header[i];
+    }
+    writeString(header, 148, 8, writeChecksum(sum));
+
+    blocks.push(header);
+    blocks.push(entry.data);
+    const pad = (512 - (entry.data.length % 512)) % 512;
+    if (pad) {
+      blocks.push(new Uint8Array(pad));
+    }
+  });
+  blocks.push(new Uint8Array(1024));
+  return concatUint8(blocks);
+}
+
+function writeString(buffer, offset, length, value) {
+  const bytes = new TextEncoder().encode(value);
+  const end = Math.min(bytes.length, length);
+  buffer.set(bytes.subarray(0, end), offset);
+}
+
+function writeOctal(value, length) {
+  const str = value.toString(8).padStart(length - 1, '0');
+  return `${str}\0`;
+}
+
+function writeChecksum(value) {
+  const str = value.toString(8).padStart(6, '0');
+  return `${str}\0 `;
+}
+
+function concatUint8(chunks) {
+  const total = chunks.reduce((sum, chunk) => sum + chunk.length, 0);
+  const result = new Uint8Array(total);
+  let offset = 0;
+  chunks.forEach((chunk) => {
+    result.set(chunk, offset);
+    offset += chunk.length;
+  });
+  return result;
+}
+
+function dataUrlToUint8(dataUrl) {
+  const base64 = dataUrl.split(',')[1] ?? '';
+  const binary = atob(base64);
+  const result = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i += 1) {
+    result[i] = binary.charCodeAt(i);
+  }
+  return result;
+}
+
+function isSafari() {
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+}
+
+function buildFilename(index, total) {
+  const frameBase = getFrameBaseName();
+  const userText = state.prefix ? `_${state.prefix}` : '';
+  const localeText = state.locale ? `_${state.locale}` : '';
+  const number = total > 1 ? `_${index + 1}` : '';
+  const suffix = state.mode === 'template' ? '_template1' : '';
+  const raw = `${frameBase}${userText}${localeText}${suffix}${number}.png`;
+  return sanitizeFilename(raw);
+}
+
+function getFrameBaseName() {
+  const src = frameKit.frameSrc || 'frame';
+  const parts = src.split('/');
+  const name = parts[parts.length - 1] || 'frame';
+  return name.replace(/\.[^/.]+$/, '');
+}
+
+function sanitizeFilename(name) {
+  return name.replace(/[^a-zA-Z0-9-_.]+/g, '_');
 }
 
 function clearAll() {

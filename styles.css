@@ -74,6 +74,11 @@ h1 {
   display: grid;
   grid-template-columns: minmax(320px, 1fr) minmax(320px, 1.2fr);
   gap: 24px;
+  margin-top: 32px;
+}
+
+.dropzone-block {
+  padding-bottom: 0;
 }
 
 .panel {

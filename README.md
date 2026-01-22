@@ -16,7 +16,7 @@ Notes:
 
 ## Frame kit
 
-- Frames directory: `frame assets/`
+- Frames directory: `assets/`
 - Manifest: `frame-manifest.json`
 - Default frame: `frame.png` (fallback when manifest isn't available)
 

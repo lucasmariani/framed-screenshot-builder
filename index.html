@@ -10,15 +10,15 @@
   <div class="app">
     <header class="app-header">
       <div>
-        <p class="kicker">Bookabulary tooling</p>
+        <p class="kicker">rianamiCorp tooling</p>
         <h1>Framed Screenshot Builder</h1>
-        <p class="sub">Client-side mockups for a 6.9" iPhone frame. No uploads. No servers.</p>
+        <p class="sub">Client-side mockups for iPhone 17 frames. No uploads. No servers.</p>
       </div>
       <div class="status" id="status">Frame kit ready</div>
     </header>
 
-    <main class="layout">
-      <section class="panel">
+    <main>
+      <section class="dropzone-block">
         <div class="dropzone" id="dropzone">
           <input id="file-input" type="file" accept="image/*" multiple />
           <div>
@@ -26,7 +26,10 @@
             <p class="drop-sub">or click to choose PNGs</p>
           </div>
         </div>
+      </section>
 
+      <div class="layout">
+        <section class="panel">
         <div class="controls">
           <div class="control-row">
             <label for="frame-select">Frame asset</label>
@@ -42,36 +45,16 @@
           </div>
 
           <div class="control-row">
-            <label for="prefix">File prefix (optional)</label>
-            <input id="prefix" type="text" placeholder="en-US" />
+            <label for="prefix">Screen name</label>
+            <input id="prefix" type="text" placeholder="hero" />
           </div>
 
           <div class="control-row">
-            <label>Screen rect</label>
-            <div class="rect-grid">
-              <div>
-                <label for="screen-x">X</label>
-                <input id="screen-x" type="number" min="0" />
-              </div>
-              <div>
-                <label for="screen-y">Y</label>
-                <input id="screen-y" type="number" min="0" />
-              </div>
-              <div>
-                <label for="screen-w">W</label>
-                <input id="screen-w" type="number" min="1" />
-              </div>
-              <div>
-                <label for="screen-h">H</label>
-                <input id="screen-h" type="number" min="1" />
-              </div>
-            </div>
+            <label for="locale">Locale</label>
+            <input id="locale" type="text" placeholder="en-US" />
           </div>
 
-          <div class="control-row">
-            <label for="corner-radius">Corner radius</label>
-            <input id="corner-radius" type="number" min="0" />
-          </div>
+          <!-- Screen rect and corner radius controls removed -->
 
         </div>
 
@@ -158,6 +141,7 @@
         </div>
         <div class="preview-grid" id="preview-grid"></div>
       </section>
+      </div>
     </main>
   </div>
 

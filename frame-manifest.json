@@ -3,14 +3,6 @@
   "frames" : [
     {
       "cornerRadius" : 201,
-      "dynamicIsland" : {
-        "height" : 107,
-        "padding" : 4,
-        "radius" : 53,
-        "width" : 373,
-        "x" : 489,
-        "y" : 112
-      },
       "id" : "iPhone_17-black-portrait",
       "label" : "iPhone 17 • Black",
       "outputSize" : {
@@ -23,18 +15,10 @@
         "x" : 72,
         "y" : 69
       },
-      "src" : "frame assets\/iPhone_17-black-portrait.png"
+      "src" : "assets\/iPhone_17-black-portrait.png"
     },
     {
       "cornerRadius" : 201,
-      "dynamicIsland" : {
-        "height" : 107,
-        "padding" : 4,
-        "radius" : 53,
-        "width" : 373,
-        "x" : 489,
-        "y" : 112
-      },
       "id" : "iPhone_17-lavender-portrait",
       "label" : "iPhone 17 • Lavender",
       "outputSize" : {
@@ -47,18 +31,10 @@
         "x" : 72,
         "y" : 69
       },
-      "src" : "frame assets\/iPhone_17-lavender-portrait.png"
+      "src" : "assets\/iPhone_17-lavender-portrait.png"
     },
     {
       "cornerRadius" : 201,
-      "dynamicIsland" : {
-        "height" : 107,
-        "padding" : 4,
-        "radius" : 53,
-        "width" : 373,
-        "x" : 489,
-        "y" : 112
-      },
       "id" : "iPhone_17-mist_blue-portrait",
       "label" : "iPhone 17 • Mist Blue",
       "outputSize" : {
@@ -71,18 +47,10 @@
         "x" : 72,
         "y" : 69
       },
-      "src" : "frame assets\/iPhone_17-mist_blue-portrait.png"
+      "src" : "assets\/iPhone_17-mist_blue-portrait.png"
     },
     {
       "cornerRadius" : 201,
-      "dynamicIsland" : {
-        "height" : 107,
-        "padding" : 4,
-        "radius" : 53,
-        "width" : 373,
-        "x" : 489,
-        "y" : 112
-      },
       "id" : "iPhone_17-sage-portrait",
       "label" : "iPhone 17 • Sage",
       "outputSize" : {
@@ -95,18 +63,10 @@
         "x" : 72,
         "y" : 69
       },
-      "src" : "frame assets\/iPhone_17-sage-portrait.png"
+      "src" : "assets\/iPhone_17-sage-portrait.png"
     },
     {
       "cornerRadius" : 201,
-      "dynamicIsland" : {
-        "height" : 107,
-        "padding" : 4,
-        "radius" : 53,
-        "width" : 373,
-        "x" : 489,
-        "y" : 112
-      },
       "id" : "iPhone_17-white-portrait",
       "label" : "iPhone 17 • White",
       "outputSize" : {
@@ -119,18 +79,10 @@
         "x" : 72,
         "y" : 69
       },
-      "src" : "frame assets\/iPhone_17-white-portrait.png"
+      "src" : "assets\/iPhone_17-white-portrait.png"
     },
     {
       "cornerRadius" : 199,
-      "dynamicIsland" : {
-        "height" : 107,
-        "padding" : 4,
-        "radius" : 53,
-        "width" : 372,
-        "x" : 489,
-        "y" : 112
-      },
       "id" : "iPhone_17_pro-cosmic_orange-portrait",
       "label" : "iPhone 17 Pro • Cosmic Orange",
       "outputSize" : {
@@ -143,18 +95,10 @@
         "x" : 72,
         "y" : 69
       },
-      "src" : "frame assets\/iPhone_17_pro-cosmic_orange-portrait.png"
+      "src" : "assets\/iPhone_17_pro-cosmic_orange-portrait.png"
     },
     {
       "cornerRadius" : 199,
-      "dynamicIsland" : {
-        "height" : 107,
-        "padding" : 4,
-        "radius" : 53,
-        "width" : 372,
-        "x" : 489,
-        "y" : 112
-      },
       "id" : "iPhone_17_pro-deep_blue-portrait",
       "label" : "iPhone 17 Pro • Deep Blue",
       "outputSize" : {
@@ -167,18 +111,10 @@
         "x" : 72,
         "y" : 69
       },
-      "src" : "frame assets\/iPhone_17_pro-deep_blue-portrait.png"
+      "src" : "assets\/iPhone_17_pro-deep_blue-portrait.png"
     },
     {
       "cornerRadius" : 199,
-      "dynamicIsland" : {
-        "height" : 107,
-        "padding" : 4,
-        "radius" : 53,
-        "width" : 372,
-        "x" : 489,
-        "y" : 112
-      },
       "id" : "iPhone_17_pro-silver-portrait",
       "label" : "iPhone 17 Pro • Silver",
       "outputSize" : {
@@ -191,18 +127,10 @@
         "x" : 72,
         "y" : 69
       },
-      "src" : "frame assets\/iPhone_17_pro-silver-portrait.png"
+      "src" : "assets\/iPhone_17_pro-silver-portrait.png"
     },
     {
       "cornerRadius" : 200,
-      "dynamicIsland" : {
-        "height" : 107,
-        "padding" : 4,
-        "radius" : 53,
-        "width" : 372,
-        "x" : 549,
-        "y" : 110
-      },
       "id" : "iPhone_17_pro_max-cosmic_orange-portrait",
       "label" : "iPhone 17 Pro Max • Cosmic Orange",
       "outputSize" : {
@@ -215,18 +143,10 @@
         "x" : 75,
         "y" : 66
       },
-      "src" : "frame assets\/iPhone_17_pro_max-cosmic_orange-portrait.png"
+      "src" : "assets\/iPhone_17_pro_max-cosmic_orange-portrait.png"
     },
     {
       "cornerRadius" : 200,
-      "dynamicIsland" : {
-        "height" : 107,
-        "padding" : 4,
-        "radius" : 53,
-        "width" : 372,
-        "x" : 549,
-        "y" : 110
-      },
       "id" : "iPhone_17_pro_max-deep_blue-portrait",
       "label" : "iPhone 17 Pro Max • Deep Blue",
       "outputSize" : {
@@ -239,18 +159,10 @@
         "x" : 75,
         "y" : 66
       },
-      "src" : "frame assets\/iPhone_17_pro_max-deep_blue-portrait.png"
+      "src" : "assets\/iPhone_17_pro_max-deep_blue-portrait.png"
     },
     {
       "cornerRadius" : 200,
-      "dynamicIsland" : {
-        "height" : 107,
-        "padding" : 4,
-        "radius" : 53,
-        "width" : 372,
-        "x" : 549,
-        "y" : 110
-      },
       "id" : "iPhone_17_pro_max-silver-portrait",
       "label" : "iPhone 17 Pro Max • Silver",
       "outputSize" : {
@@ -263,18 +175,10 @@
         "x" : 75,
         "y" : 66
       },
-      "src" : "frame assets\/iPhone_17_pro_max-silver-portrait.png"
+      "src" : "assets\/iPhone_17_pro_max-silver-portrait.png"
     },
     {
       "cornerRadius" : 199,
-      "dynamicIsland" : {
-        "height" : 108,
-        "padding" : 4,
-        "radius" : 54,
-        "width" : 373,
-        "x" : 504,
-        "y" : 133
-      },
       "id" : "iPhone_air-cloud_white-portrait",
       "label" : "iPhone Air • Cloud White",
       "outputSize" : {
@@ -287,18 +191,10 @@
         "x" : 60,
         "y" : 72
       },
-      "src" : "frame assets\/iPhone_air-cloud_white-portrait.png"
+      "src" : "assets\/iPhone_air-cloud_white-portrait.png"
     },
     {
       "cornerRadius" : 199,
-      "dynamicIsland" : {
-        "height" : 108,
-        "padding" : 4,
-        "radius" : 54,
-        "width" : 373,
-        "x" : 504,
-        "y" : 133
-      },
       "id" : "iPhone_air-light_gold-portrait",
       "label" : "iPhone Air • Light Gold",
       "outputSize" : {
@@ -311,20 +207,12 @@
         "x" : 60,
         "y" : 72
       },
-      "src" : "frame assets\/iPhone_air-light_gold-portrait.png"
+      "src" : "assets\/iPhone_air-light_gold-portrait.png"
     },
     {
       "cornerRadius" : 199,
-      "dynamicIsland" : {
-        "height" : 108,
-        "padding" : 4,
-        "radius" : 54,
-        "width" : 373,
-        "x" : 504,
-        "y" : 133
-      },
-      "id" : "iPhone_air-sly_blue-portrait",
-      "label" : "iPhone Air • Sly Blue",
+      "id" : "iPhone_air-sky_blue-portrait",
+      "label" : "iPhone Air • Sky Blue",
       "outputSize" : {
         "height" : 2880,
         "width" : 1380
@@ -335,18 +223,10 @@
         "x" : 60,
         "y" : 72
       },
-      "src" : "frame assets\/iPhone_air-sly_blue-portrait.png"
+      "src" : "assets\/iPhone_air-sky_blue-portrait.png"
     },
     {
       "cornerRadius" : 199,
-      "dynamicIsland" : {
-        "height" : 108,
-        "padding" : 4,
-        "radius" : 54,
-        "width" : 373,
-        "x" : 504,
-        "y" : 133
-      },
       "id" : "iPhone_air-space_black-portrait",
       "label" : "iPhone Air • Space Black",
       "outputSize" : {
@@ -359,7 +239,7 @@
         "x" : 60,
         "y" : 72
       },
-      "src" : "frame assets\/iPhone_air-space_black-portrait.png"
+      "src" : "assets\/iPhone_air-space_black-portrait.png"
     }
   ]
 }
