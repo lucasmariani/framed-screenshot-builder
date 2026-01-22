@@ -317,7 +317,6 @@ const TEMPLATE_DEFINITIONS = {
 const state = {
   mode: 'frame',
   backgroundMode: 'gradient',
-  locale: '',
   templateId: 'template1',
   images: [],
   frame: null,
@@ -334,7 +333,6 @@ const elements = {
   downloadAll: document.getElementById('download-all'),
   clear: document.getElementById('clear'),
   frameSelect: document.getElementById('frame-select'),
-  locale: document.getElementById('locale'),
   templateControls: document.getElementById('template-controls'),
   headline: document.getElementById('headline'),
   subheadline: document.getElementById('subheadline'),
@@ -423,11 +421,6 @@ function wireEvents() {
       currentTemplate().background.type = state.backgroundMode;
       renderAll();
     });
-  });
-
-  elements.locale.addEventListener('input', (event) => {
-    state.locale = event.target.value.trim();
-    updateAllFilenameDisplays();
   });
 
   elements.frameSelect.addEventListener('change', async (event) => {
@@ -590,7 +583,8 @@ async function handleFiles(fileList) {
       newItems.push({
         image: result.value,
         name: files[index].name,
-        screenName: ''
+        screenName: '',
+        locale: ''
       });
     } else {
       failed += 1;
@@ -852,6 +846,16 @@ function renderPreviewCard(canvas, item, index, filename) {
     updateAllFilenameDisplays();
   });
 
+  const localeInput = document.createElement('input');
+  localeInput.type = 'text';
+  localeInput.className = 'locale-input';
+  localeInput.placeholder = 'Locale (en-US)';
+  localeInput.value = item.locale ?? '';
+  localeInput.addEventListener('input', () => {
+    item.locale = localeInput.value.trim();
+    updateAllFilenameDisplays();
+  });
+
   const button = document.createElement('button');
   button.textContent = 'Download';
   button.addEventListener('click', () => {
@@ -868,7 +872,7 @@ function renderPreviewCard(canvas, item, index, filename) {
   });
 
   actions.append(button, removeButton);
-  card.append(preview, name, input, actions);
+  card.append(preview, name, input, localeInput, actions);
   return card;
 }
 
@@ -1037,7 +1041,7 @@ function isSafari() {
 function buildBaseKey(item) {
   const frameBase = getFrameBaseName();
   const screenName = item.screenName ? `_${item.screenName}` : '';
-  const localeText = state.locale ? `_${state.locale}` : '';
+  const localeText = item.locale ? `_${item.locale}` : '';
   const suffix = state.mode === 'template' ? `_${state.templateId}` : '';
   const raw = `${frameBase}${screenName}${localeText}${suffix}`;
   return sanitizeFilename(raw);
