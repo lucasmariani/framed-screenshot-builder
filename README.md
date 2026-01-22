@@ -18,7 +18,7 @@ Notes:
 
 - Frames directory: `assets/`
 - Manifest: `frame-manifest.json`
-- Default frame: `frame.png` (fallback when manifest isn't available)
+- A manifest is required; if it's missing, the app disables uploads and downloads.
 
 ### Regenerate the manifest
 
@@ -29,7 +29,7 @@ swiftc -module-cache-path /tmp/swift-module-cache tools/generate_frame_manifest.
 /tmp/generate_frame_manifest
 ```
 
-Update the `FRAME_KIT` constants in `app.js` only if you change the fallback `frame.png`.
+Update the `FRAME_KIT` constants in `app.js` only if you change the base frame geometry defaults.
 
 ## Templates
 

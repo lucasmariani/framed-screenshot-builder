@@ -1,6 +1,6 @@
 const FRAME_KIT = {
   device: 'iPhone 17 Pro Max 6.9"',
-  frameSrc: 'frame.png',
+  frameSrc: '',
   outputSize: { width: 1470, height: 3000 },
   screenRect: { x: 76, y: 60, width: 1318, height: 2866 },
   cornerRadius: 234,
@@ -321,7 +321,8 @@ const state = {
   images: [],
   frame: null,
   manifest: null,
-  outputs: []
+  outputs: [],
+  enabled: true
 };
 
 const elements = {
@@ -361,26 +362,32 @@ async function init() {
   elements.templateControls.style.display = state.mode === 'template' ? 'grid' : 'none';
 
   await loadManifest();
-  if (!state.manifest) {
-    state.frame = await loadImage(frameKit.frameSrc);
-    elements.status.textContent = 'Frame kit loaded';
-  }
-
   wireEvents();
   placeDropzone();
 }
 
 function wireEvents() {
   elements.dropzone.addEventListener('dragover', (event) => {
+    if (!state.enabled) {
+      event.preventDefault();
+      return;
+    }
     event.preventDefault();
     elements.dropzone.classList.add('dragover');
   });
 
   elements.dropzone.addEventListener('dragleave', () => {
+    if (!state.enabled) {
+      return;
+    }
     elements.dropzone.classList.remove('dragover');
   });
 
   elements.dropzone.addEventListener('drop', (event) => {
+    if (!state.enabled) {
+      event.preventDefault();
+      return;
+    }
     event.preventDefault();
     elements.dropzone.classList.remove('dragover');
     if (event.dataTransfer?.files?.length) {
@@ -389,6 +396,9 @@ function wireEvents() {
   });
 
   elements.fileInput.addEventListener('change', (event) => {
+    if (!state.enabled) {
+      return;
+    }
     if (event.target.files?.length) {
       handleFiles(event.target.files);
       event.target.value = '';
@@ -505,12 +515,15 @@ function syncFrameInputs() {
 }
 
 async function loadManifest() {
-  if (location.protocol === 'file:') {
-    await applyManifest(EMBEDDED_MANIFEST);
-    return;
-  }
-
   try {
+    if (location.protocol === 'file:') {
+      if (!EMBEDDED_MANIFEST?.frames?.length) {
+        throw new Error('Manifest not available');
+      }
+      await applyManifest(EMBEDDED_MANIFEST);
+      return;
+    }
+
     const response = await fetch('frame-manifest.json', { cache: 'no-store' });
     if (!response.ok) {
       throw new Error('Manifest not found');
@@ -521,18 +534,7 @@ async function loadManifest() {
     }
     await applyManifest(manifest);
   } catch (error) {
-    if (EMBEDDED_MANIFEST?.frames?.length) {
-      await applyManifest(EMBEDDED_MANIFEST);
-      elements.status.textContent = 'Using embedded frames';
-    } else {
-      elements.status.textContent = 'Using default frame';
-      elements.frameSelect.innerHTML = '';
-      const option = document.createElement('option');
-      option.value = 'default';
-      option.textContent = 'Default frame';
-      option.selected = true;
-      elements.frameSelect.appendChild(option);
-    }
+    disableApp('Error: frame manifest unavailable');
   }
 }
 
@@ -554,6 +556,7 @@ async function applyManifest(manifest) {
   populateFrameSelect(manifest.frames, manifest.defaultId);
   const defaultFrame = manifest.frames.find((item) => item.id === manifest.defaultId) || manifest.frames[0];
   await applyFrame(defaultFrame);
+  setUiEnabled(true);
 }
 
 async function applyFrame(frame) {
@@ -573,6 +576,9 @@ async function applyFrame(frame) {
 }
 
 async function handleFiles(fileList) {
+  if (!state.enabled) {
+    return;
+  }
   elements.status.textContent = 'Loading screenshots...';
   const files = Array.from(fileList);
   const results = await Promise.allSettled(files.map(loadImageFromFile));
@@ -841,6 +847,7 @@ function renderPreviewCard(canvas, item, index, filename) {
   input.className = 'screen-name-input';
   input.placeholder = 'Screen name';
   input.value = item.screenName ?? '';
+  input.disabled = !state.enabled;
   input.addEventListener('input', () => {
     item.screenName = input.value.trim();
     updateAllFilenameDisplays();
@@ -851,6 +858,7 @@ function renderPreviewCard(canvas, item, index, filename) {
   localeInput.className = 'locale-input';
   localeInput.placeholder = 'Locale (en-US)';
   localeInput.value = item.locale ?? '';
+  localeInput.disabled = !state.enabled;
   localeInput.addEventListener('input', () => {
     item.locale = localeInput.value.trim();
     updateAllFilenameDisplays();
@@ -858,6 +866,7 @@ function renderPreviewCard(canvas, item, index, filename) {
 
   const button = document.createElement('button');
   button.textContent = 'Download';
+  button.disabled = !state.enabled;
   button.addEventListener('click', () => {
     const currentName = state.outputs[index]?.name ?? filename;
     downloadCanvas(canvas, currentName);
@@ -866,6 +875,7 @@ function renderPreviewCard(canvas, item, index, filename) {
   const removeButton = document.createElement('button');
   removeButton.className = 'remove';
   removeButton.textContent = 'Remove';
+  removeButton.disabled = !state.enabled;
   removeButton.addEventListener('click', () => {
     state.images.splice(index, 1);
     renderAll();
@@ -1100,6 +1110,34 @@ function clearAll() {
   state.outputs = [];
   renderAll();
   elements.status.textContent = 'Cleared';
+}
+
+function setUiEnabled(enabled) {
+  state.enabled = enabled;
+  elements.dropzone.classList.toggle('is-disabled', !enabled);
+  elements.fileInput.disabled = !enabled;
+  elements.downloadAll.disabled = !enabled;
+  elements.clear.disabled = !enabled;
+  elements.frameSelect.disabled = !enabled;
+  document.querySelectorAll('.segmented-btn').forEach((button) => {
+    button.disabled = !enabled;
+  });
+  document.querySelectorAll('.controls input, .controls select, .template-controls input').forEach((input) => {
+    input.disabled = !enabled;
+  });
+}
+
+function disableApp(message) {
+  state.enabled = false;
+  state.frame = null;
+  state.manifest = null;
+  state.images = [];
+  state.outputs = [];
+  elements.status.textContent = message;
+  elements.count.textContent = '0 processed';
+  elements.previewGrid.innerHTML = '';
+  setUiEnabled(false);
+  placeDropzone();
 }
 
 async function loadImage(src) {

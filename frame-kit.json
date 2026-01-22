@@ -1,6 +1,6 @@
 {
   "device": "iPhone 17 Pro Max 6.9\"",
-  "frame": "frame.png",
+  "frame": "",
   "outputSize": { "width": 1470, "height": 3000 },
   "screenRect": { "x": 76, "y": 60, "width": 1318, "height": 2866 },
   "cornerRadius": 234,
