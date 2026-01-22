@@ -326,14 +326,10 @@ button:disabled {
   gap: 8px;
 }
 
-.screen-name-input {
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 8px 10px;
-  font-size: 13px;
-}
-
-.locale-input {
+.screen-name-input,
+.locale-input,
+.headline-input,
+.subheadline-input {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 8px 10px;
@@ -341,7 +337,9 @@ button:disabled {
 }
 
 .screen-name-input:disabled,
-.locale-input:disabled {
+.locale-input:disabled,
+.headline-input:disabled,
+.subheadline-input:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }

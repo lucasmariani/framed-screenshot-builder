@@ -335,16 +335,13 @@ const elements = {
   clear: document.getElementById('clear'),
   frameSelect: document.getElementById('frame-select'),
   templateControls: document.getElementById('template-controls'),
-  headline: document.getElementById('headline'),
-  subheadline: document.getElementById('subheadline'),
   headlineSize: document.getElementById('headline-size'),
   subheadlineSize: document.getElementById('subheadline-size'),
   textColor: document.getElementById('text-color'),
   subtextColor: document.getElementById('subtext-color'),
   deviceScale: document.getElementById('device-scale'),
   deviceOffset: document.getElementById('device-offset'),
-  bgColor: document.getElementById('bg-color'),
-  subtitleControls: document.querySelectorAll('.subtitle-controls')
+  bgColor: document.getElementById('bg-color')
 };
 
 const templates = JSON.parse(JSON.stringify(TEMPLATE_DEFINITIONS));
@@ -441,16 +438,6 @@ function wireEvents() {
     }
   });
 
-  elements.headline.addEventListener('input', (event) => {
-    currentTemplate().text.title = event.target.value;
-    renderAll();
-  });
-
-  elements.subheadline.addEventListener('input', (event) => {
-    currentTemplate().text.subtitle = event.target.value;
-    renderAll();
-  });
-
   elements.headlineSize.addEventListener('input', (event) => {
     currentTemplate().text.titleSize = clampNumber(event.target.value, 10, 400, currentTemplate().text.titleSize);
     renderAll();
@@ -492,8 +479,6 @@ function wireEvents() {
 
 function syncTemplateInputs() {
   const template = currentTemplate();
-  elements.headline.value = template.text.title ?? '';
-  elements.subheadline.value = template.text.subtitle ?? '';
   elements.headlineSize.value = template.text.titleSize ?? 96;
   elements.subheadlineSize.value = template.text.subtitleSize ?? 44;
   elements.textColor.value = template.text.color ?? '#1f1b16';
@@ -505,8 +490,13 @@ function syncTemplateInputs() {
 
 function updateSubtitleVisibility() {
   const template = currentTemplate();
-  elements.subtitleControls.forEach((el) => {
-    el.style.display = template.showSubtitle ? 'grid' : 'none';
+  document.querySelectorAll('.subtitle-controls').forEach((el) => {
+    if (!template.showSubtitle) {
+      el.style.display = 'none';
+      return;
+    }
+    const display = el.tagName === 'INPUT' ? 'block' : 'grid';
+    el.style.display = display;
   });
 }
 
@@ -590,7 +580,9 @@ async function handleFiles(fileList) {
         image: result.value,
         name: files[index].name,
         screenName: '',
-        locale: ''
+        locale: '',
+        headline: '',
+        subheadline: ''
       });
     } else {
       failed += 1;
@@ -621,7 +613,7 @@ function renderAll() {
   const filenames = computeFilenames();
   state.images.forEach((item, index) => {
     const framedCanvas = renderFramed(item.image);
-    const renderedCanvas = state.mode === 'template' ? renderTemplate(framedCanvas) : framedCanvas;
+    const renderedCanvas = state.mode === 'template' ? renderTemplate(framedCanvas, item) : framedCanvas;
     const finalOutput = normalizeOutputCanvas(renderedCanvas, {
       width: OUTPUT_SIZE.width,
       height: OUTPUT_SIZE.height,
@@ -636,6 +628,7 @@ function renderAll() {
 
   elements.count.textContent = `${state.outputs.length} processed`;
   placeDropzone();
+  updateSubtitleVisibility();
 }
 
 function placeDropzone() {
@@ -695,7 +688,7 @@ function roundedRectPath(ctx, x, y, width, height, radius) {
   ctx.closePath();
 }
 
-function renderTemplate(framedCanvas) {
+function renderTemplate(framedCanvas, item) {
   const template = currentTemplate();
   const canvas = document.createElement('canvas');
   canvas.width = OUTPUT_SIZE.width;
@@ -723,20 +716,24 @@ function renderTemplate(framedCanvas) {
   const topPadding = template.text.topPadding ?? Math.max(96, Math.round(canvas.height * 0.06));
   const maxWidth = Math.min(template.text.maxWidth, canvas.width - 120);
 
-  drawWrappedText(ctx, template.text.title, {
-    x: canvas.width / 2,
-    y: topPadding,
-    maxWidth,
-    fontSize: template.text.titleSize,
-    color: template.text.color,
-    align: template.text.align,
-    lineHeight: template.text.lineHeight,
-    fontFamily: template.text.fontFamily ?? '"Bodoni 72", "Didot", "Times New Roman", serif'
-  });
+  const titleText = (item?.headline ?? '').trim() || template.text.title;
+  if (titleText) {
+    drawWrappedText(ctx, titleText, {
+      x: canvas.width / 2,
+      y: topPadding,
+      maxWidth,
+      fontSize: template.text.titleSize,
+      color: template.text.color,
+      align: template.text.align,
+      lineHeight: template.text.lineHeight,
+      fontFamily: template.text.fontFamily ?? '"Bodoni 72", "Didot", "Times New Roman", serif'
+    });
+  }
 
-  if (template.showSubtitle && template.text.subtitle) {
+  const subtitleText = (item?.subheadline ?? '').trim() || template.text.subtitle;
+  if (template.showSubtitle && subtitleText) {
     const spacing = template.text.subtitleSpacing ?? Math.round(template.text.titleSize * 0.6);
-    drawWrappedText(ctx, template.text.subtitle, {
+    drawWrappedText(ctx, subtitleText, {
       x: canvas.width / 2,
       y: topPadding + template.text.titleSize * template.text.lineHeight + spacing,
       maxWidth,
@@ -864,12 +861,39 @@ function renderPreviewCard(canvas, item, index, filename) {
     updateAllFilenameDisplays();
   });
 
+  let headlineInput = null;
+  let subheadlineInput = null;
+  if (state.mode === 'template') {
+    headlineInput = document.createElement('input');
+    headlineInput.type = 'text';
+    headlineInput.className = 'headline-input';
+    headlineInput.placeholder = 'Headline';
+    headlineInput.value = item.headline ?? '';
+    headlineInput.disabled = !state.enabled;
+    headlineInput.addEventListener('input', () => {
+      item.headline = headlineInput.value;
+      updatePreviewAtIndex(index);
+    });
+
+    subheadlineInput = document.createElement('input');
+    subheadlineInput.type = 'text';
+    subheadlineInput.className = 'subheadline-input subtitle-controls';
+    subheadlineInput.placeholder = 'Subheadline';
+    subheadlineInput.value = item.subheadline ?? '';
+    subheadlineInput.disabled = !state.enabled;
+    subheadlineInput.addEventListener('input', () => {
+      item.subheadline = subheadlineInput.value;
+      updatePreviewAtIndex(index);
+    });
+  }
+
   const button = document.createElement('button');
   button.textContent = 'Download';
   button.disabled = !state.enabled;
   button.addEventListener('click', () => {
-    const currentName = state.outputs[index]?.name ?? filename;
-    downloadCanvas(canvas, currentName);
+    const output = state.outputs[index];
+    const currentName = output?.name ?? filename;
+    downloadCanvas(output?.canvas ?? canvas, currentName);
   });
 
   const removeButton = document.createElement('button');
@@ -882,8 +906,42 @@ function renderPreviewCard(canvas, item, index, filename) {
   });
 
   actions.append(button, removeButton);
-  card.append(preview, name, input, localeInput, actions);
+  if (headlineInput && subheadlineInput) {
+    card.append(preview, name, input, localeInput, headlineInput, subheadlineInput, actions);
+  } else {
+    card.append(preview, name, input, localeInput, actions);
+  }
   return card;
+}
+
+function updatePreviewAtIndex(index) {
+  if (!state.enabled || !state.frame) {
+    return;
+  }
+  const item = state.images[index];
+  if (!item) {
+    return;
+  }
+
+  const framedCanvas = renderFramed(item.image);
+  const renderedCanvas = state.mode === 'template' ? renderTemplate(framedCanvas, item) : framedCanvas;
+  const finalOutput = normalizeOutputCanvas(renderedCanvas, {
+    width: OUTPUT_SIZE.width,
+    height: OUTPUT_SIZE.height,
+    mode: 'contain',
+    background: state.mode === 'template' ? currentTemplate().background : null
+  });
+
+  const card = elements.previewGrid.querySelector(`.preview-card[data-index="${index}"]`);
+  const preview = card?.querySelector('canvas');
+  if (preview) {
+    preview.width = finalOutput.width;
+    preview.height = finalOutput.height;
+    preview.getContext('2d').drawImage(finalOutput, 0, 0);
+  }
+
+  const name = state.outputs[index]?.name ?? computeFilenames()[index];
+  state.outputs[index] = { canvas: finalOutput, name };
 }
 
 async function downloadAll() {
