@@ -18,16 +18,6 @@
     </header>
 
     <main>
-      <section class="dropzone-block">
-        <div class="dropzone" id="dropzone">
-          <input id="file-input" type="file" accept="image/*" multiple />
-          <div>
-            <p class="drop-title">Drop screenshots here</p>
-            <p class="drop-sub">or click to choose PNGs</p>
-          </div>
-        </div>
-      </section>
-
       <div class="layout">
         <section class="panel">
         <div class="controls">
@@ -131,7 +121,15 @@
           <h3>Preview</h3>
           <div class="count" id="count">0 processed</div>
         </div>
-        <div class="preview-grid" id="preview-grid"></div>
+        <div class="preview-grid" id="preview-grid">
+          <div class="dropzone" id="dropzone">
+            <input id="file-input" type="file" accept="image/*" multiple />
+            <div>
+              <p class="drop-title">Drop screenshots here</p>
+              <p class="drop-sub">or click to choose PNGs</p>
+            </div>
+          </div>
+        </div>
       </section>
       </div>
     </main>

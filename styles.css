@@ -77,10 +77,6 @@ h1 {
   margin-top: 32px;
 }
 
-.dropzone-block {
-  padding-bottom: 0;
-}
-
 .panel {
   background: var(--panel);
   border: 1px solid var(--border);
@@ -98,6 +94,11 @@ h1 {
   text-align: center;
   background: rgba(255, 255, 255, 0.6);
   transition: border-color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  width: 100%;
 }
 
 .dropzone.dragover {
@@ -287,6 +288,23 @@ button.ghost {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   margin-top: 16px;
+  flex: 1;
+  align-content: start;
+  min-height: 240px;
+}
+
+.preview-grid.is-empty {
+  align-content: stretch;
+  grid-auto-rows: 1fr;
+}
+
+.dropzone--span {
+  grid-column: 1 / -1;
+}
+
+.dropzone--empty {
+  grid-column: 1 / -1;
+  height: 100%;
 }
 
 .preview-card {

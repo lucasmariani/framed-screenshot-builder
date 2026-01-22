@@ -369,6 +369,7 @@ async function init() {
   }
 
   wireEvents();
+  placeDropzone();
 }
 
 function wireEvents() {
@@ -613,6 +614,7 @@ function renderAll() {
 
   if (!state.images.length || !state.frame) {
     elements.count.textContent = '0 processed';
+    placeDropzone();
     return;
   }
 
@@ -633,6 +635,22 @@ function renderAll() {
   });
 
   elements.count.textContent = `${state.outputs.length} processed`;
+  placeDropzone();
+}
+
+function placeDropzone() {
+  const count = state.images.length;
+  elements.dropzone.classList.remove('dropzone--span', 'dropzone--empty');
+  elements.previewGrid.classList.remove('is-empty');
+
+  if (!count) {
+    elements.previewGrid.classList.add('is-empty');
+    elements.dropzone.classList.add('dropzone--empty');
+  } else if (count % 2 === 0) {
+    elements.dropzone.classList.add('dropzone--span');
+  }
+
+  elements.previewGrid.appendChild(elements.dropzone);
 }
 
 function renderFramed(sourceImage) {
@@ -1076,8 +1094,7 @@ function updateAllFilenameDisplays() {
 function clearAll() {
   state.images = [];
   state.outputs = [];
-  elements.previewGrid.innerHTML = '';
-  elements.count.textContent = '0 processed';
+  renderAll();
   elements.status.textContent = 'Cleared';
 }
 
