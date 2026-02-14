@@ -34,3 +34,12 @@ Update the `FRAME_KIT` constants in `app.js` only if you change the base frame g
 ## Templates
 
 Template outputs are fixed at **1320 x 2868**. All previews and downloads are normalized to this size.
+
+## Alpha channels
+
+Frame-only exports now support two options in the UI:
+
+- **Solid (JPEG)**: flattens onto a solid background (default white) for App Store Connect-safe output.
+- **Transparent (PNG)**: preserves alpha around the framed device.
+
+You can change the solid color by editing `FRAME_BACKGROUND` in `app.js`.

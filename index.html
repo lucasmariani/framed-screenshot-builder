@@ -29,10 +29,18 @@
           <div class="control-row">
             <label>Output mode</label>
             <div class="segmented">
-              <button class="segmented-btn active" data-mode="frame">Frame only</button>
-              <button class="segmented-btn" data-mode="template1">Template 1</button>
-              <button class="segmented-btn" data-mode="template2">Template 2</button>
-              <button class="segmented-btn" data-mode="template3">Template 3</button>
+              <button type="button" class="segmented-btn active" data-mode="frame">Frame only</button>
+              <button type="button" class="segmented-btn" data-mode="template1">Template 1</button>
+              <button type="button" class="segmented-btn" data-mode="template2">Template 2</button>
+              <button type="button" class="segmented-btn" data-mode="template3">Template 3</button>
+            </div>
+          </div>
+
+          <div class="control-row" id="frame-export-controls">
+            <label>Frame background</label>
+            <div class="segmented">
+              <button type="button" class="segmented-btn active" data-frame-bg="solid">Solid (JPEG)</button>
+              <button type="button" class="segmented-btn" data-frame-bg="transparent">Transparent (PNG)</button>
             </div>
           </div>
 
@@ -84,8 +92,8 @@
           <div class="control-row">
             <label>Background</label>
             <div class="segmented">
-              <button class="segmented-btn active" data-bg="gradient">Gradient</button>
-              <button class="segmented-btn" data-bg="solid">Solid</button>
+              <button type="button" class="segmented-btn active" data-bg="gradient">Gradient</button>
+              <button type="button" class="segmented-btn" data-bg="solid">Solid</button>
             </div>
           </div>
 
@@ -120,6 +128,6 @@
     </main>
   </div>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=20260214b"></script>
 </body>
 </html>

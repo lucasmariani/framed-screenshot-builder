@@ -7,6 +7,13 @@ const FRAME_KIT = {
   scaleMode: 'cover'
 };
 
+const FRAME_BACKGROUND = { type: 'solid', solid: '#ffffff' };
+const OUTPUT_FORMATS = {
+  frame: { mime: 'image/jpeg', extension: 'jpeg', quality: 0.98 },
+  frameTransparent: { mime: 'image/png', extension: 'png' },
+  template: { mime: 'image/png', extension: 'png' }
+};
+
 const frameKit = JSON.parse(JSON.stringify(FRAME_KIT));
 const OUTPUT_SIZE = { width: 1320, height: 2868 };
 
@@ -316,6 +323,7 @@ const TEMPLATE_DEFINITIONS = {
 
 const state = {
   mode: 'frame',
+  frameBackgroundMode: 'solid',
   backgroundMode: 'gradient',
   templateId: 'template1',
   images: [],
@@ -334,6 +342,7 @@ const elements = {
   downloadAll: document.getElementById('download-all'),
   clear: document.getElementById('clear'),
   frameSelect: document.getElementById('frame-select'),
+  frameExportControls: document.getElementById('frame-export-controls'),
   templateControls: document.getElementById('template-controls'),
   headlineSize: document.getElementById('headline-size'),
   subheadlineSize: document.getElementById('subheadline-size'),
@@ -350,17 +359,48 @@ function currentTemplate() {
   return templates[state.templateId];
 }
 
+function currentOutputFormat() {
+  if (state.mode === 'template') {
+    return OUTPUT_FORMATS.template;
+  }
+  return state.frameBackgroundMode === 'transparent'
+    ? OUTPUT_FORMATS.frameTransparent
+    : OUTPUT_FORMATS.frame;
+}
+
+function currentFrameBackground() {
+  return state.mode === 'frame' && state.frameBackgroundMode === 'transparent'
+    ? null
+    : FRAME_BACKGROUND;
+}
+
+function syncFrameBackgroundInputs() {
+  document.querySelectorAll('[data-frame-bg]').forEach((button) => {
+    button.classList.toggle('active', button.dataset.frameBg === state.frameBackgroundMode);
+  });
+}
+
+function updateModeVisibility() {
+  if (elements.templateControls) {
+    elements.templateControls.style.display = state.mode === 'template' ? 'grid' : 'none';
+  }
+  if (elements.frameExportControls) {
+    elements.frameExportControls.style.display = state.mode === 'frame' ? 'grid' : 'none';
+  }
+}
+
 init();
 
 async function init() {
   syncTemplateInputs();
+  syncFrameBackgroundInputs();
   syncFrameInputs();
   updateSubtitleVisibility();
-  elements.templateControls.style.display = state.mode === 'template' ? 'grid' : 'none';
-
-  await loadManifest();
+  updateModeVisibility();
   wireEvents();
   placeDropzone();
+
+  await loadManifest();
 }
 
 function wireEvents() {
@@ -413,12 +453,24 @@ function wireEvents() {
         state.mode = 'template';
         state.templateId = mode;
       }
-      elements.templateControls.style.display = state.mode === 'template' ? 'grid' : 'none';
+      updateModeVisibility();
       updateSubtitleVisibility();
       syncTemplateInputs();
       renderAll();
     });
   });
+
+  if (elements.frameExportControls) {
+    elements.frameExportControls.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-frame-bg]');
+      if (!button || button.disabled) {
+        return;
+      }
+      state.frameBackgroundMode = button.dataset.frameBg;
+      syncFrameBackgroundInputs();
+      renderAll();
+    });
+  }
 
   document.querySelectorAll('[data-bg]').forEach((button) => {
     button.addEventListener('click', () => {
@@ -524,6 +576,11 @@ async function loadManifest() {
     }
     await applyManifest(manifest);
   } catch (error) {
+    if (EMBEDDED_MANIFEST?.frames?.length) {
+      await applyManifest(EMBEDDED_MANIFEST);
+      elements.status.textContent = 'Frame kit ready (embedded manifest)';
+      return;
+    }
     disableApp('Error: frame manifest unavailable');
   }
 }
@@ -618,7 +675,7 @@ function renderAll() {
       width: OUTPUT_SIZE.width,
       height: OUTPUT_SIZE.height,
       mode: 'contain',
-      background: state.mode === 'template' ? currentTemplate().background : null
+      background: state.mode === 'template' ? currentTemplate().background : currentFrameBackground()
     });
     const filename = filenames[index];
     const card = renderPreviewCard(finalOutput, item, index, filename);
@@ -651,8 +708,11 @@ function renderFramed(sourceImage) {
   canvas.width = frameKit.outputSize.width;
   canvas.height = frameKit.outputSize.height;
 
-  const ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const transparentFrameExport = state.mode === 'frame' && state.frameBackgroundMode === 'transparent';
+  const ctx = canvas.getContext('2d', { alpha: transparentFrameExport });
+  if (!transparentFrameExport) {
+    fillCanvasBackground(ctx, canvas.width, canvas.height, FRAME_BACKGROUND);
+  }
 
   const rect = frameKit.screenRect;
   const scale = Math.max(rect.width / sourceImage.width, rect.height / sourceImage.height);
@@ -693,7 +753,7 @@ function renderTemplate(framedCanvas, item) {
   const canvas = document.createElement('canvas');
   canvas.width = OUTPUT_SIZE.width;
   canvas.height = OUTPUT_SIZE.height;
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext('2d', { alpha: false });
 
   if (template.background.type === 'gradient') {
     const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
@@ -761,7 +821,7 @@ function normalizeOutputCanvas(sourceCanvas, options = {}) {
   const canvas = document.createElement('canvas');
   canvas.width = width;
   canvas.height = height;
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext('2d', { alpha: !background });
   ctx.imageSmoothingQuality = 'high';
 
   if (background) {
@@ -929,7 +989,7 @@ function updatePreviewAtIndex(index) {
     width: OUTPUT_SIZE.width,
     height: OUTPUT_SIZE.height,
     mode: 'contain',
-    background: state.mode === 'template' ? currentTemplate().background : null
+    background: state.mode === 'template' ? currentTemplate().background : currentFrameBackground()
   });
 
   const card = elements.previewGrid.querySelector(`.preview-card[data-index="${index}"]`);
@@ -991,11 +1051,13 @@ function downloadCanvas(canvas, filename) {
 }
 
 function canvasToBlob(canvas) {
-  return new Promise((resolve) => canvas.toBlob(resolve, 'image/png'));
+  const { mime, quality } = currentOutputFormat();
+  return new Promise((resolve) => canvas.toBlob(resolve, mime, quality));
 }
 
 function downloadCanvasDataUrl(canvas, filename) {
-  const dataUrl = canvas.toDataURL('image/png');
+  const { mime, quality } = currentOutputFormat();
+  const dataUrl = canvas.toDataURL(mime, quality);
   const link = document.createElement('a');
   link.href = dataUrl;
   link.download = filename;
@@ -1023,7 +1085,8 @@ async function downloadAllAsTar() {
         const buffer = await blob.arrayBuffer();
         return { name: output.name, data: new Uint8Array(buffer) };
       }
-      const dataUrl = output.canvas.toDataURL('image/png');
+      const { mime, quality } = currentOutputFormat();
+      const dataUrl = output.canvas.toDataURL(mime, quality);
       return { name: output.name, data: dataUrlToUint8(dataUrl) };
     })
   );
@@ -1110,8 +1173,7 @@ function buildBaseKey(item) {
   const frameBase = getFrameBaseName();
   const screenName = item.screenName ? `_${item.screenName}` : '';
   const localeText = item.locale ? `_${item.locale}` : '';
-  const suffix = state.mode === 'template' ? `_${state.templateId}` : '';
-  const raw = `${frameBase}${screenName}${localeText}${suffix}`;
+  const raw = `${frameBase}${screenName}${localeText}`;
   return sanitizeFilename(raw);
 }
 
@@ -1127,6 +1189,7 @@ function sanitizeFilename(name) {
 }
 
 function computeFilenames() {
+  const { extension } = currentOutputFormat();
   const baseKeys = state.images.map((item) => buildBaseKey(item));
   const counts = new Map();
   baseKeys.forEach((key) => counts.set(key, (counts.get(key) ?? 0) + 1));
@@ -1135,11 +1198,11 @@ function computeFilenames() {
   return baseKeys.map((key) => {
     const count = counts.get(key) ?? 1;
     if (count <= 1) {
-      return `${key}.png`;
+      return `${key}.${extension}`;
     }
     const next = (seen.get(key) ?? 0) + 1;
     seen.set(key, next);
-    return `${key}_${next}.png`;
+    return `${key}_${next}.${extension}`;
   });
 }
 
@@ -1178,6 +1241,11 @@ function setUiEnabled(enabled) {
   elements.clear.disabled = !enabled;
   elements.frameSelect.disabled = !enabled;
   document.querySelectorAll('.segmented-btn').forEach((button) => {
+    // Keep frame-background toggle clickable to allow format switching even if other controls are disabled.
+    if (button.dataset.frameBg) {
+      button.disabled = false;
+      return;
+    }
     button.disabled = !enabled;
   });
   document.querySelectorAll('.controls input, .controls select, .template-controls input').forEach((input) => {
