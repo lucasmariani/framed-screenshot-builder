@@ -30,9 +30,10 @@
             <label>Output mode</label>
             <div class="segmented">
               <button type="button" class="segmented-btn active" data-mode="frame">Frame only</button>
-              <button type="button" class="segmented-btn" data-mode="template1">Template 1</button>
-              <button type="button" class="segmented-btn" data-mode="template2">Template 2</button>
-              <button type="button" class="segmented-btn" data-mode="template3">Template 3</button>
+              <button type="button" class="segmented-btn" data-mode="template1">Hero</button>
+              <button type="button" class="segmented-btn" data-mode="template2">Feature</button>
+              <button type="button" class="segmented-btn" data-mode="template3">Single line</button>
+              <button type="button" class="segmented-btn" data-mode="template4">Practice</button>
             </div>
           </div>
 
@@ -50,6 +51,12 @@
 
         <div class="template-controls" id="template-controls">
           <h3>Template settings</h3>
+          <div class="control-row">
+            <label>Bookabulary preset</label>
+            <button id="apply-bookabulary-preset" type="button">Apply ASC Refresh Copy</button>
+            <p class="control-help">Fills the first five screenshots with recommended screen names, copy, and template assignments.</p>
+          </div>
+
           <div class="control-row two">
             <div>
               <label for="headline-size">Headline size</label>
@@ -57,7 +64,7 @@
             </div>
           </div>
 
-          <div class="control-row two subtitle-controls">
+          <div class="control-row two template-subtitle-controls">
             <div>
               <label for="subheadline-size">Subheadline size</label>
               <input id="subheadline-size" type="number" min="10" />
@@ -71,7 +78,7 @@
             </div>
           </div>
 
-          <div class="control-row two subtitle-controls">
+          <div class="control-row two template-subtitle-controls">
             <div>
               <label for="subtext-color">Subheadline color</label>
               <input id="subtext-color" type="color" />
@@ -128,6 +135,6 @@
     </main>
   </div>
 
-  <script src="app.js?v=20260214b"></script>
+  <script src="app.js?v=20260416a"></script>
 </body>
 </html>

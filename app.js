@@ -266,58 +266,130 @@ const EMBEDDED_MANIFEST = {
 const TEMPLATE_DEFINITIONS = {
   template1: {
     id: 'template1',
-    name: 'Template 1',
-    showSubtitle: false,
-    device: { scale: 0.9, offsetX: 0, offsetY: 220 },
-    text: {
-      title: 'Build your vocabulary',
-      titleSize: 96,
-      color: '#1f1b16',
-      fontFamily: '"Bodoni 72", "Didot", "Times New Roman", serif',
-      align: 'center',
-      maxWidth: 1200,
-      lineHeight: 1.1
-    },
-    background: { type: 'gradient', colors: ['#f7f1ea', '#e8efe9'], solid: '#f7f1ea' }
-  },
-  template2: {
-    id: 'template2',
-    name: 'Template 2',
+    name: 'Hero',
     showSubtitle: true,
-    device: { scale: 0.92, offsetX: 0, offsetY: 540 },
+    device: { scale: 0.88, offsetX: 0, offsetY: 520 },
     text: {
-      title: 'Your vocabulary',
-      subtitle: 'Captured from any page, ready to learn.',
-      titleSize: 92,
-      subtitleSize: 44,
+      title: 'Scan Words From Books',
+      subtitle: 'Capture text from books without retyping.',
+      titleSize: 88,
+      subtitleSize: 42,
       color: '#1f1b16',
       subtitleColor: '#4b4037',
       fontFamily: '"Bodoni 72", "Didot", "Times New Roman", serif',
-      subtitleFontFamily: '"Bodoni 72", "Didot", "Times New Roman", serif',
+      subtitleFontFamily: '"Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif',
       align: 'center',
-      maxWidth: 1200,
-      lineHeight: 1.1,
-      topPadding: 180,
-      subtitleSpacing: 32
+      maxWidth: 1120,
+      lineHeight: 1.04,
+      topPadding: 156,
+      subtitleSpacing: 28
     },
-    background: { type: 'gradient', colors: ['#f7f1ea', '#e8efe9'], solid: '#f7f1ea' }
+    background: { type: 'gradient', colors: ['#f7f1ea', '#eee6da'], solid: '#f7f1ea' }
+  },
+  template2: {
+    id: 'template2',
+    name: 'Feature',
+    showSubtitle: true,
+    device: { scale: 0.93, offsetX: 0, offsetY: 610 },
+    text: {
+      title: 'Save Vocabulary Fast',
+      subtitle: 'Keep vocabulary searchable and organized.',
+      titleSize: 84,
+      subtitleSize: 40,
+      color: '#1f1b16',
+      subtitleColor: '#4b4037',
+      fontFamily: '"Bodoni 72", "Didot", "Times New Roman", serif',
+      subtitleFontFamily: '"Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif',
+      align: 'center',
+      maxWidth: 1110,
+      lineHeight: 1.06,
+      topPadding: 164,
+      subtitleSpacing: 24
+    },
+    background: { type: 'gradient', colors: ['#faf5ee', '#ece8de'], solid: '#faf5ee' }
   },
   template3: {
     id: 'template3',
-    name: 'Template 3',
+    name: 'Single line',
     showSubtitle: false,
-    device: { scale: 0.92, offsetX: 0, offsetY: 540 },
+    device: { scale: 0.95, offsetX: 0, offsetY: 570 },
     text: {
-      title: 'Your vocabulary',
-      titleSize: 104,
+      title: 'Practice What You Read',
+      titleSize: 88,
       color: '#1f1b16',
       fontFamily: '"Bodoni 72", "Didot", "Times New Roman", serif',
       align: 'center',
-      maxWidth: 1200,
-      lineHeight: 1.1,
-      topPadding: 200
+      maxWidth: 1120,
+      lineHeight: 1.06,
+      topPadding: 170
     },
-    background: { type: 'gradient', colors: ['#f7f1ea', '#e8efe9'], solid: '#f7f1ea' }
+    background: { type: 'gradient', colors: ['#faf5ef', '#ece5db'], solid: '#faf5ef' }
+  },
+  template4: {
+    id: 'template4',
+    name: 'Practice',
+    showSubtitle: true,
+    device: { scale: 0.96, offsetX: 0, offsetY: 620 },
+    text: {
+      title: 'Test What You Remember',
+      subtitle: 'Use Test sessions to strengthen memory.',
+      titleSize: 82,
+      subtitleSize: 38,
+      color: '#1f1b16',
+      subtitleColor: '#4b4037',
+      fontFamily: '"Bodoni 72", "Didot", "Times New Roman", serif',
+      subtitleFontFamily: '"Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif',
+      align: 'center',
+      maxWidth: 1080,
+      lineHeight: 1.05,
+      topPadding: 164,
+      subtitleSpacing: 22
+    },
+    background: { type: 'gradient', colors: ['#f6f0e8', '#ece7de'], solid: '#f6f0e8' }
+  }
+};
+
+const MARKETING_PRESETS = {
+  bookabularyAscRefresh: {
+    id: 'bookabularyAscRefresh',
+    name: 'Bookabulary ASC Refresh',
+    items: [
+      {
+        templateId: 'template1',
+        screenName: '01_scan',
+        locale: 'en-US',
+        headline: 'Scan Words From Books',
+        subheadline: 'Capture text from books without retyping.'
+      },
+      {
+        templateId: 'template2',
+        screenName: '02_vocabulary',
+        locale: 'en-US',
+        headline: 'Tap A Word For Meaning',
+        subheadline: 'Go from page to meaning in seconds.'
+      },
+      {
+        templateId: 'template2',
+        screenName: '03_detail',
+        locale: 'en-US',
+        headline: 'Save Vocabulary Fast',
+        subheadline: 'Keep vocabulary searchable and organized.'
+      },
+      {
+        templateId: 'template4',
+        screenName: '04_study',
+        locale: 'en-US',
+        headline: 'Practice What You Read',
+        subheadline: 'Turn saved words into repeat review.'
+      },
+      {
+        templateId: 'template4',
+        screenName: '05_test',
+        locale: 'en-US',
+        headline: 'Test What You Remember',
+        subheadline: 'Use Test sessions to strengthen memory.'
+      }
+    ]
   }
 };
 
@@ -344,6 +416,7 @@ const elements = {
   frameSelect: document.getElementById('frame-select'),
   frameExportControls: document.getElementById('frame-export-controls'),
   templateControls: document.getElementById('template-controls'),
+  applyBookabularyPreset: document.getElementById('apply-bookabulary-preset'),
   headlineSize: document.getElementById('headline-size'),
   subheadlineSize: document.getElementById('subheadline-size'),
   textColor: document.getElementById('text-color'),
@@ -355,8 +428,16 @@ const elements = {
 
 const templates = JSON.parse(JSON.stringify(TEMPLATE_DEFINITIONS));
 
+function getTemplate(templateId = state.templateId) {
+  return templates[templateId] ?? templates[state.templateId];
+}
+
 function currentTemplate() {
-  return templates[state.templateId];
+  return getTemplate(state.templateId);
+}
+
+function templateForItem(item) {
+  return getTemplate(item?.templateId);
 }
 
 function currentOutputFormat() {
@@ -380,6 +461,19 @@ function syncFrameBackgroundInputs() {
   });
 }
 
+function syncModeInputs() {
+  document.querySelectorAll('[data-mode]').forEach((button) => {
+    const isActive = button.dataset.mode === (state.mode === 'frame' ? 'frame' : state.templateId);
+    button.classList.toggle('active', isActive);
+  });
+}
+
+function syncTemplateBackgroundInputs() {
+  document.querySelectorAll('[data-bg]').forEach((button) => {
+    button.classList.toggle('active', button.dataset.bg === currentTemplate().background.type);
+  });
+}
+
 function updateModeVisibility() {
   if (elements.templateControls) {
     elements.templateControls.style.display = state.mode === 'template' ? 'grid' : 'none';
@@ -394,6 +488,8 @@ init();
 async function init() {
   syncTemplateInputs();
   syncFrameBackgroundInputs();
+  syncModeInputs();
+  syncTemplateBackgroundInputs();
   syncFrameInputs();
   updateSubtitleVisibility();
   updateModeVisibility();
@@ -444,8 +540,6 @@ function wireEvents() {
 
   document.querySelectorAll('[data-mode]').forEach((button) => {
     button.addEventListener('click', () => {
-      document.querySelectorAll('[data-mode]').forEach((btn) => btn.classList.remove('active'));
-      button.classList.add('active');
       const mode = button.dataset.mode;
       if (mode === 'frame') {
         state.mode = 'frame';
@@ -453,9 +547,11 @@ function wireEvents() {
         state.mode = 'template';
         state.templateId = mode;
       }
+      syncModeInputs();
       updateModeVisibility();
       updateSubtitleVisibility();
       syncTemplateInputs();
+      syncTemplateBackgroundInputs();
       renderAll();
     });
   });
@@ -474,10 +570,9 @@ function wireEvents() {
 
   document.querySelectorAll('[data-bg]').forEach((button) => {
     button.addEventListener('click', () => {
-      document.querySelectorAll('[data-bg]').forEach((btn) => btn.classList.remove('active'));
-      button.classList.add('active');
       state.backgroundMode = button.dataset.bg;
       currentTemplate().background.type = state.backgroundMode;
+      syncTemplateBackgroundInputs();
       renderAll();
     });
   });
@@ -525,6 +620,10 @@ function wireEvents() {
     renderAll();
   });
 
+  elements.applyBookabularyPreset?.addEventListener('click', () => {
+    applyMarketingPreset('bookabularyAscRefresh');
+  });
+
   elements.downloadAll.addEventListener('click', downloadAll);
   elements.clear.addEventListener('click', clearAll);
 }
@@ -538,11 +637,12 @@ function syncTemplateInputs() {
   elements.deviceScale.value = template.device.scale;
   elements.deviceOffset.value = template.device.offsetY;
   elements.bgColor.value = template.background.solid;
+  state.backgroundMode = template.background.type;
 }
 
 function updateSubtitleVisibility() {
   const template = currentTemplate();
-  document.querySelectorAll('.subtitle-controls').forEach((el) => {
+  document.querySelectorAll('.template-subtitle-controls').forEach((el) => {
     if (!template.showSubtitle) {
       el.style.display = 'none';
       return;
@@ -639,7 +739,8 @@ async function handleFiles(fileList) {
         screenName: '',
         locale: '',
         headline: '',
-        subheadline: ''
+        subheadline: '',
+        templateId: state.templateId
       });
     } else {
       failed += 1;
@@ -671,11 +772,12 @@ function renderAll() {
   state.images.forEach((item, index) => {
     const framedCanvas = renderFramed(item.image);
     const renderedCanvas = state.mode === 'template' ? renderTemplate(framedCanvas, item) : framedCanvas;
+    const itemTemplate = templateForItem(item);
     const finalOutput = normalizeOutputCanvas(renderedCanvas, {
       width: OUTPUT_SIZE.width,
       height: OUTPUT_SIZE.height,
       mode: 'contain',
-      background: state.mode === 'template' ? currentTemplate().background : currentFrameBackground()
+      background: state.mode === 'template' ? itemTemplate.background : currentFrameBackground()
     });
     const filename = filenames[index];
     const card = renderPreviewCard(finalOutput, item, index, filename);
@@ -749,7 +851,7 @@ function roundedRectPath(ctx, x, y, width, height, radius) {
 }
 
 function renderTemplate(framedCanvas, item) {
-  const template = currentTemplate();
+  const template = templateForItem(item);
   const canvas = document.createElement('canvas');
   canvas.width = OUTPUT_SIZE.width;
   canvas.height = OUTPUT_SIZE.height;
@@ -921,9 +1023,26 @@ function renderPreviewCard(canvas, item, index, filename) {
     updateAllFilenameDisplays();
   });
 
+  let templateSelect = null;
   let headlineInput = null;
   let subheadlineInput = null;
   if (state.mode === 'template') {
+    templateSelect = document.createElement('select');
+    templateSelect.className = 'card-template-select';
+    Object.values(templates).forEach((template) => {
+      const option = document.createElement('option');
+      option.value = template.id;
+      option.textContent = template.name;
+      option.selected = (item.templateId ?? state.templateId) === template.id;
+      templateSelect.appendChild(option);
+    });
+    templateSelect.disabled = !state.enabled;
+    templateSelect.addEventListener('change', () => {
+      item.templateId = templateSelect.value;
+      syncCardTemplateVisibility(card, item);
+      updatePreviewAtIndex(index);
+    });
+
     headlineInput = document.createElement('input');
     headlineInput.type = 'text';
     headlineInput.className = 'headline-input';
@@ -937,7 +1056,7 @@ function renderPreviewCard(canvas, item, index, filename) {
 
     subheadlineInput = document.createElement('input');
     subheadlineInput.type = 'text';
-    subheadlineInput.className = 'subheadline-input subtitle-controls';
+    subheadlineInput.className = 'subheadline-input';
     subheadlineInput.placeholder = 'Subheadline';
     subheadlineInput.value = item.subheadline ?? '';
     subheadlineInput.disabled = !state.enabled;
@@ -966,8 +1085,9 @@ function renderPreviewCard(canvas, item, index, filename) {
   });
 
   actions.append(button, removeButton);
-  if (headlineInput && subheadlineInput) {
-    card.append(preview, name, input, localeInput, headlineInput, subheadlineInput, actions);
+  if (templateSelect && headlineInput && subheadlineInput) {
+    card.append(preview, name, input, localeInput, templateSelect, headlineInput, subheadlineInput, actions);
+    syncCardTemplateVisibility(card, item);
   } else {
     card.append(preview, name, input, localeInput, actions);
   }
@@ -985,11 +1105,12 @@ function updatePreviewAtIndex(index) {
 
   const framedCanvas = renderFramed(item.image);
   const renderedCanvas = state.mode === 'template' ? renderTemplate(framedCanvas, item) : framedCanvas;
+  const itemTemplate = templateForItem(item);
   const finalOutput = normalizeOutputCanvas(renderedCanvas, {
     width: OUTPUT_SIZE.width,
     height: OUTPUT_SIZE.height,
     mode: 'contain',
-    background: state.mode === 'template' ? currentTemplate().background : currentFrameBackground()
+    background: state.mode === 'template' ? itemTemplate.background : currentFrameBackground()
   });
 
   const card = elements.previewGrid.querySelector(`.preview-card[data-index="${index}"]`);
@@ -1002,6 +1123,43 @@ function updatePreviewAtIndex(index) {
 
   const name = state.outputs[index]?.name ?? computeFilenames()[index];
   state.outputs[index] = { canvas: finalOutput, name };
+}
+
+function syncCardTemplateVisibility(card, item) {
+  const subheadlineInput = card.querySelector('.subheadline-input');
+  if (!subheadlineInput) {
+    return;
+  }
+  const template = templateForItem(item);
+  subheadlineInput.style.display = template.showSubtitle ? 'block' : 'none';
+}
+
+function applyMarketingPreset(presetId) {
+  const preset = MARKETING_PRESETS[presetId];
+  if (!preset || !state.images.length) {
+    return;
+  }
+
+  const appliedCount = Math.min(state.images.length, preset.items.length);
+  for (let index = 0; index < appliedCount; index += 1) {
+    const item = state.images[index];
+    const slot = preset.items[index];
+    item.templateId = slot.templateId;
+    item.screenName = slot.screenName;
+    item.locale = slot.locale;
+    item.headline = slot.headline;
+    item.subheadline = slot.subheadline;
+  }
+
+  state.mode = 'template';
+  state.templateId = preset.items[0]?.templateId ?? state.templateId;
+  syncModeInputs();
+  updateModeVisibility();
+  syncTemplateInputs();
+  syncTemplateBackgroundInputs();
+  updateSubtitleVisibility();
+  renderAll();
+  elements.status.textContent = `Applied ${preset.name} to ${appliedCount} screenshot(s)`;
 }
 
 async function downloadAll() {
@@ -1240,6 +1398,9 @@ function setUiEnabled(enabled) {
   elements.downloadAll.disabled = !enabled;
   elements.clear.disabled = !enabled;
   elements.frameSelect.disabled = !enabled;
+  if (elements.applyBookabularyPreset) {
+    elements.applyBookabularyPreset.disabled = !enabled;
+  }
   document.querySelectorAll('.segmented-btn').forEach((button) => {
     // Keep frame-background toggle clickable to allow format switching even if other controls are disabled.
     if (button.dataset.frameBg) {

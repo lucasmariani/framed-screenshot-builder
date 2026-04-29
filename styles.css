@@ -234,6 +234,10 @@ h1 {
   display: none;
 }
 
+.template-subtitle-controls {
+  display: none;
+}
+
 .segmented-btn.active {
   background: rgba(31, 27, 22, 0.1);
   color: var(--ink);
@@ -248,6 +252,13 @@ h1 {
   margin: 0 0 6px;
   font-family: var(--heading);
   font-size: 18px;
+}
+
+.control-help {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
 }
 
 
@@ -328,16 +339,20 @@ button:disabled {
 
 .screen-name-input,
 .locale-input,
+.card-template-select,
 .headline-input,
 .subheadline-input {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 8px 10px;
   font-size: 13px;
+  background: white;
+  color: var(--ink);
 }
 
 .screen-name-input:disabled,
 .locale-input:disabled,
+.card-template-select:disabled,
 .headline-input:disabled,
 .subheadline-input:disabled {
   opacity: 0.6;
