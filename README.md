@@ -31,6 +31,12 @@ swiftc -module-cache-path /tmp/swift-module-cache tools/generate_frame_manifest.
 /tmp/generate_frame_manifest
 ```
 
+The generator derives `assets/` and `frame-manifest.json` from this repo by default. You can also pass explicit paths:
+
+```bash
+/tmp/generate_frame_manifest /path/to/assets /path/to/frame-manifest.json
+```
+
 Update the `FRAME_KIT` constants in `app.js` only if you change the base frame geometry defaults.
 
 ## Templates

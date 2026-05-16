@@ -1,10 +1,28 @@
 import AppKit
 import Foundation
 
-let framesDir = URL(fileURLWithPath: "/Users/lucas/Developer/Bookabulary/framed-screenshot-builder/assets")
-let outputURL = URL(fileURLWithPath: "/Users/lucas/Developer/Bookabulary/framed-screenshot-builder/frame-manifest.json")
-
 let fm = FileManager.default
+let scriptURL = URL(fileURLWithPath: #filePath)
+let repoRoot = scriptURL.deletingLastPathComponent().deletingLastPathComponent()
+
+func urlFromArgument(_ argument: String) -> URL {
+    let url = URL(fileURLWithPath: argument)
+    if url.path == argument {
+        return url
+    }
+    return URL(fileURLWithPath: fm.currentDirectoryPath).appendingPathComponent(argument)
+}
+
+let framesDir = CommandLine.arguments.dropFirst().first.map(urlFromArgument)
+    ?? repoRoot.appendingPathComponent("assets", isDirectory: true)
+let outputURL = CommandLine.arguments.dropFirst(2).first.map(urlFromArgument)
+    ?? repoRoot.appendingPathComponent("frame-manifest.json")
+
+guard fm.fileExists(atPath: framesDir.path) else {
+    fputs("Frames directory not found: \(framesDir.path)\n", stderr)
+    exit(1)
+}
+
 let files = try fm.contentsOfDirectory(at: framesDir, includingPropertiesForKeys: nil)
     .filter { $0.pathExtension.lowercased() == "png" }
     .filter { !$0.lastPathComponent.contains("@") }
@@ -201,6 +219,7 @@ let manifest: [String: Any] = [
 ]
 
 let data = try JSONSerialization.data(withJSONObject: manifest, options: [.prettyPrinted, .sortedKeys])
+try fm.createDirectory(at: outputURL.deletingLastPathComponent(), withIntermediateDirectories: true)
 try data.write(to: outputURL)
 
 print("Wrote manifest to", outputURL.path)
