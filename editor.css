@@ -86,7 +86,7 @@
 .scene-panel,
 .inspector-panel {
   padding: 16px;
-  max-height: calc(100vh - 164px);
+  max-height: var(--editor-panel-height, calc(100vh - 205px));
   overflow: auto;
   position: sticky;
   top: 18px;
@@ -174,7 +174,8 @@
 }
 
 .stage-panel {
-  min-height: calc(100vh - 164px);
+  height: var(--editor-panel-height, calc(100vh - 205px));
+  min-height: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -190,6 +191,13 @@
   background: rgba(255, 255, 255, 0.52);
 }
 
+.stage-toolbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
 .segmented.compact {
   flex-wrap: nowrap;
   min-width: 205px;
@@ -197,6 +205,17 @@
 
 .segmented.compact .segmented-btn {
   padding: 8px 12px;
+  white-space: nowrap;
+}
+
+.segmented.canvas-scale {
+  flex-wrap: nowrap;
+  gap: 3px;
+  padding: 3px;
+}
+
+.segmented.canvas-scale .segmented-btn {
+  padding: 6px 9px;
   white-space: nowrap;
 }
 
@@ -218,11 +237,32 @@
 }
 
 .stage-scroll {
+  flex: 1;
   min-height: 0;
-  height: calc(100vh - 224px);
+  height: auto;
   overflow: auto;
   padding: 22px;
   background: linear-gradient(135deg, rgba(28, 22, 18, 0.05), rgba(28, 22, 18, 0.015));
+}
+
+.stage-scroll.fit-canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.stage-scroll.fit-canvas .stage-canvas-shell {
+  box-sizing: content-box;
+  width: auto;
+  height: calc(100% - 20px);
+  aspect-ratio: 1320 / 2868;
+  margin: 0;
+}
+
+.stage-scroll.fit-canvas #stage-canvas {
+  width: 100%;
+  height: 100%;
 }
 
 .stage-canvas-shell {
@@ -531,6 +571,10 @@
     flex-direction: column;
   }
 
+  .stage-toolbar-controls {
+    flex-wrap: wrap;
+  }
+
   .stage-meta {
     align-items: flex-start;
   }
@@ -550,6 +594,28 @@
   }
 
   .stage-scroll {
+    height: auto;
+  }
+
+  .stage-panel {
+    height: auto;
+  }
+
+  .stage-scroll.fit-canvas {
+    display: block;
+    overflow: auto;
+  }
+
+  .stage-scroll.fit-canvas .stage-canvas-shell {
+    box-sizing: border-box;
+    width: min(100%, 610px);
+    height: auto;
+    aspect-ratio: auto;
+    margin: 0 auto;
+  }
+
+  .stage-scroll.fit-canvas #stage-canvas {
+    width: 100%;
     height: auto;
   }
 }

@@ -23,6 +23,7 @@ For each screenshot you can:
 - Adjust the paper color, accent glow, and texture.
 - Save/open a portable JSON project; browser edits also autosave locally.
 - Export one full-resolution PNG or all six as a TAR archive. All exported PNGs are **1320 × 2868**.
+- Keep the complete screenshot visible with the default **Fit** canvas mode, then switch to **Zoom** for detailed positioning.
 
 The built-in editable scenes use extracted device artwork from the approved Omato compositions, while **Current PNG** always shows the original finished screenshot for comparison.
 All six editable titles begin with one shared typography preset, and all six subtitles begin with a second shared preset, so the set is consistent before any per-scene changes.

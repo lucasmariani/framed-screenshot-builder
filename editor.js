@@ -166,6 +166,8 @@ const elements = {
   sceneList: document.getElementById('scene-list'),
   sceneCount: document.getElementById('scene-count'),
   stageCanvas: document.getElementById('stage-canvas'),
+  stagePanel: document.querySelector('.stage-panel'),
+  stageScroll: document.getElementById('stage-scroll'),
   stageName: document.getElementById('stage-name'),
   stageHint: document.getElementById('stage-hint'),
   layerList: document.getElementById('layer-list'),
@@ -221,6 +223,7 @@ const state = {
   selectedSceneId: null,
   selectedLayerId: 'title',
   view: 'editable',
+  canvasScale: 'fit',
   imageCache: new Map(),
   drag: null,
   saveTimer: null,
@@ -256,6 +259,16 @@ function selectedLayer() {
 
 function setStatus(message) {
   elements.status.textContent = message;
+}
+
+function syncPanelHeightToViewport() {
+  if (window.matchMedia('(max-width: 760px)').matches) {
+    document.documentElement.style.removeProperty('--editor-panel-height');
+    return;
+  }
+  const panelTop = elements.stagePanel.getBoundingClientRect().top;
+  const availableHeight = Math.max(420, window.innerHeight - panelTop - 18);
+  document.documentElement.style.setProperty('--editor-panel-height', `${Math.floor(availableHeight)}px`);
 }
 
 function clamp(value, min, max, fallback = min) {
@@ -1291,6 +1304,15 @@ function wireActions() {
       await renderStage();
     });
   });
+  document.querySelectorAll('[data-canvas-scale]').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.canvasScale = button.dataset.canvasScale;
+      document.querySelectorAll('[data-canvas-scale]').forEach((candidate) => {
+        candidate.classList.toggle('active', candidate === button);
+      });
+      elements.stageScroll.classList.toggle('fit-canvas', state.canvasScale === 'fit');
+    });
+  });
   elements.addImage.addEventListener('change', () => addImageFromFile(elements.addImage.files[0]));
   elements.replaceImage.addEventListener('change', () => addImageFromFile(elements.replaceImage.files[0], true));
   elements.duplicateLayer.addEventListener('click', duplicateSelectedLayer);
@@ -1322,6 +1344,7 @@ function wireActions() {
   elements.stageCanvas.addEventListener('pointerup', handlePointerUp);
   elements.stageCanvas.addEventListener('pointercancel', handlePointerUp);
   elements.stageCanvas.addEventListener('keydown', handleCanvasKeydown);
+  window.addEventListener('resize', syncPanelHeightToViewport);
 }
 
 async function init() {
@@ -1329,6 +1352,7 @@ async function init() {
   wireActions();
   await renderGallery();
   await selectScene(state.selectedSceneId);
+  syncPanelHeightToViewport();
   setStatus(loadStoredProject() ? 'Restored local edits' : 'Omato ASC project ready');
 }
 
