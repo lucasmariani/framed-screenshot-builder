@@ -358,6 +358,46 @@
   line-height: 1.45;
 }
 
+.image-size-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.image-size-heading label {
+  display: block;
+}
+
+.image-size-heading output {
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.image-size-controls {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) 36px;
+  align-items: center;
+  gap: 9px;
+}
+
+.image-size-controls button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 50%;
+  background: white;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.image-size-controls input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: ew-resize;
+}
+
 .section-title-row {
   display: flex;
   align-items: center;

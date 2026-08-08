@@ -19,7 +19,7 @@ Open `editor.html` (or select **Open ASC Editor** from the frame builder) to edi
 For each screenshot you can:
 
 - Edit title and subtitle text, font family, weight, size, line height, tracking, color, and alignment.
-- Select, drag, position, resize, rotate, replace, duplicate, reorder, or delete image layers.
+- Select, drag, position, resize with a dedicated slider or − / + controls, rotate, replace, duplicate, reorder, or delete image layers.
 - Adjust the paper color, accent glow, and texture.
 - Save/open a portable JSON project; browser edits also autosave locally.
 - Export one full-resolution PNG or all six as a TAR archive. All exported PNGs are **1320 × 2868**.

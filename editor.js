@@ -175,6 +175,7 @@ const elements = {
   layerX: document.getElementById('layer-x'),
   layerY: document.getElementById('layer-y'),
   layerWidth: document.getElementById('layer-width'),
+  layerWidthLabel: document.getElementById('layer-width-label'),
   textControls: document.getElementById('text-controls'),
   imageControls: document.getElementById('image-controls'),
   textContent: document.getElementById('text-content'),
@@ -187,6 +188,10 @@ const elements = {
   letterSpacing: document.getElementById('letter-spacing'),
   textColor: document.getElementById('editor-text-color'),
   textAlign: document.getElementById('text-align'),
+  imageSize: document.getElementById('image-size'),
+  imageSizeValue: document.getElementById('image-size-value'),
+  imageSmaller: document.getElementById('image-smaller'),
+  imageLarger: document.getElementById('image-larger'),
   imageRotation: document.getElementById('image-rotation'),
   imageOpacity: document.getElementById('image-opacity'),
   imageShadow: document.getElementById('image-shadow'),
@@ -686,6 +691,7 @@ function syncInspector() {
   elements.layerX.value = Math.round(layer.x * 10) / 10;
   elements.layerY.value = Math.round(layer.y * 10) / 10;
   elements.layerWidth.value = Math.round(layer.width * 10) / 10;
+  elements.layerWidthLabel.textContent = layer.type === 'image' ? 'Image width' : 'Text box width';
   elements.textControls.hidden = layer.type !== 'text';
   elements.imageControls.hidden = layer.type !== 'image';
   elements.duplicateLayer.disabled = layer.type !== 'image';
@@ -701,6 +707,8 @@ function syncInspector() {
     elements.textColor.value = layer.color;
     elements.textAlign.value = layer.align;
   } else {
+    elements.imageSize.value = clamp(layer.width, 40, 3000, 1000);
+    elements.imageSizeValue.value = `${Math.round(layer.width)} px`;
     elements.imageRotation.value = layer.rotation;
     elements.imageOpacity.value = layer.opacity;
     elements.imageShadow.checked = Boolean(layer.shadow);
@@ -1209,6 +1217,28 @@ function wireInspector() {
   elements.textAlign.addEventListener('change', async () => {
     selectedLayer().align = elements.textAlign.value;
     await commitVisualChange();
+  });
+
+  bindNumber(elements.imageSize, (value) => { selectedLayer().width = value; }, {
+    min: 40,
+    max: 3000,
+    fallback: () => selectedLayer()?.width
+  });
+  elements.imageSmaller.addEventListener('click', async () => {
+    const layer = selectedLayer();
+    if (layer?.type !== 'image') {
+      return;
+    }
+    layer.width = clamp(Math.round(layer.width * 0.9), 40, 3000, layer.width);
+    await commitVisualChange(`Reduced ${layer.name}`);
+  });
+  elements.imageLarger.addEventListener('click', async () => {
+    const layer = selectedLayer();
+    if (layer?.type !== 'image') {
+      return;
+    }
+    layer.width = clamp(Math.round(layer.width * 1.1), 40, 3000, layer.width);
+    await commitVisualChange(`Enlarged ${layer.name}`);
   });
 
   bindNumber(elements.imageRotation, (value) => { selectedLayer().rotation = value; }, {
