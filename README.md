@@ -27,6 +27,13 @@ For each screenshot you can:
 The built-in editable scenes use extracted device artwork from the approved Omato compositions, while **Current PNG** always shows the original finished screenshot for comparison.
 All six editable titles begin with one shared typography preset, and all six subtitles begin with a second shared preset, so the set is consistent before any per-scene changes.
 
+Directly opening `editor.html` with a `file://` URL is supported. The editor loads its built-in device layers from `embedded-device-assets.js` in that mode so browsers do not taint the export canvas. Regenerate that bundle after changing a built-in device PNG:
+
+```bash
+node tools/generate_embedded_device_assets.mjs
+node tools/generate_embedded_device_assets.mjs --check
+```
+
 Notes:
 - Running via `http://localhost` enables directory saving in Chrome using the File System Access API.
 - All processing happens locally in the browser; nothing is uploaded.

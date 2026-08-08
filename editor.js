@@ -2,6 +2,8 @@ const OUTPUT_SIZE = { width: 1320, height: 2868 };
 const STORAGE_KEY = 'omato.ascScreenshotEditor.v1';
 const PROJECT_VERSION = 1;
 const ASSET_ROOT = 'project-assets/omato-asc';
+const USE_EMBEDDED_ASSETS = window.location.protocol === 'file:'
+  || new URLSearchParams(window.location.search).has('embeddedAssets');
 const TITLE_PRESET = {
   x: 78,
   y: 120,
@@ -292,7 +294,13 @@ function loadImage(src) {
     image.decoding = 'async';
     image.onload = () => resolve(image);
     image.onerror = () => reject(new Error(`Could not load ${src}`));
-    image.src = encodeURI(src);
+    const embeddedSource = USE_EMBEDDED_ASSETS
+      ? globalThis.OMATO_EMBEDDED_DEVICE_ASSETS?.[src]
+      : null;
+    const resolvedSource = embeddedSource || src;
+    image.src = resolvedSource.startsWith('data:') || resolvedSource.startsWith('blob:')
+      ? resolvedSource
+      : encodeURI(resolvedSource);
   });
   state.imageCache.set(src, promise);
   return promise;
