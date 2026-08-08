@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omato ASC Screenshot Editor</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="styles.css?v=20260807b" />
+  <link rel="stylesheet" href="editor.css?v=20260807b" />
+</head>
+<body class="editor-body">
+  <div class="editor-app">
+    <header class="editor-header">
+      <div class="editor-title-group">
+        <a class="back-link" href="index.html">← Frame builder</a>
+        <div>
+          <p class="kicker">Omato marketing studio</p>
+          <h1>ASC Screenshot Editor</h1>
+          <p class="sub">Edit the six App Store screenshots as real text and image layers. Everything stays local.</p>
+        </div>
+      </div>
+
+      <div class="project-actions" aria-label="Project actions">
+        <button id="open-project" type="button">Open project</button>
+        <input id="project-file" type="file" accept="application/json,.json" hidden />
+        <button id="save-project" type="button">Save project</button>
+        <button id="reset-project" class="ghost" type="button">Reset</button>
+        <button id="export-current" class="primary" type="button">Export PNG</button>
+        <button id="export-all" class="primary" type="button">Export all</button>
+      </div>
+    </header>
+
+    <div class="editor-status-row">
+      <div class="status" id="editor-status" role="status">Loading Omato ASC project…</div>
+      <div class="autosave-note">Autosaves in this browser · Output 1320 × 2868</div>
+    </div>
+
+    <main class="editor-layout">
+      <aside class="scene-panel editor-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="panel-eyebrow">Screenshots</p>
+            <h2>Current set</h2>
+          </div>
+          <span id="scene-count" class="count">6 scenes</span>
+        </div>
+        <div id="scene-list" class="scene-list" aria-label="Screenshot list"></div>
+      </aside>
+
+      <section class="stage-panel editor-panel" aria-label="Screenshot canvas">
+        <div class="stage-toolbar">
+          <div class="segmented compact" aria-label="Canvas view">
+            <button class="segmented-btn active" type="button" data-view="editable">Editable</button>
+            <button class="segmented-btn" type="button" data-view="reference">Current PNG</button>
+          </div>
+          <div class="stage-meta">
+            <strong id="stage-name">Screenshot</strong>
+            <span id="stage-hint">Click or drag a layer to move it</span>
+          </div>
+        </div>
+
+        <div class="stage-scroll" id="stage-scroll">
+          <div class="stage-canvas-shell">
+            <canvas id="stage-canvas" width="1320" height="2868" tabindex="0" aria-label="Editable App Store screenshot"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <aside class="inspector-panel editor-panel">
+        <div class="panel-heading inspector-heading">
+          <div>
+            <p class="panel-eyebrow">Inspector</p>
+            <h2 id="inspector-title">Title</h2>
+          </div>
+          <button id="duplicate-layer" class="icon-button" type="button" title="Duplicate selected image layer" aria-label="Duplicate selected image layer">Duplicate</button>
+        </div>
+
+        <section class="inspector-section">
+          <label for="scene-name">Screenshot name</label>
+          <input id="scene-name" type="text" />
+          <label for="scene-filename">Export filename</label>
+          <input id="scene-filename" type="text" />
+        </section>
+
+        <section class="inspector-section">
+          <div class="section-title-row">
+            <h3>Layers</h3>
+            <label class="small-file-button">
+              Add image
+              <input id="add-image" type="file" accept="image/*" hidden />
+            </label>
+          </div>
+          <div id="layer-list" class="layer-list"></div>
+        </section>
+
+        <section id="common-controls" class="inspector-section">
+          <h3>Position</h3>
+          <div class="field-grid two-columns">
+            <label>X <input id="layer-x" type="number" step="1" /></label>
+            <label>Y <input id="layer-y" type="number" step="1" /></label>
+          </div>
+          <label>Layer width <input id="layer-width" type="number" min="20" max="3000" step="1" /></label>
+          <p class="field-help">You can also drag the selected layer directly on the canvas. Arrow keys nudge by 1 px; Shift + arrow nudges by 10 px.</p>
+        </section>
+
+        <section id="text-controls" class="inspector-section">
+          <h3>Typography</h3>
+          <label for="text-content">Text</label>
+          <textarea id="text-content" rows="3" spellcheck="true"></textarea>
+
+          <div class="field-grid two-columns">
+            <label for="font-family">Font
+              <select id="font-family">
+                <option value="Bodoni 72">Bodoni 72</option>
+                <option value="Didot">Didot</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Avenir Next">Avenir Next</option>
+                <option value="SF Pro Display">SF Pro Display</option>
+                <option value="system-ui">System UI</option>
+              </select>
+            </label>
+            <label for="font-weight">Weight
+              <select id="font-weight">
+                <option value="300">Light · 300</option>
+                <option value="400">Regular · 400</option>
+                <option value="500">Medium · 500</option>
+                <option value="600">Semibold · 600</option>
+                <option value="700">Bold · 700</option>
+                <option value="800">Extra bold · 800</option>
+                <option value="900">Black · 900</option>
+              </select>
+            </label>
+          </div>
+
+          <label for="custom-font">Custom font family</label>
+          <div class="inline-field">
+            <input id="custom-font" type="text" placeholder="e.g. New York" />
+            <button id="apply-custom-font" type="button">Apply</button>
+          </div>
+
+          <div class="field-grid two-columns">
+            <label for="font-size">Size <input id="font-size" type="number" min="8" max="500" step="1" /></label>
+            <label for="line-height">Line height <input id="line-height" type="number" min="0.5" max="3" step="0.01" /></label>
+            <label for="letter-spacing">Tracking <input id="letter-spacing" type="number" min="-20" max="80" step="0.5" /></label>
+            <label for="text-color">Color <input id="editor-text-color" type="color" /></label>
+          </div>
+
+          <label for="text-align">Alignment</label>
+          <select id="text-align">
+            <option value="left">Left</option>
+            <option value="center">Center</option>
+            <option value="right">Right</option>
+          </select>
+        </section>
+
+        <section id="image-controls" class="inspector-section" hidden>
+          <h3>Image</h3>
+          <label class="replace-image-button">
+            Replace selected image
+            <input id="replace-image" type="file" accept="image/*" hidden />
+          </label>
+          <div class="field-grid two-columns">
+            <label for="image-rotation">Rotation <input id="image-rotation" type="number" min="-180" max="180" step="0.1" /></label>
+            <label for="image-opacity">Opacity <input id="image-opacity" type="number" min="0" max="1" step="0.01" /></label>
+          </div>
+          <label class="check-row"><input id="image-shadow" type="checkbox" /> Device shadow</label>
+          <div class="layer-actions">
+            <button id="move-layer-up" type="button">Move forward</button>
+            <button id="move-layer-down" type="button">Move backward</button>
+            <button id="delete-layer" class="danger" type="button">Delete layer</button>
+          </div>
+        </section>
+
+        <section class="inspector-section">
+          <h3>Background</h3>
+          <div class="field-grid two-columns">
+            <label for="background-color">Paper <input id="background-color" type="color" /></label>
+            <label for="accent-color">Accent <input id="accent-color" type="color" /></label>
+            <label for="accent-x">Glow X <input id="accent-x" type="number" step="1" /></label>
+            <label for="accent-y">Glow Y <input id="accent-y" type="number" step="1" /></label>
+            <label for="accent-radius">Glow size <input id="accent-radius" type="number" min="100" max="2400" step="10" /></label>
+            <label for="accent-opacity">Glow opacity <input id="accent-opacity" type="number" min="0" max="1" step="0.01" /></label>
+          </div>
+          <label for="paper-texture">Paper texture <input id="paper-texture" type="number" min="0" max="1" step="0.01" /></label>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script src="editor.js?v=20260807b"></script>
+</body>
+</html>

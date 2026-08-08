@@ -1,6 +1,6 @@
 # Framed Screenshot Builder
 
-Local-only, client-side mockup tool for 6.9" iPhone frames. Drag screenshots in, get framed PNGs out.
+Local-only, client-side tools for framing iPhone screenshots and editing Omato's App Store Connect artwork.
 
 ## Quick start
 
@@ -11,6 +11,21 @@ Local-only, client-side mockup tool for 6.9" iPhone frames. Drag screenshots in,
 - Use **Apply ASC Refresh Copy** to fill the first five screenshots with the current Bookabulary App Store copy, ordering, and template assignments.
 - Adjust template settings globally, then fine-tune each screenshot with its own template and headline fields in the preview cards.
 - Click **Download all**.
+
+## ASC screenshot editor
+
+Open `editor.html` (or select **Open ASC Editor** from the frame builder) to edit the six current English App Store screenshots. The editor includes the current finished PNG beside an editable version of every scene.
+
+For each screenshot you can:
+
+- Edit title and subtitle text, font family, weight, size, line height, tracking, color, and alignment.
+- Select, drag, position, resize, rotate, replace, duplicate, reorder, or delete image layers.
+- Adjust the paper color, accent glow, and texture.
+- Save/open a portable JSON project; browser edits also autosave locally.
+- Export one full-resolution PNG or all six as a TAR archive. All exported PNGs are **1320 × 2868**.
+
+The built-in editable scenes use extracted device artwork from the approved Omato compositions, while **Current PNG** always shows the original finished screenshot for comparison.
+All six editable titles begin with one shared typography preset, and all six subtitles begin with a second shared preset, so the set is consistent before any per-scene changes.
 
 Notes:
 - Running via `http://localhost` enables directory saving in Chrome using the File System Access API.
