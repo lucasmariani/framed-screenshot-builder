@@ -832,6 +832,22 @@ function renderFramed(sourceImage) {
 
   ctx.drawImage(state.frame, 0, 0, canvas.width, canvas.height);
 
+  // The frame assets leave the sensor area transparent. Simulator screenshots
+  // can omit the island, so composite its resting capsule explicitly.
+  // All bundled portrait assets use a 3x screen scale.
+  const islandWidth = 126 * 3;
+  const islandHeight = 37 * 3;
+  ctx.fillStyle = '#000000';
+  ctx.beginPath();
+  ctx.roundRect(
+    rect.x + (rect.width - islandWidth) / 2,
+    rect.y + 11 * 3,
+    islandWidth,
+    islandHeight,
+    islandHeight / 2
+  );
+  ctx.fill();
+
   return canvas;
 }
 
