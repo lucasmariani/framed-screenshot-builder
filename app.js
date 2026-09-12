@@ -830,18 +830,35 @@ function renderFramed(sourceImage) {
   ctx.fill();
   ctx.restore();
 
-  ctx.drawImage(state.frame, 0, 0, canvas.width, canvas.height);
+  // Native 1206 x 2622 reference captures have a 376 x 110 resting island,
+  // 42 pixels below the screen top. These are screen pixels, not percentages
+  // of the bezel. All bundled assets have 3x screens, including Pro Max/Air.
+  // Air's sensor assembly sits 18 pixels lower (verified against its artwork).
+  const islandWidth = 376;
+  const islandHeight = 110;
+  const islandTop = frameKit.frameSrc.includes('iPhone_air-') ? 60 : 42;
+  const islandX = rect.x + (rect.width - islandWidth) / 2;
+  const islandY = rect.y + islandTop;
 
-  // The frame assets leave the sensor area transparent. Simulator screenshots
-  // can omit the island, so composite its resting capsule explicitly.
-  // All bundled portrait assets use a 3x screen scale.
-  const islandWidth = 126 * 3;
-  const islandHeight = 37 * 3;
+  // Keep a native island's existing antialiasing rather than painting over it.
+  // Check across its interior, away from the curved edge and status-bar icons.
+  const islandPixels = ctx.getImageData(islandX, islandY, islandWidth, islandHeight).data;
+  const hasNativeIsland = [0.25, 0.5, 0.75].every((y) =>
+    [0.15, 0.5, 0.85].every((x) => {
+      const offset = (Math.floor(y * islandHeight) * islandWidth + Math.floor(x * islandWidth)) * 4;
+      return islandPixels[offset] < 16 && islandPixels[offset + 1] < 16 &&
+        islandPixels[offset + 2] < 16 && islandPixels[offset + 3] > 240;
+    })
+  );
+  ctx.drawImage(state.frame, 0, 0, canvas.width, canvas.height);
+  if (hasNativeIsland) {
+    return canvas;
+  }
   ctx.fillStyle = '#000000';
   ctx.beginPath();
   ctx.roundRect(
-    rect.x + (rect.width - islandWidth) / 2,
-    rect.y + 11 * 3,
+    islandX,
+    islandY,
     islandWidth,
     islandHeight,
     islandHeight / 2

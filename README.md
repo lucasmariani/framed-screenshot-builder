@@ -44,6 +44,11 @@ Notes:
 - Frames directory: `assets/`
 - Manifest: `frame-manifest.json`
 - A manifest is required; if it's missing, the app disables uploads and downloads.
+- Missing Dynamic Islands are composited at native screen scale: 376 × 110 pixels,
+  centered 42 pixels below the screen top (60 pixels for iPhone Air). The resting
+  size and standard offset were measured from the seven previous native Omato
+  captures at 1206 × 2622; Air's offset follows its frame's sensor artwork.
+  Screenshots that already contain a black island retain their original edges.
 
 ### Regenerate the manifest
 
