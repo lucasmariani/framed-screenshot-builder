@@ -125,3 +125,7 @@ Frame-only exports now support two options in the UI:
 - **Transparent (PNG)**: preserves alpha around the framed device.
 
 You can change the solid color by editing `FRAME_BACKGROUND` in `app.js`.
+
+Revision 5 refines only the backgrounds of Test, Translation, and Conjugations:
+three photographic ivory/paper/bookcloth compositions replace the repeated sage
+curve. The first five exports, all copy, and all device layers remain unchanged.

@@ -1,3 +1,32 @@
+# Revision 5 — final-three background refinement
+
+Scope: background layers only for Test (6), Translation (7), and Conjugations (8). The selected ivory/sage literary direction is retained. Before-state: commit 1938838. Source style references: existing campaign PNGs and background-book.png. New background-only image assets were generated and visually inspected individually.
+
+## Evidence and normalization
+
+Combined comparison: output/reading-companion/qa-backgrounds-v5.jpg shows all three before and after compositions together. Each 1320 × 2868 export is normalized to 264 × 574. Final detail board: output/reading-companion/last-three-backgrounds.jpg. Browser preview checked at 1280 × 720 with 264 CSS px images; the final conjugation image visibly loads the new paper background. Original backgrounds are 851 × 1848/1849 and scale proportionally to 1322 px wide with x=-1, ensuring full bleed without stretching.
+
+## Findings
+
+The repeated hard sage curve was replaced by physical paper/book surfaces with quiet ivory copy areas. Test uses warm window light, a subtle notebook edge, and oak. Translation uses sage bookcloth and an open book. Conjugations uses fanned cream pages, sage binding, and oak. The narrow visible side regions carry the material detail while the app remains dominant. No dark texture or object crosses the marketing copy. No actionable P0/P1/P2 findings in the final comparison.
+
+Fonts and typography: unchanged Bodoni/Avenir scale, wrapping, and contrast. Spacing and layout: every device and text coordinate unchanged. Color: warm ivory, soft sage, and oak remain consistent with concept 1. Image quality: original app screenshots retained; newly generated backgrounds contain no UI or lettering and have clean crops. Copy/content: unchanged.
+
+## Checks
+
+- First five PNGs verified byte-identical to the preceding commit.
+- All text and device-layer objects verified unchanged in the project JSON.
+- Eight RGB PNGs, embedded portable project, and ZIP rebuilt; ZIP integrity passed.
+- Browser gallery shows refreshed image assets and eight scenes.
+- Source syntax and Git whitespace checks passed.
+- Earlier browser autosaves preserved under their prior key.
+
+Photographic details are deliberately subtle at mobile size; background raster resolution is lower than the 1320 × 2868 export, while the genuine UI retains its original source resolution. No App Store upload performed.
+
+final result: passed
+
+---
+
 # Revision 4 — conjugations appended
 
 An eighth image now follows translation, using the original device-conjugations.png capture and the existing sage layout. Copy: “Know your verb forms.” / “Explore conjugations across tenses.” Both layers fit two lines at the established 178 px and 90 px sizes.
