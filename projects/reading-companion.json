@@ -7,9 +7,9 @@
   },
   "scenes": [
     {
-      "id": "rc-v2-1",
-      "name": "Turn reading into vocabulary",
-      "filename": "01-turn-reading-into-vocabulary.png",
+      "id": "rc-v3-1",
+      "name": "Scan a page",
+      "filename": "01-scan-a-page.png",
       "background": {
         "color": "#f6f2e9",
         "accent": "#a9b49e",
@@ -37,9 +37,9 @@
           "type": "image",
           "name": "Feature Phone",
           "src": "project-assets/reading-companion/device-scan.png",
-          "x": 60,
+          "x": 210,
           "y": 900,
-          "width": 1200,
+          "width": 900,
           "rotation": 0,
           "opacity": 1,
           "shadow": true
@@ -64,7 +64,7 @@
           "id": "subtitle",
           "type": "text",
           "name": "Subtitle",
-          "text": "Scan a page.\nKeep the words you find.",
+          "text": "Scan a page\nfrom your book.",
           "x": 84,
           "y": 625,
           "width": 1152,
@@ -95,9 +95,153 @@
       ]
     },
     {
-      "id": "rc-v2-2",
-      "name": "Dictionary for readers",
-      "filename": "02-dictionary-for-readers.png",
+      "id": "rc-v3-2",
+      "name": "Tap a word to look it up",
+      "filename": "02-tap-a-word.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-paper.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "feature-phone",
+          "type": "image",
+          "name": "Feature Phone",
+          "src": "project-assets/reading-companion/device-word-selection.png",
+          "x": 60,
+          "y": 900,
+          "width": 1200,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Tap a word.\nLook it up.",
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 178,
+          "lineHeight": 1.02,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Choose a word from\nthe scanned page.",
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 90,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "rc-v3-3",
+      "name": "Every lookup in your vocabulary",
+      "filename": "03-your-looked-up-words.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-book.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "feature-phone",
+          "type": "image",
+          "name": "Feature Phone",
+          "src": "project-assets/reading-companion/device-vocabulary.png",
+          "x": 60,
+          "y": 900,
+          "width": 1200,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Every lookup.\nIn one place.",
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 178,
+          "lineHeight": 1.02,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Words you look up\nlive in your vocabulary.",
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 90,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "rc-v3-4",
+      "name": "Read dictionary definitions",
+      "filename": "04-dictionary-definitions.png",
       "background": {
         "color": "#f6f2e9",
         "accent": "#a9b49e",
@@ -167,9 +311,153 @@
       ]
     },
     {
-      "id": "rc-v2-3",
+      "id": "rc-v3-5",
+      "name": "Practice with Study mode",
+      "filename": "05-study-your-words.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-paper.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "feature-phone",
+          "type": "image",
+          "name": "Feature Phone",
+          "src": "project-assets/reading-companion/device-study-after.png",
+          "x": 60,
+          "y": 900,
+          "width": 1200,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Study your\nnew words.",
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 178,
+          "lineHeight": 1.02,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Recall the meaning.\nTap to reveal it.",
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 90,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "rc-v3-6",
+      "name": "Practice with Test mode",
+      "filename": "06-test-your-memory.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-sage.png",
+          "x": -340,
+          "y": 0,
+          "width": 2000,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "feature-phone",
+          "type": "image",
+          "name": "Feature Phone",
+          "src": "project-assets/reading-companion/device-test.png",
+          "x": 60,
+          "y": 900,
+          "width": 1200,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Test what\nyou remember.",
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 178,
+          "lineHeight": 1.02,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Type the missing word.\nCheck your answer.",
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 90,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "rc-v3-7",
       "name": "Translation for language learners",
-      "filename": "03-translation-for-learners.png",
+      "filename": "07-translate-as-you-read.png",
       "background": {
         "color": "#f6f2e9",
         "accent": "#a9b49e",
@@ -225,222 +513,6 @@
           "type": "text",
           "name": "Subtitle",
           "text": "Translate words.\nBuild your vocabulary.",
-          "x": 84,
-          "y": 625,
-          "width": 1152,
-          "fontFamily": "Avenir Next",
-          "fontWeight": 500,
-          "fontSize": 90,
-          "lineHeight": 1.15,
-          "letterSpacing": 0,
-          "color": "#20251e",
-          "align": "left"
-        }
-      ]
-    },
-    {
-      "id": "rc-v2-4",
-      "name": "Practice your vocabulary",
-      "filename": "04-practice-your-vocabulary.png",
-      "background": {
-        "color": "#f6f2e9",
-        "accent": "#a9b49e",
-        "accentX": 660,
-        "accentY": 1500,
-        "accentRadius": 900,
-        "accentOpacity": 0,
-        "texture": 0
-      },
-      "layers": [
-        {
-          "id": "background",
-          "type": "image",
-          "name": "Background",
-          "src": "project-assets/reading-companion/background-sage.png",
-          "x": -340,
-          "y": 0,
-          "width": 2000,
-          "rotation": 0,
-          "opacity": 1,
-          "shadow": false
-        },
-        {
-          "id": "feature-phone",
-          "type": "image",
-          "name": "Feature Phone",
-          "src": "project-assets/reading-companion/device-test.png",
-          "x": 60,
-          "y": 900,
-          "width": 1200,
-          "rotation": 0,
-          "opacity": 1,
-          "shadow": true
-        },
-        {
-          "id": "title",
-          "type": "text",
-          "name": "Title",
-          "text": "Make new\nwords stick.",
-          "x": 80,
-          "y": 210,
-          "width": 1160,
-          "fontFamily": "Bodoni 72",
-          "fontWeight": 700,
-          "fontSize": 178,
-          "lineHeight": 1.02,
-          "letterSpacing": 0,
-          "color": "#20251e",
-          "align": "left"
-        },
-        {
-          "id": "subtitle",
-          "type": "text",
-          "name": "Subtitle",
-          "text": "Practice the words\nyou discover.",
-          "x": 84,
-          "y": 625,
-          "width": 1152,
-          "fontFamily": "Avenir Next",
-          "fontWeight": 500,
-          "fontSize": 90,
-          "lineHeight": 1.15,
-          "letterSpacing": 0,
-          "color": "#20251e",
-          "align": "left"
-        }
-      ]
-    },
-    {
-      "id": "rc-v2-5",
-      "name": "Your vocabulary collection",
-      "filename": "05-your-vocabulary-collection.png",
-      "background": {
-        "color": "#f6f2e9",
-        "accent": "#a9b49e",
-        "accentX": 660,
-        "accentY": 1500,
-        "accentRadius": 900,
-        "accentOpacity": 0,
-        "texture": 0
-      },
-      "layers": [
-        {
-          "id": "background",
-          "type": "image",
-          "name": "Background",
-          "src": "project-assets/reading-companion/background-book.png",
-          "x": 0,
-          "y": 0,
-          "width": 1320,
-          "rotation": 0,
-          "opacity": 1,
-          "shadow": false
-        },
-        {
-          "id": "feature-phone",
-          "type": "image",
-          "name": "Feature Phone",
-          "src": "project-assets/reading-companion/device-vocabulary.png",
-          "x": 60,
-          "y": 900,
-          "width": 1200,
-          "rotation": 0,
-          "opacity": 1,
-          "shadow": true
-        },
-        {
-          "id": "title",
-          "type": "text",
-          "name": "Title",
-          "text": "Your words.\nOne collection.",
-          "x": 80,
-          "y": 210,
-          "width": 1160,
-          "fontFamily": "Bodoni 72",
-          "fontWeight": 700,
-          "fontSize": 178,
-          "lineHeight": 1.02,
-          "letterSpacing": 0,
-          "color": "#20251e",
-          "align": "left"
-        },
-        {
-          "id": "subtitle",
-          "type": "text",
-          "name": "Subtitle",
-          "text": "Save your discoveries.\nFind them again.",
-          "x": 84,
-          "y": 625,
-          "width": 1152,
-          "fontFamily": "Avenir Next",
-          "fontWeight": 500,
-          "fontSize": 90,
-          "lineHeight": 1.15,
-          "letterSpacing": 0,
-          "color": "#20251e",
-          "align": "left"
-        }
-      ]
-    },
-    {
-      "id": "rc-v2-6",
-      "name": "Study your saved words",
-      "filename": "06-study-your-saved-words.png",
-      "background": {
-        "color": "#f6f2e9",
-        "accent": "#a9b49e",
-        "accentX": 660,
-        "accentY": 1500,
-        "accentRadius": 900,
-        "accentOpacity": 0,
-        "texture": 0
-      },
-      "layers": [
-        {
-          "id": "background",
-          "type": "image",
-          "name": "Background",
-          "src": "project-assets/reading-companion/background-paper.png",
-          "x": 0,
-          "y": 0,
-          "width": 1320,
-          "rotation": 0,
-          "opacity": 1,
-          "shadow": false
-        },
-        {
-          "id": "feature-phone",
-          "type": "image",
-          "name": "Feature Phone",
-          "src": "project-assets/reading-companion/device-study-after.png",
-          "x": 60,
-          "y": 900,
-          "width": 1200,
-          "rotation": 0,
-          "opacity": 1,
-          "shadow": true
-        },
-        {
-          "id": "title",
-          "type": "text",
-          "name": "Title",
-          "text": "Recall.\nReveal. Repeat.",
-          "x": 80,
-          "y": 210,
-          "width": 1160,
-          "fontFamily": "Bodoni 72",
-          "fontWeight": 700,
-          "fontSize": 178,
-          "lineHeight": 1.02,
-          "letterSpacing": 0,
-          "color": "#20251e",
-          "align": "left"
-        },
-        {
-          "id": "subtitle",
-          "type": "text",
-          "name": "Subtitle",
-          "text": "Study your vocabulary,\none card at a time.",
           "x": 84,
           "y": 625,
           "width": 1152,

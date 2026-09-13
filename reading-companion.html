@@ -12,18 +12,18 @@
 </style>
 </head>
 <body>
-<header><div><p class="eyebrow">Omato · App Store campaign</p><h1>The Reading Companion</h1><p>Six screenshots · English · 1320 × 2868</p></div><nav aria-label="Campaign actions"><a href="output/reading-companion/omato-reading-companion.zip" download>Download all six</a><a href="editor.html?campaign=reading-companion">Edit screenshots</a></nav></header>
+<header><div><p class="eyebrow">Omato · App Store campaign</p><h1>The Reading Companion</h1><p>Seven screenshots · English · 1320 × 2868</p></div><nav aria-label="Campaign actions"><a href="output/reading-companion/omato-reading-companion.zip" download>Download all seven</a><a href="editor.html?campaign=reading-companion&amp;revision=3">Edit screenshots</a></nav></header>
 <div class="view-controls" role="group" aria-label="Preview size"><button id="mobile-view" aria-pressed="true">Mobile size</button><button id="large-view" aria-pressed="false">Large overview</button><span id="view-hint">264 px screenshots · Swipe to browse</span></div>
 <main id="gallery" class="mobile" aria-label="Screenshot preview"></main>
 <footer>Original app captures with editable headlines and photographic backgrounds. Select an image to inspect it at full resolution.</footer>
 <script>
 const galleryElement=document.getElementById('gallery');
 for(const [id,mobile] of [['mobile-view',true],['large-view',false]])document.getElementById(id).addEventListener('click',()=>{galleryElement.classList.toggle('mobile',mobile);document.getElementById('mobile-view').setAttribute('aria-pressed',String(mobile));document.getElementById('large-view').setAttribute('aria-pressed',String(!mobile));document.getElementById('view-hint').textContent=mobile?'264 px screenshots · Swipe to browse':'Full set · Select an image for full resolution';});
-fetch('projects/reading-companion.json?v=2').then(r=>{if(!r.ok)throw new Error('Campaign unavailable');return r.json()}).then(project=>{
+fetch('projects/reading-companion.json?v=3').then(r=>{if(!r.ok)throw new Error('Campaign unavailable');return r.json()}).then(project=>{
  const gallery=document.getElementById('gallery');
  for(const [index,scene] of project.scenes.entries()){
   const figure=document.createElement('figure');const link=document.createElement('a');link.href='output/reading-companion/'+scene.filename;link.target='_blank';link.rel='noopener';
-  const img=new Image();img.src=link.href+'?v=2';img.alt=scene.name;img.width=1320;img.height=2868;link.append(img);
+  const img=new Image();img.src=link.href+'?v=3';img.alt=scene.name;img.width=1320;img.height=2868;link.append(img);
   const caption=document.createElement('figcaption');const label=document.createElement('span');label.textContent=String(index+1).padStart(2,'0')+' · '+scene.name;
   const download=document.createElement('a');download.href=link.href;download.download=scene.filename;download.textContent='Download PNG';caption.append(label,download);figure.append(link,caption);gallery.append(figure);
  }

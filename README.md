@@ -16,7 +16,7 @@ Local-only, client-side tools for framing iPhone screenshots and editing Omato's
 
 ### The Reading Companion campaign
 
-Serve this folder locally and open `reading-companion.html` to review the six-image
+Serve this folder locally and open `reading-companion.html` to review the seven-image
 ivory-and-sage campaign selected on September 12, 2026. The gallery includes the
 1320 × 2868 PNGs, a ZIP download, and an **Edit screenshots** link.
 
@@ -40,11 +40,13 @@ preview; regenerate the PNGs and ZIP together after changing the project. Run
 `python3 tools/package_campaign.py` (Pillow required) after rendering to rebuild
 the RGB PNGs, ZIP, portable JSON, and small-size previews.
 
-Revision 2 gives dictionary lookup and translation their own images in positions
-2 and 3. Practice, collection, and Study follow as shared benefits. All scenes
-use one 1200-pixel-wide device layer, 178-pixel headlines, and 90-pixel supporting
-copy. The gallery defaults to a swipeable 264-pixel image preview; the large
-overview is optional. Revision 1 browser autosaves remain under their old key.
+Revision 3 follows the reading journey: scan → tap a word → vocabulary list →
+dictionary definition → Study → Test → translation. The opening scan device is
+fully visible at 900 px wide, including its shutter and navigation controls.
+Other scenes use a larger 1200 px device crop. Headlines remain 178 px and
+supporting copy 90 px. The gallery defaults to a swipeable 264 px image preview.
+Each revision preserves earlier browser autosaves under its previous key.
+
 
 ### Original campaign
 

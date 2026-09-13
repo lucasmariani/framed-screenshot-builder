@@ -1,3 +1,41 @@
+# Reading Companion revision 3 — design QA
+
+September 12, 2026. Current result supersedes revision 2 below.
+
+## Revision 3 target and evidence
+
+User target: full scan screen, tappable word selection, saved vocabulary list, dictionary definitions, Study, Test, then translation. Art direction remains concept 1. Source before-state: commit 306baf5. Implementation: seven 1320 × 2868 RGB PNGs named in projects/reading-companion.json.
+
+Combined evidence: output/reading-companion/qa-comparison-v3.jpg places the old and revised first two images in one input, all normalized to 264 × 574. The change in scene 2 content is intentional. Full-set evidence: output/reading-companion/qa-mobile-strip.jpg. Focused browser evidence: qa-v3-scan.jpg and qa-v3-word-selection.jpg in that directory, captured at 390 × 844 with 264 px image widths. Viewport restored after inspection.
+
+## Findings and resolved issues
+
+- Resolved P1: scan shutter and navigation were cropped out. The first device is now 900 px wide, x=210, y=900. Its complete visible frame and screen fit the canvas; browser inspection confirms shutter, keyboard/manual button, flash, and all four tabs.
+- Resolved P1: the scan-to-lookup interaction was absent. Scene 2 now uses the supplied word-selection capture with its native tap instruction and explicit tap-to-look-up marketing headline.
+- Resolved P1: sequence did not match the requested journey. Seven scenes now follow scan, selection, vocabulary, dictionary, Study, Test, translation. Vocabulary copy explicitly says looked-up words live there.
+- No remaining actionable P0/P1/P2 issues in this revision.
+
+## Fidelity and verification
+
+Typography remains Bodoni 72 Bold 178 px and Avenir Next Medium 90 px; every title and supporting passage fits two lines. Ivory, sage, book imagery, shared margins, and clear background/text separation remain intact. The first phone intentionally has a smaller scale to show all controls; remaining device crops prioritize app content. Original app UI, Dynamic Islands, and the new word-selection capture are unchanged. No fabricated tap overlays or UI were added.
+
+The mobile browser inspection confirms the first complete phone and the next selection step. Editor navigation loads seven scenes, reports ready, and successfully exports 01-scan-a-page.png. The package helper verified seven opaque RGB images, rebuilt the portable embedded project, and checked the seven-file ZIP integrity. The full set was inspected at 264 px per image. No live App Store upload or conversion test was performed.
+
+## Checklist
+
+- [x] Complete scan screen and controls visible.
+- [x] Actual word-selection screen explains tapping.
+- [x] Vocabulary list follows and explains saved lookups.
+- [x] Dictionary, Study, Test, then translation in the requested order.
+- [x] Mobile-size copy and original art direction retained.
+- [x] Seven-scene editor and exports verified.
+
+final result: passed
+
+---
+
+## Previous revision audit (historical)
+
 # Reading Companion revision 2 — design QA
 
 September 12, 2026. Revision target: distinguish dictionary readers from translation users and make the campaign legible on mobile. Source art direction: /Users/lucas/Developer/Omato/marketing-screenshots/design/concept-1.png. Before state: commit 36af633. Implementation: the six PNGs named in projects/reading-companion.json under output/reading-companion/.

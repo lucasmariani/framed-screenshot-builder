@@ -1,6 +1,6 @@
 const OUTPUT_SIZE = { width: 1320, height: 2868 };
 const CAMPAIGN = new URLSearchParams(window.location.search).get('campaign');
-const STORAGE_KEY = `omato.ascScreenshotEditor.v1${CAMPAIGN === 'reading-companion' ? '.reading-companion.v2' : ''}`;
+const STORAGE_KEY = `omato.ascScreenshotEditor.v1${CAMPAIGN === 'reading-companion' ? '.reading-companion.v3' : ''}`;
 const PROJECT_VERSION = 1;
 const ASSET_ROOT = 'project-assets/omato-asc';
 const USE_EMBEDDED_ASSETS = window.location.protocol === 'file:'
@@ -1005,7 +1005,7 @@ async function openProjectFile(file) {
 }
 
 async function resetProject() {
-  if (!window.confirm('Reset all six screenshots to the built-in editable project?')) {
+  if (!window.confirm('Reset all screenshots to the default editable project?')) {
     return;
   }
   state.project = clone(defaultProject);

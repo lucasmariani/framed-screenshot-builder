@@ -1,6 +1,6 @@
 [
   {
-    "scene": "rc-v2-1",
+    "scene": "rc-v3-1",
     "text": [
       {
         "id": "title",
@@ -19,8 +19,8 @@
       {
         "id": "subtitle",
         "lines": [
-          "Scan a page.",
-          "Keep the words you find."
+          "Scan a page",
+          "from your book."
         ],
         "bounds": {
           "x": 84,
@@ -46,7 +46,73 @@
     ]
   },
   {
-    "scene": "rc-v2-2",
+    "scene": "rc-v3-2",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Tap a word.",
+          "Look it up."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Choose a word from",
+          "the scanned page."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "rc-v3-3",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Every lookup.",
+          "In one place."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Words you look up",
+          "live in your vocabulary."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "rc-v3-4",
     "text": [
       {
         "id": "title",
@@ -79,7 +145,73 @@
     ]
   },
   {
-    "scene": "rc-v2-3",
+    "scene": "rc-v3-5",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Study your",
+          "new words."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Recall the meaning.",
+          "Tap to reveal it."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "rc-v3-6",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Test what",
+          "you remember."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Type the missing word.",
+          "Check your answer."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "rc-v3-7",
     "text": [
       {
         "id": "title",
@@ -100,105 +232,6 @@
         "lines": [
           "Translate words.",
           "Build your vocabulary."
-        ],
-        "bounds": {
-          "x": 84,
-          "y": 625,
-          "width": 1152,
-          "height": 206.99999999999997,
-          "rotation": 0
-        }
-      }
-    ]
-  },
-  {
-    "scene": "rc-v2-4",
-    "text": [
-      {
-        "id": "title",
-        "lines": [
-          "Make new",
-          "words stick."
-        ],
-        "bounds": {
-          "x": 80,
-          "y": 210,
-          "width": 1160,
-          "height": 363.12,
-          "rotation": 0
-        }
-      },
-      {
-        "id": "subtitle",
-        "lines": [
-          "Practice the words",
-          "you discover."
-        ],
-        "bounds": {
-          "x": 84,
-          "y": 625,
-          "width": 1152,
-          "height": 206.99999999999997,
-          "rotation": 0
-        }
-      }
-    ]
-  },
-  {
-    "scene": "rc-v2-5",
-    "text": [
-      {
-        "id": "title",
-        "lines": [
-          "Your words.",
-          "One collection."
-        ],
-        "bounds": {
-          "x": 80,
-          "y": 210,
-          "width": 1160,
-          "height": 363.12,
-          "rotation": 0
-        }
-      },
-      {
-        "id": "subtitle",
-        "lines": [
-          "Save your discoveries.",
-          "Find them again."
-        ],
-        "bounds": {
-          "x": 84,
-          "y": 625,
-          "width": 1152,
-          "height": 206.99999999999997,
-          "rotation": 0
-        }
-      }
-    ]
-  },
-  {
-    "scene": "rc-v2-6",
-    "text": [
-      {
-        "id": "title",
-        "lines": [
-          "Recall.",
-          "Reveal. Repeat."
-        ],
-        "bounds": {
-          "x": 80,
-          "y": 210,
-          "width": 1160,
-          "height": 363.12,
-          "rotation": 0
-        }
-      },
-      {
-        "id": "subtitle",
-        "lines": [
-          "Study your vocabulary,",
-          "one card at a time."
         ],
         "bounds": {
           "x": 84,
