@@ -132,7 +132,7 @@
         "id": "subtitle",
         "lines": [
           "Explore meanings",
-          "in the book’s language."
+          "in the book\u2019s language."
         ],
         "bounds": {
           "x": 84,
@@ -232,6 +232,39 @@
         "lines": [
           "Translate words.",
           "Build your vocabulary."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "rc-v4-8",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Know your",
+          "verb forms."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Explore conjugations",
+          "across tenses."
         ],
         "bounds": {
           "x": 84,

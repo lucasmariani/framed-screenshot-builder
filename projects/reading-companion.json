@@ -525,6 +525,78 @@
           "align": "left"
         }
       ]
+    },
+    {
+      "id": "rc-v4-8",
+      "name": "Explore verb conjugations",
+      "filename": "08-explore-conjugations.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-sage.png",
+          "x": -340,
+          "y": 0,
+          "width": 2000,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "feature-phone",
+          "type": "image",
+          "name": "Feature Phone",
+          "src": "project-assets/reading-companion/device-conjugations.png",
+          "x": 60,
+          "y": 900,
+          "width": 1200,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Know your\nverb forms.",
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 178,
+          "lineHeight": 1.02,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Explore conjugations\nacross tenses.",
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 90,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
     }
   ]
 }

@@ -1,3 +1,17 @@
+# Revision 4 — conjugations appended
+
+An eighth image now follows translation, using the original device-conjugations.png capture and the existing sage layout. Copy: “Know your verb forms.” / “Explore conjugations across tenses.” Both layers fit two lines at the established 178 px and 90 px sizes.
+
+Source style: revision 3 translation composition, output/reading-companion/07-translate-as-you-read.png. Implementation: 08-explore-conjugations.png in that directory. The pair is normalized together to 264 × 574 in qa-conjugations-pair.jpg. Native 1320 × 2868 export inspected for phone crop and the complete present-tense table. Mobile-size browser preview inspected at 264 CSS px in a 1280 × 720 viewport.
+
+The new image retains the same fonts, margins, colors, sage transition, and device scale. The actual conjugation UI is unchanged. No title/body clipping or overlap observed. The continuing imperfect table is intentionally cropped below the fully visible present table. No actionable P0/P1/P2 differences from the established style.
+
+Eight RGB PNGs, portable embedded project, and eight-file ZIP regenerated and integrity checked. Existing seven images retain their order. Browser gallery shows eight entries with conjugations last. Earlier browser autosaves preserved under their prior key. Checks are local; no App Store upload performed.
+
+final result: passed
+
+---
+
 # Reading Companion revision 3 — design QA
 
 September 12, 2026. Current result supersedes revision 2 below.

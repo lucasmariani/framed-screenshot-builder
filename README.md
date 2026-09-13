@@ -16,7 +16,7 @@ Local-only, client-side tools for framing iPhone screenshots and editing Omato's
 
 ### The Reading Companion campaign
 
-Serve this folder locally and open `reading-companion.html` to review the seven-image
+Serve this folder locally and open `reading-companion.html` to review the eight-image
 ivory-and-sage campaign selected on September 12, 2026. The gallery includes the
 1320 × 2868 PNGs, a ZIP download, and an **Edit screenshots** link.
 
@@ -46,6 +46,7 @@ fully visible at 900 px wide, including its shutter and navigation controls.
 Other scenes use a larger 1200 px device crop. Headlines remain 178 px and
 supporting copy 90 px. The gallery defaults to a swipeable 264 px image preview.
 Each revision preserves earlier browser autosaves under its previous key.
+Revision 4 appends a conjugation image after translation: “Know your verb forms.”
 
 
 ### Original campaign
