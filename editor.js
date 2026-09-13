@@ -1,6 +1,6 @@
 const OUTPUT_SIZE = { width: 1320, height: 2868 };
 const CAMPAIGN = new URLSearchParams(window.location.search).get('campaign');
-const STORAGE_KEY = `omato.ascScreenshotEditor.v1${CAMPAIGN === 'reading-companion' ? '.reading-companion' : ''}`;
+const STORAGE_KEY = `omato.ascScreenshotEditor.v1${CAMPAIGN === 'reading-companion' ? '.reading-companion.v2' : ''}`;
 const PROJECT_VERSION = 1;
 const ASSET_ROOT = 'project-assets/omato-asc';
 const USE_EMBEDDED_ASSETS = window.location.protocol === 'file:'

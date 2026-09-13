@@ -26,7 +26,7 @@ campaign. Titles, supporting copy, background photographs, and original device
 captures remain separate editable layers. Use **Save project** for a portable
 JSON with embedded assets. This campaign route requires the local HTTP server.
 
-The campaign uses macOS **Bodoni 72 Bold** and **Avenir Next Regular**. Browser
+The campaign uses macOS **Bodoni 72 Bold** and **Avenir Next Medium**. Browser
 exports use those installed fonts. Backgrounds are generated photographic assets;
 all app UI comes from the supplied, unchanged framed captures.
 
@@ -36,7 +36,15 @@ with `@napi-rs/canvas`. Set `NODE_PATH` to a directory containing that package a
 from the macOS font collections; registering only a TTC may select the wrong
 weight. Run `node tools/render_project.cjs projects/reading-companion.json
 output/reading-companion`. Exported review assets are checked in for immediate
-preview; regenerate the PNGs and ZIP together after changing the project.
+preview; regenerate the PNGs and ZIP together after changing the project. Run
+`python3 tools/package_campaign.py` (Pillow required) after rendering to rebuild
+the RGB PNGs, ZIP, portable JSON, and small-size previews.
+
+Revision 2 gives dictionary lookup and translation their own images in positions
+2 and 3. Practice, collection, and Study follow as shared benefits. All scenes
+use one 1200-pixel-wide device layer, 178-pixel headlines, and 90-pixel supporting
+copy. The gallery defaults to a swipeable 264-pixel image preview; the large
+overview is optional. Revision 1 browser autosaves remain under their old key.
 
 ### Original campaign
 

@@ -1,6 +1,6 @@
 [
   {
-    "scene": "rc-1",
+    "scene": "rc-v2-1",
     "text": [
       {
         "id": "title",
@@ -9,24 +9,24 @@
           "into vocabulary."
         ],
         "bounds": {
-          "x": 98,
-          "y": 235,
-          "width": 1124,
-          "height": 294,
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
           "rotation": 0
         }
       },
       {
         "id": "subtitle",
         "lines": [
-          "Scan a page. Look up words.",
-          "Practice them later."
+          "Scan a page.",
+          "Keep the words you find."
         ],
         "bounds": {
-          "x": 102,
-          "y": 600,
-          "width": 1116,
-          "height": 132.23999999999998,
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
           "rotation": 0
         }
       },
@@ -46,162 +46,165 @@
     ]
   },
   {
-    "scene": "rc-2",
+    "scene": "rc-v2-2",
     "text": [
       {
         "id": "title",
         "lines": [
-          "Find the meaning.",
-          "In your language."
+          "A dictionary",
+          "for your book."
         ],
         "bounds": {
-          "x": 98,
-          "y": 235,
-          "width": 1124,
-          "height": 294,
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
           "rotation": 0
         }
       },
       {
         "id": "subtitle",
         "lines": [
-          "Choose definitions or translations."
+          "Explore meanings",
+          "in the book’s language."
         ],
         "bounds": {
-          "x": 102,
-          "y": 600,
-          "width": 1116,
-          "height": 66.11999999999999,
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
           "rotation": 0
         }
       }
     ]
   },
   {
-    "scene": "rc-3",
+    "scene": "rc-v2-3",
     "text": [
       {
         "id": "title",
         "lines": [
-          "Make new words",
-          "stick."
+          "Read in a",
+          "new language."
         ],
         "bounds": {
-          "x": 98,
-          "y": 235,
-          "width": 1124,
-          "height": 294,
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
           "rotation": 0
         }
       },
       {
         "id": "subtitle",
         "lines": [
-          "Practice recalling the words you save."
+          "Translate words.",
+          "Build your vocabulary."
         ],
         "bounds": {
-          "x": 102,
-          "y": 600,
-          "width": 1116,
-          "height": 66.11999999999999,
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
           "rotation": 0
         }
       }
     ]
   },
   {
-    "scene": "rc-4",
+    "scene": "rc-v2-4",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Make new",
+          "words stick."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Practice the words",
+          "you discover."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "rc-v2-5",
     "text": [
       {
         "id": "title",
         "lines": [
           "Your words.",
-          "All in one place."
+          "One collection."
         ],
         "bounds": {
-          "x": 98,
-          "y": 235,
-          "width": 1124,
-          "height": 294,
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
           "rotation": 0
         }
       },
       {
         "id": "subtitle",
         "lines": [
-          "Build a personal, searchable vocabulary."
+          "Save your discoveries.",
+          "Find them again."
         ],
         "bounds": {
-          "x": 102,
-          "y": 600,
-          "width": 1116,
-          "height": 66.11999999999999,
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
           "rotation": 0
         }
       }
     ]
   },
   {
-    "scene": "rc-5",
+    "scene": "rc-v2-6",
     "text": [
       {
         "id": "title",
         "lines": [
-          "Try to recall it.",
-          "Then reveal it."
+          "Recall.",
+          "Reveal. Repeat."
         ],
         "bounds": {
-          "x": 98,
-          "y": 235,
-          "width": 1124,
-          "height": 294,
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
           "rotation": 0
         }
       },
       {
         "id": "subtitle",
         "lines": [
-          "Study your saved words,",
+          "Study your vocabulary,",
           "one card at a time."
         ],
         "bounds": {
-          "x": 102,
-          "y": 600,
-          "width": 1116,
-          "height": 132.23999999999998,
-          "rotation": 0
-        }
-      }
-    ]
-  },
-  {
-    "scene": "rc-6",
-    "text": [
-      {
-        "id": "title",
-        "lines": [
-          "Learn how",
-          "the word works."
-        ],
-        "bounds": {
-          "x": 98,
-          "y": 235,
-          "width": 1124,
-          "height": 294,
-          "rotation": 0
-        }
-      },
-      {
-        "id": "subtitle",
-        "lines": [
-          "Explore examples, synonyms,",
-          "and verb forms."
-        ],
-        "bounds": {
-          "x": 102,
-          "y": 600,
-          "width": 1116,
-          "height": 132.23999999999998,
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
           "rotation": 0
         }
       }

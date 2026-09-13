@@ -1,85 +1,50 @@
-# Reading Companion campaign QA — 2026-09-12
+# Reading Companion revision 2 — design QA
 
-**Final result: passed**
+September 12, 2026. Revision target: distinguish dictionary readers from translation users and make the campaign legible on mobile. Source art direction: /Users/lucas/Developer/Omato/marketing-screenshots/design/concept-1.png. Before state: commit 36af633. Implementation: the six PNGs named in projects/reading-companion.json under output/reading-companion/.
 
-Source visual truth: `/Users/lucas/Developer/Omato/marketing-screenshots/design/concept-1.png`.
-Implementation: `output/reading-companion/01-turn-reading-into-vocabulary.png`
-through `06-learn-how-the-word-works.png`; full set in `overview.jpg`.
-Combined comparison evidence: `output/reading-companion/qa-comparison.jpg`.
-Browser evidence: `output/reading-companion/qa-browser.jpg`.
+## Comparison evidence
 
-## Comparison conditions
+Combined before/after: output/reading-companion/qa-comparison-v2.jpg. Each source and revised image is normalized from 1320 × 2868 to 264 × 574; the first three images of each sequence appear together. Content and order changes are intentional; this tests the user's revision, not pixel identity with the original concept. Full-set small-size evidence: output/reading-companion/qa-mobile-strip.jpg.
 
-The source is a generated three-panel concept board at 1040 × 1513. Each source
-panel is much taller than the required App Store format. Production uses six
-1320 × 2868 canvases. The comparison places the source and first three exports
-together at approximately equal panel widths, preserving both aspect ratios.
-This is an art-direction adaptation, not a claim of pixel-identical reproduction.
-The additional three scenes extend the same direction using actual app captures.
+Focused browser captures: output/reading-companion/qa-mobile-dictionary.jpg and qa-mobile-translation.jpg. Viewport: 390 × 844 CSS pixels, screenshots 390 × 844 pixels, image width 264 CSS pixels. Large overview checked at 1280 × 720. Temporary viewport restored.
 
-The gallery was checked in the Codex browser at 1280 × 720. The editor's Fit
-canvas was checked in the same viewport. Export PNG succeeded for scene 5.
-The gallery loaded all six images and exposes individual PNG, ZIP, and editor
-links. Browser console check returned no warnings or errors. The screenshot
-files themselves are the production canvases; browser gallery sizing does not
-alter their pixel dimensions. Responsive CSS was inspected; a separate narrow
-viewport interaction pass was not performed.
+## Findings and iteration history
 
-## Findings and comparison history
+- Resolved P1: the combined dictionary/translation image blurred audiences. Positions 2 and 3 now have separate messages and matching app screenshots. Collection and practice remain shared benefits.
+- Resolved P2: 57 px supporting copy reduced to 11.4 px at 264 px image width. Supporting copy is now 90 px Medium (18 px at review size); titles are 178 px (35.6 px); each scene uses one 1200 px phone. The combined comparison and phone-width browser captures confirm stronger legibility. Every headline and supporting passage fits two lines.
+- Previous wrapping and sage/text overlap fixes remain effective. Sage backgrounds were enlarged further so their transition clears the new supporting text.
+- No remaining actionable P0/P1/P2 findings in the reviewed revision.
 
-- Resolved P2: the second title wrapped to three lines in the native renderer.
-  Registered individual macOS font faces and set the shared title size to 150 px.
-  Final exports and editor preview show two-line titles without body overlap.
-- Resolved P2: the sage boundary intersected body text on scenes 3 and 5.
-  Enlarged the background layer to 1650 px, centered at x = -165. Re-rendered
-  all exports. The final combined comparison and full-size scene 5 show clear
-  ivory space behind both lines of supporting copy.
-- No remaining actionable P0/P1/P2 findings in the final comparison.
+## Fidelity surfaces
 
-## Required fidelity surfaces
-
-- Typography: Bodoni 72 Bold preserves the literary display character; Avenir
-  Next Regular provides the quieter supporting voice. Shared title size, line
-  height, width, and alignment across all six scenes. No text truncation.
-- Layout: consistent headline and body origins; enlarged actual phone imagery;
-  intentional overlapping devices on scenes 2, 5, and 6. Scene 6 intentionally
-  crops the continuing conjugation table and occludes part of the rear phone.
-  Main single phones fit the canvas. Decorative rules and tiny footer slogans
-  from the concept were omitted to keep attention on benefit copy and app UI.
-- Colors: warm ivory, dark olive text, muted sage, and oak/book photography
-  retain the selected direction. The darker test answer remains native app UI.
-- Assets: backgrounds were generated separately to fit the production format.
-  Device layers are the supplied framed captures, with their native app content
-  and Dynamic Islands retained. No generated replacement app UI. Fine text is
-  sharp at export resolution; small UI details naturally reduce at thumbnail size.
-- Content: first three images communicate scan → meaning → practice. Remaining
-  scenes cover library, recall/reveal, and examples/synonyms/conjugations.
-  No invented ratings, performance statistics, or unsupported product promises.
-
-Full-size scenes 5 and 6 were opened for focused inspection of supporting copy,
-phone edges, card text, and conjugation content; the first three were inspected
-in the combined comparison and browser gallery. The overview covers set rhythm.
+- Typography: Bodoni 72 Bold preserves the editorial identity. Avenir Next Medium supporting copy is shorter, larger, and more robust. Both browser rendering and native exports checked; individual font faces registered for native export.
+- Layout: consistent margins, title/body positions, and one enlarged phone per image. Lower phone portions intentionally extend beyond the canvas to prioritize feature content. This is a marketing composition, not a complete navigation tutorial.
+- Color: ivory paper, dark olive text, muted sage, oak and books preserve concept 1. Background transitions clear supporting copy; app UI colors remain native.
+- Assets: original framed app captures and Dynamic Islands retained. Existing generated photographic backgrounds reused. Main dictionary and translated meanings are readable at the tested size. Fine metadata and book prose remain supporting imagery; the marketing message does not depend on reading them.
+- Copy: the reader image explicitly says dictionary and book language; the learner image says new language and translate. Collection and practice address both audiences. No invented ratings, outcomes, or language-coverage promises.
 
 ## Verification
 
-- Six PNGs verified as RGB, 1320 × 2868, with no alpha channel.
-- ZIP contains exactly six PNGs and passes archive integrity checking.
-- Portable project contains all six scenes and embeds every image layer.
-- Editor JavaScript and batch-render helper pass syntax checks.
-- Git diff whitespace checks pass.
-- Existing editor autosave uses a separate key from this campaign.
+- Mobile preview renders 264 px images inside a 390 px viewport.
+- Horizontal swipe reaches the separate dictionary and translation images.
+- Large overview toggle works; mobile mode can be restored.
+- Revised editor loads six scenes with the new font settings.
+- Six RGB PNGs at 1320 × 2868, no alpha channel.
+- ZIP rebuilt from exactly the six current filenames; integrity check passes.
+- Portable project rebuilt with all image layers embedded.
+- JavaScript syntax and Git whitespace checks pass.
+- Earlier campaign browser autosaves preserved under their prior key.
 
-## Follow-up polish
+## Limits and follow-up
 
-P3: future capture sessions could use a more approachable word and carry that
-same word through scan, lookup, and recall. Current genuine captures were used
-without rewriting their UI. Conversion performance remains unmeasured.
+This is browser-based small-size verification, not a live App Store upload or conversion test. App Store placements vary in size. Headlines communicate the feature at sizes where secondary app details become small. P3: future captures could use a simpler, consistent word across the flow.
 
-## Implementation checklist
+## Checklist
 
-- [x] Preserve selected concept 1 art direction.
-- [x] Compose six scenes with editable text and original device captures.
-- [x] Correct text wrapping and sage boundary interference.
-- [x] Verify exports, package downloads, and open the review gallery.
+- [x] Separate audience messages and screenshots.
+- [x] Increase text and feature-image sizes.
+- [x] Compare before/after at equal small dimensions.
+- [x] Check phone-width rendering and swipe behavior.
+- [x] Regenerate the six-image exports and editable project.
 
 final result: passed
