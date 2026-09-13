@@ -1,0 +1,494 @@
+{
+  "version": 1,
+  "name": "Omato · The Reading Companion · en-US",
+  "output": {
+    "width": 1320,
+    "height": 2868
+  },
+  "scenes": [
+    {
+      "id": "rc-1",
+      "name": "Turn reading into vocabulary",
+      "filename": "01-turn-reading-into-vocabulary.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-book.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "scan-phone",
+          "type": "image",
+          "name": "Scan Phone",
+          "src": "project-assets/reading-companion/device-scan.png",
+          "x": 190,
+          "y": 765,
+          "width": 940,
+          "rotation": 1.2,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Turn reading\ninto vocabulary.",
+          "x": 98,
+          "y": 235,
+          "width": 1124,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 150,
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Scan a page. Look up words.\nPractice them later.",
+          "x": 102,
+          "y": 600,
+          "width": 1116,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 400,
+          "fontSize": 57,
+          "lineHeight": 1.16,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "wordmark",
+          "type": "text",
+          "name": "Wordmark",
+          "text": "Omato",
+          "x": 100,
+          "y": 80,
+          "width": 500,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 82,
+          "lineHeight": 1.0,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "rc-2",
+      "name": "Find the meaning",
+      "filename": "02-find-the-meaning.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-paper.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "dictionary-phone",
+          "type": "image",
+          "name": "Dictionary Phone",
+          "src": "project-assets/reading-companion/device-dictionary.png",
+          "x": 44,
+          "y": 750,
+          "width": 830,
+          "rotation": -1,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "translation-phone",
+          "type": "image",
+          "name": "Translation Phone",
+          "src": "project-assets/reading-companion/device-translation.png",
+          "x": 630,
+          "y": 1420,
+          "width": 695,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Find the meaning.\nIn your language.",
+          "x": 98,
+          "y": 235,
+          "width": 1124,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 150,
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Choose definitions or translations.",
+          "x": 102,
+          "y": 600,
+          "width": 1116,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 400,
+          "fontSize": 57,
+          "lineHeight": 1.16,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "rc-3",
+      "name": "Make new words stick",
+      "filename": "03-make-new-words-stick.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-sage.png",
+          "x": -165,
+          "y": 0,
+          "width": 1650,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "test-phone",
+          "type": "image",
+          "name": "Test Phone",
+          "src": "project-assets/reading-companion/device-test.png",
+          "x": 180,
+          "y": 765,
+          "width": 960,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Make new words\nstick.",
+          "x": 98,
+          "y": 235,
+          "width": 1124,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 150,
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Practice recalling the words you save.",
+          "x": 102,
+          "y": 600,
+          "width": 1116,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 400,
+          "fontSize": 57,
+          "lineHeight": 1.16,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "rc-4",
+      "name": "Your words all in one place",
+      "filename": "04-your-words-all-in-one-place.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-book.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "vocabulary-phone",
+          "type": "image",
+          "name": "Vocabulary Phone",
+          "src": "project-assets/reading-companion/device-vocabulary.png",
+          "x": 180,
+          "y": 765,
+          "width": 960,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Your words.\nAll in one place.",
+          "x": 98,
+          "y": 235,
+          "width": 1124,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 150,
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Build a personal, searchable vocabulary.",
+          "x": 102,
+          "y": 600,
+          "width": 1116,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 400,
+          "fontSize": 57,
+          "lineHeight": 1.16,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "rc-5",
+      "name": "Try to recall then reveal",
+      "filename": "05-try-to-recall-then-reveal.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-sage.png",
+          "x": -165,
+          "y": 0,
+          "width": 1650,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "study-before-phone",
+          "type": "image",
+          "name": "Study Before Phone",
+          "src": "project-assets/reading-companion/device-study-before.png",
+          "x": -20,
+          "y": 820,
+          "width": 800,
+          "rotation": -1.4,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "study-after-phone",
+          "type": "image",
+          "name": "Study After Phone",
+          "src": "project-assets/reading-companion/device-study-after.png",
+          "x": 610,
+          "y": 1120,
+          "width": 730,
+          "rotation": 1,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Try to recall it.\nThen reveal it.",
+          "x": 98,
+          "y": 235,
+          "width": 1124,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 150,
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Study your saved words,\none card at a time.",
+          "x": 102,
+          "y": 600,
+          "width": 1116,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 400,
+          "fontSize": 57,
+          "lineHeight": 1.16,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "rc-6",
+      "name": "Learn how the word works",
+      "filename": "06-learn-how-the-word-works.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-paper.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "translation-phone",
+          "type": "image",
+          "name": "Translation Phone",
+          "src": "project-assets/reading-companion/device-translation.png",
+          "x": 14,
+          "y": 770,
+          "width": 780,
+          "rotation": -1,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "conjugations-phone",
+          "type": "image",
+          "name": "Conjugations Phone",
+          "src": "project-assets/reading-companion/device-conjugations.png",
+          "x": 580,
+          "y": 1260,
+          "width": 800,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Learn how\nthe word works.",
+          "x": 98,
+          "y": 235,
+          "width": 1124,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 150,
+          "lineHeight": 0.98,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Explore examples, synonyms,\nand verb forms.",
+          "x": 102,
+          "y": 600,
+          "width": 1116,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 400,
+          "fontSize": 57,
+          "lineHeight": 1.16,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    }
+  ]
+}

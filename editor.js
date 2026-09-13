@@ -1,5 +1,6 @@
 const OUTPUT_SIZE = { width: 1320, height: 2868 };
-const STORAGE_KEY = 'omato.ascScreenshotEditor.v1';
+const CAMPAIGN = new URLSearchParams(window.location.search).get('campaign');
+const STORAGE_KEY = `omato.ascScreenshotEditor.v1${CAMPAIGN === 'reading-companion' ? '.reading-companion' : ''}`;
 const PROJECT_VERSION = 1;
 const ASSET_ROOT = 'project-assets/omato-asc';
 const USE_EMBEDDED_ASSETS = window.location.protocol === 'file:'
@@ -160,6 +161,8 @@ const BUILT_IN_PROJECT = {
     )
   ]
 };
+
+let defaultProject = BUILT_IN_PROJECT;
 
 const elements = {
   status: document.getElementById('editor-status'),
@@ -1005,7 +1008,7 @@ async function resetProject() {
   if (!window.confirm('Reset all six screenshots to the built-in editable project?')) {
     return;
   }
-  state.project = clone(BUILT_IN_PROJECT);
+  state.project = clone(defaultProject);
   state.selectedSceneId = state.project.scenes[0].id;
   state.selectedLayerId = 'title';
   state.imageCache.clear();
@@ -1348,6 +1351,15 @@ function wireActions() {
 }
 
 async function init() {
+  if (CAMPAIGN === 'reading-companion') {
+    const response = await fetch('projects/reading-companion.json');
+    if (!response.ok) throw new Error('The Reading Companion project could not be loaded');
+    const project = await response.json();
+    if (!isValidProject(project)) throw new Error('The Reading Companion project is invalid');
+    defaultProject = project;
+    state.project = loadStoredProject() ?? clone(defaultProject);
+    state.selectedSceneId = state.project.scenes[0].id;
+  }
   wireInspector();
   wireActions();
   await renderGallery();

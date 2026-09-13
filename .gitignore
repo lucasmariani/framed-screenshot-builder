@@ -1,1 +1,3 @@
 .playwright-cli/
+output/reading-companion/editable-project.json
+output/reading-companion/qa-*.jpg

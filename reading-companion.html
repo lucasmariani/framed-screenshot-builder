@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Omato · The Reading Companion</title>
+<link rel="icon" href="data:,">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#e9e7df;color:#262b22;font-family:'Avenir Next',system-ui,sans-serif}header{max-width:1440px;margin:auto;padding:38px 38px 30px;display:flex;align-items:end;justify-content:space-between;gap:24px}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 10px}h1{font-family:'Bodoni 72',Georgia,serif;font-size:42px;line-height:1;margin:0 0 10px}header p{font-size:14px;margin:0;color:#53584d}nav{display:flex;gap:10px;flex-wrap:wrap}a{color:inherit}nav a{display:block;text-decoration:none;padding:12px 18px;border:1px solid #c2c7b9;border-radius:24px;background:#f7f5ee;font-size:14px}nav a:first-child{background:#323a2c;color:#fff;border-color:#323a2c}main{max-width:1440px;margin:auto;padding:0 38px 48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 22px}figure{margin:0}figure img{width:100%;height:auto;aspect-ratio:1320/2868;display:block;box-shadow:0 5px 16px #252b2218}figcaption{padding:13px 0;display:flex;justify-content:space-between;gap:10px;font-size:13px}figcaption a{text-underline-offset:3px}footer{max-width:1440px;margin:auto;padding:0 38px 36px;font-size:13px;color:#555c4f}@media(max-width:800px){header{align-items:start;flex-direction:column;padding:24px}h1{font-size:34px}main{padding:0 24px 32px;grid-template-columns:repeat(2,minmax(0,1fr))}figcaption{flex-direction:column}}@media(max-width:480px){main{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div><p class="eyebrow">Omato · App Store campaign</p><h1>The Reading Companion</h1><p>Six screenshots · English · 1320 × 2868</p></div><nav aria-label="Campaign actions"><a href="output/reading-companion/omato-reading-companion.zip" download>Download all six</a><a href="editor.html?campaign=reading-companion">Edit screenshots</a></nav></header>
+<main id="gallery"></main>
+<footer>Original app captures with editable headlines and photographic backgrounds. Select an image to inspect it at full resolution.</footer>
+<script>
+fetch('projects/reading-companion.json').then(r=>{if(!r.ok)throw new Error('Campaign unavailable');return r.json()}).then(project=>{
+ const gallery=document.getElementById('gallery');
+ for(const [index,scene] of project.scenes.entries()){
+  const figure=document.createElement('figure');const link=document.createElement('a');link.href='output/reading-companion/'+scene.filename;link.target='_blank';link.rel='noopener';
+  const img=new Image();img.src=link.href;img.alt=scene.name;img.width=1320;img.height=2868;link.append(img);
+  const caption=document.createElement('figcaption');const label=document.createElement('span');label.textContent=String(index+1).padStart(2,'0')+' · '+scene.name;
+  const download=document.createElement('a');download.href=link.href;download.download=scene.filename;download.textContent='Download PNG';caption.append(label,download);figure.append(link,caption);gallery.append(figure);
+ }
+}).catch(error=>document.getElementById('gallery').textContent=error.message);
+</script>
+</body></html>

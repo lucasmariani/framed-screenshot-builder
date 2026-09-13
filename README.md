@@ -14,6 +14,32 @@ Local-only, client-side tools for framing iPhone screenshots and editing Omato's
 
 ## ASC screenshot editor
 
+### The Reading Companion campaign
+
+Serve this folder locally and open `reading-companion.html` to review the six-image
+ivory-and-sage campaign selected on September 12, 2026. The gallery includes the
+1320 × 2868 PNGs, a ZIP download, and an **Edit screenshots** link.
+
+`editor.html?campaign=reading-companion` loads `projects/reading-companion.json`.
+Its autosave is separate from the original editor project. Reset restores this
+campaign. Titles, supporting copy, background photographs, and original device
+captures remain separate editable layers. Use **Save project** for a portable
+JSON with embedded assets. This campaign route requires the local HTTP server.
+
+The campaign uses macOS **Bodoni 72 Bold** and **Avenir Next Regular**. Browser
+exports use those installed fonts. Backgrounds are generated photographic assets;
+all app UI comes from the supplied, unchanged framed captures.
+
+For batch rendering, `tools/render_project.cjs` uses the editor's canvas renderer
+with `@napi-rs/canvas`. Set `NODE_PATH` to a directory containing that package and
+`OMATO_RENDER_FONTS` to a directory containing the individual font faces extracted
+from the macOS font collections; registering only a TTC may select the wrong
+weight. Run `node tools/render_project.cjs projects/reading-companion.json
+output/reading-companion`. Exported review assets are checked in for immediate
+preview; regenerate the PNGs and ZIP together after changing the project.
+
+### Original campaign
+
 Open `editor.html` (or select **Open ASC Editor** from the frame builder) to edit the six current English App Store screenshots. The editor includes the current finished PNG beside an editable version of every scene.
 
 For each screenshot you can:

@@ -1,0 +1,210 @@
+[
+  {
+    "scene": "rc-1",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Turn reading",
+          "into vocabulary."
+        ],
+        "bounds": {
+          "x": 98,
+          "y": 235,
+          "width": 1124,
+          "height": 294,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Scan a page. Look up words.",
+          "Practice them later."
+        ],
+        "bounds": {
+          "x": 102,
+          "y": 600,
+          "width": 1116,
+          "height": 132.23999999999998,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "wordmark",
+        "lines": [
+          "Omato"
+        ],
+        "bounds": {
+          "x": 100,
+          "y": 80,
+          "width": 500,
+          "height": 82,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "rc-2",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Find the meaning.",
+          "In your language."
+        ],
+        "bounds": {
+          "x": 98,
+          "y": 235,
+          "width": 1124,
+          "height": 294,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Choose definitions or translations."
+        ],
+        "bounds": {
+          "x": 102,
+          "y": 600,
+          "width": 1116,
+          "height": 66.11999999999999,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "rc-3",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Make new words",
+          "stick."
+        ],
+        "bounds": {
+          "x": 98,
+          "y": 235,
+          "width": 1124,
+          "height": 294,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Practice recalling the words you save."
+        ],
+        "bounds": {
+          "x": 102,
+          "y": 600,
+          "width": 1116,
+          "height": 66.11999999999999,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "rc-4",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Your words.",
+          "All in one place."
+        ],
+        "bounds": {
+          "x": 98,
+          "y": 235,
+          "width": 1124,
+          "height": 294,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Build a personal, searchable vocabulary."
+        ],
+        "bounds": {
+          "x": 102,
+          "y": 600,
+          "width": 1116,
+          "height": 66.11999999999999,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "rc-5",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Try to recall it.",
+          "Then reveal it."
+        ],
+        "bounds": {
+          "x": 98,
+          "y": 235,
+          "width": 1124,
+          "height": 294,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Study your saved words,",
+          "one card at a time."
+        ],
+        "bounds": {
+          "x": 102,
+          "y": 600,
+          "width": 1116,
+          "height": 132.23999999999998,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "rc-6",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Learn how",
+          "the word works."
+        ],
+        "bounds": {
+          "x": 98,
+          "y": 235,
+          "width": 1124,
+          "height": 294,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Explore examples, synonyms,",
+          "and verb forms."
+        ],
+        "bounds": {
+          "x": 102,
+          "y": 600,
+          "width": 1116,
+          "height": 132.23999999999998,
+          "rotation": 0
+        }
+      }
+    ]
+  }
+]
