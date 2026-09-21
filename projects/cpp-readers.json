@@ -1,0 +1,602 @@
+{
+  "version": 1,
+  "name": "Omato Custom Product Page — Readers",
+  "output": {
+    "width": 1320,
+    "height": 2868
+  },
+  "scenes": [
+    {
+      "id": "cpp-readers-1",
+      "name": "Look up words in your books.",
+      "filename": "01-scan-a-page.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-book.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "feature-phone",
+          "type": "image",
+          "name": "Feature Phone",
+          "src": "project-assets/reading-companion/device-scan.png",
+          "x": 210,
+          "y": 900,
+          "width": 900,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Look up words\nin your books.",
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 178,
+          "lineHeight": 1.02,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Take a photo of\nthe page you’re reading.",
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 90,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "wordmark",
+          "type": "text",
+          "name": "Wordmark",
+          "text": "Omato",
+          "x": 100,
+          "y": 80,
+          "width": 500,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 82,
+          "lineHeight": 1.0,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "cpp-readers-2",
+      "name": "Tap a word to look it up",
+      "filename": "02-tap-a-word.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-paper.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "feature-phone",
+          "type": "image",
+          "name": "Feature Phone",
+          "src": "project-assets/reading-companion/device-word-selection.png",
+          "x": 60,
+          "y": 900,
+          "width": 1200,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Tap a word.\nLook it up.",
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 178,
+          "lineHeight": 1.02,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Choose a word from\nthe scanned page.",
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 90,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "cpp-readers-3",
+      "name": "Read dictionary definitions",
+      "filename": "03-dictionary-definitions.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-paper.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "feature-phone",
+          "type": "image",
+          "name": "Feature Phone",
+          "src": "project-assets/reading-companion/device-dictionary.png",
+          "x": 60,
+          "y": 900,
+          "width": 1200,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "A dictionary\nfor your book.",
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 178,
+          "lineHeight": 1.02,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Explore meanings\nin the book’s language.",
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 90,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "cpp-readers-4",
+      "name": "Every lookup in your vocabulary",
+      "filename": "04-your-looked-up-words.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-book.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "feature-phone",
+          "type": "image",
+          "name": "Feature Phone",
+          "src": "project-assets/reading-companion/device-vocabulary.png",
+          "x": 60,
+          "y": 900,
+          "width": 1200,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Every lookup.\nIn one place.",
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 178,
+          "lineHeight": 1.02,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Words you look up\nlive in your vocabulary.",
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 90,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "cpp-readers-5",
+      "name": "Practice with Study mode",
+      "filename": "05-study-your-words.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-paper.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "feature-phone",
+          "type": "image",
+          "name": "Feature Phone",
+          "src": "project-assets/reading-companion/device-study-after.png",
+          "x": 60,
+          "y": 900,
+          "width": 1200,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Study your\nnew words.",
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 178,
+          "lineHeight": 1.02,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Recall the meaning.\nTap to reveal it.",
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 90,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "cpp-readers-6",
+      "name": "Practice with Test mode",
+      "filename": "06-test-your-memory.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-test-v5.png",
+          "x": -1,
+          "y": 0,
+          "width": 1322,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "feature-phone",
+          "type": "image",
+          "name": "Feature Phone",
+          "src": "project-assets/reading-companion/device-test.png",
+          "x": 60,
+          "y": 900,
+          "width": 1200,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Test what\nyou remember.",
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 178,
+          "lineHeight": 1.02,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Type the missing word.\nCheck your answer.",
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 90,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "cpp-readers-7",
+      "name": "Translation for language learners",
+      "filename": "07-translate-as-you-read.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-translation-v5.png",
+          "x": -1,
+          "y": 0,
+          "width": 1322,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "feature-phone",
+          "type": "image",
+          "name": "Feature Phone",
+          "src": "project-assets/reading-companion/device-translation.png",
+          "x": 60,
+          "y": 900,
+          "width": 1200,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Read in a\nnew language.",
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 178,
+          "lineHeight": 1.02,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Translate words.\nBuild your vocabulary.",
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 90,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "cpp-readers-8",
+      "name": "Explore verb conjugations",
+      "filename": "08-explore-conjugations.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1500,
+        "accentRadius": 900,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "Background",
+          "src": "project-assets/reading-companion/background-conjugations-v5.png",
+          "x": -1,
+          "y": 0,
+          "width": 1322,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "feature-phone",
+          "type": "image",
+          "name": "Feature Phone",
+          "src": "project-assets/reading-companion/device-conjugations.png",
+          "x": 60,
+          "y": 900,
+          "width": 1200,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "Title",
+          "text": "Know your\nverb forms.",
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 178,
+          "lineHeight": 1.02,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "Subtitle",
+          "text": "Explore conjugations\nacross tenses.",
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 90,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    }
+  ]
+}

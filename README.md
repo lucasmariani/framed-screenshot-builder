@@ -49,6 +49,36 @@ Each revision preserves earlier browser autosaves under its previous key.
 Revision 4 appends a conjugation image after translation: “Know your verb forms.”
 
 
+### Custom product pages — September 21, 2026
+
+The Readers and Language Learners variants reuse the Reading Companion artwork
+and unchanged app captures. Their editable projects are
+`projects/cpp-readers.json` and `projects/cpp-language-learners.json`; final RGB
+PNGs are in the corresponding `output/cpp-*` folders. Upload the eight numbered
+PNGs in numeric order to App Store Connect's iPhone 6.9-inch screenshot slot.
+Each export is 1320 × 2868 and has no alpha channel.
+
+Readers opens with “Look up words in your books.” and follows photo → word
+selection → dictionary → saved vocabulary → Study → Test → translation →
+conjugations. Language Learners opens with “Practice the words you look up.” and
+follows Study → Test → saved vocabulary → photo → word selection → dictionary →
+translation → conjugations. Both photo cards say “Take a photo of the page
+you’re reading.” The learner headline uses 160 px to fit cleanly in two lines.
+
+Only the changed compositions were rendered for these exports; all other PNGs
+were copied from the Reading Companion exports to preserve their exact artwork.
+The renderer above can render either project; normalize any regenerated PNGs to
+RGB before uploading. Font files remain local and are not checked in.
+
+App Store Connect pages:
+
+- [Readers](https://appstoreconnect.apple.com/apps/6756230098/distribution/productpages/f5fa86e5-b893-4af2-8a19-0b20880ac9d7)
+- [Language Learners](https://appstoreconnect.apple.com/apps/6756230098/distribution/productpages/628048f8-8712-481d-8bc9-95b5961f7449)
+
+These are English-US custom pages, separate from the main listing. Their copy,
+keywords, review status, and deferred metadata are recorded in the sibling iOS
+repository's `docs/APP_STORE_ASO_2026-09-21.md`.
+
 ### Original campaign
 
 Open `editor.html` (or select **Open ASC Editor** from the frame builder) to edit the six current English App Store screenshots. The editor includes the current finished PNG beside an editable version of every scene.

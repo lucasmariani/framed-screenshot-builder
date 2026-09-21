@@ -1,0 +1,279 @@
+[
+  {
+    "scene": "cpp-readers-1",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Look up words",
+          "in your books."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Take a photo of",
+          "the page you’re reading."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "wordmark",
+        "lines": [
+          "Omato"
+        ],
+        "bounds": {
+          "x": 100,
+          "y": 80,
+          "width": 500,
+          "height": 82,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "cpp-readers-2",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Tap a word.",
+          "Look it up."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Choose a word from",
+          "the scanned page."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "cpp-readers-3",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "A dictionary",
+          "for your book."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Explore meanings",
+          "in the book’s language."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "cpp-readers-4",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Every lookup.",
+          "In one place."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Words you look up",
+          "live in your vocabulary."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "cpp-readers-5",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Study your",
+          "new words."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Recall the meaning.",
+          "Tap to reveal it."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "cpp-readers-6",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Test what",
+          "you remember."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Type the missing word.",
+          "Check your answer."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "cpp-readers-7",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Read in a",
+          "new language."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Translate words.",
+          "Build your vocabulary."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
+          "rotation": 0
+        }
+      }
+    ]
+  },
+  {
+    "scene": "cpp-readers-8",
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Know your",
+          "verb forms."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 210,
+          "width": 1160,
+          "height": 363.12,
+          "rotation": 0
+        }
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Explore conjugations",
+          "across tenses."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 625,
+          "width": 1152,
+          "height": 206.99999999999997,
+          "rotation": 0
+        }
+      }
+    ]
+  }
+]
