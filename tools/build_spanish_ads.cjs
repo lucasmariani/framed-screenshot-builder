@@ -1,3 +1,4 @@
+// Historical v1 reproduction only: Avenir subtitles are superseded by Baskerville Regular for new ads.
 // Reproducible, editable projects using genuine captures and the existing App Store visual system.
 // Run from any directory: NODE_PATH=... node tools/build_spanish_ads.cjs
 const fs=require('node:fs'), path=require('node:path'), crypto=require('node:crypto');

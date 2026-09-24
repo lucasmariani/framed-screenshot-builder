@@ -1,3 +1,10 @@
+
+## Current ad typography — September 24, 2026
+
+Lucas confirmed **Bodoni 72 Bold (700)** headlines and **Baskerville Regular (400)** subtitles/support for all new ad audiences and formats. The earlier Avenir Next subtitle choice was carried over from the historical Reading Companion/CPP templates in error. Their projects and rendered records remain historical references only. The matching serif reference is `../marketing-screenshots/review/asc-intro-2026-09-22/intro-editor-project.json`.
+
+The corrected current set is `reddit-spanish-v8.html`, with three editable `projects/spanish-reddit-v8-*.json` layouts and ten exports. This revision preserves v7 copy, screenshots and owner positioning. `tools/prepare_fonts.py` now includes Baskerville; rerun it before rendering. The editor’s subtitle preset and campaign compiler use Baskerville Regular, and the font menu includes Baskerville.
+
 # Revision 5 — final-three background refinement
 
 Scope: background layers only for Test (6), Translation (7), and Conjugations (8). The selected ivory/sage literary direction is retained. Before-state: commit 1938838. Source style references: existing campaign PNGs and background-book.png. New background-only image assets were generated and visually inspected individually.

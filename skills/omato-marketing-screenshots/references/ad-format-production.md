@@ -30,7 +30,7 @@ For each chosen format, create a project with its own `output.width`, `output.he
 
 ## Composition requirements for every language
 
-- Headings: **Bodoni 72 Bold**. Support: **Avenir Next Medium**. Read `projects/reading-companion.json` and any newer user-selected reference for exact typography. Extract installed faces with `tools/prepare_fonts.py`; set `OMATO_RENDER_FONTS`. Do not distribute proprietary fonts.
+- Headings: **Bodoni 72 Bold (700)**. Subtitles/support: **Baskerville Regular (400)**, family `Baskerville`. This is Lucas’s September 24 correction for all future ad audiences/formats. Match the ASC intro source at `../marketing-screenshots/review/asc-intro-2026-09-22/intro-editor-project.json`; old Reading Companion/CPP Avenir typography is historical, not the default. Current corrected layouts: `campaigns/spanish-reddit-v8.json`. Extract installed faces with `tools/prepare_fonts.py`; set `OMATO_RENDER_FONTS`. Do not distribute proprietary fonts.
 - Backgrounds: inspect `/Users/lucas/Developer/Omato/marketing-screenshots/asc/en-US`. Use varied scenes within its consistent warm ivory/paper, books, wood, soft daylight, shadow, muted sage/olive theme. Reuse its approved image assets or generate new backgrounds in that theme. ImageGen may also create the separately documented book-page fixture; it must never fabricate app UI or bake marketing copy into the background.
 - Use available space, a prominent recognizable iPhone, concise copy and large readable type. Show the whole device or the accepted bottom continuation. Avoid floating screen fragments, sliced-off device tops, arbitrary zoom crops and oversized crowded headings.
 - **Never add a decorative Omato wordmark/title.** Genuine app UI stays unchanged.

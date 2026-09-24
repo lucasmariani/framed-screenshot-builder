@@ -20,8 +20,8 @@ const SUBTITLE_PRESET = {
   x: 80,
   y: 450,
   width: 1160,
-  fontFamily: 'Avenir Next',
-  fontWeight: 600,
+  fontFamily: 'Baskerville',
+  fontWeight: 400,
   fontSize: 58,
   lineHeight: 1.1,
   color: '#11100f'

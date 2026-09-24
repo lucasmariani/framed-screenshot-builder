@@ -1,0 +1,88 @@
+{
+  "image_count": 10,
+  "checks": [
+    {
+      "file": "output/spanish-reddit-v8-reddit-carousel-square/01-introduction.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds_and_wrapping": "pass",
+      "title_support_separation": "pass",
+      "font_only_change": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v8-reddit-carousel-square/02-photo.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds_and_wrapping": "pass",
+      "title_support_separation": "pass",
+      "font_only_change": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v8-reddit-carousel-square/03-selection.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds_and_wrapping": "pass",
+      "title_support_separation": "pass",
+      "font_only_change": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v8-reddit-carousel-square/04-meaning.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds_and_wrapping": "pass",
+      "title_support_separation": "pass",
+      "font_only_change": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v8-reddit-carousel-square/05-study.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds_and_wrapping": "pass",
+      "title_support_separation": "pass",
+      "font_only_change": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v8-reddit-carousel-square/06-test.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds_and_wrapping": "pass",
+      "title_support_separation": "pass",
+      "font_only_change": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v8-reddit-image-square/01-lookup.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds_and_wrapping": "pass",
+      "title_support_separation": "pass",
+      "font_only_change": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v8-reddit-image-square/02-practice.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds_and_wrapping": "pass",
+      "title_support_separation": "pass",
+      "font_only_change": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v8-reddit-image-portrait/01-lookup.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds_and_wrapping": "pass",
+      "title_support_separation": "pass",
+      "font_only_change": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v8-reddit-image-portrait/02-practice.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds_and_wrapping": "pass",
+      "title_support_separation": "pass",
+      "font_only_change": "pass"
+    }
+  ],
+  "visual_review": "All ten exports inspected at 360px image width; serif subtitles, no clipping or overlap. Original v7 copy, geometry and captures unchanged.",
+  "browser_review": "Gallery introduction inspected at 360px CSS image width.",
+  "provider_preview": "Pending owner artwork review; nothing uploaded."
+}

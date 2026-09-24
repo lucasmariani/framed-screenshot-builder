@@ -14,8 +14,11 @@ if (process.env.OMATO_RENDER_FONTS) {
 }
 const inputProject = JSON.parse(fs.readFileSync(projectPath, 'utf8'));
 for (const scene of inputProject.scenes || []) for (const layer of scene.layers || []) {
-  if (layer.type === 'text' && ['Bodoni 72', 'Avenir Next'].includes(layer.fontFamily) && !process.env.OMATO_RENDER_FONTS) {
+  if (layer.type === 'text' && ['Bodoni 72', 'Avenir Next', 'Baskerville'].includes(layer.fontFamily) && !process.env.OMATO_RENDER_FONTS) {
     throw new Error('Set OMATO_RENDER_FONTS to individually extracted macOS font faces; see tools/prepare_fonts.py');
+  }
+  if (layer.type === 'text' && layer.fontFamily === 'Baskerville' && !fs.existsSync(path.join(process.env.OMATO_RENDER_FONTS, 'Baskerville.ttf'))) {
+    throw new Error('Baskerville Regular face missing; rerun tools/prepare_fonts.py for this font directory');
   }
 }
 const source = fs.readFileSync('editor.js', 'utf8').split('init().catch(')[0];

@@ -7,7 +7,7 @@ const root=path.resolve(__dirname,'..');process.chdir(root);
 const briefPath=process.argv[2];const brief=JSON.parse(fs.readFileSync(briefPath));
 const dir=`project-assets/${brief.id}`;fs.mkdirSync(dir,{recursive:true});
 const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
-const txt=(id,text,x,y,width,size)=>({id,type:'text',name:id,text,x,y,width,fontFamily:id==='title'?'Bodoni 72':'Avenir Next',fontWeight:id==='title'?700:500,fontSize:size,lineHeight:id==='title'?1.03:1.14,letterSpacing:0,color:'#20251e',align:'left'});
+const txt=(id,text,x,y,width,size)=>({id,type:'text',name:id,text,x,y,width,fontFamily:id==='title'?'Bodoni 72':'Baskerville',fontWeight:id==='title'?700:400,fontSize:size,lineHeight:id==='title'?1.03:1.14,letterSpacing:0,color:'#20251e',align:'left'});
 const img=(id,src,x,y,width)=>({id,type:'image',name:id,src,x,y,width,rotation:0,opacity:1,shadow:false});
 (async()=>{
  const provenance=[];

@@ -58,7 +58,7 @@
   "frameId": "iPhone_17_pro-silver-portrait",
   "design": {
     "headingFont": "Bodoni 72 Bold",
-    "supportFont": "Avenir Next Medium",
+    "supportFont": "Baskerville Regular",
     "backgroundThemeReference": "marketing-screenshots/asc/en-US",
     "decorativeWordmark": false,
     "reviewWidthCssPixels": 360
