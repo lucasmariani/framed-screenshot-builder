@@ -1,0 +1,314 @@
+[
+  {
+    "project": "projects/spanish-learners-v3-reddit-carousel-square.json",
+    "projectSha256": "7d747c627584f19a7015932e7efe2368bdf1a4a9940b900b9d01bfe202a236c9",
+    "kind": "carousel",
+    "format": "reddit-carousel-square",
+    "output": {
+      "width": 1200,
+      "height": 1200
+    },
+    "files": [
+      {
+        "file": "output/spanish-learners-v3-reddit-carousel-square/01-introduction.png",
+        "sha256": "598446de4e3ba1f7ccb5303ec2838a19fdfd80fdc73a9a43a2f7bb8f358e5824",
+        "bytes": 874225,
+        "width": 1200,
+        "height": 1200,
+        "scene": "01-introduction"
+      },
+      {
+        "file": "output/spanish-learners-v3-reddit-carousel-square/02-photo.png",
+        "sha256": "741bfaac9337b13e7cbb68319780bc772abb71f5ca72b588be3f83ac29e51f35",
+        "bytes": 749950,
+        "width": 1200,
+        "height": 1200,
+        "scene": "02-photo"
+      },
+      {
+        "file": "output/spanish-learners-v3-reddit-carousel-square/03-selection.png",
+        "sha256": "2559f8cead7d3155a2a1f89ba84e8cac19b52a50b5bf53c9e33da9010432d0ba",
+        "bytes": 833233,
+        "width": 1200,
+        "height": 1200,
+        "scene": "03-selection"
+      },
+      {
+        "file": "output/spanish-learners-v3-reddit-carousel-square/04-meaning.png",
+        "sha256": "e51e5f350932ec4d5eb66e28dd3a44a02f645bbd21e6bee2e3a7c7b274c8cc39",
+        "bytes": 722274,
+        "width": 1200,
+        "height": 1200,
+        "scene": "04-meaning"
+      },
+      {
+        "file": "output/spanish-learners-v3-reddit-carousel-square/05-vocabulary.png",
+        "sha256": "d07af2a052c6f11097f0731a9b895367b3c5e0ee7db401ffa90794b9399da8c5",
+        "bytes": 763137,
+        "width": 1200,
+        "height": 1200,
+        "scene": "05-vocabulary"
+      },
+      {
+        "file": "output/spanish-learners-v3-reddit-carousel-square/06-study.png",
+        "sha256": "930ff1f87412c7824014cfdf4cdfebf1ef23f43abda32f3eaab44d18eb446e0d",
+        "bytes": 732694,
+        "width": 1200,
+        "height": 1200,
+        "scene": "06-study"
+      },
+      {
+        "file": "output/spanish-learners-v3-reddit-carousel-square/07-test.png",
+        "sha256": "72fe0110fbc10c4d2caf22b7a5596f0550f1e06ae1aa340eb17979edf21b32e3",
+        "bytes": 669117,
+        "width": 1200,
+        "height": 1200,
+        "scene": "07-test"
+      }
+    ],
+    "status": "awaiting-owner-artwork-review"
+  },
+  {
+    "project": "projects/spanish-learners-v3-meta-square.json",
+    "projectSha256": "63b77a56698f175e7ac86a9c43ff30c58f8f5fd66237c3e6c6f18b0daa0924d5",
+    "kind": "carousel",
+    "format": "meta-square",
+    "output": {
+      "width": 1080,
+      "height": 1080
+    },
+    "files": [
+      {
+        "file": "output/spanish-learners-v3-meta-square/01-introduction.png",
+        "sha256": "4f8c6f1b0e541558cc7a404dfcb5e567c248717dc4795bd368918e1439c69a52",
+        "bytes": 751361,
+        "width": 1080,
+        "height": 1080,
+        "scene": "01-introduction"
+      },
+      {
+        "file": "output/spanish-learners-v3-meta-square/02-photo.png",
+        "sha256": "d7370d49cbaef7f8066f92d96506fb6fe1be9def7af740f86b2ebfbcfc671a63",
+        "bytes": 640213,
+        "width": 1080,
+        "height": 1080,
+        "scene": "02-photo"
+      },
+      {
+        "file": "output/spanish-learners-v3-meta-square/03-selection.png",
+        "sha256": "92829b70328a4747c3f567f817f64ece40c68606b8f75562339b1dad30cd848f",
+        "bytes": 726578,
+        "width": 1080,
+        "height": 1080,
+        "scene": "03-selection"
+      },
+      {
+        "file": "output/spanish-learners-v3-meta-square/04-meaning.png",
+        "sha256": "837825eae1f5ad2b32e5a8d2bf327e86ea7a23ab98e5efebcc6329962c932619",
+        "bytes": 629732,
+        "width": 1080,
+        "height": 1080,
+        "scene": "04-meaning"
+      },
+      {
+        "file": "output/spanish-learners-v3-meta-square/05-vocabulary.png",
+        "sha256": "780f56fe47a0f17f5851be7abc0ab2c4e249f8ca10108db20cc52387b5744923",
+        "bytes": 654568,
+        "width": 1080,
+        "height": 1080,
+        "scene": "05-vocabulary"
+      },
+      {
+        "file": "output/spanish-learners-v3-meta-square/06-study.png",
+        "sha256": "875731e8928c10401596dec7395cacc27cf22acedff56c8941b6b5c3d3d99bc6",
+        "bytes": 633857,
+        "width": 1080,
+        "height": 1080,
+        "scene": "06-study"
+      },
+      {
+        "file": "output/spanish-learners-v3-meta-square/07-test.png",
+        "sha256": "8aece7642eedb454565cd2937578607b064586a7196e04cb348fed3c8ea404f2",
+        "bytes": 580369,
+        "width": 1080,
+        "height": 1080,
+        "scene": "07-test"
+      }
+    ],
+    "status": "awaiting-owner-artwork-review"
+  },
+  {
+    "project": "projects/spanish-learners-v3-reddit-image-square.json",
+    "projectSha256": "917da20a73c2c10a16524b0f6c61097aaf07a054c667d6ea48c46b10198b6931",
+    "kind": "static",
+    "format": "reddit-image-square",
+    "output": {
+      "width": 1080,
+      "height": 1080
+    },
+    "files": [
+      {
+        "file": "output/spanish-learners-v3-reddit-image-square/01-lookup.png",
+        "sha256": "13eb3e71253d9148b2a51f0927cdd29a98a62ef451d5eb6418fa6f253f96fa49",
+        "bytes": 636361,
+        "width": 1080,
+        "height": 1080,
+        "scene": "01-lookup"
+      },
+      {
+        "file": "output/spanish-learners-v3-reddit-image-square/02-practice.png",
+        "sha256": "57b275b57622831fa3bea7d9b9cb624e72d6b4d01b8e58d554756f6d8d66818a",
+        "bytes": 589868,
+        "width": 1080,
+        "height": 1080,
+        "scene": "02-practice"
+      }
+    ],
+    "status": "awaiting-owner-artwork-review"
+  },
+  {
+    "project": "projects/spanish-learners-v3-meta-feed.json",
+    "projectSha256": "7545be52f0291fc7d1a2e3e612844310f1bf3e1cddf4e79ccf7c2224199f9f4e",
+    "kind": "static",
+    "format": "meta-feed",
+    "output": {
+      "width": 1440,
+      "height": 1800
+    },
+    "files": [
+      {
+        "file": "output/spanish-learners-v3-meta-feed/01-lookup.png",
+        "sha256": "55e9d1ed5c3901e424d2baa129e693685f466f110f5b4ea95b27b97eeb5276a9",
+        "bytes": 1152897,
+        "width": 1440,
+        "height": 1800,
+        "scene": "01-lookup"
+      },
+      {
+        "file": "output/spanish-learners-v3-meta-feed/02-practice.png",
+        "sha256": "e84e25cbeb34d85e5b0819cf6908982d1974567a9eef389005640bc4774e211d",
+        "bytes": 974134,
+        "width": 1440,
+        "height": 1800,
+        "scene": "02-practice"
+      }
+    ],
+    "status": "awaiting-owner-artwork-review"
+  },
+  {
+    "project": "projects/spanish-learners-v3-meta-vertical.json",
+    "projectSha256": "6f73028a4c5512ecd9fc5ede9140cf2542af4955636d67b1c17d0d3bef810f1e",
+    "kind": "static",
+    "format": "meta-vertical",
+    "output": {
+      "width": 1440,
+      "height": 2560
+    },
+    "files": [
+      {
+        "file": "output/spanish-learners-v3-meta-vertical/01-lookup.png",
+        "sha256": "2ba1f15444dbee57a6a1ede9da6da47ac5868f5cfb0e01bf87aec3bb1d248d71",
+        "bytes": 3085215,
+        "width": 1440,
+        "height": 2560,
+        "scene": "01-lookup"
+      },
+      {
+        "file": "output/spanish-learners-v3-meta-vertical/02-practice.png",
+        "sha256": "926cf84ec4ccc028c2379b00d68e7cc39fe4ff46bdccf68c4e9331adc1b8a1f3",
+        "bytes": 2255293,
+        "width": 1440,
+        "height": 2560,
+        "scene": "02-practice"
+      }
+    ],
+    "status": "awaiting-owner-artwork-review"
+  },
+  {
+    "project": "projects/spanish-learners-v3-google-app-square.json",
+    "projectSha256": "c530e9b17ddf6eb30ee6a882ef3fc9276ee4ca0499c4cb8c2254600e85584426",
+    "kind": "static",
+    "format": "google-app-square",
+    "output": {
+      "width": 1200,
+      "height": 1200
+    },
+    "files": [
+      {
+        "file": "output/spanish-learners-v3-google-app-square/01-lookup.png",
+        "sha256": "e5e8373a440ed8ccf85ad16d2f07b7738e140081e0836a0e2fad06ba82ff3952",
+        "bytes": 732091,
+        "width": 1200,
+        "height": 1200,
+        "scene": "01-lookup"
+      },
+      {
+        "file": "output/spanish-learners-v3-google-app-square/02-practice.png",
+        "sha256": "dd2ac891d6cabdc8440764285f929fd2145009ab2100130d8e08ce815e30d4a7",
+        "bytes": 679514,
+        "width": 1200,
+        "height": 1200,
+        "scene": "02-practice"
+      }
+    ],
+    "status": "awaiting-owner-artwork-review"
+  },
+  {
+    "project": "projects/spanish-learners-v3-google-app-portrait.json",
+    "projectSha256": "18b24a203a61331571e2d9d23e939bb1c701db0b44bb01a567340b02160d87fd",
+    "kind": "static",
+    "format": "google-app-portrait",
+    "output": {
+      "width": 1200,
+      "height": 1500
+    },
+    "files": [
+      {
+        "file": "output/spanish-learners-v3-google-app-portrait/01-lookup.png",
+        "sha256": "66d474129f883e3ed68fc36da92d9c6c78e99aaf36e1efccc85fa4feb7e812ae",
+        "bytes": 869748,
+        "width": 1200,
+        "height": 1500,
+        "scene": "01-lookup"
+      },
+      {
+        "file": "output/spanish-learners-v3-google-app-portrait/02-practice.png",
+        "sha256": "edda1a5ca51c5507004e3fb28681d02fde6a4dc1e4af4ecde9b3e0cd4d4fd10d",
+        "bytes": 746120,
+        "width": 1200,
+        "height": 1500,
+        "scene": "02-practice"
+      }
+    ],
+    "status": "awaiting-owner-artwork-review"
+  },
+  {
+    "project": "projects/spanish-learners-v3-google-app-landscape.json",
+    "projectSha256": "3814fff9d3919a69624cface0ccf9e0e1ad464d50fc22038db5e5b1697311d08",
+    "kind": "static",
+    "format": "google-app-landscape",
+    "output": {
+      "width": 1200,
+      "height": 628
+    },
+    "files": [
+      {
+        "file": "output/spanish-learners-v3-google-app-landscape/01-lookup.png",
+        "sha256": "e056bcdffb4039f22515bb6f8d60859409f7d4c68ad5949593169d0a111e56eb",
+        "bytes": 469139,
+        "width": 1200,
+        "height": 628,
+        "scene": "01-lookup"
+      },
+      {
+        "file": "output/spanish-learners-v3-google-app-landscape/02-practice.png",
+        "sha256": "1fe157c36a83a77533577ca33ef5a1eef8dc6c5419d4ef1508a235df7f25a445",
+        "bytes": 443425,
+        "width": 1200,
+        "height": 628,
+        "scene": "02-practice"
+      }
+    ],
+    "status": "awaiting-owner-artwork-review"
+  }
+]

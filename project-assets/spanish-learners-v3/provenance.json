@@ -1,0 +1,55 @@
+{
+  "brief": "campaigns/spanish-learners-v3.json",
+  "briefSha256": "39bdbc117dcc7e84fd4d5bc083116fcbff9d60c5116ea5a67f824030153df047",
+  "uiPolicy": "No recreated app UI; deterministic frame/scale/crop only",
+  "assets": [
+    {
+      "id": "vocabulary",
+      "source": "omato-ios/docs/marketing/drafts/reddit-spanish-2026-09-24/assets/vocabulary-populated-framed.png",
+      "sourceSha256": "b9d3245b3c6c9c914b135a281b976a92f5f6944c20b71c8a15a72f82d47e0fc3",
+      "framed": "project-assets/spanish-learners-v3/vocabulary.png",
+      "framedSha256": "b9d3245b3c6c9c914b135a281b976a92f5f6944c20b71c8a15a72f82d47e0fc3",
+      "method": "User-selected historical framed vocabulary"
+    },
+    {
+      "id": "scan",
+      "source": "omato-ios/docs/marketing/drafts/reddit-spanish-2026-09-24/assets/08-spanish-scan-native.png",
+      "sourceSha256": "58e18284b937210632fb094fe12b056d7b357edda332ff120e568319188aa09f",
+      "framed": "project-assets/spanish-learners-v3/scan.png",
+      "framedSha256": "42fb0c7bf2259bb1aa2cb93aad3df5d705967b35b2602e313c7c59c37ddccd97",
+      "method": "Official Xcode capture + iPhone 17 Pro silver frame"
+    },
+    {
+      "id": "selection",
+      "source": "omato-ios/docs/marketing/drafts/reddit-spanish-2026-09-24/assets/09-spanish-selection-native.png",
+      "sourceSha256": "b3491b9ef6e287c0a81b48e324ad09285dada1a27764fd6f581b57b6622b7b3e",
+      "framed": "project-assets/spanish-learners-v3/selection.png",
+      "framedSha256": "2f83c4e8073fbe05e5a82098e146c71ee55595550dc3e844feaa1beeca267176",
+      "method": "Official Xcode capture + iPhone 17 Pro silver frame"
+    },
+    {
+      "id": "meaning",
+      "source": "omato-ios/docs/marketing/drafts/reddit-spanish-2026-09-24/assets/01-meaning-native.png",
+      "sourceSha256": "7d6f14cb38e58e0e38b8ad3a1a696fd343bb6c784af47ac6a81a3440d713d63d",
+      "framed": "project-assets/spanish-learners-v3/meaning.png",
+      "framedSha256": "593a70ab864862d9d5dccf084f189ca8cf159dd0aa3258a8268265aba4bd66ab",
+      "method": "Official Xcode capture + iPhone 17 Pro silver frame"
+    },
+    {
+      "id": "study",
+      "source": "omato-ios/docs/marketing/drafts/reddit-spanish-2026-09-24/assets/05-study-back-native.png",
+      "sourceSha256": "0cbdc75044387cfcbf4a7d68cf87239d42042b1bc7f16a3bd7ce8ef250c3c067",
+      "framed": "project-assets/spanish-learners-v3/study.png",
+      "framedSha256": "28e9d75f46bdf30412a3fb4cb49ae289ea7770c24d71507c04a33775a48dacb0",
+      "method": "Official Xcode capture + iPhone 17 Pro silver frame"
+    },
+    {
+      "id": "test",
+      "source": "omato-ios/docs/marketing/drafts/reddit-spanish-2026-09-24/assets/07-test-correct-native.png",
+      "sourceSha256": "3613e0aa8763c5df9e1a6a9ae2ebe82e06810c2d558661ad253a7f89e61099ec",
+      "framed": "project-assets/spanish-learners-v3/test.png",
+      "framedSha256": "fb7caf377e7d8a5deb297e1e02e8d108bd0866fa27b3d1e93b23b6e3dc9e6781",
+      "method": "Official Xcode capture + iPhone 17 Pro silver frame"
+    }
+  ]
+}

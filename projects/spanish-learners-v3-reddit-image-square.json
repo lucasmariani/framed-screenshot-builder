@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "name": "Spanish learners · static · Reddit · square image",
+  "revision": 3,
+  "campaignId": "spanish-learners-v3",
+  "creativeKind": "static",
+  "output": {
+    "width": 1080,
+    "height": 1080
+  },
+  "formatId": "reddit-image-square",
+  "safeInsets": null,
+  "locale": "en-US",
+  "sourceLanguage": "es",
+  "definitionLanguage": "en",
+  "status": "awaiting-owner-artwork-review",
+  "editorPolicy": {
+    "omittedLayerIds": [
+      "wordmark"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "01-lookup",
+      "name": "Look up Spanish words as you read.",
+      "filename": "01-lookup.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 540,
+        "accentY": 540,
+        "accentRadius": 1080,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "background",
+          "src": "project-assets/reading-companion/background-translation-v5.png",
+          "x": 0,
+          "y": -253.05757931844892,
+          "width": 1080,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "type": "image",
+          "name": "device",
+          "src": "project-assets/spanish-learners-v3/reddit-image-square-01-lookup-focus.png",
+          "x": 54,
+          "y": 415.80000000000007,
+          "width": 972,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "title",
+          "text": "Look up Spanish\nwords as you read.",
+          "x": 48.6,
+          "y": 43.2,
+          "width": 982.8,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 97.2,
+          "lineHeight": 1.03,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "subtitle",
+          "text": "Photograph a page. Tap a word.\nSee its meaning in English.",
+          "x": 48.6,
+          "y": 264.6,
+          "width": 982.8,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 50.4,
+          "lineHeight": 1.14,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "sourceFramed": "project-assets/spanish-learners-v3/meaning.png",
+      "sourceCrop": {
+        "x": 0,
+        "y": 500,
+        "width": 1350,
+        "height": 923
+      },
+      "reviewNote": "Intentional device detail crop at mobile-readable scale; genuine UI pixels unchanged."
+    },
+    {
+      "id": "02-practice",
+      "name": "Practice the Spanish words you look up.",
+      "filename": "02-practice.png",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 540,
+        "accentY": 540,
+        "accentRadius": 1080,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "image",
+          "name": "background",
+          "src": "project-assets/reading-companion/background-test-v5.png",
+          "x": 0,
+          "y": -253.31139835487667,
+          "width": 1080,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "type": "image",
+          "name": "device",
+          "src": "project-assets/spanish-learners-v3/reddit-image-square-02-practice-focus.png",
+          "x": 54,
+          "y": 415.80000000000007,
+          "width": 972,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "name": "title",
+          "text": "Practice the Spanish\nwords you look up.",
+          "x": 48.6,
+          "y": 43.2,
+          "width": 982.8,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 97.2,
+          "lineHeight": 1.03,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "name": "subtitle",
+          "text": "Build your vocabulary.\nTest what you remember.",
+          "x": 48.6,
+          "y": 264.6,
+          "width": 982.8,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 50.4,
+          "lineHeight": 1.14,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "sourceFramed": "project-assets/spanish-learners-v3/test.png",
+      "sourceCrop": {
+        "x": 0,
+        "y": 430,
+        "width": 1350,
+        "height": 923
+      },
+      "reviewNote": "Intentional device detail crop at mobile-readable scale; genuine UI pixels unchanged."
+    }
+  ]
+}

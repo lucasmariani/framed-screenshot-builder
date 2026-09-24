@@ -2,12 +2,21 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const presets=require('../format-presets.js');
 process.chdir(path.resolve(__dirname,'..'));
 let count=0;
-for(const file of fs.readdirSync('projects').filter(n=>n.startsWith('spanish-')&&n.endsWith('.json'))){
+const campaign=process.argv[2];
+const files=campaign?JSON.parse(fs.readFileSync(`campaigns/${campaign}-projects.json`)).map(p=>path.basename(p)):fs.readdirSync('projects').filter(n=>n.startsWith('spanish-')&&n.endsWith('.json'));
+for(const file of files){
  const p=JSON.parse(fs.readFileSync('projects/'+file)),folder='output/'+file.slice(0,-5),preset=presets.find(x=>x.id===p.formatId);
  const metrics=JSON.parse(fs.readFileSync(folder+'/layout-metrics.json'));
  for(const scene of p.scenes){
+  if(p.campaignId){
+   assert.ok(!scene.layers.some(l=>l.id==='wordmark'),'No added wordmark');
+   for(const l of scene.layers.filter(l=>l.type==='text'))assert.ok(l.fontSize*360/p.output.width>=(l.id==='title'?28:16),`${file}/${scene.id}: copy too small at phone width`);
+   const d=scene.layers.find(l=>l.id==='device'),source=scene.sourceCrop;assert.ok(source&&source.height>0,'Explicit genuine screenshot crop required');
+   assert.ok(d.width>=p.output.width*.4,'Device detail too small');
+  }
   const b=fs.readFileSync(folder+'/'+scene.filename),w=b.readUInt32BE(16),h=b.readUInt32BE(20);
   assert.equal(w,p.output.width);assert.equal(h,p.output.height);
+  if(p.creativeKind==='carousel')assert.equal(p.scenes.length,7);
   if(preset.maxBytes)assert.ok(b.length<=preset.maxBytes,`${file}/${scene.id}: file limit`);
   const m=metrics.find(x=>x.scene===scene.id),title=m.text.find(x=>x.id==='title'),sub=m.text.find(x=>x.id==='subtitle');
   assert.ok(title.bounds.y+title.bounds.height<=sub.bounds.y,`${file}/${scene.id}: copy overlap`);

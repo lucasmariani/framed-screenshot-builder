@@ -1,0 +1,317 @@
+[
+  {
+    "scene": "01-introduction",
+    "output": {
+      "width": 1200,
+      "height": 1200
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Build your Spanish",
+          "vocabulary as you read."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 48,
+          "width": 1092,
+          "height": 197.76,
+          "rotation": 0
+        },
+        "lineWidths": [
+          729.5,
+          877.1500244140625
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "• Photograph a page in Spanish.",
+          "• Tap for its meaning in English.",
+          "• Words saved automatically.",
+          "• Practice with Study and Test."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 268,
+          "width": 1092,
+          "height": 255.35999999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          831.989990234375,
+          809.3699951171875,
+          743.4000244140625,
+          767.8200073242188
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "02-photo",
+    "output": {
+      "width": 1200,
+      "height": 1200
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Take a photo",
+          "as you read."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 48,
+          "width": 1092,
+          "height": 222.48000000000002,
+          "rotation": 0
+        },
+        "lineWidths": [
+          554.7999877929688,
+          500.0400085449219
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Start with a page in Spanish."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 294,
+          "width": 1092,
+          "height": 63.839999999999996,
+          "rotation": 0
+        },
+        "lineWidths": [
+          724.97998046875
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "03-selection",
+    "output": {
+      "width": 1200,
+      "height": 1200
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Tap a word",
+          "you want to learn."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 48,
+          "width": 1092,
+          "height": 222.48000000000002,
+          "rotation": 0
+        },
+        "lineWidths": [
+          468.3999938964844,
+          756.760009765625
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Select it in the scanned text."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 294,
+          "width": 1092,
+          "height": 63.839999999999996,
+          "rotation": 0
+        },
+        "lineWidths": [
+          717.1900024414062
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "04-meaning",
+    "output": {
+      "width": 1200,
+      "height": 1200
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "See what it means",
+          "in English."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 48,
+          "width": 1092,
+          "height": 222.48000000000002,
+          "rotation": 0
+        },
+        "lineWidths": [
+          746.3900146484375,
+          470.989990234375
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "A translation, definition",
+          "and example for context."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 294,
+          "width": 1092,
+          "height": 127.67999999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          596.0599975585938,
+          640.5800170898438
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "05-vocabulary",
+    "output": {
+      "width": 1200,
+      "height": 1200
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Keep the words",
+          "you discover."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 48,
+          "width": 1092,
+          "height": 222.48000000000002,
+          "rotation": 0
+        },
+        "lineWidths": [
+          656.3200073242188,
+          562.3599853515625
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Every lookup is saved",
+          "to your vocabulary."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 294,
+          "width": 1092,
+          "height": 127.67999999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          554.0599975585938,
+          490.3900146484375
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "06-study",
+    "output": {
+      "width": 1200,
+      "height": 1200
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Study your",
+          "new words."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 48,
+          "width": 1092,
+          "height": 222.48000000000002,
+          "rotation": 0
+        },
+        "lineWidths": [
+          460.6199951171875,
+          473.69000244140625
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Recall the meaning.",
+          "Tap to reveal it."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 294,
+          "width": 1092,
+          "height": 127.67999999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          505.57000732421875,
+          390.6600036621094
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "07-test",
+    "output": {
+      "width": 1200,
+      "height": 1200
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Test what",
+          "you remember."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 48,
+          "width": 1092,
+          "height": 222.48000000000002,
+          "rotation": 0
+        },
+        "lineWidths": [
+          403.80999755859375,
+          660.4199829101562
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Type the word.",
+          "Check your answer."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 294,
+          "width": 1092,
+          "height": 127.67999999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          380.3500061035156,
+          500.19000244140625
+        ]
+      }
+    ]
+  }
+]

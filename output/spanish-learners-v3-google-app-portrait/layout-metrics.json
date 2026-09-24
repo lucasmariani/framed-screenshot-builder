@@ -1,0 +1,92 @@
+[
+  {
+    "scene": "01-lookup",
+    "output": {
+      "width": 1200,
+      "height": 1500
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Look up Spanish",
+          "words as you read."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 48,
+          "width": 1092,
+          "height": 222.48000000000002,
+          "rotation": 0
+        },
+        "lineWidths": [
+          720.9000244140625,
+          773.280029296875
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Photograph a page. Tap a word.",
+          "See its meaning in English."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 294,
+          "width": 1092,
+          "height": 127.67999999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          821.02001953125,
+          686.6199951171875
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "02-practice",
+    "output": {
+      "width": 1200,
+      "height": 1500
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Practice the Spanish",
+          "words you look up."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 48,
+          "width": 1092,
+          "height": 222.48000000000002,
+          "rotation": 0
+        },
+        "lineWidths": [
+          870.7000122070312,
+          804.1699829101562
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Build your vocabulary.",
+          "Test what you remember."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 294,
+          "width": 1092,
+          "height": 127.67999999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          570.97998046875,
+          645.6799926757812
+        ]
+      }
+    ]
+  }
+]

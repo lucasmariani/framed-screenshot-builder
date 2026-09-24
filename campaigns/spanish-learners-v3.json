@@ -1,0 +1,142 @@
+{
+  "id": "spanish-learners-v3",
+  "name": "Spanish learners",
+  "revision": 3,
+  "interfaceLanguage": "en",
+  "sourceLanguage": "es",
+  "definitionLanguage": "en",
+  "locale": "en-US",
+  "captureRoot": "../omato-ios/docs/marketing/drafts/reddit-spanish-2026-09-24/assets",
+  "assets": {
+    "vocabulary": {
+      "file": "vocabulary-populated-framed.png",
+      "framed": true,
+      "focusY": 480
+    },
+    "scan": {
+      "file": "08-spanish-scan-native.png",
+      "focusY": 600
+    },
+    "selection": {
+      "file": "09-spanish-selection-native.png",
+      "focusY": 100
+    },
+    "meaning": {
+      "file": "01-meaning-native.png",
+      "focusY": 500
+    },
+    "study": {
+      "file": "05-study-back-native.png",
+      "focusY": 920
+    },
+    "test": {
+      "file": "07-test-correct-native.png",
+      "focusY": 430
+    }
+  },
+  "carousel": [
+    {
+      "id": "01-introduction",
+      "asset": "vocabulary",
+      "title": "Build your Spanish\nvocabulary as you read.",
+      "subtitle": "• Photograph a page in Spanish.\n• Tap for its meaning in English.\n• Words saved automatically.\n• Practice with Study and Test.",
+      "background": "background-book.png"
+    },
+    {
+      "id": "02-photo",
+      "asset": "scan",
+      "title": "Take a photo\nas you read.",
+      "subtitle": "Start with a page in Spanish.",
+      "background": "background-paper.png"
+    },
+    {
+      "id": "03-selection",
+      "asset": "selection",
+      "title": "Tap a word\nyou want to learn.",
+      "subtitle": "Select it in the scanned text.",
+      "background": "background-book.png"
+    },
+    {
+      "id": "04-meaning",
+      "asset": "meaning",
+      "title": "See what it means\nin English.",
+      "subtitle": "A translation, definition\nand example for context.",
+      "background": "background-translation-v5.png"
+    },
+    {
+      "id": "05-vocabulary",
+      "asset": "vocabulary",
+      "title": "Keep the words\nyou discover.",
+      "subtitle": "Every lookup is saved\nto your vocabulary.",
+      "background": "background-paper.png"
+    },
+    {
+      "id": "06-study",
+      "asset": "study",
+      "title": "Study your\nnew words.",
+      "subtitle": "Recall the meaning.\nTap to reveal it.",
+      "background": "background-paper.png"
+    },
+    {
+      "id": "07-test",
+      "asset": "test",
+      "title": "Test what\nyou remember.",
+      "subtitle": "Type the word.\nCheck your answer.",
+      "background": "background-test-v5.png"
+    }
+  ],
+  "static": [
+    {
+      "id": "01-lookup",
+      "asset": "meaning",
+      "title": "Look up Spanish\nwords as you read.",
+      "subtitle": "Photograph a page. Tap a word.\nSee its meaning in English.",
+      "landscapeTitle": "Look up\nSpanish words.",
+      "landscapeSubtitle": "Scan. Tap.\nUnderstand.",
+      "background": "background-translation-v5.png"
+    },
+    {
+      "id": "02-practice",
+      "asset": "test",
+      "title": "Practice the Spanish\nwords you look up.",
+      "subtitle": "Build your vocabulary.\nTest what you remember.",
+      "landscapeTitle": "Practice your\nSpanish words.",
+      "landscapeSubtitle": "Look up words.\nTest your recall.",
+      "background": "background-test-v5.png"
+    }
+  ],
+  "formats": [
+    {
+      "preset": "reddit-carousel-square",
+      "kind": "carousel"
+    },
+    {
+      "preset": "meta-square",
+      "kind": "carousel"
+    },
+    {
+      "preset": "reddit-image-square",
+      "kind": "static"
+    },
+    {
+      "preset": "meta-feed",
+      "kind": "static"
+    },
+    {
+      "preset": "meta-vertical",
+      "kind": "static"
+    },
+    {
+      "preset": "google-app-square",
+      "kind": "static"
+    },
+    {
+      "preset": "google-app-portrait",
+      "kind": "static"
+    },
+    {
+      "preset": "google-app-landscape",
+      "kind": "static"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "scene": "01-lookup",
+    "output": {
+      "width": 1200,
+      "height": 628
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Look up",
+          "Spanish words."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 48,
+          "width": 650,
+          "height": 197.76,
+          "rotation": 0
+        },
+        "lineWidths": [
+          319.20001220703125,
+          576.6699829101562
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Scan. Tap.",
+          "Understand."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 302,
+          "width": 650,
+          "height": 127.67999999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          254.24000549316406,
+          316.739990234375
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "02-practice",
+    "output": {
+      "width": 1200,
+      "height": 628
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Practice your",
+          "Spanish words."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 48,
+          "width": 650,
+          "height": 197.76,
+          "rotation": 0
+        },
+        "lineWidths": [
+          505.25,
+          576.6699829101562
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Look up words.",
+          "Test your recall."
+        ],
+        "bounds": {
+          "x": 54,
+          "y": 302,
+          "width": 650,
+          "height": 127.67999999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          393.2300109863281,
+          398.1600036621094
+        ]
+      }
+    ]
+  }
+]

@@ -163,3 +163,22 @@ reusable skill preserve the rule. V1 PNGs/projects remain in output/archive for
 registry lineage; V2 retains other copy/order pending owner's story review.
 All 30 export dimension/layout checks pass; shared renderer regression passes.
 Nothing uploaded or pushed.
+
+## Mobile-first audience revision v3
+
+26 exports in eight sets: two seven-card carousels (Reddit and Meta), plus two
+independent static concepts across Reddit square, Meta Feed and Stories, and
+Google square/portrait/landscape. Each static concept explains its own benefit.
+The seven-card flow uses the vocabulary introduction, Spanish scan/selection,
+meaning, saved vocabulary, revealed Study and checked-correct Test. No added
+wordmark. Backgrounds reuse the ASC reference family with quieter copy areas.
+
+Replaced point-resolution capture inputs with native 1206×2622 screenshots; kept
+the user-selected historical populated vocabulary. Real app UI is framed/scaled/
+cropped only, with crop rectangles recorded. The gallery shows 360 px images.
+Verified type sizes, text wrapping/separation, PNG dimensions, known file limits,
+Stories safe areas, selected crecer, revealed definition and green Correct state.
+Simulated camera image and live OCR capture limitations are recorded in the iOS
+capture-v3-notes.md; no physical camera claim. Simulator sessions are closed.
+
+All outputs remain local drafts, pending owner review before upload.

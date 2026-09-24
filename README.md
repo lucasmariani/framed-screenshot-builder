@@ -209,3 +209,29 @@ The reusable operational skill is versioned at
 `skills/omato-marketing-screenshots/SKILL.md` and installed in Lucas's personal
 Codex skills under the same name. Invoke **$omato-marketing-screenshots** for
 future simulator capture, localization, framing and artwork production.
+
+### Audience campaigns: carousel and standalone images
+
+The current review is `spanish-learners.html`; its editor links use new v3 routes,
+so prior autosaves and artwork remain intact. `campaigns/spanish-learners-v3.json`
+is the example brief for future audiences and languages. It separates language
+pair, genuine captures, seven-card story, standalone messages and format presets.
+
+With the documented Node dependencies and extracted font faces configured:
+
+```sh
+node tools/build_campaign.cjs campaigns/spanish-learners-v3.json
+# Render each entry in campaigns/spanish-learners-v3-projects.json:
+node tools/render_project.cjs projects/<name>.json output/<name>
+node tools/validate_ads.cjs spanish-learners-v3
+python3 tools/package_ad_campaign.py spanish-learners-v3
+```
+
+These are explicit-generation tools: preserve edits before regenerating. For a
+new audience, create a new brief and capture that language's real UI; translating
+headlines alone is insufficient. Source crops are recorded per scene and preserve
+real pixels. Inspect the 360 px gallery, including each crop's meaningful content.
+The checks enforce internal marketing font targets (28 px headings, 16 px support
+at 360 px display width), dimensions and known placement limits. These are design
+targets, not provider eligibility guarantees. Owner review remains required before
+upload; tools do not publish ads.
