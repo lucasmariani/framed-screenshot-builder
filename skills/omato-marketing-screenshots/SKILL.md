@@ -45,6 +45,8 @@ These rules apply to **all future Omato audiences and languages**, not only Span
 
 **Accepted composition reference (September 24, 2026):** Lucas accepted the v4 direction and adjusted the editor to use more empty space. Use `projects/spanish-composition-review-v4-owner-adjusted.json` as the reference: higher/larger vocabulary phone, larger near-full-height standalone phone, and larger supporting type. Preserve those exact owner adjustments; adapt their balance to each format instead of copying coordinates blindly. This is design-direction acceptance, not upload or campaign authorization.
 
+**Reddit carousel exception — September 24, 2026:** Reddit supports at most six cards. Lucas approved omitting the repeated saved-vocabulary card for Reddit: vocabulary-led introduction → photo → selection → meaning → revealed Study → checked Test. Keep the seven-card master story for other eligible placements. Provider limits take precedence over a reusable card count; get any new story adaptation reviewed.
+
 **Choose the ad structure first:** Carousel = the agreed seven-card progression. Single static image = one complete, audience-specific value proposition, one strong screenshot and brief supporting copy; it cannot rely on previous/next cards or use a multi-step carousel squeezed into one frame. Prepare standalone variants separately, with distinct IDs and copy. The introductory vocabulary image, translation result, revealed Study or checked-correct Test can be used when they prove that standalone promise.
 
 **Permanent artwork rule (Lucas, September 24, 2026): Do not add a decorative “Omato” title/wordmark to screenshots or ad compositions. This includes the top-left wordmark. Preserve genuine app UI; the restriction is on added branding layers.**

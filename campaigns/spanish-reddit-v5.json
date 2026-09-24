@@ -1,0 +1,26 @@
+{
+  "id": "spanish-reddit-v5",
+  "revision": 5,
+  "audience": "English-speaking Spanish learners",
+  "languageMatrix": {
+    "interface": "en",
+    "source": "es",
+    "definition": "en",
+    "copy": "en-US"
+  },
+  "reference": "projects/spanish-composition-review-v4-owner-adjusted.json",
+  "carouselAdaptation": "Lucas approved six cards; omit the repeated saved-vocabulary card, retaining vocabulary overview, photo, selection, meaning, revealed Study and checked Test.",
+  "captureProvenance": "project-assets/spanish-learners-v3/provenance.json",
+  "projects": [
+    "projects/spanish-reddit-v5-reddit-carousel-square.json",
+    "projects/spanish-reddit-v5-reddit-image-square.json",
+    "projects/spanish-reddit-v5-reddit-image-portrait.json"
+  ],
+  "status": "local-review-only",
+  "publicationAuthorized": false,
+  "specsCheckedAt": "2026-09-24",
+  "specSources": [
+    "https://www.business.reddit.com/learning-hub/articles/reddit-image-ad-specs",
+    "https://www.business.reddit.com/advertise/ad-types/carousel-ads"
+  ]
+}

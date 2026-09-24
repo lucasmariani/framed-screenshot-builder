@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "file": "output/spanish-reddit-v5-reddit-carousel-square/01-introduction.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v5-reddit-carousel-square/02-photo.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v5-reddit-carousel-square/03-selection.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v5-reddit-carousel-square/04-meaning.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v5-reddit-carousel-square/05-study.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v5-reddit-carousel-square/06-test.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v5-reddit-image-square/01-lookup.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v5-reddit-image-square/02-practice.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v5-reddit-image-portrait/01-lookup.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v5-reddit-image-portrait/02-practice.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    }
+  ],
+  "image_count": 10,
+  "visual_review": "Inspected at 360px CSS width; headings adjusted to keep clear of phone frames. Owner introduction pixel-identical.",
+  "provider_preview": "Not performed; no upload authorized."
+}
