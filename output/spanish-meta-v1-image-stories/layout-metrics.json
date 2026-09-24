@@ -1,0 +1,100 @@
+[
+  {
+    "scene": "01-lookup",
+    "output": {
+      "width": 1440,
+      "height": 2560
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Look up",
+          "Spanish words",
+          "as you read."
+        ],
+        "bounds": {
+          "x": 161.24,
+          "y": 620.63,
+          "width": 565,
+          "height": 302.7996,
+          "rotation": 0
+        },
+        "lineWidths": [
+          316.6000061035156,
+          545.510009765625,
+          440.8599853515625
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Scan a page.",
+          "Tap a word.",
+          "See its meaning",
+          "in English."
+        ],
+        "bounds": {
+          "x": 165.38,
+          "y": 997.37,
+          "width": 550,
+          "height": 277.794,
+          "rotation": 0
+        },
+        "lineWidths": [
+          287.7200012207031,
+          276.9700012207031,
+          357.5400085449219,
+          243.08999633789062
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "02-practice",
+    "output": {
+      "width": 1440,
+      "height": 2560
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Practice your",
+          "Spanish words."
+        ],
+        "bounds": {
+          "x": 161.24,
+          "y": 664.1,
+          "width": 565,
+          "height": 193.08960000000002,
+          "rotation": 0
+        },
+        "lineWidths": [
+          479.3399963378906,
+          547.1099853515625
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Look up words.",
+          "Build vocabulary.",
+          "Test your recall."
+        ],
+        "bounds": {
+          "x": 165.38,
+          "y": 959.075,
+          "width": 550,
+          "height": 208.34549999999996,
+          "rotation": 0
+        },
+        "lineWidths": [
+          353.6199951171875,
+          393.760009765625,
+          363.8800048828125
+        ]
+      }
+    ]
+  }
+]

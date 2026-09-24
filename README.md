@@ -3,6 +3,14 @@
 Local-only, client-side tools for framing iPhone screenshots and editing Omato's App Store Connect artwork.
 
 
+## Saved Reddit and Meta adaptation — September 24, 2026
+
+`reddit-spanish-v9.html` preserves the six-card Reddit set requested by Lucas, including the current two-line Test subtitle. Its project is `projects/spanish-reddit-v9-reddit-carousel-square.json`; prior revisions and standalone Reddit variants remain intact.
+
+`meta-spanish-v1.html` reviews thirteen new images: a seven-card 1080 × 1080 carousel, two square standalone images at 1080 × 1080, two feed images at 1440 × 1800, and two Stories images at 1440 × 2560. The saved-vocabulary card returns between meaning and revealed Study. Source screenshots and Bodoni/Baskerville typography are preserved. Stories use the existing conservative safe guide; live placement eligibility, carousel delivery and automatic crops require Ads Manager previews before publication. These are local review assets, with no upload or activation.
+
+Both galleries link editable projects and ZIPs containing PNGs, manifests, projects and their image sources. See `campaigns/spanish-meta-v1.json` and `campaigns/spanish-reddit-v9.json` for the decision record, and each `output/<campaign>/validation.json` for checks. Immutable new IDs are recorded in the sibling iOS creative registry.
+
 ## Current ad typography — September 24, 2026
 
 Lucas confirmed **Bodoni 72 Bold (700)** headlines and **Baskerville Regular (400)** subtitles/support for all new ad audiences and formats. The earlier Avenir Next subtitle choice was carried over from the historical Reading Companion/CPP templates in error. Their projects and rendered records remain historical references only. The matching serif reference is `../marketing-screenshots/review/asc-intro-2026-09-22/intro-editor-project.json`.

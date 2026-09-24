@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "name": "Spanish learners · Meta Stories image · v1 · verosímil",
+  "revision": 1,
+  "output": {
+    "width": 1440,
+    "height": 2560
+  },
+  "formatId": "meta-vertical",
+  "safeInsets": {
+    "top": 0.14,
+    "bottom": 0.35,
+    "left": 0.06,
+    "right": 0.06
+  },
+  "locale": "en-US",
+  "sourceLanguage": "es",
+  "definitionLanguage": "en",
+  "status": "awaiting-owner-artwork-review",
+  "editorPolicy": {
+    "omittedLayerIds": [
+      "wordmark"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "01-lookup",
+      "name": "Look up Spanish words as you read",
+      "filename": "01-lookup.png",
+      "creativeKind": "static",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 621.0,
+        "accentY": 621.0,
+        "accentRadius": 1242.0,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-translation-v5.png",
+          "x": 0,
+          "y": -290,
+          "width": 1440,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.1715628672150413
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-verosimil-v7/meaning.png",
+          "x": 720.14,
+          "y": 414.665,
+          "width": 592.02,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Look up\nSpanish words\nas you read.",
+          "x": 161.24,
+          "y": 620.63,
+          "width": 565,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 95.22,
+          "lineHeight": 1.06,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Scan a page.\nTap a word.\nSee its meaning\nin English.",
+          "x": 165.38,
+          "y": 997.37,
+          "width": 550,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 56.925,
+          "lineHeight": 1.22,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "02-practice",
+      "name": "Practice your Spanish words",
+      "filename": "02-practice.png",
+      "creativeKind": "static",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 621.0,
+        "accentY": 621.0,
+        "accentRadius": 1242.0,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-test-v5.png",
+          "x": 0,
+          "y": -480,
+          "width": 1440,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-verosimil-v7/test-correct.png",
+          "x": 720.14,
+          "y": 414.665,
+          "width": 592.02,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Practice your\nSpanish words.",
+          "x": 161.24,
+          "y": 664.1,
+          "width": 565,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 91.08,
+          "lineHeight": 1.06,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Look up words.\nBuild vocabulary.\nTest your recall.",
+          "x": 165.38,
+          "y": 959.075,
+          "width": 550,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 56.925,
+          "lineHeight": 1.22,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "new-batch-review-required",
+  "campaignId": "spanish-reddit-v5",
+  "creativeKind": "static",
+  "interfaceLanguage": "en",
+  "provider": "meta"
+}

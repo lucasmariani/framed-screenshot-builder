@@ -1,0 +1,55 @@
+{
+  "image_count": 6,
+  "checks": [
+    {
+      "file": "output/spanish-reddit-v9-reddit-carousel-square/01-introduction.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-reddit-v9-reddit-carousel-square/02-photo.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-reddit-v9-reddit-carousel-square/03-selection.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-reddit-v9-reddit-carousel-square/04-meaning.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-reddit-v9-reddit-carousel-square/05-study.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-reddit-v9-reddit-carousel-square/06-test.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    }
+  ],
+  "visual_review": "Inspected at 360px image width; real silver-framed captures, serif fonts, copy separation and readable hierarchy.",
+  "provider_preview": "Not uploaded; live Ads Manager eligibility and creative transformations unverified."
+}

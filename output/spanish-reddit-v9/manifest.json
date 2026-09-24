@@ -1,0 +1,182 @@
+{
+  "campaign": "spanish-reddit-v9",
+  "provider": "Reddit",
+  "status": "saved-for-Reddit",
+  "publication_authorized": false,
+  "destination": "https://apps.apple.com/us/app/omato-vocabulary-builder/id6756230098",
+  "click_tracker": null,
+  "impression_tracker": null,
+  "language_matrix": {
+    "interface": "en",
+    "source": "es",
+    "definition": "en",
+    "copy": "en-US"
+  },
+  "capture_provenance": {
+    "path": "project-assets/spanish-verosimil-v7/provenance.json",
+    "sha256": "66f83bbc6992299b3c274ac36a77eb4b7d13d18e6a9108c11c434970e6d1eb2c"
+  },
+  "spec_sources": [
+    "https://www.business.reddit.com/learning-hub/articles/reddit-image-ad-specs",
+    "https://www.business.reddit.com/advertise/ad-types/carousel-ads"
+  ],
+  "placement_notes": [],
+  "sets": [
+    {
+      "project": "projects/spanish-reddit-v9-reddit-carousel-square.json",
+      "project_sha256": "b084b16444d26d75124f1428aa497e7ca6e3fe32b4caa60d8b49e375f18400f7",
+      "kind": "carousel",
+      "format": "reddit-carousel-square",
+      "output": {
+        "width": 1200,
+        "height": 1200
+      },
+      "assets": [
+        {
+          "id": "AD-LNG-VEROSIMIL-REDDIT-spanish-reddit-v9-reddit-carousel-square-01-introduction-en-US",
+          "file": "output/spanish-reddit-v9-reddit-carousel-square/01-introduction.png",
+          "sha256": "1922ea9de1523dd924b858141bdf6085247793f56c64b8c20705416e27a41c31",
+          "bytes": 1131220,
+          "width": 1200,
+          "height": 1200,
+          "scene": "01-introduction",
+          "name": "Build your Spanish vocabulary",
+          "copy": {
+            "title": "Build your Spanish\nvocabulary as you read.",
+            "subtitle": "Scan a page. Look up words.\nKeep them. Practice later."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-book.png",
+              "sha256": "d2d0fdff5d50abd9f1d178a4d5c638e27d8d25e3a44a9d39b0fc71ecaedb7f4a"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/vocabulary.png",
+              "sha256": "d31296445b4e8df408b2626abb00aad65215c84c658f3d43dec1c62eabd51b89"
+            }
+          ]
+        },
+        {
+          "id": "AD-LNG-VEROSIMIL-REDDIT-spanish-reddit-v9-reddit-carousel-square-02-photo-en-US",
+          "file": "output/spanish-reddit-v9-reddit-carousel-square/02-photo.png",
+          "sha256": "975c962aed39d950310a12ce90464321644152eaf6b38504c6733934dfc4734b",
+          "bytes": 1442512,
+          "width": 1200,
+          "height": 1200,
+          "scene": "02-photo",
+          "name": "Take a photo as you read",
+          "copy": {
+            "title": "Take a photo\nas you read.",
+            "subtitle": "Start with\na page\nin Spanish."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-paper.png",
+              "sha256": "fa84486708ef7200eef8bfbb580a945be1b2fa4f546ebb16e625717050a01f84"
+            },
+            {
+              "path": "project-assets/spanish-hidalgo-v6/scan.png",
+              "sha256": "67b3b56b2e49f12adc68d796f3f48fc494dbd73a1b9f1d8f79c1603c2eb389e6"
+            }
+          ]
+        },
+        {
+          "id": "AD-LNG-VEROSIMIL-REDDIT-spanish-reddit-v9-reddit-carousel-square-03-selection-en-US",
+          "file": "output/spanish-reddit-v9-reddit-carousel-square/03-selection.png",
+          "sha256": "54063df4ab416acb09b5ac63500b0a54a9e9ab8141b10fdae193f9e52a622aa3",
+          "bytes": 1021917,
+          "width": 1200,
+          "height": 1200,
+          "scene": "03-selection",
+          "name": "Tap a word you want to learn",
+          "copy": {
+            "title": "Tap a word\nyou want\nto learn.",
+            "subtitle": "Select it in\nthe scanned\ntext."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-book.png",
+              "sha256": "d2d0fdff5d50abd9f1d178a4d5c638e27d8d25e3a44a9d39b0fc71ecaedb7f4a"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/selection.png",
+              "sha256": "21de09bf70a25b52944a34546c89d46c9150caaf1c5d13c05ec5f291325eacc5"
+            }
+          ]
+        },
+        {
+          "id": "AD-LNG-VEROSIMIL-REDDIT-spanish-reddit-v9-reddit-carousel-square-04-meaning-en-US",
+          "file": "output/spanish-reddit-v9-reddit-carousel-square/04-meaning.png",
+          "sha256": "9b27a93fb2b92ca929e41950cf63f513f5d383a47c1e1e1db8255cd40699feaf",
+          "bytes": 955530,
+          "width": 1200,
+          "height": 1200,
+          "scene": "04-meaning",
+          "name": "See what it means in English",
+          "copy": {
+            "title": "See what\nit means\nin English.",
+            "subtitle": "A translation,\ndefinition\nand example\nfor context."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-translation-v5.png",
+              "sha256": "51ac5059d2bdbe0bde3ee87212728554ad51a112f21a4818d5b34c34fae8c055"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/meaning.png",
+              "sha256": "e0fc2d5d9a4e07bed6f306725e066bf91c4773bfb393f8a3c4e547f131f29801"
+            }
+          ]
+        },
+        {
+          "id": "AD-LNG-VEROSIMIL-REDDIT-spanish-reddit-v9-reddit-carousel-square-05-study-en-US",
+          "file": "output/spanish-reddit-v9-reddit-carousel-square/05-study.png",
+          "sha256": "0549f2fa8802d7e2d5855aaa337a714e552717401eb70de099e4e4d5f5fc7cfb",
+          "bytes": 978470,
+          "width": 1200,
+          "height": 1200,
+          "scene": "05-study",
+          "name": "Study your new words",
+          "copy": {
+            "title": "Study your\nnew words.",
+            "subtitle": "Recall the\nmeaning.\nTap to reveal it."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-sage.png",
+              "sha256": "d3f43f78ba1fff6cc8927ea82a3f05c9966dd618897d3ff1c7324894e80539fb"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/study-revealed.png",
+              "sha256": "4a5be4ab837d12f43c17619e3bd2811a19e5c8b2c998645611e9eb472f9747fb"
+            }
+          ]
+        },
+        {
+          "id": "AD-LNG-VEROSIMIL-REDDIT-spanish-reddit-v9-reddit-carousel-square-06-test-en-US",
+          "file": "output/spanish-reddit-v9-reddit-carousel-square/06-test.png",
+          "sha256": "0e69b645d6116be49142521867533e0495317846fc30de72113c082fbab8779b",
+          "bytes": 906745,
+          "width": 1200,
+          "height": 1200,
+          "scene": "06-test",
+          "name": "Test what you remember",
+          "copy": {
+            "title": "Test what you\nremember.",
+            "subtitle": "Type the word.\nCheck your answer."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-test-v5.png",
+              "sha256": "a83b16348fb0c57eac3fc8ddd74f20763dc61de4e5468dba81bf718ddcbfef58"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/test-correct.png",
+              "sha256": "cfabc1bef0b90891725f7b5b6b72c3629ec407f9010fb3c13dbe9896df0cfbd7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
