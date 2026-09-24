@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "name": "Spanish learners · two composition studies · v4",
+  "revision": 4,
+  "output": {
+    "width": 1200,
+    "height": 1200
+  },
+  "formatId": "reddit-carousel-square",
+  "safeInsets": null,
+  "locale": "en-US",
+  "sourceLanguage": "es",
+  "definitionLanguage": "en",
+  "status": "two-image-direction-review-not-approved",
+  "editorPolicy": {
+    "omittedLayerIds": [
+      "wordmark"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "01-carousel-introduction",
+      "name": "Carousel introduction",
+      "filename": "01-carousel-introduction.png",
+      "creativeKind": "carousel-introduction",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 600,
+        "accentY": 600,
+        "accentRadius": 1200,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-book.png",
+          "x": 0,
+          "y": -1120,
+          "width": 1200,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.172737955346651
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-learners-v3/vocabulary.png",
+          "x": 183,
+          "y": 371,
+          "width": 809,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.172727272727273
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Build your Spanish\nvocabulary as you read.",
+          "x": 66,
+          "y": 62,
+          "width": 1068,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 90,
+          "lineHeight": 1.06,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Scan a page. Look up words.\nKeep them. Practice later.",
+          "x": 70,
+          "y": 286,
+          "width": 1050,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 48,
+          "lineHeight": 1.22,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "02-standalone-lookup",
+      "name": "Standalone lookup ad",
+      "filename": "02-standalone-lookup.png",
+      "creativeKind": "static",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 600,
+        "accentY": 600,
+        "accentRadius": 1200,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-translation-v5.png",
+          "x": 0,
+          "y": -430,
+          "width": 1200,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.1715628672150413
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-learners-v3/meaning.png",
+          "x": 604,
+          "y": 19,
+          "width": 572,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Look up\nSpanish words\nas you read.",
+          "x": 64,
+          "y": 218,
+          "width": 570,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 92,
+          "lineHeight": 1.06,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Scan a page.\nTap a word.\nSee its meaning\nin English.",
+          "x": 68,
+          "y": 582,
+          "width": 500,
+          "fontFamily": "Avenir Next",
+          "fontWeight": 500,
+          "fontSize": 55,
+          "lineHeight": 1.22,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "direction_accepted_owner_adjusted_2026-09-24"
+}
