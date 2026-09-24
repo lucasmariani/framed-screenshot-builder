@@ -1,0 +1,28 @@
+{
+  "updated_images": 2,
+  "unchanged_images_reused_from_v3": 11,
+  "checks": [
+    {
+      "file": "output/spanish-meta-v4-image-stories/01-lookup.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "copy_bounds_wrapping_spacing": "pass",
+      "text_contrast": "pass",
+      "essential_device_region_bottom_px": 1728.03,
+      "conservative_safe_bottom_px": 1664,
+      "essential_device_safe_guide": "outside; owner composition preserved, provider overlay preview required"
+    },
+    {
+      "file": "output/spanish-meta-v4-image-stories/02-practice.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "copy_bounds_wrapping_spacing": "pass",
+      "text_contrast": "pass",
+      "essential_device_region_bottom_px": 1996.44,
+      "conservative_safe_bottom_px": 1664,
+      "essential_device_safe_guide": "outside; owner composition preserved, provider overlay preview required"
+    }
+  ],
+  "provider_preview": "Not uploaded. Actual Stories overlay preview required; no claim that essential device proof fits the conservative guide.",
+  "visual_review": "Both exported PNGs inspected in the gallery at 360 CSS px width: clear copy, prominent silver phone, no copy/device overlap. Exact owner device coordinates retained."
+}

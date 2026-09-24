@@ -1,0 +1,52 @@
+{
+  "id": "spanish-meta-v4",
+  "revision": 4,
+  "provider": "Meta",
+  "audience": "English-speaking Spanish learners",
+  "languageMatrix": {
+    "interface": "en",
+    "source": "es",
+    "definition": "en",
+    "copy": "en-US"
+  },
+  "featuredWord": "verosímil",
+  "reference": "campaigns/spanish-meta-v3.json",
+  "captureProvenance": "project-assets/spanish-verosimil-v7/provenance.json",
+  "typography": {
+    "headings": "Bodoni 72 Bold (700)",
+    "subtitles": "Baskerville Regular (400)",
+    "change": "Owner adjusted only the two Stories device positions and widths. All other formats reuse v3 unchanged.",
+    "subtitleSize": 83,
+    "storiesSubtitleSize": 90
+  },
+  "projects": [
+    "projects/spanish-meta-v3-carousel-square.json",
+    "projects/spanish-meta-v3-image-square.json",
+    "projects/spanish-meta-v3-image-feed.json",
+    "projects/spanish-meta-v4-image-stories.json"
+  ],
+  "carouselOrder": [
+    "introduction",
+    "photo",
+    "selection",
+    "meaning",
+    "saved vocabulary",
+    "revealed Study",
+    "checked Test"
+  ],
+  "status": "owner-adjusted-local-draft",
+  "publicationAuthorized": false,
+  "placementNotes": [
+    "Seven-card square carousel master; verify app-promotion placement eligibility and retained order in Ads Manager.",
+    "Two standalone concepts, each in square, 4:5 feed and 9:16 Stories formats.",
+    "Official help confirms app-promotion carousel support but contains legacy Instagram API restrictions; verify full seven-card delivery for chosen Instagram placement before activation.",
+    "Owner enlarged Stories phones. Marketing copy passes the conservative guide; essential device proof extends below it in both images. Preserve owner artwork and inspect actual Stories overlays before upload."
+  ],
+  "specSources": [
+    "https://www.facebook.com/business/ads-guide/update/carousel",
+    "https://www.facebook.com/business/ads-guide/update/image/facebook-feed",
+    "https://www.facebook.com/business/help/504476536989757",
+    "https://www.facebook.com/business/help/2222978001316177",
+    "https://www.facebook.com/business/help/1639197963055851"
+  ]
+}

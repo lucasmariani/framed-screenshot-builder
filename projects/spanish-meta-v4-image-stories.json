@@ -1,0 +1,242 @@
+{
+  "version": 1,
+  "name": "Spanish learners · Meta Stories · v4 · owner-adjusted",
+  "revision": 4,
+  "output": {
+    "width": 1440,
+    "height": 2560
+  },
+  "formatId": "meta-vertical",
+  "safeInsets": {
+    "top": 0.14,
+    "bottom": 0.35,
+    "left": 0.06,
+    "right": 0.06
+  },
+  "locale": "en-US",
+  "sourceLanguage": "es",
+  "definitionLanguage": "en",
+  "status": "owner-adjusted-local-draft",
+  "editorPolicy": {
+    "omittedLayerIds": [
+      "wordmark"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "01-lookup",
+      "name": "Look up Spanish words as you read",
+      "filename": "01-lookup.png",
+      "creativeKind": "static",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 621.0,
+        "accentY": 621.0,
+        "accentRadius": 1242.0,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-translation-v5.png",
+          "x": 0,
+          "y": -280,
+          "width": 1440,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.1715628672150413
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind text",
+          "src": "project-assets/meta-v3-contrast/spanish-meta-v3-image-stories-01-lookup.png",
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "aspectRatio": 1.7777777777777777,
+          "rotation": 0,
+          "opacity": 0.85,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-verosimil-v7/meaning.png",
+          "x": 118,
+          "y": 814,
+          "width": 1198,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Look up Spanish\nwords as you read.",
+          "x": 100,
+          "y": 360,
+          "width": 1240,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 136,
+          "lineHeight": 1.02,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Scan a page. Tap a word.",
+          "x": 104,
+          "y": 660,
+          "width": 1230,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 90,
+          "lineHeight": 1.05,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "essentialDeviceRegion": {
+        "sourceRect": {
+          "x": 140,
+          "y": 440,
+          "width": 1080,
+          "height": 590
+        },
+        "description": "Spanish term and English translation"
+      },
+      "deviceContinuation": "Owner-enlarged genuine framed phone continues below the canvas; placement overlay validation recorded separately.",
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      }
+    },
+    {
+      "id": "02-practice",
+      "name": "Practice your Spanish words",
+      "filename": "02-practice.png",
+      "creativeKind": "static",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 621.0,
+        "accentY": 621.0,
+        "accentRadius": 1242.0,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-test-v5.png",
+          "x": 0,
+          "y": -440,
+          "width": 1440,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind text",
+          "src": "project-assets/meta-v3-contrast/spanish-meta-v3-image-stories-02-practice.png",
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "aspectRatio": 1.7777777777777777,
+          "rotation": 0,
+          "opacity": 0.85,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-verosimil-v7/test-correct.png",
+          "x": 61,
+          "y": 820,
+          "width": 1318,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Practice your\nSpanish words.",
+          "x": 100,
+          "y": 360,
+          "width": 1240,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 136,
+          "lineHeight": 1.02,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Look up words. Practice later.",
+          "x": 104,
+          "y": 660,
+          "width": 1230,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 90,
+          "lineHeight": 1.05,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "essentialDeviceRegion": {
+        "sourceRect": {
+          "x": 145,
+          "y": 977,
+          "width": 454,
+          "height": 228
+        },
+        "description": "Green verosímil answer and Correct confirmation"
+      },
+      "deviceContinuation": "Owner-enlarged genuine framed phone continues below the canvas; placement overlay validation recorded separately.",
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      }
+    }
+  ],
+  "reviewStatus": "new-batch-review-required",
+  "campaignId": "spanish-meta-v4",
+  "creativeKind": "static",
+  "interfaceLanguage": "en",
+  "provider": "meta",
+  "ownerChanges": {
+    "source": "Live editor DOM controls, 2026-09-24",
+    "base": "projects/spanish-meta-v3-image-stories.json",
+    "changes": "Only the device layers changed: lookup x118 y814 width1198; practice x61 y820 width1318. All other visible controls match v3."
+  }
+}

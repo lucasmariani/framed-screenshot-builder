@@ -1,0 +1,88 @@
+[
+  {
+    "scene": "01-lookup",
+    "output": {
+      "width": 1440,
+      "height": 2560
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Look up Spanish",
+          "words as you read."
+        ],
+        "bounds": {
+          "x": 100,
+          "y": 360,
+          "width": 1240,
+          "height": 277.44,
+          "rotation": 0
+        },
+        "lineWidths": [
+          907.7999877929688,
+          973.760009765625
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Scan a page. Tap a word."
+        ],
+        "bounds": {
+          "x": 104,
+          "y": 660,
+          "width": 1230,
+          "height": 94.5,
+          "rotation": 0
+        },
+        "lineWidths": [
+          915.3400268554688
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "02-practice",
+    "output": {
+      "width": 1440,
+      "height": 2560
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Practice your",
+          "Spanish words."
+        ],
+        "bounds": {
+          "x": 100,
+          "y": 360,
+          "width": 1240,
+          "height": 277.44,
+          "rotation": 0
+        },
+        "lineWidths": [
+          715.77001953125,
+          816.9500122070312
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Look up words. Practice later."
+        ],
+        "bounds": {
+          "x": 104,
+          "y": 660,
+          "width": 1230,
+          "height": 94.5,
+          "rotation": 0
+        },
+        "lineWidths": [
+          1069.4100341796875
+        ]
+      }
+    ]
+  }
+]
