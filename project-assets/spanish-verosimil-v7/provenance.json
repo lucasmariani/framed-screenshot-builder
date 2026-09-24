@@ -1,0 +1,92 @@
+{
+  "revision": 7,
+  "featured_word": "verosímil",
+  "selected_inflection": "verosímiles",
+  "audience": "English-speaking Spanish learners",
+  "language_matrix": {
+    "ui": "en",
+    "source": "es",
+    "definition": "en",
+    "copy": "en-US"
+  },
+  "new_captures": [
+    {
+      "role": "selection",
+      "original": "/Users/lucas/Desktop/Screenshot Omato Marketing EN-ES Clean 24-09-2026 at 16.48.21.png",
+      "raw": "project-assets/spanish-verosimil-v7/raw/selection.png",
+      "sha256": "258e2d3dbaec61c8982300f12e55f5e66bf0e8038140d9768689dad67a39b25a",
+      "pixels": [
+        1206,
+        2622
+      ],
+      "capture_owner": "Lucas",
+      "build": "Not independently verified for user-supplied captures"
+    },
+    {
+      "role": "meaning",
+      "original": "/Users/lucas/Desktop/Screenshot Omato Marketing EN-ES Clean 24-09-2026 at 16.48.32.png",
+      "raw": "project-assets/spanish-verosimil-v7/raw/meaning.png",
+      "sha256": "2982cd607cee0d78d5a0ea922263065c16f11f63e2878487749b2a0a96268e8e",
+      "pixels": [
+        1206,
+        2622
+      ],
+      "capture_owner": "Lucas",
+      "build": "Not independently verified for user-supplied captures"
+    },
+    {
+      "role": "study-revealed",
+      "original": "/Users/lucas/Desktop/Screenshot Omato Marketing EN-ES Clean 24-09-2026 at 16.48.53.png",
+      "raw": "project-assets/spanish-verosimil-v7/raw/study-revealed.png",
+      "sha256": "3ae8c01d566e3f5ecbe4f9476464a2e75bf7ce2d88c60d65c624bbaffe354ae6",
+      "pixels": [
+        1206,
+        2622
+      ],
+      "capture_owner": "Lucas",
+      "build": "Not independently verified for user-supplied captures"
+    },
+    {
+      "role": "test-correct",
+      "original": "/Users/lucas/Desktop/Screenshot Omato Marketing EN-ES Clean 24-09-2026 at 16.49.18.png",
+      "raw": "project-assets/spanish-verosimil-v7/raw/test-correct.png",
+      "sha256": "73c49a4fac66aa2a3eeefed84c35bbff182413df394359fbf9c2177000db9ad3",
+      "pixels": [
+        1206,
+        2622
+      ],
+      "capture_owner": "Lucas",
+      "build": "Not independently verified for user-supplied captures"
+    },
+    {
+      "role": "vocabulary",
+      "original": "/Users/lucas/Desktop/Screenshot Omato Marketing EN-ES Clean 24-09-2026 at 16.51.45.png",
+      "raw": "project-assets/spanish-verosimil-v7/raw/vocabulary.png",
+      "sha256": "595e379b3eb355efe3695d4b4c0e08116f1b5f64e177083a907ab6676f874829",
+      "pixels": [
+        1206,
+        2622
+      ],
+      "capture_owner": "Lucas",
+      "build": "Not independently verified for user-supplied captures"
+    }
+  ],
+  "reused_scan": {
+    "raw": "project-assets/spanish-hidalgo-v6/raw/scan.png",
+    "framed": "project-assets/spanish-hidalgo-v6/scan.png",
+    "provenance": "project-assets/spanish-hidalgo-v6/provenance.json",
+    "reason": "Same Don Quijote page; user supplied five replacements and no new Scan image."
+  },
+  "content_policy": "Use supplied app screenshots unchanged; no synthesized UI or replacement definitions. Keep native singular lemma verosímil and plural selection verosímiles.",
+  "status_bar": "Visually checked supplied captures: 9:41, full Wi-Fi/cellular, full black battery with no charging bolt.",
+  "frame": "iPhone_17_pro-silver-portrait",
+  "native_pixels": [
+    1206,
+    2622
+  ],
+  "framed_pixels": [
+    1350,
+    2760
+  ],
+  "publication_authorized": false
+}

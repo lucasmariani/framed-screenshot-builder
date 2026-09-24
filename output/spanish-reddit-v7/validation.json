@@ -1,0 +1,91 @@
+{
+  "image_count": 10,
+  "checks": [
+    {
+      "file": "output/spanish-reddit-v7-reddit-carousel-square/01-introduction.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v7-reddit-carousel-square/02-photo.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v7-reddit-carousel-square/03-selection.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v7-reddit-carousel-square/04-meaning.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v7-reddit-carousel-square/05-study.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v7-reddit-carousel-square/06-test.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v7-reddit-image-square/01-lookup.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v7-reddit-image-square/02-practice.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v7-reddit-image-portrait/01-lookup.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v7-reddit-image-portrait/02-practice.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    }
+  ],
+  "raw_capture_check": "All five supplied originals copied byte-for-byte; 1206 x 2622 each.",
+  "frame": "iPhone_17_pro-silver-portrait; 1350 x 2760; preserved aspect ratio",
+  "layout_reference": "v6 approved layouts and copy unchanged",
+  "provider_preview": "Pending owner review; no upload.",
+  "visual_review": "All ten exports inspected in the gallery at 360px CSS image width. Correct new source screenshots, silver frames, preserved copy/layouts, no overlaps introduced.",
+  "gallery_links": "All local image, editor and ZIP links resolve."
+}

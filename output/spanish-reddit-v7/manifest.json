@@ -1,0 +1,313 @@
+{
+  "campaign": "spanish-reddit-v7",
+  "status": "awaiting-owner-artwork-review",
+  "publication_authorized": false,
+  "destination": "https://apps.apple.com/us/app/omato-vocabulary-builder/id6756230098",
+  "measurement_links": {
+    "click_tracker": null,
+    "impression_tracker": null
+  },
+  "cta_proposal": "Install",
+  "language_matrix": {
+    "ui": "en",
+    "source": "es",
+    "definition": "en",
+    "ad_copy": "en-US"
+  },
+  "design_reference": {
+    "path": "projects/spanish-composition-review-v4-owner-adjusted.json",
+    "sha256": "2746b1e4ed10ef950b3e19e0b6c90a7c1669bf3bc468b35cb53d98a231529767"
+  },
+  "capture_provenance": {
+    "path": "project-assets/spanish-verosimil-v7/provenance.json",
+    "sha256": "66f83bbc6992299b3c274ac36a77eb4b7d13d18e6a9108c11c434970e6d1eb2c"
+  },
+  "limits": {
+    "carousel_max_cards": 6,
+    "image_max_bytes_conservative": 3000000
+  },
+  "spec_sources": [
+    "https://www.business.reddit.com/learning-hub/articles/reddit-image-ad-specs",
+    "https://www.business.reddit.com/advertise/ad-types/carousel-ads"
+  ],
+  "review_limit": "Local render verification only; Reddit placement previews remain pending until artwork approval.",
+  "sets": [
+    {
+      "project": "projects/spanish-reddit-v7-reddit-carousel-square.json",
+      "project_sha256": "36d40e3b7f97f337f9c238902f5f68cd8161242e1d003d1be63d64ab5fb4005a",
+      "kind": "carousel",
+      "format": "reddit-carousel-square",
+      "output": {
+        "width": 1200,
+        "height": 1200
+      },
+      "assets": [
+        {
+          "file": "output/spanish-reddit-v7-reddit-carousel-square/01-introduction.png",
+          "sha256": "ab0820f3e676f902800daec7b277c821ab3146809eb162e7a60d303365bb6053",
+          "bytes": 1130362,
+          "width": 1200,
+          "height": 1200,
+          "scene": "01-introduction",
+          "name": "Build your Spanish vocabulary",
+          "copy": {
+            "title": "Build your Spanish\nvocabulary as you read.",
+            "subtitle": "Scan a page. Look up words.\nKeep them. Practice later."
+          },
+          "ad_headline_proposal": "Learning Spanish? Look up words as you read, then practice them later with Omato.",
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-book.png",
+              "sha256": "d2d0fdff5d50abd9f1d178a4d5c638e27d8d25e3a44a9d39b0fc71ecaedb7f4a"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/vocabulary.png",
+              "sha256": "d31296445b4e8df408b2626abb00aad65215c84c658f3d43dec1c62eabd51b89"
+            }
+          ]
+        },
+        {
+          "file": "output/spanish-reddit-v7-reddit-carousel-square/02-photo.png",
+          "sha256": "a061cf7f015b34857a19ad95bb31a972ce6ee6d00dff786004598e5bd5e0ad21",
+          "bytes": 1440509,
+          "width": 1200,
+          "height": 1200,
+          "scene": "02-photo",
+          "name": "Take a photo as you read",
+          "copy": {
+            "title": "Take a photo\nas you read.",
+            "subtitle": "Start with\na page\nin Spanish."
+          },
+          "ad_headline_proposal": "Learning Spanish? Look up words as you read, then practice them later with Omato.",
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-paper.png",
+              "sha256": "fa84486708ef7200eef8bfbb580a945be1b2fa4f546ebb16e625717050a01f84"
+            },
+            {
+              "path": "project-assets/spanish-hidalgo-v6/scan.png",
+              "sha256": "67b3b56b2e49f12adc68d796f3f48fc494dbd73a1b9f1d8f79c1603c2eb389e6"
+            }
+          ]
+        },
+        {
+          "file": "output/spanish-reddit-v7-reddit-carousel-square/03-selection.png",
+          "sha256": "4a827b602c8ae6aaaea08fa9385e2cf0fb39e5c51097094e94d57fa49c07ac3f",
+          "bytes": 1020745,
+          "width": 1200,
+          "height": 1200,
+          "scene": "03-selection",
+          "name": "Tap a word you want to learn",
+          "copy": {
+            "title": "Tap a word\nyou want\nto learn.",
+            "subtitle": "Select it in\nthe scanned\ntext."
+          },
+          "ad_headline_proposal": "Learning Spanish? Look up words as you read, then practice them later with Omato.",
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-book.png",
+              "sha256": "d2d0fdff5d50abd9f1d178a4d5c638e27d8d25e3a44a9d39b0fc71ecaedb7f4a"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/selection.png",
+              "sha256": "21de09bf70a25b52944a34546c89d46c9150caaf1c5d13c05ec5f291325eacc5"
+            }
+          ]
+        },
+        {
+          "file": "output/spanish-reddit-v7-reddit-carousel-square/04-meaning.png",
+          "sha256": "932e5ba7965c91ebe52a006ef004a48559af1c7c32d7342ee372841976b33da9",
+          "bytes": 950731,
+          "width": 1200,
+          "height": 1200,
+          "scene": "04-meaning",
+          "name": "See what it means in English",
+          "copy": {
+            "title": "See what\nit means\nin English.",
+            "subtitle": "A translation,\ndefinition\nand example\nfor context."
+          },
+          "ad_headline_proposal": "Learning Spanish? Look up words as you read, then practice them later with Omato.",
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-translation-v5.png",
+              "sha256": "51ac5059d2bdbe0bde3ee87212728554ad51a112f21a4818d5b34c34fae8c055"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/meaning.png",
+              "sha256": "e0fc2d5d9a4e07bed6f306725e066bf91c4773bfb393f8a3c4e547f131f29801"
+            }
+          ]
+        },
+        {
+          "file": "output/spanish-reddit-v7-reddit-carousel-square/05-study.png",
+          "sha256": "01b7a973b5b97fb228b560c20ca8e4c2018c75b95e8fe28cf8f87aae0022a118",
+          "bytes": 974556,
+          "width": 1200,
+          "height": 1200,
+          "scene": "05-study",
+          "name": "Study your new words",
+          "copy": {
+            "title": "Study your\nnew words.",
+            "subtitle": "Recall the\nmeaning.\nTap to reveal it."
+          },
+          "ad_headline_proposal": "Learning Spanish? Look up words as you read, then practice them later with Omato.",
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-sage.png",
+              "sha256": "d3f43f78ba1fff6cc8927ea82a3f05c9966dd618897d3ff1c7324894e80539fb"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/study-revealed.png",
+              "sha256": "4a5be4ab837d12f43c17619e3bd2811a19e5c8b2c998645611e9eb472f9747fb"
+            }
+          ]
+        },
+        {
+          "file": "output/spanish-reddit-v7-reddit-carousel-square/06-test.png",
+          "sha256": "1d6fd8cc61a9d502b005d15d8cf23b557ce7524902f03234e604203d76c95768",
+          "bytes": 905801,
+          "width": 1200,
+          "height": 1200,
+          "scene": "06-test",
+          "name": "Test what you remember",
+          "copy": {
+            "title": "Test what you\nremember.",
+            "subtitle": "Type the word.\nCheck your\nanswer."
+          },
+          "ad_headline_proposal": "Learning Spanish? Look up words as you read, then practice them later with Omato.",
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-test-v5.png",
+              "sha256": "a83b16348fb0c57eac3fc8ddd74f20763dc61de4e5468dba81bf718ddcbfef58"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/test-correct.png",
+              "sha256": "cfabc1bef0b90891725f7b5b6b72c3629ec407f9010fb3c13dbe9896df0cfbd7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": "projects/spanish-reddit-v7-reddit-image-square.json",
+      "project_sha256": "a3ce38c7c9e7c54940ee3b86b88ba1ecdcc3a3d47fbefb200c338b213234cebb",
+      "kind": "static",
+      "format": "reddit-image-square",
+      "output": {
+        "width": 1080,
+        "height": 1080
+      },
+      "assets": [
+        {
+          "file": "output/spanish-reddit-v7-reddit-image-square/01-lookup.png",
+          "sha256": "2c32835bd7ff021ac864bb718e7f8852859f2c070ace2078380509a174320b84",
+          "bytes": 814140,
+          "width": 1080,
+          "height": 1080,
+          "scene": "01-lookup",
+          "name": "Look up Spanish words as you read",
+          "copy": {
+            "title": "Look up\nSpanish words\nas you read.",
+            "subtitle": "Scan a page.\nTap a word.\nSee its meaning\nin English."
+          },
+          "ad_headline_proposal": "Learning Spanish? Look up words as you read, then practice them later with Omato.",
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-translation-v5.png",
+              "sha256": "51ac5059d2bdbe0bde3ee87212728554ad51a112f21a4818d5b34c34fae8c055"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/meaning.png",
+              "sha256": "e0fc2d5d9a4e07bed6f306725e066bf91c4773bfb393f8a3c4e547f131f29801"
+            }
+          ]
+        },
+        {
+          "file": "output/spanish-reddit-v7-reddit-image-square/02-practice.png",
+          "sha256": "d0e8847835e64118ea212086040265bdd408ef2e48cb536b238925e736d00af6",
+          "bytes": 781736,
+          "width": 1080,
+          "height": 1080,
+          "scene": "02-practice",
+          "name": "Practice your Spanish words",
+          "copy": {
+            "title": "Practice your\nSpanish words.",
+            "subtitle": "Look up words.\nBuild vocabulary.\nTest your recall."
+          },
+          "ad_headline_proposal": "Practice the Spanish words you look up with Omato. Build vocabulary and test your recall.",
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-test-v5.png",
+              "sha256": "a83b16348fb0c57eac3fc8ddd74f20763dc61de4e5468dba81bf718ddcbfef58"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/test-correct.png",
+              "sha256": "cfabc1bef0b90891725f7b5b6b72c3629ec407f9010fb3c13dbe9896df0cfbd7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": "projects/spanish-reddit-v7-reddit-image-portrait.json",
+      "project_sha256": "7bb1402d864a75965b858546388e0e84268a0be18949b0b60743f07c59c75515",
+      "kind": "static",
+      "format": "reddit-image-portrait",
+      "output": {
+        "width": 1080,
+        "height": 1350
+      },
+      "assets": [
+        {
+          "file": "output/spanish-reddit-v7-reddit-image-portrait/01-lookup.png",
+          "sha256": "cfa6dd9a802bfc6d17c74b72db0208fdbcce0b5919f7a94bbe63f6399f1a68d0",
+          "bytes": 1051374,
+          "width": 1080,
+          "height": 1350,
+          "scene": "01-lookup",
+          "name": "Look up Spanish words as you read",
+          "copy": {
+            "title": "Look up\nSpanish words\nas you read.",
+            "subtitle": "Scan a page.\nTap a word.\nSee its meaning\nin English."
+          },
+          "ad_headline_proposal": "Learning Spanish? Look up words as you read, then practice them later with Omato.",
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-translation-v5.png",
+              "sha256": "51ac5059d2bdbe0bde3ee87212728554ad51a112f21a4818d5b34c34fae8c055"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/meaning.png",
+              "sha256": "e0fc2d5d9a4e07bed6f306725e066bf91c4773bfb393f8a3c4e547f131f29801"
+            }
+          ]
+        },
+        {
+          "file": "output/spanish-reddit-v7-reddit-image-portrait/02-practice.png",
+          "sha256": "8772d9a7c7390c2b78757ee45e2e9fd6be3b7eb0d2f4085ad525bc99b03c7cbf",
+          "bytes": 1016389,
+          "width": 1080,
+          "height": 1350,
+          "scene": "02-practice",
+          "name": "Practice your Spanish words",
+          "copy": {
+            "title": "Practice your\nSpanish words.",
+            "subtitle": "Look up words.\nBuild vocabulary.\nTest your recall."
+          },
+          "ad_headline_proposal": "Practice the Spanish words you look up with Omato. Build vocabulary and test your recall.",
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-test-v5.png",
+              "sha256": "a83b16348fb0c57eac3fc8ddd74f20763dc61de4e5468dba81bf718ddcbfef58"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/test-correct.png",
+              "sha256": "cfabc1bef0b90891725f7b5b6b72c3629ec407f9010fb3c13dbe9896df0cfbd7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "featured_word": "verosímil"
+}
