@@ -1,0 +1,315 @@
+[
+  {
+    "scene": "01-introduction",
+    "output": {
+      "width": 1320,
+      "height": 2868
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Build your Spanish",
+          "vocabulary as you read."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 95,
+          "width": 1160,
+          "height": 262.88,
+          "rotation": 0
+        },
+        "lineWidths": [
+          942.280029296875,
+          1132.989990234375
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Scan a page. Look up words.",
+          "Keep them. Practice later."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 470,
+          "width": 1152,
+          "height": 195.88,
+          "rotation": 0
+        },
+        "lineWidths": [
+          955.9199829101562,
+          861.72998046875
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "02-photo",
+    "output": {
+      "width": 1320,
+      "height": 2868
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Take a photo",
+          "as you read."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 95,
+          "width": 1160,
+          "height": 318,
+          "rotation": 0
+        },
+        "lineWidths": [
+          770.5499877929688,
+          694.5
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Start with a page",
+          "in Spanish."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 470,
+          "width": 1152,
+          "height": 195.88,
+          "rotation": 0
+        },
+        "lineWidths": [
+          566.2899780273438,
+          370.05999755859375
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "03-selection",
+    "output": {
+      "width": 1320,
+      "height": 2868
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Tap a word",
+          "you want to learn."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 95,
+          "width": 1160,
+          "height": 318,
+          "rotation": 0
+        },
+        "lineWidths": [
+          650.5499877929688,
+          1051.050048828125
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Select it in the scanned text."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 470,
+          "width": 1152,
+          "height": 97.94,
+          "rotation": 0
+        },
+        "lineWidths": [
+          929.4500122070312
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "04-meaning",
+    "output": {
+      "width": 1320,
+      "height": 2868
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "See what it means",
+          "in English."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 95,
+          "width": 1160,
+          "height": 318,
+          "rotation": 0
+        },
+        "lineWidths": [
+          1036.6500244140625,
+          654.1500244140625
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "A translation, definition",
+          "and example for context."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 470,
+          "width": 1152,
+          "height": 195.88,
+          "rotation": 0
+        },
+        "lineWidths": [
+          789.4299926757812,
+          827.6099853515625
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "05-vocabulary",
+    "output": {
+      "width": 1320,
+      "height": 2868
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Keep the words",
+          "you discover."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 95,
+          "width": 1160,
+          "height": 318,
+          "rotation": 0
+        },
+        "lineWidths": [
+          911.5499877929688,
+          781.0499877929688
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Every lookup is saved",
+          "to your vocabulary."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 470,
+          "width": 1152,
+          "height": 195.88,
+          "rotation": 0
+        },
+        "lineWidths": [
+          712.1500244140625,
+          633.2000122070312
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "06-study",
+    "output": {
+      "width": 1320,
+      "height": 2868
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Study your",
+          "new words."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 95,
+          "width": 1160,
+          "height": 318,
+          "rotation": 0
+        },
+        "lineWidths": [
+          639.75,
+          657.9000244140625
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Recall the meaning.",
+          "Tap to reveal it."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 470,
+          "width": 1152,
+          "height": 195.88,
+          "rotation": 0
+        },
+        "lineWidths": [
+          657.52001953125,
+          523.2899780273438
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "07-test",
+    "output": {
+      "width": 1320,
+      "height": 2868
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Test what",
+          "you remember."
+        ],
+        "bounds": {
+          "x": 80,
+          "y": 95,
+          "width": 1160,
+          "height": 318,
+          "rotation": 0
+        },
+        "lineWidths": [
+          560.8499755859375,
+          917.25
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Type the word.",
+          "Check your answer."
+        ],
+        "bounds": {
+          "x": 84,
+          "y": 470,
+          "width": 1152,
+          "height": 195.88,
+          "rotation": 0
+        },
+        "lineWidths": [
+          505.0899963378906,
+          650.7899780273438
+        ]
+      }
+    ]
+  }
+]

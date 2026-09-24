@@ -1,0 +1,673 @@
+{
+  "version": 1,
+  "name": "Language Learners · Spanish · App Store · v2",
+  "revision": 2,
+  "output": {
+    "width": 1320,
+    "height": 2868
+  },
+  "formatId": "asc-69",
+  "locale": "en-US",
+  "sourceLanguage": "es",
+  "definitionLanguage": "en",
+  "status": "awaiting-owner-artwork-review",
+  "editorPolicy": {
+    "omittedLayerIds": [
+      "wordmark"
+    ]
+  },
+  "sourceProject": "projects/spanish-meta-v3-carousel-square.json",
+  "scenes": [
+    {
+      "id": "01-introduction",
+      "name": "Build your Spanish vocabulary",
+      "filename": "01-introduction.png",
+      "creativeKind": "app-store-screenshot",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1434,
+        "accentRadius": 1080,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-book.png",
+          "x": -2,
+          "y": 0,
+          "width": 1324,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.172737955346651
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind copy",
+          "src": "project-assets/cpp-spanish-learners-v2/ivory-copy-wash.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "aspectRatio": 2.172727272727273,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-verosimil-v7/vocabulary.png",
+          "x": 90,
+          "y": 745,
+          "width": 1140,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Build your Spanish\nvocabulary as you read.",
+          "x": 80,
+          "y": 95,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 124,
+          "lineHeight": 1.06,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Scan a page. Look up words.\nKeep them. Practice later.",
+          "x": 84,
+          "y": 470,
+          "width": 1152,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 83,
+          "lineHeight": 1.18,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      }
+    },
+    {
+      "id": "02-photo",
+      "name": "Take a photo as you read",
+      "filename": "02-photo.png",
+      "creativeKind": "app-store-screenshot",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1434,
+        "accentRadius": 1080,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-paper.png",
+          "x": -2,
+          "y": 0,
+          "width": 1324,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.172737955346651
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind copy",
+          "src": "project-assets/cpp-spanish-learners-v2/ivory-copy-wash.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "aspectRatio": 2.172727272727273,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-hidalgo-v6/scan.png",
+          "x": 145,
+          "y": 745,
+          "width": 1030,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Take a photo\nas you read.",
+          "x": 80,
+          "y": 95,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 150,
+          "lineHeight": 1.06,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Start with a page\nin Spanish.",
+          "x": 84,
+          "y": 470,
+          "width": 1152,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 83,
+          "lineHeight": 1.18,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      }
+    },
+    {
+      "id": "03-selection",
+      "name": "Tap a word you want to learn",
+      "filename": "03-selection.png",
+      "creativeKind": "app-store-screenshot",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1434,
+        "accentRadius": 1080,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-book.png",
+          "x": -2,
+          "y": 0,
+          "width": 1324,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.172737955346651
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind copy",
+          "src": "project-assets/cpp-spanish-learners-v2/ivory-copy-wash.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "aspectRatio": 2.172727272727273,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-verosimil-v7/selection.png",
+          "x": 90,
+          "y": 745,
+          "width": 1140,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Tap a word\nyou want to learn.",
+          "x": 80,
+          "y": 95,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 150,
+          "lineHeight": 1.06,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Select it in the scanned text.",
+          "x": 84,
+          "y": 470,
+          "width": 1152,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 83,
+          "lineHeight": 1.18,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      }
+    },
+    {
+      "id": "04-meaning",
+      "name": "See what it means in English",
+      "filename": "04-meaning.png",
+      "creativeKind": "app-store-screenshot",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1434,
+        "accentRadius": 1080,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-translation-v5.png",
+          "x": -2,
+          "y": 0,
+          "width": 1324,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.1715628672150413
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind copy",
+          "src": "project-assets/cpp-spanish-learners-v2/ivory-copy-wash.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "aspectRatio": 2.172727272727273,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-verosimil-v7/meaning.png",
+          "x": 90,
+          "y": 745,
+          "width": 1140,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "See what it means\nin English.",
+          "x": 80,
+          "y": 95,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 150,
+          "lineHeight": 1.06,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "A translation, definition\nand example for context.",
+          "x": 84,
+          "y": 470,
+          "width": 1152,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 83,
+          "lineHeight": 1.18,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      }
+    },
+    {
+      "id": "05-vocabulary",
+      "name": "Keep the words you discover",
+      "filename": "05-vocabulary.png",
+      "creativeKind": "app-store-screenshot",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1434,
+        "accentRadius": 1080,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-paper.png",
+          "x": -2,
+          "y": 0,
+          "width": 1324,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.1715628672150413
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind copy",
+          "src": "project-assets/cpp-spanish-learners-v2/ivory-copy-wash.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "aspectRatio": 2.172727272727273,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-verosimil-v7/vocabulary.png",
+          "x": 90,
+          "y": 745,
+          "width": 1140,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Keep the words\nyou discover.",
+          "x": 80,
+          "y": 95,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 150,
+          "lineHeight": 1.06,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Every lookup is saved\nto your vocabulary.",
+          "x": 84,
+          "y": 470,
+          "width": 1152,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 83,
+          "lineHeight": 1.18,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      }
+    },
+    {
+      "id": "06-study",
+      "name": "Study your new words",
+      "filename": "06-study.png",
+      "creativeKind": "app-store-screenshot",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1434,
+        "accentRadius": 1080,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-sage.png",
+          "x": -2,
+          "y": 0,
+          "width": 1324,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.172737955346651
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind copy",
+          "src": "project-assets/cpp-spanish-learners-v2/ivory-copy-wash.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "aspectRatio": 2.172727272727273,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-verosimil-v7/study-revealed.png",
+          "x": 90,
+          "y": 745,
+          "width": 1140,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Study your\nnew words.",
+          "x": 80,
+          "y": 95,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 150,
+          "lineHeight": 1.06,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Recall the meaning.\nTap to reveal it.",
+          "x": 84,
+          "y": 470,
+          "width": 1152,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 83,
+          "lineHeight": 1.18,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      }
+    },
+    {
+      "id": "07-test",
+      "name": "Test what you remember",
+      "filename": "07-test.png",
+      "creativeKind": "app-store-screenshot",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 660,
+        "accentY": 1434,
+        "accentRadius": 1080,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-test-v5.png",
+          "x": -2,
+          "y": 0,
+          "width": 1324,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.172737955346651
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind copy",
+          "src": "project-assets/cpp-spanish-learners-v2/ivory-copy-wash.png",
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "aspectRatio": 2.172727272727273,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-verosimil-v7/test-correct.png",
+          "x": 90,
+          "y": 745,
+          "width": 1140,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Test what\nyou remember.",
+          "x": 80,
+          "y": 95,
+          "width": 1160,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 150,
+          "lineHeight": 1.06,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Type the word.\nCheck your answer.",
+          "x": 84,
+          "y": 470,
+          "width": 1152,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 83,
+          "lineHeight": 1.18,
+          "letterSpacing": 0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      }
+    }
+  ]
+}

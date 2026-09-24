@@ -1,0 +1,172 @@
+{
+  "id": "cpp-spanish-learners-v2",
+  "status": "awaiting-owner-artwork-review",
+  "targetPageName": "Language Learners",
+  "targetLocale": "en-US",
+  "targetSlot": "APP_IPHONE_67",
+  "dimensions": [
+    1320,
+    2868
+  ],
+  "languageMatrix": {
+    "ui": "en",
+    "source": "es",
+    "definition": "en",
+    "copy": "en-US"
+  },
+  "promotionalText": "Build your Spanish vocabulary as you read. Scan a page, look up words in English, save them to your vocabulary, and practice with Study and Test.",
+  "promotionalTextCharacters": 145,
+  "frame": "iPhone_17_pro-silver-portrait",
+  "project": {
+    "path": "projects/cpp-spanish-learners-v2.json",
+    "sha256": "37379d104db062f40d45694544a98a8255d7ca40d32d8e618dcebb24128316c5",
+    "bytes": 18744
+  },
+  "images": [
+    {
+      "id": "CR-APPLE-LNG-ES-en-US-01-introduction-v2",
+      "path": "output/cpp-spanish-learners-v2/01-introduction.png",
+      "sha256": "3bd8ca5b850f645ec89f6fe12227c74320a06abe9ea28018d48784bc57277c0a",
+      "bytes": 1401618,
+      "copy": {
+        "title": "Build your Spanish\nvocabulary as you read.",
+        "subtitle": "Scan a page. Look up words.\nKeep them. Practice later."
+      }
+    },
+    {
+      "id": "CR-APPLE-LNG-ES-en-US-02-photo-v2",
+      "path": "output/cpp-spanish-learners-v2/02-photo.png",
+      "sha256": "4bcfe71a5daa66990a0da317d39e10360de3edaa663d0b5382071b9dd5c88c62",
+      "bytes": 2776564,
+      "copy": {
+        "title": "Take a photo\nas you read.",
+        "subtitle": "Start with a page\nin Spanish."
+      }
+    },
+    {
+      "id": "CR-APPLE-LNG-ES-en-US-03-selection-v2",
+      "path": "output/cpp-spanish-learners-v2/03-selection.png",
+      "sha256": "41224d35ce7db9db9ead4c85050b988bb49cfcb0d468dcc7e9349ab7d7bb1baf",
+      "bytes": 1544839,
+      "copy": {
+        "title": "Tap a word\nyou want to learn.",
+        "subtitle": "Select it in the scanned text."
+      }
+    },
+    {
+      "id": "CR-APPLE-LNG-ES-en-US-04-meaning-v2",
+      "path": "output/cpp-spanish-learners-v2/04-meaning.png",
+      "sha256": "2a6d59a137a0adf024aa40d4709659ed63ea1bdcaa22e11776ddd20babe3555e",
+      "bytes": 1205899,
+      "copy": {
+        "title": "See what it means\nin English.",
+        "subtitle": "A translation, definition\nand example for context."
+      }
+    },
+    {
+      "id": "CR-APPLE-LNG-ES-en-US-05-vocabulary-v2",
+      "path": "output/cpp-spanish-learners-v2/05-vocabulary.png",
+      "sha256": "f4e8127089526a46a048dea5562946202bd831b6d641662cb1fc13685521476a",
+      "bytes": 1306023,
+      "copy": {
+        "title": "Keep the words\nyou discover.",
+        "subtitle": "Every lookup is saved\nto your vocabulary."
+      }
+    },
+    {
+      "id": "CR-APPLE-LNG-ES-en-US-06-study-v2",
+      "path": "output/cpp-spanish-learners-v2/06-study.png",
+      "sha256": "f9a39c23321d6dadac9f45291331a4bb984972dc8c8312f471abb4cf1786b949",
+      "bytes": 1203111,
+      "copy": {
+        "title": "Study your\nnew words.",
+        "subtitle": "Recall the meaning.\nTap to reveal it."
+      }
+    },
+    {
+      "id": "CR-APPLE-LNG-ES-en-US-07-test-v2",
+      "path": "output/cpp-spanish-learners-v2/07-test.png",
+      "sha256": "2241c1cab77a938861289f7f9b1bb7d5c0433ef20f6dc596d893c88241c84fb8",
+      "bytes": 1009983,
+      "copy": {
+        "title": "Test what\nyou remember.",
+        "subtitle": "Type the word.\nCheck your answer."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "path": "project-assets/cpp-spanish-learners-v2/ivory-copy-wash.png",
+      "sha256": "221c280a731c49b189e7bd3e14e9bcb00585197f7cd42a73165a1c0b451f0ef5",
+      "bytes": 17447
+    },
+    {
+      "path": "project-assets/reading-companion/background-book.png",
+      "sha256": "d2d0fdff5d50abd9f1d178a4d5c638e27d8d25e3a44a9d39b0fc71ecaedb7f4a",
+      "bytes": 1733415
+    },
+    {
+      "path": "project-assets/reading-companion/background-paper.png",
+      "sha256": "fa84486708ef7200eef8bfbb580a945be1b2fa4f546ebb16e625717050a01f84",
+      "bytes": 1478537
+    },
+    {
+      "path": "project-assets/reading-companion/background-sage.png",
+      "sha256": "d3f43f78ba1fff6cc8927ea82a3f05c9966dd618897d3ff1c7324894e80539fb",
+      "bytes": 1711095
+    },
+    {
+      "path": "project-assets/reading-companion/background-test-v5.png",
+      "sha256": "a83b16348fb0c57eac3fc8ddd74f20763dc61de4e5468dba81bf718ddcbfef58",
+      "bytes": 1553284
+    },
+    {
+      "path": "project-assets/reading-companion/background-translation-v5.png",
+      "sha256": "51ac5059d2bdbe0bde3ee87212728554ad51a112f21a4818d5b34c34fae8c055",
+      "bytes": 1950388
+    },
+    {
+      "path": "project-assets/spanish-hidalgo-v6/scan.png",
+      "sha256": "67b3b56b2e49f12adc68d796f3f48fc494dbd73a1b9f1d8f79c1603c2eb389e6",
+      "bytes": 3062293
+    },
+    {
+      "path": "project-assets/spanish-verosimil-v7/meaning.png",
+      "sha256": "e0fc2d5d9a4e07bed6f306725e066bf91c4773bfb393f8a3c4e547f131f29801",
+      "bytes": 616216
+    },
+    {
+      "path": "project-assets/spanish-verosimil-v7/selection.png",
+      "sha256": "21de09bf70a25b52944a34546c89d46c9150caaf1c5d13c05ec5f291325eacc5",
+      "bytes": 769776
+    },
+    {
+      "path": "project-assets/spanish-verosimil-v7/study-revealed.png",
+      "sha256": "4a5be4ab837d12f43c17619e3bd2811a19e5c8b2c998645611e9eb472f9747fb",
+      "bytes": 684520
+    },
+    {
+      "path": "project-assets/spanish-verosimil-v7/test-correct.png",
+      "sha256": "cfabc1bef0b90891725f7b5b6b72c3629ec407f9010fb3c13dbe9896df0cfbd7",
+      "bytes": 554847
+    },
+    {
+      "path": "project-assets/spanish-verosimil-v7/vocabulary.png",
+      "sha256": "d31296445b4e8df408b2626abb00aad65215c84c658f3d43dec1c62eabd51b89",
+      "bytes": 746961
+    }
+  ],
+  "captureProvenance": [
+    "project-assets/spanish-verosimil-v7/provenance.json",
+    "project-assets/spanish-hidalgo-v6/provenance.json"
+  ],
+  "captureNote": "Reuses Lucas-supplied native September 24 captures and the prior Translation Scan capture. No new simulator capture or public-build verification in this task.",
+  "validation": {
+    "allTextContrastAtLeast4_5": true,
+    "textOverlap": false,
+    "subtitlePx": 83
+  },
+  "uploadState": "not_uploaded",
+  "reviewSubmissionState": "not_submitted",
+  "adsActivation": "not_authorized"
+}
