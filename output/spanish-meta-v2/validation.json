@@ -1,0 +1,111 @@
+{
+  "image_count": 13,
+  "checks": [
+    {
+      "file": "output/spanish-meta-v2-carousel-square/01-introduction.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-meta-v2-carousel-square/02-photo.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-meta-v2-carousel-square/03-selection.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-meta-v2-carousel-square/04-meaning.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-meta-v2-carousel-square/05-vocabulary.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-meta-v2-carousel-square/06-study.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-meta-v2-carousel-square/07-test.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-meta-v2-image-square/01-lookup.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-meta-v2-image-square/02-practice.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-meta-v2-image-feed/01-lookup.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-meta-v2-image-feed/02-practice.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "not applicable"
+    },
+    {
+      "file": "output/spanish-meta-v2-image-stories/01-lookup.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "pass"
+    },
+    {
+      "file": "output/spanish-meta-v2-image-stories/02-practice.png",
+      "dimensions": "pass",
+      "bytes": "pass",
+      "text_bounds_wrapping_separation": "pass",
+      "frame_aspect": "pass",
+      "safe_guide": "pass"
+    }
+  ],
+  "visual_review": "Inspected at 360px image width; real silver-framed captures, serif fonts, copy separation and readable hierarchy.",
+  "provider_preview": "Not uploaded; live Ads Manager eligibility and creative transformations unverified."
+}

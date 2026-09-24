@@ -38,6 +38,8 @@ For each chosen format, create a project with its own `output.width`, `output.he
 - Carousel master: value proposition with populated vocabulary → photo → selected word → meaning → saved vocabulary → revealed Study → checked-green Test. The introduction is a separate benefit overview. The Reddit exception is above.
 - A static ad is one complete promise with one strong proof screen. It must work without previous/next cards. Lookup, vocabulary growth and practice can be separate static concepts; do not squeeze the entire carousel into one image.
 
+**Subtitle readability default — Lucas, September 24, 2026:** Use **83 px** for all ad subtitle/support layers across formats and future audiences. Keep Baskerville Regular (400). Adjust line breaks, text-box placement and surrounding layout to fit; do not quietly shrink subtitles to fit. Check at phone-feed size. This explicit newer instruction supersedes earlier smaller support sizes and the instruction to preserve their size.
+
 ## Export and verify
 
 1. Load the workspace runtime with `mcp__codex_app__load_workspace_dependencies`; use its Node executable/packages for the existing renderer. With installed font faces prepared, run `node tools/render_project.cjs projects/<unique-name>.json output/<unique-name>` for each project.

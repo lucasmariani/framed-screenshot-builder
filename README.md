@@ -250,3 +250,7 @@ The checks enforce internal marketing font targets (28 px headings, 16 px suppor
 at 360 px display width), dimensions and known placement limits. These are design
 targets, not provider eligibility guarantees. Owner review remains required before
 upload; tools do not publish ads.
+
+
+**Subtitle readability default — Lucas, September 24, 2026:** Use **83 px** for all ad subtitle/support layers across formats and future audiences. Keep Baskerville Regular (400). Adjust line breaks, text-box placement and surrounding layout to fit; do not quietly shrink subtitles to fit. Check at phone-feed size. This explicit newer instruction supersedes earlier smaller support sizes and the instruction to preserve their size.
+Current Meta revision: `spanish-meta-v2`; the saved Reddit set remains separately preserved.

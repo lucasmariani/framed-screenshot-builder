@@ -189,3 +189,7 @@ Simulated camera image and live OCR capture limitations are recorded in the iOS
 capture-v3-notes.md; no physical camera claim. Simulator sessions are closed.
 
 All outputs remain local drafts, pending owner review before upload.
+
+
+**Subtitle readability default — Lucas, September 24, 2026:** Use **83 px** for all ad subtitle/support layers across formats and future audiences. Keep Baskerville Regular (400). Adjust line breaks, text-box placement and surrounding layout to fit; do not quietly shrink subtitles to fit. Check at phone-feed size. This explicit newer instruction supersedes earlier smaller support sizes and the instruction to preserve their size.
+Current Meta revision: `spanish-meta-v2`; the saved Reddit set remains separately preserved.

@@ -1,0 +1,51 @@
+{
+  "id": "spanish-meta-v2",
+  "revision": 2,
+  "provider": "Meta",
+  "audience": "English-speaking Spanish learners",
+  "languageMatrix": {
+    "interface": "en",
+    "source": "es",
+    "definition": "en",
+    "copy": "en-US"
+  },
+  "featuredWord": "verosímil",
+  "reference": "campaigns/spanish-meta-v1.json",
+  "captureProvenance": "project-assets/spanish-verosimil-v7/provenance.json",
+  "typography": {
+    "headings": "Bodoni 72 Bold (700)",
+    "subtitles": "Baskerville Regular (400)",
+    "change": "Owner requested 83px subtitles across every image for readability; adjust wrapping and layout to fit, retain Baskerville Regular.",
+    "subtitleSize": 83
+  },
+  "projects": [
+    "projects/spanish-meta-v2-carousel-square.json",
+    "projects/spanish-meta-v2-image-square.json",
+    "projects/spanish-meta-v2-image-feed.json",
+    "projects/spanish-meta-v2-image-stories.json"
+  ],
+  "carouselOrder": [
+    "introduction",
+    "photo",
+    "selection",
+    "meaning",
+    "saved vocabulary",
+    "revealed Study",
+    "checked Test"
+  ],
+  "status": "awaiting-owner-artwork-review",
+  "publicationAuthorized": false,
+  "placementNotes": [
+    "Seven-card square carousel master; verify app-promotion placement eligibility and retained order in Ads Manager.",
+    "Two standalone concepts, each in square, 4:5 feed and 9:16 Stories formats.",
+    "Stories use the saved conservative 14% top, 35% bottom, 6% side safe guide. Reels/video and automatic creative transformations are not verified.",
+    "Official help confirms app-promotion carousel support but contains legacy Instagram API restrictions; verify full seven-card delivery for chosen Instagram placement before activation."
+  ],
+  "specSources": [
+    "https://www.facebook.com/business/ads-guide/update/carousel",
+    "https://www.facebook.com/business/ads-guide/update/image/facebook-feed",
+    "https://www.facebook.com/business/help/504476536989757",
+    "https://www.facebook.com/business/help/2222978001316177",
+    "https://www.facebook.com/business/help/1639197963055851"
+  ]
+}

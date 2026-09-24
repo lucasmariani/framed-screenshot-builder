@@ -61,10 +61,19 @@
     "supportFont": "Baskerville Regular",
     "backgroundThemeReference": "marketing-screenshots/asc/en-US",
     "decorativeWordmark": false,
-    "reviewWidthCssPixels": 360
+    "reviewWidthCssPixels": 360,
+    "supportFontSize": 83
   },
   "placements": [],
-  "placementEntryFields": ["provider", "presetId", "creativeKind", "copyLocale", "projectPath", "specSource", "specCheckedAt"],
+  "placementEntryFields": [
+    "provider",
+    "presetId",
+    "creativeKind",
+    "copyLocale",
+    "projectPath",
+    "specSource",
+    "specCheckedAt"
+  ],
   "outputs": {
     "captureProvenance": null,
     "reviewGallery": null,

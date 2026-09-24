@@ -22,7 +22,7 @@ const SUBTITLE_PRESET = {
   width: 1160,
   fontFamily: 'Baskerville',
   fontWeight: 400,
-  fontSize: 58,
+  fontSize: 83,
   lineHeight: 1.1,
   color: '#11100f'
 };
