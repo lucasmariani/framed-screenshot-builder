@@ -1,0 +1,118 @@
+{
+  "threshold": 4.5,
+  "method": "Local sRGB background contrast at glyph-mask pixels with alpha >= 128; excludes antialiasing of the foreground and does not replace visual review.",
+  "results": [
+    {
+      "scene": "01-introduction",
+      "layer": "title",
+      "minimumRatio": 13.63,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 26035,
+      "pass": true
+    },
+    {
+      "scene": "01-introduction",
+      "layer": "subtitle",
+      "minimumRatio": 13.5,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 21601,
+      "pass": true
+    },
+    {
+      "scene": "02-photo",
+      "layer": "title",
+      "minimumRatio": 13.72,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 15121,
+      "pass": true
+    },
+    {
+      "scene": "02-photo",
+      "layer": "subtitle",
+      "minimumRatio": 9.8,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 11847,
+      "pass": true
+    },
+    {
+      "scene": "03-selection",
+      "layer": "title",
+      "minimumRatio": 13.76,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 17002,
+      "pass": true
+    },
+    {
+      "scene": "03-selection",
+      "layer": "subtitle",
+      "minimumRatio": 13.72,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 10543,
+      "pass": true
+    },
+    {
+      "scene": "04-meaning",
+      "layer": "title",
+      "minimumRatio": 13.87,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 18186,
+      "pass": true
+    },
+    {
+      "scene": "04-meaning",
+      "layer": "subtitle",
+      "minimumRatio": 11.38,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 19674,
+      "pass": true
+    },
+    {
+      "scene": "05-vocabulary",
+      "layer": "title",
+      "minimumRatio": 13.61,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 15873,
+      "pass": true
+    },
+    {
+      "scene": "05-vocabulary",
+      "layer": "subtitle",
+      "minimumRatio": 13.5,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 15813,
+      "pass": true
+    },
+    {
+      "scene": "06-study",
+      "layer": "title",
+      "minimumRatio": 13.76,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 13117,
+      "pass": true
+    },
+    {
+      "scene": "06-study",
+      "layer": "subtitle",
+      "minimumRatio": 11.99,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 14431,
+      "pass": true
+    },
+    {
+      "scene": "07-test",
+      "layer": "title",
+      "minimumRatio": 13.65,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 14908,
+      "pass": true
+    },
+    {
+      "scene": "07-test",
+      "layer": "subtitle",
+      "minimumRatio": 10.04,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 13435,
+      "pass": true
+    }
+  ]
+}

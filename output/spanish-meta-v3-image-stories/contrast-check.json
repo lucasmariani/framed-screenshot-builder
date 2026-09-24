@@ -1,0 +1,38 @@
+{
+  "threshold": 4.5,
+  "method": "Local sRGB background contrast at glyph-mask pixels with alpha >= 128; excludes antialiasing of the foreground and does not replace visual review.",
+  "results": [
+    {
+      "scene": "01-lookup",
+      "layer": "title",
+      "minimumRatio": 13.86,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 57680,
+      "pass": true
+    },
+    {
+      "scene": "01-lookup",
+      "layer": "subtitle",
+      "minimumRatio": 13.87,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 11295,
+      "pass": true
+    },
+    {
+      "scene": "02-practice",
+      "layer": "title",
+      "minimumRatio": 13.87,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 47230,
+      "pass": true
+    },
+    {
+      "scene": "02-practice",
+      "layer": "subtitle",
+      "minimumRatio": 13.76,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 13485,
+      "pass": true
+    }
+  ]
+}

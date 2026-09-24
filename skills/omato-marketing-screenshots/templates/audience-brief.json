@@ -62,7 +62,11 @@
     "backgroundThemeReference": "marketing-screenshots/asc/en-US",
     "decorativeWordmark": false,
     "reviewWidthCssPixels": 360,
-    "supportFontSize": 83
+    "supportFontSize": 83,
+    "minimumTextBackgroundContrast": 4.5,
+    "contrastCheck": "tools/check_ad_contrast.cjs",
+    "storiesComposition": "Large full-width heading above prominent silver-framed phone; safe areas apply to copy and identified essential UI; allow bottom continuation.",
+    "supportFontSizePolicy": "83 px baseline; larger when needed for readable format composition."
   },
   "placements": [],
   "placementEntryFields": [

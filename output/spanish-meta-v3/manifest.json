@@ -1,0 +1,446 @@
+{
+  "campaign": "spanish-meta-v3",
+  "provider": "Meta",
+  "status": "awaiting-owner-artwork-review",
+  "publication_authorized": false,
+  "destination": "https://apps.apple.com/us/app/omato-vocabulary-builder/id6756230098",
+  "click_tracker": null,
+  "impression_tracker": null,
+  "language_matrix": {
+    "interface": "en",
+    "source": "es",
+    "definition": "en",
+    "copy": "en-US"
+  },
+  "capture_provenance": {
+    "path": "project-assets/spanish-verosimil-v7/provenance.json",
+    "sha256": "66f83bbc6992299b3c274ac36a77eb4b7d13d18e6a9108c11c434970e6d1eb2c"
+  },
+  "spec_sources": [
+    "https://www.facebook.com/business/ads-guide/update/carousel",
+    "https://www.facebook.com/business/ads-guide/update/image/facebook-feed",
+    "https://www.facebook.com/business/help/504476536989757",
+    "https://www.facebook.com/business/help/2222978001316177",
+    "https://www.facebook.com/business/help/1639197963055851"
+  ],
+  "placement_notes": [
+    "Seven-card square carousel master; verify app-promotion placement eligibility and retained order in Ads Manager.",
+    "Two standalone concepts, each in square, 4:5 feed and 9:16 Stories formats.",
+    "Official help confirms app-promotion carousel support but contains legacy Instagram API restrictions; verify full seven-card delivery for chosen Instagram placement before activation.",
+    "Stories retain the conservative safe guide for marketing copy and essential product proof, rather than shrinking the entire phone into it. Nonessential lower phone content continues beyond the canvas; provider previews remain required."
+  ],
+  "sets": [
+    {
+      "project": "projects/spanish-meta-v3-carousel-square.json",
+      "project_sha256": "ccb02f6cfc787b25d526fcc096519ac1ebd122b0aa8bae13302d3e04f7705d86",
+      "kind": "carousel",
+      "format": "meta-square",
+      "output": {
+        "width": 1080,
+        "height": 1080
+      },
+      "assets": [
+        {
+          "id": "AD-LNG-VEROSIMIL-META-spanish-meta-v3-carousel-square-01-introduction-en-US",
+          "file": "output/spanish-meta-v3-carousel-square/01-introduction.png",
+          "sha256": "3cfe649d7ccf6b0487ae18f0295cbc0998984e7627132b9c178aae1041b8536a",
+          "bytes": 764771,
+          "width": 1080,
+          "height": 1080,
+          "scene": "01-introduction",
+          "name": "Build your Spanish vocabulary",
+          "copy": {
+            "title": "Build your Spanish\nvocabulary as you read.",
+            "subtitle": "Scan a page. Look up words.\nKeep them. Practice later."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-book.png",
+              "sha256": "d2d0fdff5d50abd9f1d178a4d5c638e27d8d25e3a44a9d39b0fc71ecaedb7f4a"
+            },
+            {
+              "path": "project-assets/meta-v3-contrast/spanish-meta-v3-carousel-square-01-introduction.png",
+              "sha256": "2d26d7e72aa2320f52f051166b17bb3f83233e5c70737876f25bbec50a6b7acc"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/vocabulary.png",
+              "sha256": "d31296445b4e8df408b2626abb00aad65215c84c658f3d43dec1c62eabd51b89"
+            }
+          ]
+        },
+        {
+          "id": "AD-LNG-VEROSIMIL-META-spanish-meta-v3-carousel-square-02-photo-en-US",
+          "file": "output/spanish-meta-v3-carousel-square/02-photo.png",
+          "sha256": "34dc8f9d97f12f9b6603fa7024dd53e32ebe1d1a7c080ee17691e65c920260d5",
+          "bytes": 936939,
+          "width": 1080,
+          "height": 1080,
+          "scene": "02-photo",
+          "name": "Take a photo as you read",
+          "copy": {
+            "title": "Take a photo\nas you read.",
+            "subtitle": "Start with\na page\nin Spanish."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-paper.png",
+              "sha256": "fa84486708ef7200eef8bfbb580a945be1b2fa4f546ebb16e625717050a01f84"
+            },
+            {
+              "path": "project-assets/meta-v3-contrast/spanish-meta-v3-carousel-square-02-photo.png",
+              "sha256": "f301cf04f2f76e0dd71f3ec973acac54b3f55cd198c932d9add91ea33bf3b2b5"
+            },
+            {
+              "path": "project-assets/spanish-hidalgo-v6/scan.png",
+              "sha256": "67b3b56b2e49f12adc68d796f3f48fc494dbd73a1b9f1d8f79c1603c2eb389e6"
+            }
+          ]
+        },
+        {
+          "id": "AD-LNG-VEROSIMIL-META-spanish-meta-v3-carousel-square-03-selection-en-US",
+          "file": "output/spanish-meta-v3-carousel-square/03-selection.png",
+          "sha256": "de9fb7457bfcdb2fc0b7a1beb85f5c69de5d53b99208aa36ce685767d6031ba5",
+          "bytes": 611889,
+          "width": 1080,
+          "height": 1080,
+          "scene": "03-selection",
+          "name": "Tap a word you want to learn",
+          "copy": {
+            "title": "Tap a word\nyou want\nto learn.",
+            "subtitle": "Select it in\nthe scanned\ntext."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-book.png",
+              "sha256": "d2d0fdff5d50abd9f1d178a4d5c638e27d8d25e3a44a9d39b0fc71ecaedb7f4a"
+            },
+            {
+              "path": "project-assets/meta-v3-contrast/spanish-meta-v3-carousel-square-03-selection.png",
+              "sha256": "f301cf04f2f76e0dd71f3ec973acac54b3f55cd198c932d9add91ea33bf3b2b5"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/selection.png",
+              "sha256": "21de09bf70a25b52944a34546c89d46c9150caaf1c5d13c05ec5f291325eacc5"
+            }
+          ]
+        },
+        {
+          "id": "AD-LNG-VEROSIMIL-META-spanish-meta-v3-carousel-square-04-meaning-en-US",
+          "file": "output/spanish-meta-v3-carousel-square/04-meaning.png",
+          "sha256": "4534318338fcfa11d0af719b8efd2d3464243cd9cdf37b8b0a109d626d519365",
+          "bytes": 561466,
+          "width": 1080,
+          "height": 1080,
+          "scene": "04-meaning",
+          "name": "See what it means in English",
+          "copy": {
+            "title": "See what\nit means\nin English.",
+            "subtitle": "A translation,\ndefinition\nand example\nfor context."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-translation-v5.png",
+              "sha256": "51ac5059d2bdbe0bde3ee87212728554ad51a112f21a4818d5b34c34fae8c055"
+            },
+            {
+              "path": "project-assets/meta-v3-contrast/spanish-meta-v3-carousel-square-04-meaning.png",
+              "sha256": "f301cf04f2f76e0dd71f3ec973acac54b3f55cd198c932d9add91ea33bf3b2b5"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/meaning.png",
+              "sha256": "e0fc2d5d9a4e07bed6f306725e066bf91c4773bfb393f8a3c4e547f131f29801"
+            }
+          ]
+        },
+        {
+          "id": "AD-LNG-VEROSIMIL-META-spanish-meta-v3-carousel-square-05-vocabulary-en-US",
+          "file": "output/spanish-meta-v3-carousel-square/05-vocabulary.png",
+          "sha256": "e8ba7cbcad8b9106e09de68cd46d079257c32c08ff14e4d5c77461cdc59d9e83",
+          "bytes": 538364,
+          "width": 1080,
+          "height": 1080,
+          "scene": "05-vocabulary",
+          "name": "Keep the words you discover",
+          "copy": {
+            "title": "Keep the words\nyou discover.",
+            "subtitle": "Every lookup\nis saved to\nyour vocabulary."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-paper.png",
+              "sha256": "fa84486708ef7200eef8bfbb580a945be1b2fa4f546ebb16e625717050a01f84"
+            },
+            {
+              "path": "project-assets/meta-v3-contrast/spanish-meta-v3-carousel-square-05-vocabulary.png",
+              "sha256": "f301cf04f2f76e0dd71f3ec973acac54b3f55cd198c932d9add91ea33bf3b2b5"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/vocabulary.png",
+              "sha256": "d31296445b4e8df408b2626abb00aad65215c84c658f3d43dec1c62eabd51b89"
+            }
+          ]
+        },
+        {
+          "id": "AD-LNG-VEROSIMIL-META-spanish-meta-v3-carousel-square-06-study-en-US",
+          "file": "output/spanish-meta-v3-carousel-square/06-study.png",
+          "sha256": "4117312a1e39eac93eccb639e8a5e575b6e9268068a24b30d74114acd7e3416a",
+          "bytes": 564762,
+          "width": 1080,
+          "height": 1080,
+          "scene": "06-study",
+          "name": "Study your new words",
+          "copy": {
+            "title": "Study your\nnew words.",
+            "subtitle": "Recall the\nmeaning.\nTap to reveal it."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-sage.png",
+              "sha256": "d3f43f78ba1fff6cc8927ea82a3f05c9966dd618897d3ff1c7324894e80539fb"
+            },
+            {
+              "path": "project-assets/meta-v3-contrast/spanish-meta-v3-carousel-square-06-study.png",
+              "sha256": "f301cf04f2f76e0dd71f3ec973acac54b3f55cd198c932d9add91ea33bf3b2b5"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/study-revealed.png",
+              "sha256": "4a5be4ab837d12f43c17619e3bd2811a19e5c8b2c998645611e9eb472f9747fb"
+            }
+          ]
+        },
+        {
+          "id": "AD-LNG-VEROSIMIL-META-spanish-meta-v3-carousel-square-07-test-en-US",
+          "file": "output/spanish-meta-v3-carousel-square/07-test.png",
+          "sha256": "bd663eaaf0cfe7bf22b38fa5b2a7567025acaf4ab8615ef74ee35a46c860831a",
+          "bytes": 521958,
+          "width": 1080,
+          "height": 1080,
+          "scene": "07-test",
+          "name": "Test what you remember",
+          "copy": {
+            "title": "Test what you\nremember.",
+            "subtitle": "Type the word.\nCheck your answer."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-test-v5.png",
+              "sha256": "a83b16348fb0c57eac3fc8ddd74f20763dc61de4e5468dba81bf718ddcbfef58"
+            },
+            {
+              "path": "project-assets/meta-v3-contrast/spanish-meta-v3-carousel-square-07-test.png",
+              "sha256": "f301cf04f2f76e0dd71f3ec973acac54b3f55cd198c932d9add91ea33bf3b2b5"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/test-correct.png",
+              "sha256": "cfabc1bef0b90891725f7b5b6b72c3629ec407f9010fb3c13dbe9896df0cfbd7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": "projects/spanish-meta-v3-image-square.json",
+      "project_sha256": "d375d8590195d3fd8f9b1a9ca007b015ebc3e489d075a4e55b4c70f0e62389ac",
+      "kind": "static",
+      "format": "meta-square",
+      "output": {
+        "width": 1080,
+        "height": 1080
+      },
+      "assets": [
+        {
+          "id": "AD-LNG-VEROSIMIL-META-spanish-meta-v3-image-square-01-lookup-en-US",
+          "file": "output/spanish-meta-v3-image-square/01-lookup.png",
+          "sha256": "a244708a619b0c7eb7b5e3c94e98366e6ea23fa146b1ca6b33e232241c0595a2",
+          "bytes": 570274,
+          "width": 1080,
+          "height": 1080,
+          "scene": "01-lookup",
+          "name": "Look up Spanish words as you read",
+          "copy": {
+            "title": "Look up\nSpanish words\nas you read.",
+            "subtitle": "Scan a page.\nTap a word.\nSee its meaning\nin English."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-translation-v5.png",
+              "sha256": "51ac5059d2bdbe0bde3ee87212728554ad51a112f21a4818d5b34c34fae8c055"
+            },
+            {
+              "path": "project-assets/meta-v3-contrast/spanish-meta-v3-image-square-01-lookup.png",
+              "sha256": "f301cf04f2f76e0dd71f3ec973acac54b3f55cd198c932d9add91ea33bf3b2b5"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/meaning.png",
+              "sha256": "e0fc2d5d9a4e07bed6f306725e066bf91c4773bfb393f8a3c4e547f131f29801"
+            }
+          ]
+        },
+        {
+          "id": "AD-LNG-VEROSIMIL-META-spanish-meta-v3-image-square-02-practice-en-US",
+          "file": "output/spanish-meta-v3-image-square/02-practice.png",
+          "sha256": "0c79101a220b433412cde60d783e266cf74cf46c08456650da46e2a2828bd1ef",
+          "bytes": 535326,
+          "width": 1080,
+          "height": 1080,
+          "scene": "02-practice",
+          "name": "Practice your Spanish words",
+          "copy": {
+            "title": "Practice your\nSpanish words.",
+            "subtitle": "Look up words.\nBuild vocabulary.\nTest your recall."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-test-v5.png",
+              "sha256": "a83b16348fb0c57eac3fc8ddd74f20763dc61de4e5468dba81bf718ddcbfef58"
+            },
+            {
+              "path": "project-assets/meta-v3-contrast/spanish-meta-v3-image-square-02-practice.png",
+              "sha256": "f301cf04f2f76e0dd71f3ec973acac54b3f55cd198c932d9add91ea33bf3b2b5"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/test-correct.png",
+              "sha256": "cfabc1bef0b90891725f7b5b6b72c3629ec407f9010fb3c13dbe9896df0cfbd7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": "projects/spanish-meta-v3-image-feed.json",
+      "project_sha256": "ef510e219ace6c49498734cd880684af16512944f71cecdf0ae35c62c82eb1ce",
+      "kind": "static",
+      "format": "meta-feed",
+      "output": {
+        "width": 1440,
+        "height": 1800
+      },
+      "assets": [
+        {
+          "id": "AD-LNG-VEROSIMIL-META-spanish-meta-v3-image-feed-01-lookup-en-US",
+          "file": "output/spanish-meta-v3-image-feed/01-lookup.png",
+          "sha256": "dc3677fd5e5661b7f3c49895ddb3b0f1fe451cf8535f39fa6f5b932b53bcdbf2",
+          "bytes": 1142339,
+          "width": 1440,
+          "height": 1800,
+          "scene": "01-lookup",
+          "name": "Look up Spanish words as you read",
+          "copy": {
+            "title": "Look up\nSpanish words\nas you read.",
+            "subtitle": "Scan a page.\nTap a word.\nSee its meaning\nin English."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-translation-v5.png",
+              "sha256": "51ac5059d2bdbe0bde3ee87212728554ad51a112f21a4818d5b34c34fae8c055"
+            },
+            {
+              "path": "project-assets/meta-v3-contrast/spanish-meta-v3-image-feed-01-lookup.png",
+              "sha256": "cbebb62f1398d6c50d9c535598130cbfe9eacb33eaf923797dce62f5c407bef3"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/meaning.png",
+              "sha256": "e0fc2d5d9a4e07bed6f306725e066bf91c4773bfb393f8a3c4e547f131f29801"
+            }
+          ]
+        },
+        {
+          "id": "AD-LNG-VEROSIMIL-META-spanish-meta-v3-image-feed-02-practice-en-US",
+          "file": "output/spanish-meta-v3-image-feed/02-practice.png",
+          "sha256": "5292f23fcebe661de362c4546d0be64d87d0b10db294352e73d602435f9a64f1",
+          "bytes": 1071944,
+          "width": 1440,
+          "height": 1800,
+          "scene": "02-practice",
+          "name": "Practice your Spanish words",
+          "copy": {
+            "title": "Practice your\nSpanish words.",
+            "subtitle": "Look up words.\nBuild vocabulary.\nTest your recall."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-test-v5.png",
+              "sha256": "a83b16348fb0c57eac3fc8ddd74f20763dc61de4e5468dba81bf718ddcbfef58"
+            },
+            {
+              "path": "project-assets/meta-v3-contrast/spanish-meta-v3-image-feed-02-practice.png",
+              "sha256": "cbebb62f1398d6c50d9c535598130cbfe9eacb33eaf923797dce62f5c407bef3"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/test-correct.png",
+              "sha256": "cfabc1bef0b90891725f7b5b6b72c3629ec407f9010fb3c13dbe9896df0cfbd7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": "projects/spanish-meta-v3-image-stories.json",
+      "project_sha256": "d86f338f17cbef04a4b611f8f796dad0b01ac78017f3f4b3c47e9cd79ace28c3",
+      "kind": "static",
+      "format": "meta-vertical",
+      "output": {
+        "width": 1440,
+        "height": 2560
+      },
+      "assets": [
+        {
+          "id": "AD-LNG-VEROSIMIL-META-spanish-meta-v3-image-stories-01-lookup-en-US",
+          "file": "output/spanish-meta-v3-image-stories/01-lookup.png",
+          "sha256": "9eb25744385e7a114a1ac0d067d351b9b48dba1ea46864f4e02b93c7f9b7d4f0",
+          "bytes": 1619750,
+          "width": 1440,
+          "height": 2560,
+          "scene": "01-lookup",
+          "name": "Look up Spanish words as you read",
+          "copy": {
+            "title": "Look up Spanish\nwords as you read.",
+            "subtitle": "Scan a page. Tap a word."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-translation-v5.png",
+              "sha256": "51ac5059d2bdbe0bde3ee87212728554ad51a112f21a4818d5b34c34fae8c055"
+            },
+            {
+              "path": "project-assets/meta-v3-contrast/spanish-meta-v3-image-stories-01-lookup.png",
+              "sha256": "3eb02aa4f7fb6e369ddc2e6bf4e51f214c379523a55002f542351983f45dea8d"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/meaning.png",
+              "sha256": "e0fc2d5d9a4e07bed6f306725e066bf91c4773bfb393f8a3c4e547f131f29801"
+            }
+          ]
+        },
+        {
+          "id": "AD-LNG-VEROSIMIL-META-spanish-meta-v3-image-stories-02-practice-en-US",
+          "file": "output/spanish-meta-v3-image-stories/02-practice.png",
+          "sha256": "0baf8ec3b09aead50f1fe1124baac98684119ea0405a84c8cc23df2f4d0111fa",
+          "bytes": 1455711,
+          "width": 1440,
+          "height": 2560,
+          "scene": "02-practice",
+          "name": "Practice your Spanish words",
+          "copy": {
+            "title": "Practice your\nSpanish words.",
+            "subtitle": "Look up words. Practice later."
+          },
+          "sources": [
+            {
+              "path": "project-assets/reading-companion/background-test-v5.png",
+              "sha256": "a83b16348fb0c57eac3fc8ddd74f20763dc61de4e5468dba81bf718ddcbfef58"
+            },
+            {
+              "path": "project-assets/meta-v3-contrast/spanish-meta-v3-image-stories-02-practice.png",
+              "sha256": "3eb02aa4f7fb6e369ddc2e6bf4e51f214c379523a55002f542351983f45dea8d"
+            },
+            {
+              "path": "project-assets/spanish-verosimil-v7/test-correct.png",
+              "sha256": "cfabc1bef0b90891725f7b5b6b72c3629ec407f9010fb3c13dbe9896df0cfbd7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
