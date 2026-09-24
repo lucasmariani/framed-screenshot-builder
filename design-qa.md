@@ -153,3 +153,13 @@ visually inspected; the full gallery is available for Lucas's art-direction revi
 upload. These are local drafts. No provider upload, campaign activation, spending,
 app distribution or backend deployment occurred. Repository changes are retained
 locally pending that review; no push of this artwork set was performed.
+
+## September 24 owner correction: no decorative wordmark
+
+Removed the added Omato wordmark from all five projects and thirty exports. The
+editor applies this project policy to restored autosaves without resetting other
+layers or user positions; verified in the live square editor. The generator and
+reusable skill preserve the rule. V1 PNGs/projects remain in output/archive for
+registry lineage; V2 retains other copy/order pending owner's story review.
+All 30 export dimension/layout checks pass; shared renderer regression passes.
+Nothing uploaded or pushed.

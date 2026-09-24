@@ -7,22 +7,6 @@
     },
     "text": [
       {
-        "id": "wordmark",
-        "lines": [
-          "Omato"
-        ],
-        "bounds": {
-          "x": 66,
-          "y": 125,
-          "width": 400,
-          "height": 55.120000000000005,
-          "rotation": 0
-        },
-        "lineWidths": [
-          144.55999755859375
-        ]
-      },
-      {
         "id": "title",
         "lines": [
           "Spanish word.",
@@ -70,22 +54,6 @@
     },
     "text": [
       {
-        "id": "wordmark",
-        "lines": [
-          "Omato"
-        ],
-        "bounds": {
-          "x": 66,
-          "y": 125,
-          "width": 400,
-          "height": 55.120000000000005,
-          "rotation": 0
-        },
-        "lineWidths": [
-          144.55999755859375
-        ]
-      },
-      {
         "id": "title",
         "lines": [
           "Your words.",
@@ -131,22 +99,6 @@
     },
     "text": [
       {
-        "id": "wordmark",
-        "lines": [
-          "Omato"
-        ],
-        "bounds": {
-          "x": 66,
-          "y": 125,
-          "width": 400,
-          "height": 55.120000000000005,
-          "rotation": 0
-        },
-        "lineWidths": [
-          144.55999755859375
-        ]
-      },
-      {
         "id": "title",
         "lines": [
           "Recall the",
@@ -191,22 +143,6 @@
       "height": 1200
     },
     "text": [
-      {
-        "id": "wordmark",
-        "lines": [
-          "Omato"
-        ],
-        "bounds": {
-          "x": 66,
-          "y": 125,
-          "width": 400,
-          "height": 55.120000000000005,
-          "rotation": 0
-        },
-        "lineWidths": [
-          144.55999755859375
-        ]
-      },
       {
         "id": "title",
         "lines": [
@@ -255,22 +191,6 @@
     },
     "text": [
       {
-        "id": "wordmark",
-        "lines": [
-          "Omato"
-        ],
-        "bounds": {
-          "x": 66,
-          "y": 125,
-          "width": 400,
-          "height": 55.120000000000005,
-          "rotation": 0
-        },
-        "lineWidths": [
-          144.55999755859375
-        ]
-      },
-      {
         "id": "title",
         "lines": [
           "Know the",
@@ -317,22 +237,6 @@
       "height": 1200
     },
     "text": [
-      {
-        "id": "wordmark",
-        "lines": [
-          "Omato"
-        ],
-        "bounds": {
-          "x": 66,
-          "y": 125,
-          "width": 400,
-          "height": 55.120000000000005,
-          "rotation": 0
-        },
-        "lineWidths": [
-          144.55999755859375
-        ]
-      },
       {
         "id": "title",
         "lines": [

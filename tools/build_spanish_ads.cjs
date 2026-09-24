@@ -30,11 +30,11 @@ const stories=[
   const base=id==='google-app-landscape'?{w:1200,h:628,px:810,py:24,pw:270,tx:66,ty:150,tw:690,ts:76,sy:430,ss:32,wy:50,bgy:-560}:id==='meta-vertical'?{w:1440,h:2560,px:748,py:410,pw:574,tx:90,ty:650,tw:620,ts:104,sy:1070,ss:40,wy:440,bgy:0}:id==='reddit-carousel-square'?{w:1200,h:1200,px:630,py:70,pw:510,tx:66,ty:285,tw:550,ts:96,sy:650,ss:36,wy:125,bgy:-550}:{w:1200,h:1500,px:610,py:190,pw:530,tx:66,ty:380,tw:530,ts:90,sy:780,ss:36,wy:205,bgy:-450};
   const scale=w/base.w;
   const scenes=stories.map(([name,file,title,subtitle,bg])=>{
-   const layers=[image('background',`project-assets/reading-companion/${bg}`,0,base.bgy,base.w),image('device',`project-assets/spanish-learners/${name}.png`,base.px,base.py,base.pw,true),text('wordmark','Omato',base.tx,base.wy,400,52),text('title',title,base.tx,base.ty,base.tw,base.ts),text('subtitle',subtitle,base.tx,base.sy,base.tw,base.ss,'Avenir Next',500)];
+   const layers=[image('background',`project-assets/reading-companion/${bg}`,0,base.bgy,base.w),image('device',`project-assets/spanish-learners/${name}.png`,base.px,base.py,base.pw,true),text('title',title,base.tx,base.ty,base.tw,base.ts),text('subtitle',subtitle,base.tx,base.sy,base.tw,base.ss,'Avenir Next',500)];
    for(const l of layers){for(const key of ['x','y','width','fontSize'])if(l[key]!==undefined)l[key]*=scale;}
    return {id:name,name:title.replace(/\n/g,' '),filename:name+'.png',background:{color:'#f6f2e9',accent:'#a9b49e',accentX:w/2,accentY:h*.6,accentRadius:w,accentOpacity:0,texture:0},layers};
   });
-  const project={version:1,name:`Omato · Spanish learners · en-US · ${preset.label}`,output:{width:w,height:h},formatId:id,safeInsets:preset.safeInsets||null,locale:'en-US',sourceLanguage:'es',definitionLanguage:'en',status:'review-draft-not-published',scenes};
+  const project={version:1,name:`Omato · Spanish learners · en-US · ${preset.label}`,output:{width:w,height:h},formatId:id,safeInsets:preset.safeInsets||null,locale:'en-US',sourceLanguage:'es',definitionLanguage:'en',status:'review-draft-not-published',editorPolicy:{omittedLayerIds:['wordmark']},scenes};
   fs.writeFileSync(path.join(root,'projects','spanish-'+id+'.json'),JSON.stringify(project,null,2)+'\n');
  }
  fs.writeFileSync(path.join(target,'provenance.json'),JSON.stringify({captured:'2026-09-24',appSourceCommit:'7861ef02b04349793b3671c16f1146c3effa83a9',captureDevice:'iPhone 17 Simulator / iOS 27.0; 1206×2622',captureRoute:'Live manual-entry lookup; Study and Test; no camera/OCR demonstrated',fonts:'Bodoni 72 Bold; Avenir Next Medium (installed macOS faces, not redistributed)',assets:provenance},null,2)+'\n');

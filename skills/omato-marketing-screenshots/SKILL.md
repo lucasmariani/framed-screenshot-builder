@@ -39,7 +39,12 @@ node tools/frame_capture.cjs /absolute/raw.png /absolute/framed.png iPhone_17_pr
 
 ## Compose editable format projects
 
-The current App Store reference is `projects/reading-companion.json`: **Bodoni 72 Bold (700)** headings/wordmark; **Avenir Next Medium (500)** supporting copy; charcoal `#20251e`, ivory `#f6f2e9`, muted sage and the existing book/paper backgrounds. Use the actual fonts, not Georgia approximations. For another user-selected reference, read that project first.
+**Permanent artwork rule (Lucas, September 24, 2026): Do not add a decorative “Omato” title/wordmark to screenshots or ad compositions. This includes the top-left wordmark. Preserve genuine app UI; the restriction is on added branding layers.**
+
+Use the exact approved copy and story from `MARKETING_AUDIENCE_INSIGHTS.md` and the creative registry. The established carousel backbone is introduction → photo → selection in scanned text → meaning → saved vocabulary → later practice. Do not omit acquisition steps or replace them with multiple Study/Test states without the user's review. Practice can be expanded into Study and Test when the agreed sequence calls for it. Historical variants remain immutable.
+
+
+The current App Store reference is `projects/reading-companion.json`: **Bodoni 72 Bold (700)** headings; **Avenir Next Medium (500)** supporting copy; charcoal `#20251e`, ivory `#f6f2e9`, muted sage and the existing book/paper backgrounds. Use the actual fonts, not Georgia approximations. For another user-selected reference, read that project first.
 
 - Browser editor: serve the builder over loopback, then `editor.html?project=projects/<name>.json`. Each project route has separate autosave. New output dimensions survive open/save/reload/export.
 - Presets live in `format-presets.js` with placement names, checked sources and known limits. These are **image** canvases, not video production. Recheck current provider docs when specs matter. A square size shared by providers does not make all other ratios interchangeable. Meta Feed, Facebook Feed carousel and Instagram Stories presets were verified against their official guides on September 24, 2026; other placements and objective-specific previews still need checking. Safe guides are placement-specific, not universal guarantees.

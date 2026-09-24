@@ -51,22 +51,6 @@
           "shadow": true
         },
         {
-          "id": "wordmark",
-          "type": "text",
-          "name": "wordmark",
-          "text": "Omato",
-          "x": 79.2,
-          "y": 246,
-          "width": 480,
-          "fontFamily": "Bodoni 72",
-          "fontWeight": 700,
-          "fontSize": 62.4,
-          "lineHeight": 1.06,
-          "letterSpacing": 0,
-          "color": "#20251e",
-          "align": "left"
-        },
-        {
           "id": "title",
           "type": "text",
           "name": "title",
@@ -137,22 +121,6 @@
           "rotation": 0,
           "opacity": 1,
           "shadow": true
-        },
-        {
-          "id": "wordmark",
-          "type": "text",
-          "name": "wordmark",
-          "text": "Omato",
-          "x": 79.2,
-          "y": 246,
-          "width": 480,
-          "fontFamily": "Bodoni 72",
-          "fontWeight": 700,
-          "fontSize": 62.4,
-          "lineHeight": 1.06,
-          "letterSpacing": 0,
-          "color": "#20251e",
-          "align": "left"
         },
         {
           "id": "title",
@@ -227,22 +195,6 @@
           "shadow": true
         },
         {
-          "id": "wordmark",
-          "type": "text",
-          "name": "wordmark",
-          "text": "Omato",
-          "x": 79.2,
-          "y": 246,
-          "width": 480,
-          "fontFamily": "Bodoni 72",
-          "fontWeight": 700,
-          "fontSize": 62.4,
-          "lineHeight": 1.06,
-          "letterSpacing": 0,
-          "color": "#20251e",
-          "align": "left"
-        },
-        {
           "id": "title",
           "type": "text",
           "name": "title",
@@ -313,22 +265,6 @@
           "rotation": 0,
           "opacity": 1,
           "shadow": true
-        },
-        {
-          "id": "wordmark",
-          "type": "text",
-          "name": "wordmark",
-          "text": "Omato",
-          "x": 79.2,
-          "y": 246,
-          "width": 480,
-          "fontFamily": "Bodoni 72",
-          "fontWeight": 700,
-          "fontSize": 62.4,
-          "lineHeight": 1.06,
-          "letterSpacing": 0,
-          "color": "#20251e",
-          "align": "left"
         },
         {
           "id": "title",
@@ -403,22 +339,6 @@
           "shadow": true
         },
         {
-          "id": "wordmark",
-          "type": "text",
-          "name": "wordmark",
-          "text": "Omato",
-          "x": 79.2,
-          "y": 246,
-          "width": 480,
-          "fontFamily": "Bodoni 72",
-          "fontWeight": 700,
-          "fontSize": 62.4,
-          "lineHeight": 1.06,
-          "letterSpacing": 0,
-          "color": "#20251e",
-          "align": "left"
-        },
-        {
           "id": "title",
           "type": "text",
           "name": "title",
@@ -491,22 +411,6 @@
           "shadow": true
         },
         {
-          "id": "wordmark",
-          "type": "text",
-          "name": "wordmark",
-          "text": "Omato",
-          "x": 79.2,
-          "y": 246,
-          "width": 480,
-          "fontFamily": "Bodoni 72",
-          "fontWeight": 700,
-          "fontSize": 62.4,
-          "lineHeight": 1.06,
-          "letterSpacing": 0,
-          "color": "#20251e",
-          "align": "left"
-        },
-        {
           "id": "title",
           "type": "text",
           "name": "title",
@@ -540,5 +444,10 @@
         }
       ]
     }
-  ]
+  ],
+  "editorPolicy": {
+    "omittedLayerIds": [
+      "wordmark"
+    ]
+  }
 }

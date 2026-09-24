@@ -1439,6 +1439,15 @@ async function init() {
     if (!isValidProject(project)) throw new Error('The Reading Companion project is invalid');
     defaultProject = project;
     state.project = loadStoredProject() ?? clone(defaultProject);
+    // Apply explicit project policy to restored edits without resetting their layout.
+    const omittedLayerIds = new Set(defaultProject.editorPolicy?.omittedLayerIds ?? []);
+    if (omittedLayerIds.size) {
+      state.project.editorPolicy = clone(defaultProject.editorPolicy);
+      for (const scene of state.project.scenes) {
+        scene.layers = scene.layers.filter(layer => !omittedLayerIds.has(layer.id));
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.project));
+    }
     state.selectedSceneId = state.project.scenes[0].id;
   }
   const presetSelect = document.getElementById('output-preset');
