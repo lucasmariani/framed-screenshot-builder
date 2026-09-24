@@ -1,0 +1,48 @@
+{
+  "status": "awaiting-owner-direction-review",
+  "replaces_rejected_direction": "v3",
+  "project": "projects/spanish-composition-review-v4.json",
+  "projectSha256": "7ddb4d33d5b4b84a6df28b06ce1c2bd76c6762a76438679a6acd18510ea3d61e",
+  "files": [
+    {
+      "file": "output/spanish-composition-review-v4/01-carousel-introduction.png",
+      "sha256": "2511341c167cb35e9009aa6ce608afdb717ebbe00a848ee3c27a1f7e419e201b",
+      "bytes": 1201065,
+      "kind": "carousel-introduction",
+      "copy": {
+        "title": "Build your Spanish\nvocabulary as you read.",
+        "subtitle": "Scan a page. Look up words.\nKeep them. Practice later."
+      },
+      "sources": [
+        {
+          "path": "project-assets/reading-companion/background-book.png",
+          "sha256": "d2d0fdff5d50abd9f1d178a4d5c638e27d8d25e3a44a9d39b0fc71ecaedb7f4a"
+        },
+        {
+          "path": "project-assets/spanish-learners-v3/vocabulary.png",
+          "sha256": "b9d3245b3c6c9c914b135a281b976a92f5f6944c20b71c8a15a72f82d47e0fc3"
+        }
+      ]
+    },
+    {
+      "file": "output/spanish-composition-review-v4/02-standalone-lookup.png",
+      "sha256": "a0726091cad6e239c4714302419ba0c3834ee353b6b04498272e043caa4a8f23",
+      "bytes": 1078879,
+      "kind": "static",
+      "copy": {
+        "title": "Look up\nSpanish words\nas you read.",
+        "subtitle": "Scan a page.\nTap a word.\nSee its meaning\nin English."
+      },
+      "sources": [
+        {
+          "path": "project-assets/reading-companion/background-translation-v5.png",
+          "sha256": "51ac5059d2bdbe0bde3ee87212728554ad51a112f21a4818d5b34c34fae8c055"
+        },
+        {
+          "path": "project-assets/spanish-learners-v3/meaning.png",
+          "sha256": "593a70ab864862d9d5dccf084f189ca8cf159dd0aa3258a8268265aba4bd66ab"
+        }
+      ]
+    }
+  ]
+}

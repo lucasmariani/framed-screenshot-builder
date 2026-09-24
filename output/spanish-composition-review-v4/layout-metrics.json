@@ -1,0 +1,98 @@
+[
+  {
+    "scene": "01-carousel-introduction",
+    "output": {
+      "width": 1200,
+      "height": 1200
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Build your Spanish",
+          "vocabulary as you read."
+        ],
+        "bounds": {
+          "x": 66,
+          "y": 62,
+          "width": 1068,
+          "height": 190.8,
+          "rotation": 0
+        },
+        "lineWidths": [
+          683.9099731445312,
+          822.3300170898438
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Scan a page. Look up words.",
+          "Keep them. Practice later."
+        ],
+        "bounds": {
+          "x": 70,
+          "y": 286,
+          "width": 1050,
+          "height": 117.12,
+          "rotation": 0
+        },
+        "lineWidths": [
+          629.3800048828125,
+          557.7100219726562
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "02-standalone-lookup",
+    "output": {
+      "width": 1200,
+      "height": 1200
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Look up",
+          "Spanish words",
+          "as you read."
+        ],
+        "bounds": {
+          "x": 64,
+          "y": 218,
+          "width": 570,
+          "height": 292.56,
+          "rotation": 0
+        },
+        "lineWidths": [
+          305.8999938964844,
+          527.0700073242188,
+          425.9599914550781
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Scan a page.",
+          "Tap a word.",
+          "See its meaning",
+          "in English."
+        ],
+        "bounds": {
+          "x": 68,
+          "y": 582,
+          "width": 500,
+          "height": 234.24,
+          "rotation": 0
+        },
+        "lineWidths": [
+          281.760009765625,
+          255.02000427246094,
+          350.29998779296875,
+          226.22000122070312
+        ]
+      }
+    ]
+  }
+]
