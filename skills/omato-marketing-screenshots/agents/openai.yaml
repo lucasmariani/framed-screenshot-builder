@@ -1,0 +1,4 @@
+interface:
+  display_name: "Omato Marketing Screenshots"
+  short_description: "Capture, frame and export genuine multilingual Omato creatives."
+  default_prompt: "Use $omato-marketing-screenshots to prepare genuine Omato screenshots and editable advertising or App Store artwork for the requested languages and placements."

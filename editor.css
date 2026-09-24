@@ -256,7 +256,7 @@
   box-sizing: content-box;
   width: auto;
   height: calc(100% - 20px);
-  aspect-ratio: 1320 / 2868;
+  aspect-ratio: auto;
   margin: 0;
 }
 

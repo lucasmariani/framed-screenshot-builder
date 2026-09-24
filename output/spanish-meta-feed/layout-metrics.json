@@ -1,0 +1,374 @@
+[
+  {
+    "scene": "01-meaning",
+    "output": {
+      "width": 1440,
+      "height": 1800
+    },
+    "text": [
+      {
+        "id": "wordmark",
+        "lines": [
+          "Omato"
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 246,
+          "width": 480,
+          "height": 66.144,
+          "rotation": 0
+        },
+        "lineWidths": [
+          173.4499969482422
+        ]
+      },
+      {
+        "id": "title",
+        "lines": [
+          "Spanish word.",
+          "English",
+          "meaning."
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 456,
+          "width": 636,
+          "height": 343.44,
+          "rotation": 0
+        },
+        "lineWidths": [
+          610.52001953125,
+          334.5799865722656,
+          414.5
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Look up crecer.",
+          "See “to grow”."
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 936,
+          "width": 636,
+          "height": 91.58399999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          302.6600036621094,
+          280.92999267578125
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "02-vocabulary",
+    "output": {
+      "width": 1440,
+      "height": 1800
+    },
+    "text": [
+      {
+        "id": "wordmark",
+        "lines": [
+          "Omato"
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 246,
+          "width": 480,
+          "height": 66.144,
+          "rotation": 0
+        },
+        "lineWidths": [
+          173.4499969482422
+        ]
+      },
+      {
+        "id": "title",
+        "lines": [
+          "Your words.",
+          "One place."
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 456,
+          "width": 636,
+          "height": 228.96,
+          "rotation": 0
+        },
+        "lineWidths": [
+          519.0499877929688,
+          456.8399963378906
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Keep the words",
+          "you look up."
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 936,
+          "width": 636,
+          "height": 91.58399999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          310.989990234375,
+          244.74000549316406
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "03-study-front",
+    "output": {
+      "width": 1440,
+      "height": 1800
+    },
+    "text": [
+      {
+        "id": "wordmark",
+        "lines": [
+          "Omato"
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 246,
+          "width": 480,
+          "height": 66.144,
+          "rotation": 0
+        },
+        "lineWidths": [
+          173.4499969482422
+        ]
+      },
+      {
+        "id": "title",
+        "lines": [
+          "Recall the",
+          "meaning."
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 456,
+          "width": 636,
+          "height": 228.96,
+          "rotation": 0
+        },
+        "lineWidths": [
+          425.0899963378906,
+          414.5
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Recall the meaning",
+          "before you reveal it."
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 936,
+          "width": 636,
+          "height": 91.58399999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          378.6700134277344,
+          394.29998779296875
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "04-study-back",
+    "output": {
+      "width": 1440,
+      "height": 1800
+    },
+    "text": [
+      {
+        "id": "wordmark",
+        "lines": [
+          "Omato"
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 246,
+          "width": 480,
+          "height": 66.144,
+          "rotation": 0
+        },
+        "lineWidths": [
+          173.4499969482422
+        ]
+      },
+      {
+        "id": "title",
+        "lines": [
+          "Reveal.",
+          "Review.",
+          "Remember."
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 456,
+          "width": 636,
+          "height": 343.44,
+          "rotation": 0
+        },
+        "lineWidths": [
+          316.8699951171875,
+          334.0400085449219,
+          513.8599853515625
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Practice with words",
+          "you have saved."
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 936,
+          "width": 636,
+          "height": 91.58399999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          381.7799987792969,
+          317.7300109863281
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "05-test-filled",
+    "output": {
+      "width": 1440,
+      "height": 1800
+    },
+    "text": [
+      {
+        "id": "wordmark",
+        "lines": [
+          "Omato"
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 246,
+          "width": 480,
+          "height": 66.144,
+          "rotation": 0
+        },
+        "lineWidths": [
+          173.4499969482422
+        ]
+      },
+      {
+        "id": "title",
+        "lines": [
+          "Know the",
+          "Spanish word?"
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 456,
+          "width": 636,
+          "height": 228.96,
+          "rotation": 0
+        },
+        "lineWidths": [
+          408.1300048828125,
+          628.5599975585938
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Read the meaning.",
+          "Type your answer."
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 936,
+          "width": 636,
+          "height": 91.58399999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          373.2699890136719,
+          355.42999267578125
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "06-test-correct",
+    "output": {
+      "width": 1440,
+      "height": 1800
+    },
+    "text": [
+      {
+        "id": "wordmark",
+        "lines": [
+          "Omato"
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 246,
+          "width": 480,
+          "height": 66.144,
+          "rotation": 0
+        },
+        "lineWidths": [
+          173.4499969482422
+        ]
+      },
+      {
+        "id": "title",
+        "lines": [
+          "Put your",
+          "words",
+          "to the test."
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 456,
+          "width": 636,
+          "height": 343.44,
+          "rotation": 0
+        },
+        "lineWidths": [
+          369.0400085449219,
+          256.92999267578125,
+          445.17999267578125
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Check your answer.",
+          "Keep practicing."
+        ],
+        "bounds": {
+          "x": 79.2,
+          "y": 936,
+          "width": 636,
+          "height": 91.58399999999999,
+          "rotation": 0
+        },
+        "lineWidths": [
+          385.75,
+          323.6000061035156
+        ]
+      }
+    ]
+  }
+]

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Omato ASC Screenshot Editor</title>
+  <title>Omato Screenshot & Ad Editor</title>
   <link rel="icon" href="data:," />
   <link rel="stylesheet" href="styles.css?v=20260807b" />
   <link rel="stylesheet" href="editor.css?v=20260808c" />
@@ -15,8 +15,8 @@
         <a class="back-link" href="index.html">← Frame builder</a>
         <div>
           <p class="kicker">Omato marketing studio</p>
-          <h1>ASC Screenshot Editor</h1>
-          <p class="sub">Edit your App Store screenshots as real text and image layers. Everything stays local.</p>
+          <h1>Screenshot & Ad Editor</h1>
+          <p class="sub">Compose App Store screenshots and ad creatives with editable text and image layers. Everything stays local.</p>
         </div>
       </div>
 
@@ -32,7 +32,7 @@
 
     <div class="editor-status-row">
       <div class="status" id="editor-status" role="status">Loading Omato ASC project…</div>
-      <div class="autosave-note">Autosaves in this browser · Output 1320 × 2868</div>
+      <div class="autosave-note" id="output-summary">Autosaves in this browser · Output 1320 × 2868</div>
     </div>
 
     <main class="editor-layout">
@@ -67,7 +67,7 @@
 
         <div class="stage-scroll fit-canvas" id="stage-scroll">
           <div class="stage-canvas-shell">
-            <canvas id="stage-canvas" width="1320" height="2868" tabindex="0" aria-label="Editable App Store screenshot"></canvas>
+            <canvas id="stage-canvas" width="1320" height="2868" tabindex="0" aria-label="Editable screenshot or ad"></canvas>
           </div>
         </div>
       </section>
@@ -80,6 +80,20 @@
           </div>
           <button id="duplicate-layer" class="icon-button" type="button" title="Duplicate selected image layer" aria-label="Duplicate selected image layer">Duplicate</button>
         </div>
+
+        <section class="inspector-section">
+          <h3>Canvas format</h3>
+          <label for="output-preset">Placement preset</label>
+          <select id="output-preset"><option value="custom">Custom dimensions</option></select>
+          <div class="field-grid two-columns">
+            <label>Width <input id="output-width" type="number" min="100" max="8192" step="1" /></label>
+            <label>Height <input id="output-height" type="number" min="100" max="8192" step="1" /></label>
+          </div>
+          <button id="apply-output" type="button">Apply canvas size</button>
+          <label class="check-row"><input id="safe-guides" type="checkbox" checked /> Show safe-area guide (preview only)</label>
+          <p id="format-note" class="field-help"></p>
+          <p class="field-help">Resizing fits existing layers proportionally. Review and reposition them for the new shape.</p>
+        </section>
 
         <section class="inspector-section">
           <label for="scene-name">Screenshot name</label>
@@ -205,6 +219,7 @@
   </div>
 
   <script src="embedded-device-assets.js?v=20260808a"></script>
-  <script src="editor.js?v=20260912-reading-companion-v5"></script>
+  <script src="format-presets.js"></script>
+  <script src="editor.js?v=20260924-multi-format-v1"></script>
 </body>
 </html>

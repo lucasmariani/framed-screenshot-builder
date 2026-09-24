@@ -129,3 +129,27 @@ This is browser-based small-size verification, not a live App Store upload or co
 - [x] Regenerate the six-image exports and editable project.
 
 final result: passed
+
+## September 24 — Spanish learner ad studio
+
+Six genuine device images support a 30-PNG set across square, landscape, portrait,
+Meta feed and Instagram Stories layouts. Reused the exact populated vocabulary
+asset requested by Lucas; the other device images show the live crecer lookup,
+Study and filled/correct Test states. Original UI pixels are preserved. The
+renderer uses individually extracted Bodoni 72 Bold / Avenir Next Medium faces.
+Existing book, paper and sage backgrounds retain their source files.
+
+Automated layout checks found and resolved a three-line landscape headline
+collision, a portrait headline wrap collision and a long square headline word.
+Final checks cover PNG dimensions, known provider file limits, text box overflow,
+title/subtitle separation and the Stories safe area. Shared-renderer regression
+compares the existing first Reading Companion scene to commit 3499ec5 and produces
+identical PNG pixels. Browser checks confirmed preset resize, real canvas size,
+autosave/reload and reset back to the original square project. Export guides are
+excluded from PNGs. Representative square, landscape and vertical PNGs were
+visually inspected; the full gallery is available for Lucas's art-direction review.
+
+**Review gate:** Lucas requested review in the Screenshot & Ad Editor before any
+upload. These are local drafts. No provider upload, campaign activation, spending,
+app distribution or backend deployment occurred. Repository changes are retained
+locally pending that review; no push of this artwork set was performed.

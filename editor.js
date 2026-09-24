@@ -1,6 +1,7 @@
 const OUTPUT_SIZE = { width: 1320, height: 2868 };
 const CAMPAIGN = new URLSearchParams(window.location.search).get('campaign');
-const STORAGE_KEY = `omato.ascScreenshotEditor.v1${CAMPAIGN === 'reading-companion' ? '.reading-companion.v5' : ''}`;
+const PROJECT_PATH = new URLSearchParams(window.location.search).get('project');
+const STORAGE_KEY = `omato.ascScreenshotEditor.v1${PROJECT_PATH ? '.project.' + encodeURIComponent(PROJECT_PATH) : CAMPAIGN === 'reading-companion' ? '.reading-companion.v5' : ''}`;
 const PROJECT_VERSION = 1;
 const ASSET_ROOT = 'project-assets/omato-asc';
 const USE_EMBEDDED_ASSETS = window.location.protocol === 'file:'
@@ -243,13 +244,86 @@ function clone(value) {
 function loadStoredProject() {
   try {
     const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    if (parsed?.version === PROJECT_VERSION && Array.isArray(parsed.scenes) && parsed.scenes.length) {
+    if (isValidProject(parsed)) {
       return parsed;
     }
   } catch (error) {
     console.warn('Saved project could not be loaded', error);
   }
   return null;
+}
+
+function outputSize(project = state.project) {
+  return project.output ?? OUTPUT_SIZE;
+}
+
+function validOutput(output) {
+  return !output || ['width', 'height'].every(key => Number.isInteger(output[key]) && output[key] >= 100 && output[key] <= 8192);
+}
+
+function fitStage() {
+  const shell = elements.stageCanvas.parentElement;
+  const {width, height} = outputSize();
+  if (state.canvasScale === 'zoom') {
+    shell.style.width = ''; shell.style.height = ''; return;
+  }
+  const availableWidth = Math.max(100, elements.stageScroll.clientWidth - 40);
+  const availableHeight = Math.max(100, elements.stageScroll.clientHeight - 40);
+  const scale = Math.min(availableWidth / width, availableHeight / height);
+  shell.style.width = `${width * scale}px`;
+  shell.style.height = `${height * scale}px`;
+}
+
+function syncOutputControls() {
+  const output = outputSize();
+  document.getElementById('output-width').value = output.width;
+  document.getElementById('output-height').value = output.height;
+  document.getElementById('output-preset').value = state.project.formatId || 'custom';
+  document.getElementById('output-summary').textContent = `Autosaves in this browser · Output ${output.width} × ${output.height}`;
+  const preset = globalThis.OMATO_FORMAT_PRESETS.find(item => item.id === state.project.formatId);
+  document.getElementById('format-note').textContent = preset?.note || 'Custom canvas. Confirm dimensions and placement previews before publishing.';
+  fitStage();
+}
+
+// Uniform fitting preserves device and typography proportions. Art direction stays editable.
+function resizeProject(project, next) {
+  const previous = outputSize(project);
+  const factor = Math.min(next.width / previous.width, next.height / previous.height);
+  const dx = (next.width - previous.width * factor) / 2;
+  const dy = (next.height - previous.height * factor) / 2;
+  for (const scene of project.scenes) {
+    delete scene.referenceSrc;
+    for (const layer of scene.layers) {
+      layer.x = layer.x * factor + dx; layer.y = layer.y * factor + dy;
+      layer.width *= factor;
+      if (layer.type === 'text') { layer.fontSize *= factor; layer.letterSpacing = (layer.letterSpacing || 0) * factor; }
+    }
+    scene.background.accentX = scene.background.accentX * factor + dx;
+    scene.background.accentY = scene.background.accentY * factor + dy;
+    scene.background.accentRadius *= factor;
+  }
+  project.output = {...next};
+}
+
+async function applyOutput() {
+  const next = {width: Number(document.getElementById('output-width').value), height: Number(document.getElementById('output-height').value)};
+  if (!validOutput(next)) { setStatus('Use whole pixel dimensions between 100 and 8192.'); return; }
+  resizeProject(state.project, next);
+  const preset = globalThis.OMATO_FORMAT_PRESETS.find(item => item.id === document.getElementById('output-preset').value && item.width === next.width && item.height === next.height);
+  state.project.formatId = preset?.id || 'custom';
+  state.project.safeInsets = preset?.safeInsets || null;
+  syncOutputControls();
+  await renderGallery(); await selectScene(state.selectedSceneId);
+  scheduleProjectUpdate('Canvas resized proportionally. Review copy, backgrounds and placement crops.');
+}
+
+function drawSafeGuides(ctx) {
+  const inset = state.project.safeInsets;
+  if (!inset) return;
+  const {width, height} = outputSize();
+  ctx.save(); ctx.strokeStyle = '#d95a25'; ctx.lineWidth = Math.max(2, width / 400); ctx.setLineDash([12, 10]);
+  ctx.strokeRect(width * inset.left, height * inset.top, width * (1-inset.left-inset.right), height * (1-inset.top-inset.bottom));
+  ctx.restore();
 }
 
 function currentScene() {
@@ -331,10 +405,8 @@ async function ensureSceneAssets(targetScene, includeReference = false) {
   const sources = targetScene.layers
     .filter((layer) => layer.type === 'image' && layer.src)
     .map((layer) => layer.src);
-  if (includeReference && targetScene.referenceSrc) {
-    sources.push(targetScene.referenceSrc);
-  }
-  await Promise.allSettled(sources.map(loadImage));
+  await Promise.all(sources.map(loadImage));
+  if (includeReference && targetScene.referenceSrc) await loadImage(targetScene.referenceSrc).catch(console.warn);
 }
 
 function hexToRgb(hex) {
@@ -362,7 +434,7 @@ function textureHash(x, y, seed = 17) {
 function drawBackground(ctx, targetScene) {
   const background = targetScene.background;
   ctx.fillStyle = background.color;
-  ctx.fillRect(0, 0, OUTPUT_SIZE.width, OUTPUT_SIZE.height);
+  ctx.fillRect(0, 0, outputSize().width, outputSize().height);
 
   const gradient = ctx.createRadialGradient(
     background.accentX,
@@ -376,7 +448,7 @@ function drawBackground(ctx, targetScene) {
   gradient.addColorStop(0.52, rgba(background.accent, background.accentOpacity * 0.52));
   gradient.addColorStop(1, rgba(background.accent, 0));
   ctx.fillStyle = gradient;
-  ctx.fillRect(0, 0, OUTPUT_SIZE.width, OUTPUT_SIZE.height);
+  ctx.fillRect(0, 0, outputSize().width, outputSize().height);
 
   if (background.texture <= 0) {
     return;
@@ -384,8 +456,8 @@ function drawBackground(ctx, targetScene) {
   ctx.save();
   ctx.globalAlpha = background.texture * 0.22;
   ctx.lineWidth = 0.8;
-  for (let y = 12; y < OUTPUT_SIZE.height; y += 23) {
-    for (let x = 10; x < OUTPUT_SIZE.width; x += 25) {
+  for (let y = 12; y < outputSize().height; y += 23) {
+    for (let x = 10; x < outputSize().width; x += 25) {
       const hash = textureHash(x, y, targetScene.id.length);
       const length = 2 + hash * 6;
       const angle = (hash - 0.5) * 1.8;
@@ -418,7 +490,7 @@ async function drawImageLayer(ctx, layer) {
     ctx.drawImage(image, -layer.width / 2, -height / 2, layer.width, height);
     ctx.restore();
   } catch (error) {
-    console.warn(error);
+    throw error;
   }
 }
 
@@ -505,13 +577,13 @@ function drawTextLayer(ctx, layer) {
 
 async function renderSceneToCanvas(targetScene, canvas, options = {}) {
   const token = ++state.renderToken;
-  canvas.width = options.width ?? OUTPUT_SIZE.width;
-  canvas.height = options.height ?? OUTPUT_SIZE.height;
+  canvas.width = options.width ?? outputSize().width;
+  canvas.height = options.height ?? outputSize().height;
   const ctx = canvas.getContext('2d', { alpha: false });
   ctx.imageSmoothingEnabled = true;
   ctx.imageSmoothingQuality = 'high';
-  const scaleX = canvas.width / OUTPUT_SIZE.width;
-  const scaleY = canvas.height / OUTPUT_SIZE.height;
+  const scaleX = canvas.width / outputSize().width;
+  const scaleY = canvas.height / outputSize().height;
 
   if (options.reference && targetScene.referenceSrc) {
     try {
@@ -536,6 +608,7 @@ async function renderSceneToCanvas(targetScene, canvas, options = {}) {
       drawTextLayer(ctx, layer);
     }
   }
+  if (options.guides) drawSafeGuides(ctx);
   if (options.selection) {
     drawSelection(ctx, options.selection, targetScene);
   }
@@ -598,7 +671,7 @@ async function renderGallery() {
 
     const canvas = document.createElement('canvas');
     canvas.width = 132;
-    canvas.height = 287;
+    canvas.height = Math.round(132 * outputSize().height / outputSize().width);
     const copy = document.createElement('span');
     copy.className = 'scene-card-copy';
     const title = document.createElement('strong');
@@ -612,7 +685,7 @@ async function renderGallery() {
 
     renderSceneToCanvas(targetScene, canvas, {
       width: 132,
-      height: 287,
+      height: Math.round(132 * outputSize().height / outputSize().width),
       reference: true
     });
   }
@@ -635,11 +708,15 @@ async function renderStage() {
   const buffer = document.createElement('canvas');
   await renderSceneToCanvas(targetScene, buffer, {
     reference: state.view === 'reference',
-    selection: state.view === 'editable' ? layer : null
+    selection: state.view === 'editable' ? layer : null,
+    guides: document.getElementById('safe-guides').checked
   });
   if (renderToken !== state.stageRenderToken) {
     return;
   }
+  elements.stageCanvas.width = buffer.width;
+  elements.stageCanvas.height = buffer.height;
+  fitStage();
   const ctx = elements.stageCanvas.getContext('2d', { alpha: false });
   ctx.clearRect(0, 0, elements.stageCanvas.width, elements.stageCanvas.height);
   ctx.drawImage(buffer, 0, 0);
@@ -651,7 +728,7 @@ async function updateSelectedThumbnail() {
   if (!canvas) {
     return;
   }
-  await renderSceneToCanvas(targetScene, canvas, { width: 132, height: 287 });
+  await renderSceneToCanvas(targetScene, canvas, { width: 132, height: Math.round(132 * outputSize().height / outputSize().width) });
 }
 
 function renderLayerList() {
@@ -946,8 +1023,8 @@ async function exportAllScenes() {
       });
     }
     const archive = await buildTar(files);
-    downloadBlob(archive, 'omato-asc-en-US-screenshots.tar');
-    setStatus(`Exported all ${files.length} screenshots at 1320 × 2868`);
+    downloadBlob(archive, `omato-${state.project.formatId || 'screenshots'}-${outputSize().width}x${outputSize().height}.tar`);
+    setStatus(`Exported all ${files.length} screenshots at ${outputSize().width} × ${outputSize().height}`);
   } finally {
     elements.exportAll.disabled = false;
     elements.exportCurrent.disabled = false;
@@ -959,12 +1036,12 @@ function saveProjectFile() {
     [JSON.stringify(state.project, null, 2)],
     { type: 'application/json' }
   );
-  downloadBlob(projectBlob, 'omato-asc-editor-project.json');
+  downloadBlob(projectBlob, `omato-${state.project.formatId || 'editor'}-project.json`);
   setStatus('Project file saved');
 }
 
 function isValidProject(project) {
-  if (!project || project.version !== PROJECT_VERSION || !Array.isArray(project.scenes) || !project.scenes.length) {
+  if (!project || !validOutput(project.output) || project.version !== PROJECT_VERSION || !Array.isArray(project.scenes) || !project.scenes.length) {
     return false;
   }
   return project.scenes.every((targetScene) => (
@@ -986,7 +1063,8 @@ async function openProjectFile(file) {
       throw new Error('This is not an Omato ASC editor project');
     }
     state.project = parsed;
-    state.project.output = { ...OUTPUT_SIZE };
+    state.project.output ??= { ...OUTPUT_SIZE };
+    syncOutputControls();
     state.selectedSceneId = state.project.scenes[0].id;
     state.selectedLayerId = state.project.scenes[0].layers.find((layer) => layer.id === 'title')?.id
       ?? state.project.scenes[0].layers.at(-1)?.id
@@ -1009,6 +1087,7 @@ async function resetProject() {
     return;
   }
   state.project = clone(defaultProject);
+  syncOutputControls();
   state.selectedSceneId = state.project.scenes[0].id;
   state.selectedLayerId = 'title';
   state.imageCache.clear();
@@ -1069,8 +1148,8 @@ async function deleteSelectedLayer() {
 function canvasPoint(event) {
   const rect = elements.stageCanvas.getBoundingClientRect();
   return {
-    x: (event.clientX - rect.left) * (OUTPUT_SIZE.width / rect.width),
-    y: (event.clientY - rect.top) * (OUTPUT_SIZE.height / rect.height)
+    x: (event.clientX - rect.left) * (outputSize().width / rect.width),
+    y: (event.clientY - rect.top) * (outputSize().height / rect.height)
   };
 }
 
@@ -1314,6 +1393,7 @@ function wireActions() {
         candidate.classList.toggle('active', candidate === button);
       });
       elements.stageScroll.classList.toggle('fit-canvas', state.canvasScale === 'fit');
+      fitStage();
     });
   });
   elements.addImage.addEventListener('change', () => addImageFromFile(elements.addImage.files[0]));
@@ -1351,8 +1431,9 @@ function wireActions() {
 }
 
 async function init() {
-  if (CAMPAIGN === 'reading-companion') {
-    const response = await fetch('projects/reading-companion.json');
+  if (PROJECT_PATH || CAMPAIGN === 'reading-companion') {
+    if (PROJECT_PATH && !/^projects\/[a-zA-Z0-9_-]+\.json$/.test(PROJECT_PATH)) throw new Error('Use a project JSON in the projects folder.');
+    const response = await fetch(PROJECT_PATH || 'projects/reading-companion.json');
     if (!response.ok) throw new Error('The Reading Companion project could not be loaded');
     const project = await response.json();
     if (!isValidProject(project)) throw new Error('The Reading Companion project is invalid');
@@ -1360,12 +1441,19 @@ async function init() {
     state.project = loadStoredProject() ?? clone(defaultProject);
     state.selectedSceneId = state.project.scenes[0].id;
   }
+  const presetSelect = document.getElementById('output-preset');
+  for (const preset of globalThis.OMATO_FORMAT_PRESETS) { const option = document.createElement('option'); option.value = preset.id; option.textContent = `${preset.label} · ${preset.width} × ${preset.height}`; presetSelect.appendChild(option); }
+  presetSelect.addEventListener('change', () => { const preset = globalThis.OMATO_FORMAT_PRESETS.find(item => item.id === presetSelect.value); if (preset) { document.getElementById('output-width').value = preset.width; document.getElementById('output-height').value = preset.height; document.getElementById('format-note').textContent = preset.note; } });
+  document.getElementById('apply-output').addEventListener('click', applyOutput);
+  document.getElementById('safe-guides').addEventListener('change', renderStage);
+  syncOutputControls();
+  new ResizeObserver(fitStage).observe(elements.stageScroll);
   wireInspector();
   wireActions();
   await renderGallery();
   await selectScene(state.selectedSceneId);
   syncPanelHeightToViewport();
-  setStatus(loadStoredProject() ? 'Restored local edits' : 'Omato ASC project ready');
+  setStatus(loadStoredProject() ? 'Restored local edits' : 'Omato screenshot project ready');
 }
 
 init().catch((error) => {

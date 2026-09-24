@@ -1,0 +1,51 @@
+{
+  "captured": "2026-09-24",
+  "appSourceCommit": "7861ef02b04349793b3671c16f1146c3effa83a9",
+  "captureDevice": "iPhone 17 Simulator / iOS 27.0; 1206×2622",
+  "captureRoute": "Live manual-entry lookup; Study and Test; no camera/OCR demonstrated",
+  "fonts": "Bodoni 72 Bold; Avenir Next Medium (installed macOS faces, not redistributed)",
+  "assets": [
+    {
+      "asset": "project-assets/spanish-learners/01-meaning.png",
+      "sha256": "c1efb834ea2e93785f5954556a502b626980fc67a0b71f6e534dc22fdefaf1f3",
+      "source": "omato-ios/docs/marketing/drafts/reddit-spanish-2026-09-24/assets/01-meaning.png",
+      "sourceSha256": "c71fefaa83eaf499d9570b2f81ac481ed46cc89fe78c71c27ee5cafb7d1d8509",
+      "method": "frame_capture.cjs with iPhone_17_pro-silver-portrait"
+    },
+    {
+      "asset": "project-assets/spanish-learners/02-vocabulary.png",
+      "sha256": "b9d3245b3c6c9c914b135a281b976a92f5f6944c20b71c8a15a72f82d47e0fc3",
+      "source": "omato-ios/docs/marketing/drafts/reddit-spanish-2026-09-24/assets/vocabulary-populated-framed.png",
+      "sourceSha256": "b9d3245b3c6c9c914b135a281b976a92f5f6944c20b71c8a15a72f82d47e0fc3",
+      "method": "Exact reuse of existing framed vocabulary image"
+    },
+    {
+      "asset": "project-assets/spanish-learners/03-study-front.png",
+      "sha256": "b30a13b859158f507efcfc19bbd8adfc4fb828fa2ac594eb49c3c96aedf69d17",
+      "source": "omato-ios/docs/marketing/drafts/reddit-spanish-2026-09-24/assets/04-study-front.png",
+      "sourceSha256": "313ac3a338816a042808fd4512dd54972044e3c450663412c65beb39fd300e1d",
+      "method": "frame_capture.cjs with iPhone_17_pro-silver-portrait"
+    },
+    {
+      "asset": "project-assets/spanish-learners/04-study-back.png",
+      "sha256": "3862046bb82b74af191348f8f3687f61e94f6167930f7783a87bbac0a477caf8",
+      "source": "omato-ios/docs/marketing/drafts/reddit-spanish-2026-09-24/assets/05-study-back.png",
+      "sourceSha256": "890607831ce1f102f807afbb09d6ffcd7bf32ca87d1f2264430933dcfbd46188",
+      "method": "frame_capture.cjs with iPhone_17_pro-silver-portrait"
+    },
+    {
+      "asset": "project-assets/spanish-learners/05-test-filled.png",
+      "sha256": "6bc265d1b3c82c3357de5d207ae464f97269e69869498e0c8577bc647ae79d42",
+      "source": "omato-ios/docs/marketing/drafts/reddit-spanish-2026-09-24/assets/06-test-filled.png",
+      "sourceSha256": "1fe66cd900cfd9d2f3654f4fc8f69d747046615271dee165e11b6183ddbf3528",
+      "method": "frame_capture.cjs with iPhone_17_pro-silver-portrait"
+    },
+    {
+      "asset": "project-assets/spanish-learners/06-test-correct.png",
+      "sha256": "fd1642d1c3061463a512ab89a73f4da18dfad3825692d48fa2eb2c2b6d0b88eb",
+      "source": "omato-ios/docs/marketing/drafts/reddit-spanish-2026-09-24/assets/07-test-correct.png",
+      "sourceSha256": "400fa470c11c8d5b90b4d9c2dda02c9ae68255c09fe4e911610e17e419df0c54",
+      "method": "frame_capture.cjs with iPhone_17_pro-silver-portrait"
+    }
+  ]
+}

@@ -159,3 +159,53 @@ You can change the solid color by editing `FRAME_BACKGROUND` in `app.js`.
 Revision 5 refines only the backgrounds of Test, Translation, and Conjugations:
 three photographic ivory/paper/bookcloth compositions replace the repeated sage
 curve. The first five exports, all copy, and all device layers remain unchanged.
+
+### Multi-format advertising studio — September 24, 2026
+
+Open `spanish-learners.html` for the six-card Spanish-learner story, using the real
+**crecer → to grow** lookup, the existing populated vocabulary asset, Study and
+filled/correct Test screens. It includes **30 exported PNGs across five layouts**,
+editable JSON and local ZIP downloads. These are local review drafts, not published ads.
+
+`editor.html?project=projects/spanish-reddit-carousel-square.json` opens the square
+set. The inspector now offers 12 named App Store, Reddit, Meta and Google image
+presets plus custom 100–8192 pixel dimensions. Canvas size is preserved through
+save/open, autosave/reload, thumbnails, pointer coordinates and PNG/archive export.
+Each project route has isolated autosave; existing App Store routes retain theirs.
+Applying another size fits layers uniformly. Recompose the background, copy and
+phone for the placement rather than assuming a proportional fit is finished art.
+Safe-area guides affect preview only.
+
+`format-presets.js` records primary sources and dates. The current checked guides are:
+
+- [Reddit image formats](https://www.business.reddit.com/learning-hub/articles/reddit-image-ad-specs) and [carousel](https://www.business.reddit.com/advertise/ad-types/carousel-ads): these have different file limits. The six-card primary export is 1200 × 1200.
+- [Google App campaign image assets](https://support.google.com/google-ads/answer/9948381): 1200 × 1200, 1200 × 628, 1200 × 1500 recommended, up to 5 MB. The Reddit square set can also supply square image candidates; it is not automatically a Google carousel campaign.
+- Meta's official guides, read in browser after web extraction returned login pages: [Facebook Feed image](https://www.facebook.com/business/ads-guide/update/image/facebook-feed) and [Instagram Feed image](https://www.facebook.com/business/ads-guide/update/image/instagram-feed), 1440 × 1800; [Instagram Stories image](https://www.facebook.com/business/ads-guide/update/image/instagram-story), 1440 × 2560; [Facebook Feed carousel](https://www.facebook.com/business/ads-guide/update/carousel), at least 1080 × 1080. These pages displayed the Awareness objective. Confirm install-campaign placement previews before upload. The Stories guide reserves 14% top, 35% bottom and 6% sides for essential elements; other placements are not implicitly verified.
+
+#### Local reproduction
+
+Load Codex workspace dependencies for Node, its `node_modules` and Python. Set
+`NODE_PATH` accordingly. Extract installed macOS font faces with
+`python tools/prepare_fonts.py /tmp/omato-font-faces` (fontTools), then set
+`OMATO_RENDER_FONTS=/tmp/omato-font-faces`. Font files remain local, outside git.
+The renderer requires the font directory for the Omato typefaces.
+
+```sh
+node tools/build_spanish_ads.cjs
+node tools/render_project.cjs projects/spanish-reddit-carousel-square.json output/spanish-reddit-carousel-square
+# Repeat render_project for the other four projects/spanish-*.json files.
+node tools/check_editor.cjs
+node tools/validate_ads.cjs
+python3 tools/package_spanish_ads.py
+```
+
+The generator is specific to this capture set and overwrites its generated JSON;
+inspect and preserve manual edits first. Raw screenshots remain in the iOS draft,
+framed assets and hashes in `project-assets/spanish-learners/`, final output hashes
+in `output/spanish-ads-manifest.json`. ZIPs are reproducible local files excluded
+from git. Required missing images fail export rather than silently disappearing.
+
+The reusable operational skill is versioned at
+`skills/omato-marketing-screenshots/SKILL.md` and installed in Lucas's personal
+Codex skills under the same name. Invoke **$omato-marketing-screenshots** for
+future simulator capture, localization, framing and artwork production.

@@ -1,0 +1,267 @@
+[
+  {
+    "project": "projects/spanish-google-app-landscape.json",
+    "format": "google-app-landscape",
+    "output": {
+      "width": 1200,
+      "height": 628
+    },
+    "files": [
+      {
+        "file": "output/spanish-google-app-landscape/01-meaning.png",
+        "width": 1200,
+        "height": 628,
+        "bytes": 573642,
+        "sha256": "534794365215d47f69e3a9e82029e1edc8f7ddf78b5b69c1c96103f9af4cfb3f"
+      },
+      {
+        "file": "output/spanish-google-app-landscape/02-vocabulary.png",
+        "width": 1200,
+        "height": 628,
+        "bytes": 604070,
+        "sha256": "b5db3ea96a6dff0513882f44e16c8a563e8aafa98379189249bb032406a17f53"
+      },
+      {
+        "file": "output/spanish-google-app-landscape/03-study-front.png",
+        "width": 1200,
+        "height": 628,
+        "bytes": 532280,
+        "sha256": "9470d9b52f07f9a4b9123d876444d972b95a7fb7517bb48221728dbb375004d1"
+      },
+      {
+        "file": "output/spanish-google-app-landscape/04-study-back.png",
+        "width": 1200,
+        "height": 628,
+        "bytes": 686797,
+        "sha256": "1d22a135794c80cfe824eb12b22058940ce191572b98714078567f33bafeef94"
+      },
+      {
+        "file": "output/spanish-google-app-landscape/05-test-filled.png",
+        "width": 1200,
+        "height": 628,
+        "bytes": 562110,
+        "sha256": "062d075b6d32ea9a0c4d41f0ba084d4eba399e560365a74a3218c1e0dc7cd5a8"
+      },
+      {
+        "file": "output/spanish-google-app-landscape/06-test-correct.png",
+        "width": 1200,
+        "height": 628,
+        "bytes": 560347,
+        "sha256": "0acfeae1388bbb1e94d40a07b1f1e5354978cb0ee1842d9c2ea531051dfb4c3a"
+      }
+    ],
+    "status": "review-draft-not-published"
+  },
+  {
+    "project": "projects/spanish-google-app-portrait.json",
+    "format": "google-app-portrait",
+    "output": {
+      "width": 1200,
+      "height": 1500
+    },
+    "files": [
+      {
+        "file": "output/spanish-google-app-portrait/01-meaning.png",
+        "width": 1200,
+        "height": 1500,
+        "bytes": 1545955,
+        "sha256": "9782ba0b78fd7d91eaeaa7c1fcc710966f128f3aaf3da75b72d313098638e865"
+      },
+      {
+        "file": "output/spanish-google-app-portrait/02-vocabulary.png",
+        "width": 1200,
+        "height": 1500,
+        "bytes": 1319351,
+        "sha256": "7dff3d1d934382bd2af7877024a4af91eb6daa0380d41283c18f6c581cea66e1"
+      },
+      {
+        "file": "output/spanish-google-app-portrait/03-study-front.png",
+        "width": 1200,
+        "height": 1500,
+        "bytes": 1124256,
+        "sha256": "ad8efa91497fec0ca7e266e264dcdc147f1789a7e2b8a69992078d92f8316334"
+      },
+      {
+        "file": "output/spanish-google-app-portrait/04-study-back.png",
+        "width": 1200,
+        "height": 1500,
+        "bytes": 1410367,
+        "sha256": "1c12a1c4134992dee8425690ccfb3c8ead4a72c864edd0e07beb26bc75ff1f5d"
+      },
+      {
+        "file": "output/spanish-google-app-portrait/05-test-filled.png",
+        "width": 1200,
+        "height": 1500,
+        "bytes": 1235246,
+        "sha256": "de7faab61378de5f4bd8005f9ea7a835137e789f0cc2b3f85e74d9caf953adcd"
+      },
+      {
+        "file": "output/spanish-google-app-portrait/06-test-correct.png",
+        "width": 1200,
+        "height": 1500,
+        "bytes": 1231959,
+        "sha256": "4f7e8f49d173ec5adbec8fb84b11a595de7ab82ffcd1fb47464571cacfb32f9c"
+      }
+    ],
+    "status": "review-draft-not-published"
+  },
+  {
+    "project": "projects/spanish-meta-feed.json",
+    "format": "meta-feed",
+    "output": {
+      "width": 1440,
+      "height": 1800
+    },
+    "files": [
+      {
+        "file": "output/spanish-meta-feed/01-meaning.png",
+        "width": 1440,
+        "height": 1800,
+        "bytes": 2026392,
+        "sha256": "43372951a4c3b6fb36d7508c0e64e817d6ad9dd44c26445324c8159a13831d64"
+      },
+      {
+        "file": "output/spanish-meta-feed/02-vocabulary.png",
+        "width": 1440,
+        "height": 1800,
+        "bytes": 1736115,
+        "sha256": "2da6c39dc090516b99e7270be5bb447acdbdee701de0c4900753cb7fc6611ac7"
+      },
+      {
+        "file": "output/spanish-meta-feed/03-study-front.png",
+        "width": 1440,
+        "height": 1800,
+        "bytes": 1466739,
+        "sha256": "15b4c8df11b8681a18625cfff948ad912bbe82c8c502e528900a2517f917b4f4"
+      },
+      {
+        "file": "output/spanish-meta-feed/04-study-back.png",
+        "width": 1440,
+        "height": 1800,
+        "bytes": 1855189,
+        "sha256": "d2ecb9f0e448581fb83e200263f8e15c320546631f9ebb61a3da945f9d2a3e09"
+      },
+      {
+        "file": "output/spanish-meta-feed/05-test-filled.png",
+        "width": 1440,
+        "height": 1800,
+        "bytes": 1615101,
+        "sha256": "a961e4c951170e5d30a7c56f7b0515d3d73cb605e9cbd5088974010d2b8ce612"
+      },
+      {
+        "file": "output/spanish-meta-feed/06-test-correct.png",
+        "width": 1440,
+        "height": 1800,
+        "bytes": 1611146,
+        "sha256": "6b1aa1498164165b35c7c38d5f3b014116afcb29149fd44398c2146dc1956f97"
+      }
+    ],
+    "status": "review-draft-not-published"
+  },
+  {
+    "project": "projects/spanish-meta-vertical.json",
+    "format": "meta-vertical",
+    "output": {
+      "width": 1440,
+      "height": 2560
+    },
+    "files": [
+      {
+        "file": "output/spanish-meta-vertical/01-meaning.png",
+        "width": 1440,
+        "height": 2560,
+        "bytes": 3219093,
+        "sha256": "69c2326d0ae414eea66747464a60eb37621d11d0536ecc3924f2b59ef9282f52"
+      },
+      {
+        "file": "output/spanish-meta-vertical/02-vocabulary.png",
+        "width": 1440,
+        "height": 2560,
+        "bytes": 2651410,
+        "sha256": "115b9a45203354021652d333385afe24c2153aadf44ee471d5cb1a6aa1d5bdee"
+      },
+      {
+        "file": "output/spanish-meta-vertical/03-study-front.png",
+        "width": 1440,
+        "height": 2560,
+        "bytes": 2272345,
+        "sha256": "7fae25b753cd3e6f6d8b38aedf769ac3bc98bfdf6aa23362373394973ece366b"
+      },
+      {
+        "file": "output/spanish-meta-vertical/04-study-back.png",
+        "width": 1440,
+        "height": 2560,
+        "bytes": 2792171,
+        "sha256": "ceab64ebacab06984fa727300b2d2f6f9703ee4c7fc0fe0c54b7ed364f14266a"
+      },
+      {
+        "file": "output/spanish-meta-vertical/05-test-filled.png",
+        "width": 1440,
+        "height": 2560,
+        "bytes": 2478176,
+        "sha256": "8105a85a263724b073d613c94dc5d2dfeb19c2a58437d52df9b51aa9fb971599"
+      },
+      {
+        "file": "output/spanish-meta-vertical/06-test-correct.png",
+        "width": 1440,
+        "height": 2560,
+        "bytes": 2473755,
+        "sha256": "fd83bf5365b9331d14c3d7c08a9f576cc0a2b6d3cbd5238caa5e56b3d9fc678f"
+      }
+    ],
+    "status": "review-draft-not-published"
+  },
+  {
+    "project": "projects/spanish-reddit-carousel-square.json",
+    "format": "reddit-carousel-square",
+    "output": {
+      "width": 1200,
+      "height": 1200
+    },
+    "files": [
+      {
+        "file": "output/spanish-reddit-carousel-square/01-meaning.png",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 1162548,
+        "sha256": "9ad6de51435ba224d633b7dd30857b2670fe39ab3b088341fb0a041e904d3233"
+      },
+      {
+        "file": "output/spanish-reddit-carousel-square/02-vocabulary.png",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 1028753,
+        "sha256": "a946e26af96326a204fb641a07ae43971bf6dee8aceb7f86da5720d96a2c6e34"
+      },
+      {
+        "file": "output/spanish-reddit-carousel-square/03-study-front.png",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 870376,
+        "sha256": "c6d0cc92105618216d97900c161881514c507d8fc291fb8d49b42af1e9ced8ad"
+      },
+      {
+        "file": "output/spanish-reddit-carousel-square/04-study-back.png",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 1113379,
+        "sha256": "c70c91e71b755f8cb2b2b745de3759a28f0d72598d9acf5b98c990071d213e49"
+      },
+      {
+        "file": "output/spanish-reddit-carousel-square/05-test-filled.png",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 958807,
+        "sha256": "fecbe1ef19539ba283f2130de9a70363df400652099da9f7847e1bbbd935d9ec"
+      },
+      {
+        "file": "output/spanish-reddit-carousel-square/06-test-correct.png",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 955270,
+        "sha256": "b7e90b3bab81369347e1141775c3c5f082b59f77eea61b623e7e4ddccdc7b7a6"
+      }
+    ],
+    "status": "review-draft-not-published"
+  }
+]
