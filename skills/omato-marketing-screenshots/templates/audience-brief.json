@@ -1,0 +1,77 @@
+{
+  "templatePurpose": "Authoring checklist; not a legacy campaign-compiler input",
+  "campaignId": null,
+  "revision": 1,
+  "audience": {
+    "motivation": "language_learning",
+    "description": null,
+    "valueProposition": null
+  },
+  "languages": {
+    "deviceLanguage": null,
+    "deviceRegionLocale": null,
+    "sourceLanguage": null,
+    "explanationLanguage": null,
+    "adCopyLocale": null,
+    "storefront": null
+  },
+  "simulator": {
+    "dedicatedAndClean": true,
+    "uuid": null,
+    "model": null,
+    "runtime": null,
+    "appBuild": null,
+    "sourceCommit": null,
+    "statusBar": {
+      "time": "9:41",
+      "wifiBars": 3,
+      "cellularBars": 4,
+      "batteryLevel": 100,
+      "batteryState": "discharging"
+    }
+  },
+  "vocabulary": {
+    "originalCsv": null,
+    "derivedWordsOnlyCsv": null,
+    "liveAppLookupRequired": true,
+    "useCsvDefinitionsExamplesOrSynonyms": false
+  },
+  "page": {
+    "bookAndAuthor": null,
+    "sourceUrl": null,
+    "rightsEvidence": null,
+    "canonicalTextFile": null,
+    "generatedPageImage": null,
+    "featuredWord": null,
+    "scanMode": "translation",
+    "selectModeAndTargetBeforeLoadingViewfinder": true,
+    "selectionRoute": "actual_app_ocr"
+  },
+  "captures": {
+    "vocabulary": null,
+    "scan": null,
+    "selectionHighlightedAfterCancel": null,
+    "meaning": null,
+    "studyRevealed": null,
+    "testCheckedGreen": null
+  },
+  "frameId": "iPhone_17_pro-silver-portrait",
+  "design": {
+    "headingFont": "Bodoni 72 Bold",
+    "supportFont": "Avenir Next Medium",
+    "backgroundThemeReference": "marketing-screenshots/asc/en-US",
+    "decorativeWordmark": false,
+    "reviewWidthCssPixels": 360
+  },
+  "placements": [],
+  "placementEntryFields": ["provider", "presetId", "creativeKind", "copyLocale", "projectPath", "specSource", "specCheckedAt"],
+  "outputs": {
+    "captureProvenance": null,
+    "reviewGallery": null,
+    "manifest": null,
+    "zip": null
+  },
+  "status": "local_draft",
+  "artworkReviewRequiredBeforeUpload": true,
+  "publicationAuthorized": false
+}

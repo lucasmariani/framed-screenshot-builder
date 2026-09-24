@@ -1,11 +1,26 @@
 ---
 name: omato-marketing-screenshots
-description: Capture genuine Omato simulator screens in one or more languages, frame them with the existing iPhone artwork, and compose editable App Store or advertising creatives with verified fonts and placement dimensions. Use for Omato screenshot, carousel, App Store, Reddit, Meta, Instagram or Google creative production; not campaign activation.
+description: Produce Omato marketing screenshots and ad sets end to end for any audience or language pair: clean localized simulator, 9:41/full-signal/discharging battery, words-only live batch lookup, public-domain book page in Translation viewfinder, OCR selection, meaning and practice captures, iPhone 17 Pro silver frames, and editable App Store, Reddit, Facebook, Instagram or Google image formats. Use for capturing or refreshing campaign creative; not campaign activation.
 ---
 
 # Omato capture → frame → compose → verify
 
 Use the saved checkout `/Users/lucas/Developer/Omato/framed-screenshot-builder`. This is an operational skill, not a Template Gallery artifact. Its versioned source is `skills/omato-marketing-screenshots/` in that repository. Announce this skill on first use.
+
+## Complete workflow
+
+This is the canonical reusable skill for the entire process, including future language pairs. Reuse it instead of creating a separate skill per audience.
+
+1. **Brief:** copy [the audience brief template](templates/audience-brief.json) into a new campaign revision. Fill in the independent audience/UI/source/translation/copy languages and requested placements from the user's brief and the marketing source of truth.
+2. **Prepare:** create or reset a dedicated disposable simulator, configure the actual device language and region, install the current Debug app with official Xcode tools, complete onboarding, and apply the exact status bar.
+3. **Populate:** derive a words-only CSV from the preserved `heroWords` folder, transfer it through the terminal and run the actual app's batch lookups. Never reuse CSV definitions, examples or synonyms.
+4. **Stage the page:** choose and document public-domain source text and its featured word, generate and inspect its page image. **In Scan, select Translation and the target language before loading the image into the viewfinder.** Dismiss tips first; then use Debug Settings → Load Viewfinder Image. This is Lucas's required order for future translated-lookup captures.
+5. **Capture:** follow [the language capture protocol](references/language-capture-protocol.md) for Scan, highlighted selection after Cancel, live meaning, populated vocabulary, revealed Study, and checked-green Test. Use the same featured word throughout.
+6. **Frame:** use the existing `iPhone_17_pro-silver-portrait` asset and native-resolution raw captures. Preserve the device aspect ratio.
+7. **Compose:** follow [the format production protocol](references/ad-format-production.md) to create editable projects for every requested placement, with the established fonts, background theme and appropriate standalone or carousel story.
+8. **Deliver:** validate actual exports and phone-size previews, record source hashes and immutable creative IDs, package PNGs/projects, and open the gallery and editor for Lucas. Complete the authorized preparation without repeated approval; artwork review precedes upload.
+
+The brief template is an authoring checklist, not input to the legacy campaign compiler. Do not send it to a script without checking that script's schema.
 
 ## Establish the brief and authority
 
@@ -20,7 +35,7 @@ For language-learning capture batches, follow [the verified source → live look
 1. Read `/Users/lucas/.codex/references/apple-development.md` once, then the personal `xcode-device-interaction` skill. Use official `mcp__xcode__*` tools for discovery, build/install and UI operations. Native CLI is a supported-operation fallback only; never XcodeBuildMCP. One owner handles each interaction session and closes it on success or failure. Do not delegate without applicable authorization.
 2. Inspect git status, source commit, app version/build, scheme, runtime and target. Prefer an isolated simulator with no personal iCloud data. Do not reset a user's existing simulator or personal vocabulary merely for attractive captures.
 3. Use `DeviceInteractionStartWorkspaceSession` for a build/install, or `DeviceInteractionStartSession` for the already installed app. Consume current tool schemas; returned session key goes in `interactSessionKey` for Synthesize, `interactionSessionKey` for InstallAndRun/EndSession.
-4. For UI localization, the repository's `OmatoUITests/OmatoRegressionUITests.swift` uses launch arguments `-AppleLanguages`, `(de)` and `-AppleLocale`, `de_DE` (replace with the requested locale). Pass these via the official launch API; verify visible labels after launch. They do **not** select the source or translation language. Select those inside the app and verify the displayed values.
+4. Set the dedicated simulator's actual language and region for the audience before first launch, following the capture protocol. Additionally, the repository's `OmatoUITests/OmatoRegressionUITests.swift` uses launch arguments `-AppleLanguages`, `(de)` and `-AppleLocale`, `de_DE` (replace with the requested locale). Pass these via the official launch API; verify visible app labels and system pickers after launch. They do **not** select the source or translation language. In Scan, select Translation and the explanation language **before** loading the page fixture; verify the displayed values.
 5. Prefer the normal live app path. Do not casually set `UITEST_MODE=1`: `UITestConfiguration.swift` controls resets, seeds and mocked network behavior. `UITEST_FORCE_INTERFACE_STYLE` is honored only in UI-test mode. If fixtures are necessary and authorized, record them as fixtures, inspect current flags and never report a mocked result as a live provider response.
 6. Read the fresh UI hierarchy and use its hit points for every action. Do not carry coordinates between screens/locales. Capture after animations/network completion. Verify actual PNG pixel dimensions: the official Xcode screenshotPath may still be point-resolution (e.g. 402 × 874), even when distinct from its thumbnail. For native-resolution marketing capture, if the official API exposes no scale control, use the authorized CLI fallback `xcrun simctl io <verified-UUID> screenshot <path>` after official Xcode UI interaction; expect this simulator’s 1206 × 2622 pixels. Never upscale a point-resolution capture and call it full-resolution. Inspect screenshots as well as text.
 7. Default marketing story: introductory value proposition with populated vocabulary → Scan → actual OCR selection → definition/translation → vocabulary → Study revealed → Test checked correct. For Study, show both the term and its definition. For Test, show the filled answer after Check with the word visibly green. Do not include unrevealed Study or pre-check Test as default marketing cards. A manual-entry lookup is a valid fallback for a meaning/practice story but is not evidence that camera/OCR was tested. For photo examples, use user-owned, original or public-domain text; document source and rights. Never paint new words over a capture or use generated UI as product proof.
@@ -29,7 +44,7 @@ For language-learning capture batches, follow [the verified source → live look
 
 ## Frame with the existing tool
 
-The selected default for this campaign is `iPhone_17_pro-silver-portrait`, **not** Pro Max. Read `frame-manifest.json`; its screen is 1206 × 2622 inside a 1350 × 2760 frame, x=72, y=69, corner radius=199. Confirm current values instead of copying them into new tools.
+The default across future audiences is **iPhone 17 Pro silver**, frame ID `iPhone_17_pro-silver-portrait`, unless Lucas explicitly requests another frame. Read `frame-manifest.json`; its screen is 1206 × 2622 inside a 1350 × 2760 frame, x=72, y=69, corner radius=199. Confirm current values instead of copying them into new tools.
 
 Use the user's authorized deterministic screenshot builder for pixel-preserving composition. `tools/frame_capture.cjs` reads that manifest, clips to the screen, overlays the exact bundled frame, preserves an existing Dynamic Island or adds the builder's resting island. It rejects mismatched capture ratios. Never double-frame an existing framed screenshot. Keep raw captures, framed device assets, photographic backgrounds and copy as distinct sources.
 
@@ -46,6 +61,8 @@ These rules apply to **all future Omato audiences and languages**, not only Span
 **Design for smartphone viewing:** Use the canvas effectively: large type, concise copy and prominent genuine app screenshots. Check at 360–390 CSS-pixel feed width without zoom. Judge legibility and hierarchy in the complete composition at phone size, against the approved ASC references. Numeric font-size targets must not override visual balance or create oversized copy. Shorten copy first. Preserve a recognizable iPhone silhouette: use the whole device or the ASC-style continuation beyond the canvas bottom. Avoid floating rectangular screen fragments, cutting away the device top, or enlarging UI until the frame loses its identity. Lucas rejected the v3 crops and oversized/crowded layouts; those are not a reusable default. Respect placement safe areas. Do not force every format into the same layout.
 
 **Accepted composition reference (September 24, 2026):** Lucas accepted the v4 direction and adjusted the editor to use more empty space. Use `projects/spanish-composition-review-v4-owner-adjusted.json` as the reference: higher/larger vocabulary phone, larger near-full-height standalone phone, and larger supporting type. Preserve those exact owner adjustments; adapt their balance to each format instead of copying coordinates blindly. This is design-direction acceptance, not upload or campaign authorization.
+
+**Accepted complete capture reference (September 24, 2026):** Lucas endorsed the refreshed v6 work. Use `campaigns/spanish-reddit-v6.json`, its three editable projects and `project-assets/spanish-hidalgo-v6/provenance.json` as the current end-to-end example. Keep the original v4 owner edits and all historical revisions. The v6 introduction uses y=430 for the device to clear its support copy; this is an example of adapting spacing to a new capture, not a universal coordinate for every locale. The new process correction is Translation **before** viewfinder loading; do not copy the historical opposite order.
 
 **Reddit carousel exception — September 24, 2026:** Reddit supports at most six cards. Lucas approved omitting the repeated saved-vocabulary card for Reddit: vocabulary-led introduction → photo → selection → meaning → revealed Study → checked Test. Keep the seven-card master story for other eligible placements. Provider limits take precedence over a reusable card count; get any new story adaptation reviewed.
 
