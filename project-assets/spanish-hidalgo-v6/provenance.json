@@ -1,0 +1,59 @@
+{
+  "captured_at": "2026-09-24",
+  "app": "Omato 0.6.3 (3), Debug",
+  "source_commit": "bb0a6090",
+  "code_change": "Debug batch importer optional translation_language support; no production measurement changes",
+  "simulator": {
+    "name": "Omato Marketing EN-ES Clean",
+    "udid": "40EF8C24-C1FA-48A8-ABAF-77DCD3417D45",
+    "model": "iPhone 17",
+    "runtime": "iOS 27.0",
+    "reset": "Newly created and erased before app installation",
+    "native_pixels": [
+      1206,
+      2622
+    ]
+  },
+  "languages": {
+    "interface": "en-US",
+    "source": "es",
+    "translation": "en",
+    "ad_copy": "en-US"
+  },
+  "status_bar": {
+    "time": "9:41",
+    "wifi_bars": 3,
+    "cellular_bars": 4,
+    "battery_level": 100,
+    "battery_state": "discharging",
+    "verified": "All six native captures show full black battery without charging bolt."
+  },
+  "routes": {
+    "vocabulary": "Ten Spanish words imported by native CSV picker, plus hidalgo added through OCR selection. All translations/definitions/examples fetched by live app. No CSV definitions/examples/synonyms used.",
+    "scan": "Generated public-domain book page loaded with Debug Settings > Load Viewfinder Image. Translation into English. Viewfinder crops image to its bounds.",
+    "selection": "Same generated image processed by actual app OCR using Mock Camera > Translation. Tapped narrative hidalgo and cancelled confirmation, preserving native highlight. OCR preserves image line breaks; generated page has a minor extra accent in recia.",
+    "meaning": "Tapped highlighted hidalgo again and Add. Live result: minor Spanish nobleman.",
+    "study": "Practice > Study > hidalgo > reveal. Both term and definition visible.",
+    "test": "Practice > Test > type hidalgo > Check. Correct green result with keyboard dismissed."
+  },
+  "debug_state": {
+    "subscription_override": true,
+    "mock_vocabulary": false,
+    "ui_test_mode": false,
+    "personal_icloud": false
+  },
+  "frame": "iPhone_17_pro-silver-portrait",
+  "source_hashes": {
+    "source/chapter-01-page.png": "acb20b58322d172dde48b7eb37394036584ab1d4682d7a846b0b7fa27c26b1f5",
+    "source/source-manifest.json": "99b07c0019d676d9222da0e726d2c2f778c5dfb2086eceefec0eb57545bbf591",
+    "source/chapter-01-page.txt": "e1466fe07e10fce47377dfc5548c23e057c31ec91295c0f2429cbea604ed71ca",
+    "source/hero_words_es_for_en_ui.csv": "bafc5af25001c831b35f05eac2625bac98eb74304b05d7d20fd9c22ec9beec15",
+    "raw/study-revealed.png": "69e3e9874f39b6c77c47779c2e4969d85a1232faa87f4662f7feeba8987d6d4c",
+    "raw/selection.png": "88eede48d65495ee84dbadd1f8ee4b729db0143ef3a766ca23c07624a7a25938",
+    "raw/vocabulary.png": "f91fc6ac0c72490f7c34fd5eda3dc246b03885213a41b49e6c60422583c3d9f3",
+    "raw/test-correct.png": "891178029151a59f96448521b4b7eee5c9e5b982ef71a3f08f18d1af32ca2d15",
+    "raw/meaning.png": "205c9fa0e15cb1f907efd6d06a020eb0aae18391bde22fd18fc5e943155778b6",
+    "raw/scan.png": "691b60f2e2b2b0d5f718483a69c43e82fc14411b3bae254ee4e5868209671fec"
+  },
+  "publication_authorized": false
+}

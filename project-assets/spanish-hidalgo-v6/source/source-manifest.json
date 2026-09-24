@@ -1,0 +1,38 @@
+{
+  "source": "https://www.gutenberg.org/ebooks/2000",
+  "text_download": "https://www.gutenberg.org/cache/epub/2000/pg2000.txt",
+  "book": "Don Quijote, Part I, Chapter I",
+  "author": "Miguel de Cervantes (1547–1616)",
+  "original_publication": 1605,
+  "rights": "Original Spanish text; public domain in USA per source. No modern translation, notes or edition artwork reused. Original generated page design.",
+  "selection": "First narrative paragraph; original spelling preserved.",
+  "word": "hidalgo",
+  "ui_language": "en",
+  "source_language": "es",
+  "definition_language": "en",
+  "simulator": "40EF8C24-C1FA-48A8-ABAF-77DCD3417D45",
+  "reset": "Created and erased before installation on 2026-09-24",
+  "hero_words": "Original files copied unchanged from Desktop; derived import adds ui_locale=en to separate interface locale from source language.",
+  "source_hashes": {
+    "hero_words_it.csv": "8908b921c3993045d1e6cf564fb0024d15c5033ff4d801824847b98b3a10befb",
+    "hero_words_de.csv": "4590a447a2457ff0d92cd5454e1c7883ec84966f6c8259e3336e26b92620fb85",
+    "hero_words_multilingual_expert_with_examples.csv": "814bb25e8ef710cf558c1eb71cea4dafa489de0c7103b36ea48d6fad5e12d734",
+    "hero_words_es.csv": "257e1be1fa6073b371ddc6df42ffc82552b696ada7644c04e1f3279c18de6129",
+    "hero_words_ko.csv": "55dbb13c08d107ed0750308fa09ff12fdc40693ad50d7a8481846d5d2facfb74",
+    "hero_words_fr.csv": "002a70eaa2bcbf69b0abe692bac83ab21f2eacaa60261e052f25b984b93f9279",
+    "hero_words_it_ko_ja_expert_with_examples.csv": "5dd897f1272c348bcd0a09542f7d82ef63a00f0ec0f9b99c7578c15166c5dd70",
+    "hero_words_en.csv": "a2571bb5d393f2283f7ce7d11e69cf1cff908fdd99c51ed0fa68bb8388a719cd",
+    "hero_words_ja.csv": "3b8144169daa02e1db3ca8a903f002100697b2a2ce00da945afa73cfb0ea97d6",
+    "hero_words_pt-PT.csv": "4925846d4e7931eed52b90fed358bf2fdf6088d7855aa33b9b9d2655e8325f19",
+    "hero_words_pt-BR.csv": "d82ce1011d72aa8d7288f196c733a29ca11724f91cd31e553858c02b06a62156"
+  },
+  "derived_csv_corrections": {
+    "accent_correction": "Tacitamente → Tácitamente",
+    "ignored_source_columns": [
+      "example_sentence",
+      "why_it_works"
+    ],
+    "lookup_content": "App retrieves all translations, definitions, examples and synonyms live; no CSV content seeded. Source language and part of speech are required importer request metadata.",
+    "translation_language": "en"
+  }
+}

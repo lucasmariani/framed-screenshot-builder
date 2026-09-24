@@ -15,6 +15,8 @@ Record a capture matrix before a multilingual batch. Keep these independent: **i
 
 ## Capture genuine app states
 
+For language-learning capture batches, follow [the verified source → live lookup → capture protocol](references/language-capture-protocol.md). It includes words-only CSV derivation, terminal transfer, actual OCR, audience localization, and the mandatory 9:41/full-signal/100% **discharging** battery setup.
+
 1. Read `/Users/lucas/.codex/references/apple-development.md` once, then the personal `xcode-device-interaction` skill. Use official `mcp__xcode__*` tools for discovery, build/install and UI operations. Native CLI is a supported-operation fallback only; never XcodeBuildMCP. One owner handles each interaction session and closes it on success or failure. Do not delegate without applicable authorization.
 2. Inspect git status, source commit, app version/build, scheme, runtime and target. Prefer an isolated simulator with no personal iCloud data. Do not reset a user's existing simulator or personal vocabulary merely for attractive captures.
 3. Use `DeviceInteractionStartWorkspaceSession` for a build/install, or `DeviceInteractionStartSession` for the already installed app. Consume current tool schemas; returned session key goes in `interactSessionKey` for Synthesize, `interactionSessionKey` for InstallAndRun/EndSession.

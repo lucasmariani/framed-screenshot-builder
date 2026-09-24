@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "file": "output/spanish-reddit-v6-reddit-carousel-square/01-introduction.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v6-reddit-carousel-square/02-photo.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v6-reddit-carousel-square/03-selection.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v6-reddit-carousel-square/04-meaning.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v6-reddit-carousel-square/05-study.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v6-reddit-carousel-square/06-test.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v6-reddit-image-square/01-lookup.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v6-reddit-image-square/02-practice.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v6-reddit-image-portrait/01-lookup.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    },
+    {
+      "file": "output/spanish-reddit-v6-reddit-image-portrait/02-practice.png",
+      "dimensions": "pass",
+      "under_3mb": "pass",
+      "text_bounds": "pass",
+      "title_support_separation": "pass",
+      "wordmark_absent": "pass"
+    }
+  ],
+  "image_count": 10,
+  "visual_review": "Inspected at 360px feed width. Introduction phone moved down 59 canvas pixels to clear support copy; new phone aspect ratio preserved. Native status bar verified.",
+  "importer_tests": "5 passed; OmatoTests scheme / OmatoUnitTests via local xcodebuild. Default MCP scheme has no test targets.",
+  "source_note": "Generated page includes a minor extra accent in recia, retained by OCR and recorded in provenance.",
+  "provider_preview": "Not performed; awaiting artwork review."
+}
