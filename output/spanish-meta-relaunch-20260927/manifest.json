@@ -1,7 +1,7 @@
 {
   "campaign_revision": "spanish-meta-relaunch-20260927",
   "recorded_on": "2026-09-27",
-  "status": "owner-artwork-approved-provider-validation-pending",
+  "status": "published-campaign-paused-review-and-cooldown-pending",
   "upload_authorized": true,
   "creative_concepts": 1,
   "placement_variants": [
@@ -32,8 +32,8 @@
       ],
       "image_title": "Reading\nin Spanish?",
       "image_subtitle": "Understand\nthe words.\nRemember\nthem later.",
-      "status": "owner-artwork-approved-provider-validation-pending",
-      "provider_preview": "pending; not uploaded"
+      "status": "published-campaign-paused-review-and-cooldown-pending",
+      "provider_preview": "Verified saved placement; Stories initial state readable, later standard CTA end-screen overlay documented."
     },
     {
       "creative_id": "CR-META-LNG-EN-ES-TRANSLATION-20260927-FEED-V1",
@@ -62,8 +62,8 @@
       ],
       "image_title": "Reading\nin Spanish?",
       "image_subtitle": "Understand\nthe words.\nRemember\nthem later.",
-      "status": "owner-artwork-approved-provider-validation-pending",
-      "provider_preview": "pending; not uploaded"
+      "status": "published-campaign-paused-review-and-cooldown-pending",
+      "provider_preview": "Verified saved placement; Stories initial state readable, later standard CTA end-screen overlay documented."
     },
     {
       "creative_id": "CR-META-LNG-EN-ES-TRANSLATION-20260927-STORIES-V1",
@@ -92,8 +92,8 @@
       ],
       "image_title": "Reading in Spanish?",
       "image_subtitle": "Understand the words.\nRemember them later.",
-      "status": "owner-artwork-approved-provider-validation-pending",
-      "provider_preview": "pending; not uploaded"
+      "status": "published-campaign-paused-review-and-cooldown-pending",
+      "provider_preview": "Verified saved placement; Stories initial state readable, later standard CTA end-screen overlay documented."
     }
   ],
   "primary_text": "Reading in Spanish? Understand the words. Remember them later. Scan a page, get the English meaning, and practice your saved words with Omato.",
@@ -123,12 +123,15 @@
   },
   "existing_carousel": "Unchanged approved seven-card Spanish Meta v3 carousel",
   "budget_approval": "Up to ARS 15,000 additional media spend over five days after approved launch; ARS 5,000 financial checkpoint; no launch performed",
-  "provider_validation": "Pending upload/placement preview after exact artwork review. Local ratio/safe-area checks are not platform acceptance.",
+  "provider_validation": "Both ads published, saved Spanish CPP and placement previews verified. Initial Stories translation readable with bottom sticker; later standard CTA end screen overlays it. QA accepted with this limitation. Campaign paused pending review/cooldown; launch time unset.",
   "owner_approval": {
     "owner": "Lucas",
     "quote": "artwork looks good",
     "recorded_at": "2026-09-27T15:41:49Z",
     "review_url": "http://127.0.0.1:4186/meta-relaunch-20260927.html",
     "scope": "Exact three unchanged artwork variants approved; proceed under existing relaunch budget and launch authority, subject to provider validation."
-  }
+  },
+  "meta_ad_id": "52596831634322",
+  "meta_creative_id": "1076889318395047",
+  "execution_record": "omato-ios/docs/marketing/coordination/meta-relaunch-execution-2026-09-27.md"
 }
