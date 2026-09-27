@@ -1,6 +1,6 @@
 # Language-learning capture protocol
 
-Verified with English UI, Spanish source text and English translations on September 24, 2026. Example assets and provenance: `project-assets/spanish-hidalgo-v6/`.
+Verified with English UI, Spanish source text and English translations on September 24, 2026. Historical example assets and provenance: `project-assets/spanish-hidalgo-v6/`. New raw captures go in `../marketing-screenshots/original screenshots/<audience-language-pair>/`; framed versions go in `../marketing-screenshots/framed/<audience-language-pair>/`. Keep provenance alongside them, following the main skill's Screenshot storage rule.
 
 ## Inputs and clean simulator
 

@@ -3,6 +3,18 @@
 Local-only, client-side tools for framing iPhone screenshots and editing Omato's App Store Connect artwork.
 
 
+## Screenshot storage
+
+All new original app captures, framed screenshots, and generated App Store Connect screenshots must live under `/Users/lucas/Developer/Omato/marketing-screenshots/`, organized as follows:
+
+- `original screenshots/<audience-language-pair>/`: unframed native app captures.
+- `framed/<audience-language-pair>/`: device-framed versions of those captures.
+- `asc/<listing-or-audience-language-pair>/`: complete generated ASC compositions.
+
+For English-speaking Spanish learners, use `original screenshots/LanguageLearner-Eng-Spa/`, `framed/LanguageLearner-Eng-Spa/`, and `asc/asc-language-learners-english-spanish/`. Keep the main listing's existing `asc/en-US/` convention. Use named revision subfolders when necessary to preserve previous artwork. Keep provenance and manifests beside the corresponding assets.
+
+The screenshot builder contains tooling and editable project definitions; new screenshot assets must not use its `project-assets/` or `output/` directories as their canonical home. Point new projects, render commands, packaging and review links at the appropriate marketing-screenshots folders. Browser downloads must be saved or moved there and verified. Historical projects may retain their old paths for reproducibility; this forward-looking rule does not require rewriting every historical campaign.
+
 ## Saved Reddit and Meta adaptation — September 24, 2026
 
 `reddit-spanish-v9.html` preserves the six-card Reddit set requested by Lucas, including the current two-line Test subtitle. Its project is `projects/spanish-reddit-v9-reddit-carousel-square.json`; prior revisions and standalone Reddit variants remain intact.

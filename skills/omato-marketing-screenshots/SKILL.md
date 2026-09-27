@@ -7,6 +7,18 @@ description: Produce Omato marketing screenshots and ad sets end to end for any 
 
 Use the saved checkout `/Users/lucas/Developer/Omato/framed-screenshot-builder`. This is an operational skill, not a Template Gallery artifact. Its versioned source is `skills/omato-marketing-screenshots/` in that repository. Announce this skill on first use.
 
+## Screenshot storage
+
+All new original app captures, framed screenshots, and generated App Store Connect screenshots must live under `/Users/lucas/Developer/Omato/marketing-screenshots/`, organized as follows:
+
+- `original screenshots/<audience-language-pair>/`: unframed native app captures.
+- `framed/<audience-language-pair>/`: device-framed versions of those captures.
+- `asc/<listing-or-audience-language-pair>/`: complete generated ASC compositions.
+
+For English-speaking Spanish learners, use `original screenshots/LanguageLearner-Eng-Spa/`, `framed/LanguageLearner-Eng-Spa/`, and `asc/asc-language-learners-english-spanish/`. Keep the main listing's existing `asc/en-US/` convention. Use named revision subfolders when necessary to preserve previous artwork. Keep provenance and manifests beside the corresponding assets.
+
+The screenshot builder contains tooling and editable project definitions; new screenshot assets must not use its `project-assets/` or `output/` directories as their canonical home. Point new projects, render commands, packaging and review links at the appropriate marketing-screenshots folders. Browser downloads must be saved or moved there and verified. Historical projects may retain their old paths for reproducibility; this forward-looking rule does not require rewriting every historical campaign.
+
 ## Complete workflow
 
 This is the canonical reusable skill for the entire process, including future language pairs. Reuse it instead of creating a separate skill per audience.
@@ -51,7 +63,7 @@ Use the user's authorized deterministic screenshot builder for pixel-preserving 
 Load workspace dependencies with `mcp__codex_app__load_workspace_dependencies`. Set `NODE_PATH` to its Node package directory; use its Node executable. Example arguments:
 
 ```sh
-node tools/frame_capture.cjs /absolute/raw.png /absolute/framed.png iPhone_17_pro-silver-portrait
+node tools/frame_capture.cjs "../marketing-screenshots/original screenshots/<audience-language-pair>/scan.png" "../marketing-screenshots/framed/<audience-language-pair>/scan.png" iPhone_17_pro-silver-portrait
 ```
 
 ## Compose editable format projects
@@ -94,7 +106,7 @@ Stories must be composed for 9:16, with prominent text and a large recognizable 
 Headless exports use the same `editor.js` layout renderer. Load the dependency runtime first. Extract the installed macOS font collection into individual faces using `tools/prepare_fonts.py /tmp/omato-font-faces` with Python/fontTools; set `OMATO_RENDER_FONTS` to that directory. Never commit or redistribute proprietary font files. Do not claim exact typography if fonts are unavailable.
 
 ```sh
-node tools/render_project.cjs projects/<name>.json output/<name>
+node tools/render_project.cjs projects/<name>.json ../marketing-screenshots/asc/<listing-or-audience-language-pair>/<revision>
 node tools/check_editor.cjs
 node tools/validate_ads.cjs
 ```

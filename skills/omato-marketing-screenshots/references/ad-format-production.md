@@ -1,6 +1,6 @@
 # From framed captures to a complete ad set
 
-Use this after `language-capture-protocol.md`. All paths below are relative to the saved `framed-screenshot-builder` checkout unless absolute.
+Use this after `language-capture-protocol.md`. All paths below are relative to the saved `framed-screenshot-builder` checkout unless absolute. Follow the main skill's Screenshot storage rule for all new raw captures, framed assets and ASC exports; historical campaign paths below are references only.
 
 ## Scope and source material
 
@@ -46,7 +46,7 @@ Stories must be composed for 9:16, with prominent text and a large recognizable 
 
 ## Export and verify
 
-1. Load the workspace runtime with `mcp__codex_app__load_workspace_dependencies`; use its Node executable/packages for the existing renderer. With installed font faces prepared, run `node tools/render_project.cjs projects/<unique-name>.json output/<unique-name>` for each project.
+1. Load the workspace runtime with `mcp__codex_app__load_workspace_dependencies`; use its Node executable/packages for the existing renderer. With installed font faces prepared, run `node tools/render_project.cjs projects/<unique-name>.json output/<unique-name>` for each ad project. For ASC projects, use `../marketing-screenshots/asc/<listing-or-audience-language-pair>/<revision>` as the output directory instead.
 2. Inspect `layout-metrics.json`: text within bounds, no title/support collisions, no copy hidden behind the phone. Check actual PNG dimensions, bytes, transparency and source aspect ratios. Confirm safe guides were not exported.
 3. View the actual exported images at **360–390 CSS pixels wide**, as well as full size. Check typography, contrast, prominent app proof, correct silver frame, Dynamic Island, 9:41/full signal/100% discharging status bar, selection highlight, revealed Study and green checked Test. Do not treat merely passing numerical checks as a visual review.
 4. If the renderer itself changed, run its appropriate regression checks. Legacy `validate_ads.cjs` and packaging scripts may name a fixed old campaign: inspect their inputs before use. A pass for an old Spanish set does not validate the new set. Do not rerun unrelated app tests for a copy/layout-only change.
