@@ -1,7 +1,7 @@
 {
   "campaign_revision": "spanish-meta-relaunch-20260927",
   "recorded_on": "2026-09-27",
-  "status": "published-campaign-paused-review-and-cooldown-pending",
+  "status": "published-campaign-active-preparing-delivery-unverified",
   "upload_authorized": true,
   "creative_concepts": 1,
   "placement_variants": [
@@ -32,7 +32,7 @@
       ],
       "image_title": "Reading\nin Spanish?",
       "image_subtitle": "Understand\nthe words.\nRemember\nthem later.",
-      "status": "published-campaign-paused-review-and-cooldown-pending",
+      "status": "published-campaign-active-preparing-delivery-unverified",
       "provider_preview": "Verified saved placement; Stories initial state readable, later standard CTA end-screen overlay documented."
     },
     {
@@ -62,7 +62,7 @@
       ],
       "image_title": "Reading\nin Spanish?",
       "image_subtitle": "Understand\nthe words.\nRemember\nthem later.",
-      "status": "published-campaign-paused-review-and-cooldown-pending",
+      "status": "published-campaign-active-preparing-delivery-unverified",
       "provider_preview": "Verified saved placement; Stories initial state readable, later standard CTA end-screen overlay documented."
     },
     {
@@ -92,7 +92,7 @@
       ],
       "image_title": "Reading in Spanish?",
       "image_subtitle": "Understand the words.\nRemember them later.",
-      "status": "published-campaign-paused-review-and-cooldown-pending",
+      "status": "published-campaign-active-preparing-delivery-unverified",
       "provider_preview": "Verified saved placement; Stories initial state readable, later standard CTA end-screen overlay documented."
     }
   ],
@@ -123,7 +123,7 @@
   },
   "existing_carousel": "Unchanged approved seven-card Spanish Meta v3 carousel",
   "budget_approval": "Up to ARS 15,000 additional media spend over five days after approved launch; ARS 5,000 financial checkpoint; no launch performed",
-  "provider_validation": "Both ads published, saved Spanish CPP and placement previews verified. Initial Stories translation readable with bottom sticker; later standard CTA end screen overlays it. QA accepted with this limitation. Campaign paused pending review/cooldown; launch time unset.",
+  "provider_validation": "Ads approved; CPP and previews verified. Normal activation cleared post-pause Updating limit status. Campaign and both ads ACTIVE/Preparing; new impressions not yet verified.",
   "owner_approval": {
     "owner": "Lucas",
     "quote": "artwork looks good",
@@ -133,5 +133,14 @@
   },
   "meta_ad_id": "52596831634322",
   "meta_creative_id": "1076889318395047",
-  "execution_record": "omato-ios/docs/marketing/coordination/meta-relaunch-execution-2026-09-27.md"
+  "execution_record": "omato-ios/docs/marketing/coordination/meta-relaunch-execution-2026-09-27.md",
+  "launch": {
+    "T0": "2026-09-27T16:23:12Z",
+    "end": "2026-10-02T16:23:00Z",
+    "lifetime_cap_ARS": 17877.5,
+    "S0_ARS": 2877.5,
+    "C0_outbound": 1,
+    "additional_authorized_ARS": 15000,
+    "delivery_confirmed": false
+  }
 }
