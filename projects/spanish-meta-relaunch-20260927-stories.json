@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "name": "Spanish learners · Translation-first standalone · stories · September 27",
+  "revision": 1,
+  "output": {
+    "width": 1440,
+    "height": 2560
+  },
+  "formatId": "meta-vertical",
+  "safeInsets": {
+    "top": 0.14,
+    "bottom": 0.35,
+    "left": 0.06,
+    "right": 0.06
+  },
+  "locale": "en-US",
+  "sourceLanguage": "es",
+  "definitionLanguage": "en",
+  "status": "awaiting-owner-artwork-review",
+  "editorPolicy": {
+    "omittedLayerIds": [
+      "wordmark"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "01-translation-first",
+      "name": "Reading in Spanish? Understand the words. Remember them later.",
+      "filename": "01-translation-first.png",
+      "creativeKind": "static",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 621.0,
+        "accentY": 621.0,
+        "accentRadius": 1242.0,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-translation-v5.png",
+          "x": 0,
+          "y": -280,
+          "width": 1440,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.1715628672150413
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind text",
+          "src": "project-assets/meta-v3-contrast/spanish-meta-v3-image-stories-01-lookup.png",
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "aspectRatio": 1.7777777777777777,
+          "rotation": 0,
+          "opacity": 0.85,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-verosimil-v7/meaning.png",
+          "x": 145,
+          "y": 760,
+          "width": 1150,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Reading in Spanish?",
+          "x": 100,
+          "y": 360,
+          "width": 1240,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 136,
+          "lineHeight": 1.02,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Understand the words.\nRemember them later.",
+          "x": 104,
+          "y": 530,
+          "width": 1230,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 90,
+          "lineHeight": 1.05,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "essentialDeviceRegion": {
+        "sourceRect": {
+          "x": 140,
+          "y": 440,
+          "width": 1080,
+          "height": 590
+        },
+        "description": "Spanish term and English translation"
+      },
+      "deviceContinuation": "Genuine silver-framed phone continues below canvas. Spanish term and English translation kept inside the conservative local guide; actual Meta placement preview required.",
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      }
+    }
+  ],
+  "reviewStatus": "new-batch-review-required",
+  "campaignId": "spanish-meta-relaunch-20260927",
+  "creativeKind": "static",
+  "interfaceLanguage": "en",
+  "provider": "meta",
+  "creativeBrief": {
+    "audience": "English-speaking US adults learning Spanish",
+    "hypothesis": "A standalone translation result communicates the immediate benefit without needing a carousel swipe.",
+    "primaryText": "Reading in Spanish? Understand the words. Remember them later. Scan a page, get the English meaning, and practice your saved words with Omato.",
+    "headline": "Build your Spanish vocabulary",
+    "cta": "Install now",
+    "sourceProject": "projects/spanish-meta-v4-image-stories.json",
+    "sourceProvenance": "project-assets/spanish-verosimil-v7/provenance.json",
+    "frame": "iPhone_17_pro-silver-portrait",
+    "captureReuse": "Historical user-provided September 24 meaning capture. No new simulator session or fabricated UI.",
+    "ownerReviewRequiredBeforeUpload": true
+  }
+}

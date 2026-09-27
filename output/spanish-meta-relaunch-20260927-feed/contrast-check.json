@@ -1,0 +1,22 @@
+{
+  "threshold": 4.5,
+  "method": "Local sRGB background contrast at glyph-mask pixels with alpha >= 128; excludes antialiasing of the foreground and does not replace visual review.",
+  "results": [
+    {
+      "scene": "01-translation-first",
+      "layer": "title",
+      "minimumRatio": 13.87,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 28312,
+      "pass": true
+    },
+    {
+      "scene": "01-translation-first",
+      "layer": "subtitle",
+      "minimumRatio": 13.87,
+      "pixelsBelow4_5": 0,
+      "glyphPixels": 18406,
+      "pass": true
+    }
+  ]
+}

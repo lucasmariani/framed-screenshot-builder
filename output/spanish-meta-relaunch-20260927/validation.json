@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "format": "square",
+      "dimensions": true,
+      "fonts": true,
+      "text_bounds_and_no_overlap": true,
+      "device_ratio": true,
+      "contrast_minimum": 11.73,
+      "essential_stories_proof_inside_local_guide": null
+    },
+    {
+      "format": "feed",
+      "dimensions": true,
+      "fonts": true,
+      "text_bounds_and_no_overlap": true,
+      "device_ratio": true,
+      "contrast_minimum": 13.87,
+      "essential_stories_proof_inside_local_guide": null
+    },
+    {
+      "format": "stories",
+      "dimensions": true,
+      "fonts": true,
+      "text_bounds_and_no_overlap": true,
+      "device_ratio": true,
+      "contrast_minimum": 13.87,
+      "essential_stories_proof_inside_local_guide": true
+    }
+  ],
+  "visual_review": "Full-size PNGs and all three 360 CSS-pixel gallery previews inspected in Codex browser; editable feed project opened and visually matched on 2026-09-27"
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "scene": "01-translation-first",
+    "output": {
+      "width": 1440,
+      "height": 1800
+    },
+    "text": [
+      {
+        "id": "title",
+        "lines": [
+          "Reading",
+          "in Spanish?"
+        ],
+        "bounds": {
+          "x": 77,
+          "y": 365,
+          "width": 602,
+          "height": 245.92000000000002,
+          "rotation": 0
+        },
+        "lineWidths": [
+          391.6199951171875,
+          536.9600219726562
+        ]
+      },
+      {
+        "id": "subtitle",
+        "lines": [
+          "Understand",
+          "the words.",
+          "Remember",
+          "them later."
+        ],
+        "bounds": {
+          "x": 82,
+          "y": 710,
+          "width": 588,
+          "height": 398.4,
+          "rotation": 0
+        },
+        "lineWidths": [
+          396.8399963378906,
+          341.80999755859375,
+          372.32000732421875,
+          352.989990234375
+        ]
+      }
+    ]
+  }
+]

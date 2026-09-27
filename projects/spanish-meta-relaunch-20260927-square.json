@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "name": "Spanish learners · Translation-first standalone · square · September 27",
+  "revision": 1,
+  "output": {
+    "width": 1080,
+    "height": 1080
+  },
+  "formatId": "meta-square",
+  "safeInsets": null,
+  "locale": "en-US",
+  "sourceLanguage": "es",
+  "definitionLanguage": "en",
+  "status": "awaiting-owner-artwork-review",
+  "editorPolicy": {
+    "omittedLayerIds": [
+      "wordmark"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "01-translation-first",
+      "name": "Reading in Spanish? Understand the words. Remember them later.",
+      "filename": "01-translation-first.png",
+      "creativeKind": "static",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 540.0,
+        "accentY": 540.0,
+        "accentRadius": 1080,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-translation-v5.png",
+          "x": 0.0,
+          "y": -387.0,
+          "width": 1080.0,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.1715628672150413
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind text",
+          "src": "project-assets/meta-v3-contrast/spanish-meta-v3-image-square-01-lookup.png",
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "aspectRatio": 1.0,
+          "rotation": 0,
+          "opacity": 0.85,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "project-assets/spanish-verosimil-v7/meaning.png",
+          "x": 543.6,
+          "y": 17.1,
+          "width": 514.8,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Reading\nin Spanish?",
+          "x": 58,
+          "y": 184,
+          "width": 470,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 89,
+          "lineHeight": 1.06,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Understand\nthe words.\nRemember\nthem later.",
+          "x": 61,
+          "y": 460,
+          "width": 470,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 83,
+          "lineHeight": 1.12,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      }
+    }
+  ],
+  "reviewStatus": "new-batch-review-required",
+  "campaignId": "spanish-meta-relaunch-20260927",
+  "creativeKind": "static",
+  "interfaceLanguage": "en",
+  "provider": "meta",
+  "creativeBrief": {
+    "audience": "English-speaking US adults learning Spanish",
+    "hypothesis": "A standalone translation result communicates the immediate benefit without needing a carousel swipe.",
+    "primaryText": "Reading in Spanish? Understand the words. Remember them later. Scan a page, get the English meaning, and practice your saved words with Omato.",
+    "headline": "Build your Spanish vocabulary",
+    "cta": "Install now",
+    "sourceProject": "projects/spanish-meta-v3-image-square.json",
+    "sourceProvenance": "project-assets/spanish-verosimil-v7/provenance.json",
+    "frame": "iPhone_17_pro-silver-portrait",
+    "captureReuse": "Historical user-provided September 24 meaning capture. No new simulator session or fabricated UI.",
+    "ownerReviewRequiredBeforeUpload": true
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "campaign_revision": "spanish-meta-relaunch-20260927",
+  "recorded_on": "2026-09-27",
+  "status": "awaiting-owner-artwork-review",
+  "upload_authorized": false,
+  "creative_concepts": 1,
+  "placement_variants": [
+    {
+      "creative_id": "CR-META-LNG-EN-ES-TRANSLATION-20260927-SQUARE-V1",
+      "format": "square",
+      "label": "Square · 1:1",
+      "project": "projects/spanish-meta-relaunch-20260927-square.json",
+      "project_sha256": "d6cc8f4a3dfe0aab09071b470b90ea61bce283d37d2f5678180a4e65438ced07",
+      "png": "output/spanish-meta-relaunch-20260927-square/01-translation-first.png",
+      "sha256": "7665512e1f8d19e8dfab4b9662bb98a6a32b98e819f3bc64d891f41ca8cf5eb0",
+      "width": 1080,
+      "height": 1080,
+      "bytes": 556157,
+      "sources": [
+        {
+          "path": "project-assets/reading-companion/background-translation-v5.png",
+          "sha256": "51ac5059d2bdbe0bde3ee87212728554ad51a112f21a4818d5b34c34fae8c055"
+        },
+        {
+          "path": "project-assets/meta-v3-contrast/spanish-meta-v3-image-square-01-lookup.png",
+          "sha256": "f301cf04f2f76e0dd71f3ec973acac54b3f55cd198c932d9add91ea33bf3b2b5"
+        },
+        {
+          "path": "project-assets/spanish-verosimil-v7/meaning.png",
+          "sha256": "e0fc2d5d9a4e07bed6f306725e066bf91c4773bfb393f8a3c4e547f131f29801"
+        }
+      ],
+      "image_title": "Reading\nin Spanish?",
+      "image_subtitle": "Understand\nthe words.\nRemember\nthem later.",
+      "status": "awaiting-owner-artwork-review",
+      "provider_preview": "pending; not uploaded"
+    },
+    {
+      "creative_id": "CR-META-LNG-EN-ES-TRANSLATION-20260927-FEED-V1",
+      "format": "feed",
+      "label": "Facebook / Instagram feed · 4:5",
+      "project": "projects/spanish-meta-relaunch-20260927-feed.json",
+      "project_sha256": "7fa2f7429420e445edfbb96116ba6de6c99164b34a36c8bc179456501e3e56d2",
+      "png": "output/spanish-meta-relaunch-20260927-feed/01-translation-first.png",
+      "sha256": "0c751b06834b8e2f82b135e1db1859e9aa51bb12e6ec937cc951382b021d67ae",
+      "width": 1440,
+      "height": 1800,
+      "bytes": 1124561,
+      "sources": [
+        {
+          "path": "project-assets/reading-companion/background-translation-v5.png",
+          "sha256": "51ac5059d2bdbe0bde3ee87212728554ad51a112f21a4818d5b34c34fae8c055"
+        },
+        {
+          "path": "project-assets/meta-v3-contrast/spanish-meta-v3-image-feed-01-lookup.png",
+          "sha256": "cbebb62f1398d6c50d9c535598130cbfe9eacb33eaf923797dce62f5c407bef3"
+        },
+        {
+          "path": "project-assets/spanish-verosimil-v7/meaning.png",
+          "sha256": "e0fc2d5d9a4e07bed6f306725e066bf91c4773bfb393f8a3c4e547f131f29801"
+        }
+      ],
+      "image_title": "Reading\nin Spanish?",
+      "image_subtitle": "Understand\nthe words.\nRemember\nthem later.",
+      "status": "awaiting-owner-artwork-review",
+      "provider_preview": "pending; not uploaded"
+    },
+    {
+      "creative_id": "CR-META-LNG-EN-ES-TRANSLATION-20260927-STORIES-V1",
+      "format": "stories",
+      "label": "Stories · 9:16",
+      "project": "projects/spanish-meta-relaunch-20260927-stories.json",
+      "project_sha256": "d0cd73b2442d8ff449330a2c116228e5c16da18fea095666b7f9ffb06c766b22",
+      "png": "output/spanish-meta-relaunch-20260927-stories/01-translation-first.png",
+      "sha256": "078f62811832a5fca216e71b4bf5a19d2952b98e85d058c21f43e7d9305eae34",
+      "width": 1440,
+      "height": 2560,
+      "bytes": 1398105,
+      "sources": [
+        {
+          "path": "project-assets/reading-companion/background-translation-v5.png",
+          "sha256": "51ac5059d2bdbe0bde3ee87212728554ad51a112f21a4818d5b34c34fae8c055"
+        },
+        {
+          "path": "project-assets/meta-v3-contrast/spanish-meta-v3-image-stories-01-lookup.png",
+          "sha256": "3eb02aa4f7fb6e369ddc2e6bf4e51f214c379523a55002f542351983f45dea8d"
+        },
+        {
+          "path": "project-assets/spanish-verosimil-v7/meaning.png",
+          "sha256": "e0fc2d5d9a4e07bed6f306725e066bf91c4773bfb393f8a3c4e547f131f29801"
+        }
+      ],
+      "image_title": "Reading in Spanish?",
+      "image_subtitle": "Understand the words.\nRemember them later.",
+      "status": "awaiting-owner-artwork-review",
+      "provider_preview": "pending; not uploaded"
+    }
+  ],
+  "primary_text": "Reading in Spanish? Understand the words. Remember them later. Scan a page, get the English meaning, and practice your saved words with Omato.",
+  "headline": "Build your Spanish vocabulary",
+  "cta": "Install now",
+  "destination": "Spanish-learner CPP under provider preflight; do not publish until validated",
+  "provenance": {
+    "source": "project-assets/spanish-verosimil-v7/provenance.json",
+    "raw": "project-assets/spanish-verosimil-v7/raw/meaning.png",
+    "framed": "project-assets/spanish-verosimil-v7/meaning.png",
+    "capture_owner": "Lucas",
+    "capture_date": "2026-09-24",
+    "app_build": "Not independently verified for supplied capture; no new simulator session",
+    "languages": {
+      "ui": "en",
+      "source": "es",
+      "definition": "en",
+      "copy": "en-US"
+    },
+    "frame": "iPhone_17_pro-silver-portrait",
+    "status_bar": "Reused real capture: 9:41, full cellular/Wi-Fi, full battery without charging bolt",
+    "renderer": "Existing editor.js via tools/render_project.cjs; no generated UI or changed screenshot pixels",
+    "fonts": "Existing locally extracted macOS Bodoni 72 Bold and Baskerville Regular; not distributed",
+    "source_sha256": "66f83bbc6992299b3c274ac36a77eb4b7d13d18e6a9108c11c434970e6d1eb2c",
+    "raw_sha256": "2982cd607cee0d78d5a0ea922263065c16f11f63e2878487749b2a0a96268e8e",
+    "framed_sha256": "e0fc2d5d9a4e07bed6f306725e066bf91c4773bfb393f8a3c4e547f131f29801"
+  },
+  "existing_carousel": "Unchanged approved seven-card Spanish Meta v3 carousel",
+  "budget_approval": "Up to ARS 15,000 additional media spend over five days after approved launch; ARS 5,000 financial checkpoint; no launch performed",
+  "provider_validation": "Pending upload/placement preview after exact artwork review. Local ratio/safe-area checks are not platform acceptance."
+}
