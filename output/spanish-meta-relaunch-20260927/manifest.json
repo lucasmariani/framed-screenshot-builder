@@ -1,8 +1,8 @@
 {
   "campaign_revision": "spanish-meta-relaunch-20260927",
   "recorded_on": "2026-09-27",
-  "status": "awaiting-owner-artwork-review",
-  "upload_authorized": false,
+  "status": "owner-artwork-approved-provider-validation-pending",
+  "upload_authorized": true,
   "creative_concepts": 1,
   "placement_variants": [
     {
@@ -32,7 +32,7 @@
       ],
       "image_title": "Reading\nin Spanish?",
       "image_subtitle": "Understand\nthe words.\nRemember\nthem later.",
-      "status": "awaiting-owner-artwork-review",
+      "status": "owner-artwork-approved-provider-validation-pending",
       "provider_preview": "pending; not uploaded"
     },
     {
@@ -62,7 +62,7 @@
       ],
       "image_title": "Reading\nin Spanish?",
       "image_subtitle": "Understand\nthe words.\nRemember\nthem later.",
-      "status": "awaiting-owner-artwork-review",
+      "status": "owner-artwork-approved-provider-validation-pending",
       "provider_preview": "pending; not uploaded"
     },
     {
@@ -92,7 +92,7 @@
       ],
       "image_title": "Reading in Spanish?",
       "image_subtitle": "Understand the words.\nRemember them later.",
-      "status": "awaiting-owner-artwork-review",
+      "status": "owner-artwork-approved-provider-validation-pending",
       "provider_preview": "pending; not uploaded"
     }
   ],
@@ -123,5 +123,12 @@
   },
   "existing_carousel": "Unchanged approved seven-card Spanish Meta v3 carousel",
   "budget_approval": "Up to ARS 15,000 additional media spend over five days after approved launch; ARS 5,000 financial checkpoint; no launch performed",
-  "provider_validation": "Pending upload/placement preview after exact artwork review. Local ratio/safe-area checks are not platform acceptance."
+  "provider_validation": "Pending upload/placement preview after exact artwork review. Local ratio/safe-area checks are not platform acceptance.",
+  "owner_approval": {
+    "owner": "Lucas",
+    "quote": "artwork looks good",
+    "recorded_at": "2026-09-27T15:41:49Z",
+    "review_url": "http://127.0.0.1:4186/meta-relaunch-20260927.html",
+    "scope": "Exact three unchanged artwork variants approved; proceed under existing relaunch budget and launch authority, subject to provider validation."
+  }
 }
