@@ -1,0 +1,762 @@
+{
+  "version": 1,
+  "name": "Spanish carousel · Stories contrast repair · review draft",
+  "revision": 1,
+  "output": {
+    "width": 1440,
+    "height": 2560
+  },
+  "formatId": "meta-vertical",
+  "safeInsets": {
+    "top": 0.14,
+    "bottom": 0.35,
+    "left": 0.06,
+    "right": 0.06
+  },
+  "locale": "en-US",
+  "sourceLanguage": "es",
+  "definitionLanguage": "en",
+  "status": "awaiting-owner-artwork-review",
+  "editorPolicy": {
+    "omittedLayerIds": [
+      "wordmark"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "01-introduction",
+      "name": "Build your Spanish vocabulary",
+      "filename": "01-introduction.png",
+      "creativeKind": "carousel",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 540.0,
+        "accentY": 540.0,
+        "accentRadius": 1080.0,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-book.png",
+          "x": 0,
+          "y": -200,
+          "width": 1440,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.172737955346651
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind text",
+          "src": "marketing-media/ads/LanguageLearner-Eng-Spa/meta-carousel-stories-20260927/ivory-wash.png",
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "aspectRatio": 1.7777777777777777,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "marketing-media/framed/LanguageLearner-Eng-Spa/vocabulary.png",
+          "x": 165.0,
+          "y": 920,
+          "width": 1110,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Build your Spanish\nvocabulary as you read.",
+          "x": 100,
+          "y": 360,
+          "width": 1240,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 120,
+          "lineHeight": 1.02,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Scan a page. Look up words.\nKeep them. Practice later.",
+          "x": 104,
+          "y": 640,
+          "width": 1230,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 90,
+          "lineHeight": 1.05,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      },
+      "deviceContinuation": "Genuine complete framed source; bottom continuation where needed. No app pixels edited.",
+      "reference": null,
+      "essentialDeviceRegion": {
+        "sourceRect": {
+          "x": 150,
+          "y": 450,
+          "width": 1000,
+          "height": 350
+        },
+        "description": "Populated Spanish vocabulary"
+      }
+    },
+    {
+      "id": "02-photo",
+      "name": "Take a photo as you read",
+      "filename": "02-photo.png",
+      "creativeKind": "carousel",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 540.0,
+        "accentY": 540.0,
+        "accentRadius": 1080.0,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-paper.png",
+          "x": 0,
+          "y": -200,
+          "width": 1440,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.172737955346651
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind text",
+          "src": "marketing-media/ads/LanguageLearner-Eng-Spa/meta-carousel-stories-20260927/ivory-wash.png",
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "aspectRatio": 1.7777777777777777,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "marketing-media/framed/LanguageLearner-Eng-Spa/scan.png",
+          "x": 225.0,
+          "y": 800,
+          "width": 990,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Take a photo\nas you read.",
+          "x": 100,
+          "y": 360,
+          "width": 1240,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 120,
+          "lineHeight": 1.02,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Start with a page in Spanish.",
+          "x": 104,
+          "y": 625,
+          "width": 1230,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 90,
+          "lineHeight": 1.05,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      },
+      "deviceContinuation": "Genuine complete framed source; bottom continuation where needed. No app pixels edited.",
+      "reference": null,
+      "essentialDeviceRegion": {
+        "sourceRect": {
+          "x": 140,
+          "y": 430,
+          "width": 1060,
+          "height": 650
+        },
+        "description": "Spanish page inside the scan viewfinder"
+      }
+    },
+    {
+      "id": "03-selection",
+      "name": "Tap a word you want to learn",
+      "filename": "03-selection.png",
+      "creativeKind": "carousel",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 540.0,
+        "accentY": 540.0,
+        "accentRadius": 1080.0,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-book.png",
+          "x": 0,
+          "y": -200,
+          "width": 1440,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.172737955346651
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind text",
+          "src": "marketing-media/ads/LanguageLearner-Eng-Spa/meta-carousel-stories-20260927/ivory-wash.png",
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "aspectRatio": 1.7777777777777777,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "marketing-media/framed/LanguageLearner-Eng-Spa/selection.png",
+          "x": 480,
+          "y": 360,
+          "width": 860,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Tap a\nword you\nwant to\nlearn.",
+          "x": 95,
+          "y": 420,
+          "width": 350,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 96,
+          "lineHeight": 1.02,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Select it\nin the\nscanned\ntext.",
+          "x": 98,
+          "y": 890,
+          "width": 350,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 83,
+          "lineHeight": 1.05,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      },
+      "deviceContinuation": "Genuine complete framed source; bottom continuation where needed. No app pixels edited.",
+      "reference": null,
+      "essentialDeviceRegion": {
+        "sourceRect": {
+          "x": 760,
+          "y": 1900,
+          "width": 340,
+          "height": 100
+        },
+        "description": "Highlighted verosímiles"
+      }
+    },
+    {
+      "id": "04-meaning",
+      "name": "See what it means in English",
+      "filename": "04-meaning.png",
+      "creativeKind": "carousel",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 540.0,
+        "accentY": 540.0,
+        "accentRadius": 1080.0,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-translation-v5.png",
+          "x": 0,
+          "y": -200,
+          "width": 1440,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.1715628672150413
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind text",
+          "src": "marketing-media/ads/LanguageLearner-Eng-Spa/meta-carousel-stories-20260927/ivory-wash.png",
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "aspectRatio": 1.7777777777777777,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "marketing-media/framed/LanguageLearner-Eng-Spa/meaning.png",
+          "x": 220.0,
+          "y": 870,
+          "width": 1000,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "See what it means\nin English.",
+          "x": 100,
+          "y": 360,
+          "width": 1240,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 120,
+          "lineHeight": 1.02,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "A translation, definition\nand example for context.",
+          "x": 104,
+          "y": 640,
+          "width": 1230,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 90,
+          "lineHeight": 1.05,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      },
+      "deviceContinuation": "Genuine complete framed source; bottom continuation where needed. No app pixels edited.",
+      "reference": null,
+      "essentialDeviceRegion": {
+        "sourceRect": {
+          "x": 140,
+          "y": 440,
+          "width": 1080,
+          "height": 590
+        },
+        "description": "verosímil and plausible translation"
+      }
+    },
+    {
+      "id": "05-vocabulary",
+      "name": "Keep the words you discover",
+      "filename": "05-vocabulary.png",
+      "creativeKind": "carousel",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 540.0,
+        "accentY": 540.0,
+        "accentRadius": 1080.0,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-paper.png",
+          "x": 0,
+          "y": -200,
+          "width": 1440,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.1715628672150413
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind text",
+          "src": "marketing-media/ads/LanguageLearner-Eng-Spa/meta-carousel-stories-20260927/ivory-wash.png",
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "aspectRatio": 1.7777777777777777,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "marketing-media/framed/LanguageLearner-Eng-Spa/vocabulary.png",
+          "x": 165.0,
+          "y": 920,
+          "width": 1110,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Keep the words\nyou discover.",
+          "x": 100,
+          "y": 360,
+          "width": 1240,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 120,
+          "lineHeight": 1.02,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Every lookup is saved\nto your vocabulary.",
+          "x": 104,
+          "y": 640,
+          "width": 1230,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 90,
+          "lineHeight": 1.05,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      },
+      "deviceContinuation": "Genuine complete framed source; bottom continuation where needed. No app pixels edited.",
+      "reference": null,
+      "essentialDeviceRegion": {
+        "sourceRect": {
+          "x": 150,
+          "y": 450,
+          "width": 1000,
+          "height": 350
+        },
+        "description": "Saved Spanish words"
+      }
+    },
+    {
+      "id": "06-study",
+      "name": "Study your new words",
+      "filename": "06-study.png",
+      "creativeKind": "carousel",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 540.0,
+        "accentY": 540.0,
+        "accentRadius": 1080.0,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-sage.png",
+          "x": 0,
+          "y": -200,
+          "width": 1440,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.172737955346651
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind text",
+          "src": "marketing-media/ads/LanguageLearner-Eng-Spa/meta-carousel-stories-20260927/ivory-wash.png",
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "aspectRatio": 1.7777777777777777,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "marketing-media/framed/LanguageLearner-Eng-Spa/study-revealed.png",
+          "x": 480,
+          "y": 360,
+          "width": 860,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Study\nyour new\nwords.",
+          "x": 95,
+          "y": 420,
+          "width": 350,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 96,
+          "lineHeight": 1.02,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Recall the\nmeaning.\nTap to\nreveal it.",
+          "x": 98,
+          "y": 800,
+          "width": 350,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 83,
+          "lineHeight": 1.05,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      },
+      "deviceContinuation": "Genuine complete framed source; bottom continuation where needed. No app pixels edited.",
+      "reference": null,
+      "essentialDeviceRegion": {
+        "sourceRect": {
+          "x": 170,
+          "y": 1220,
+          "width": 1010,
+          "height": 390
+        },
+        "description": "Revealed term and definition"
+      }
+    },
+    {
+      "id": "07-test",
+      "name": "Test what you remember",
+      "filename": "07-test.png",
+      "creativeKind": "carousel",
+      "background": {
+        "color": "#f6f2e9",
+        "accent": "#a9b49e",
+        "accentX": 540.0,
+        "accentY": 540.0,
+        "accentRadius": 1080.0,
+        "accentOpacity": 0,
+        "texture": 0
+      },
+      "layers": [
+        {
+          "id": "background",
+          "name": "background",
+          "type": "image",
+          "src": "project-assets/reading-companion/background-test-v5.png",
+          "x": 0,
+          "y": -200,
+          "width": 1440,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false,
+          "aspectRatio": 2.172737955346651
+        },
+        {
+          "id": "contrast-wash",
+          "type": "image",
+          "name": "Soft ivory behind text",
+          "src": "marketing-media/ads/LanguageLearner-Eng-Spa/meta-carousel-stories-20260927/ivory-wash.png",
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "aspectRatio": 1.7777777777777777,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "id": "device",
+          "name": "device",
+          "type": "image",
+          "src": "marketing-media/framed/LanguageLearner-Eng-Spa/test-correct.png",
+          "x": 270.0,
+          "y": 840,
+          "width": 900,
+          "rotation": 0,
+          "opacity": 1,
+          "shadow": true,
+          "aspectRatio": 2.0444444444444443
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "text": "Test what you\nremember.",
+          "x": 100,
+          "y": 360,
+          "width": 1240,
+          "fontFamily": "Bodoni 72",
+          "fontWeight": 700,
+          "fontSize": 120,
+          "lineHeight": 1.02,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "text",
+          "text": "Type the word.\nCheck your answer.",
+          "x": 104,
+          "y": 625,
+          "width": 1230,
+          "fontFamily": "Baskerville",
+          "fontWeight": 400,
+          "fontSize": 90,
+          "lineHeight": 1.05,
+          "letterSpacing": 0.0,
+          "color": "#20251e",
+          "align": "left"
+        }
+      ],
+      "contrastPolicy": {
+        "minimumRatio": 4.5,
+        "check": "tools/check_ad_contrast.cjs",
+        "treatment": "Separate editable feathered ivory wash beneath copy; original photographs and app captures unchanged."
+      },
+      "deviceContinuation": "Genuine complete framed source; bottom continuation where needed. No app pixels edited.",
+      "reference": null,
+      "essentialDeviceRegion": {
+        "sourceRect": {
+          "x": 145,
+          "y": 977,
+          "width": 454,
+          "height": 228
+        },
+        "description": "Checked green answer and Correct"
+      }
+    }
+  ],
+  "reviewStatus": "Local draft only; provider preview pending",
+  "campaignId": "spanish-reddit-v5",
+  "creativeKind": "carousel",
+  "interfaceLanguage": "en",
+  "provider": "meta",
+  "sourceProject": "projects/spanish-meta-v3-carousel-square.json",
+  "repairIntent": "Native 9:16 media for Instagram Stories only; Feed cards and live ad unchanged. Meta caption contrast and CTA must be verified after owner artwork review."
+}
