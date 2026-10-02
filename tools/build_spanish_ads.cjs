@@ -5,7 +5,7 @@ const fs=require('node:fs'), path=require('node:path'), crypto=require('node:cry
 const {frameCapture}=require('./frame_capture.cjs');
 const presets=require('../format-presets.js');
 const root=path.resolve(__dirname,'..');
-const captureRoot=path.resolve(root,'../omato-ios/docs/marketing/drafts/reddit-spanish-2026-09-24/assets');
+const captureRoot=path.resolve(root,'../marketing/docs/drafts/reddit-spanish-2026-09-24/assets');
 const target=path.join(root,'project-assets/spanish-learners');
 const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
 const text=(id,text,x,y,width,fontSize,family='Bodoni 72',weight=700)=>({id,type:'text',name:id,text,x,y,width,fontFamily:family,fontWeight:weight,fontSize,lineHeight:1.06,letterSpacing:0,color:'#20251e',align:'left'});

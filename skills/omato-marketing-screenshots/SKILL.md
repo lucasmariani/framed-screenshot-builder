@@ -36,7 +36,7 @@ The brief template is an authoring checklist, not input to the legacy campaign c
 
 ## Establish the brief and authority
 
-Read workspace/repository AGENTS instructions and `omato-ios/docs/MARKETING_AUDIENCE_INSIGHTS.md`, then the appropriate provider playbook and creative registry under `omato-ios/docs/marketing/`. Reuse current user decisions without asking again. Drafting, simulator capture, local rendering and reversible builder changes do not imply ad activation, new spending, app release or backend deployment.
+Read workspace/repository AGENTS instructions and `marketing/docs/MARKETING_AUDIENCE_INSIGHTS.md`, then the appropriate provider playbook and creative registry under `marketing/docs/`. Reuse current user decisions without asking again. Drafting, simulator capture, local rendering and reversible builder changes do not imply ad activation, new spending, app release or backend deployment.
 
 Record a capture matrix before a multilingual batch. Keep these independent: **interface locale**, **source word/text language**, **definition/translation language**, **ad-copy locale**, **storefront**. English UI with Spanish words is not a Spanish UI localization. Start with the requested pair; do not invent a multi-country rollout. Maintain identical stories/copy intent across locales, but allow different wrapping and word choice. Get unfamiliar translations reviewed rather than silently correcting screenshots.
 
