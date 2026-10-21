@@ -2,6 +2,19 @@
 
 Local-only, client-side tools for framing iPhone screenshots and editing Omato's App Store Connect artwork.
 
+## Local tool dependencies
+
+Install the locked Node dependencies with `npm ci`. For Python helpers, create
+an isolated environment with `python3 -m venv .venv`, then run
+`.venv/bin/python -m pip install -r requirements.txt`. Use `.venv/bin/python`
+for the scripts in `tools/`. Python 3.11 or newer is required.
+
+The manifests pin the canvas renderer, Pillow and FontTools; no external
+`NODE_PATH` is needed. Run `npm test` for editor/export regression checks and
+`.venv/bin/python tools/check_python.py` for image packaging and decoder checks.
+Use `tools/prepare_fonts.py` with the Python environment to extract the local
+macOS fonts before rendering projects that require them.
+
 
 ## Screenshot storage
 

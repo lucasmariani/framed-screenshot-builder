@@ -1,4 +1,7 @@
 .playwright-cli/
+node_modules/
+.venv/
+__pycache__/
 output/reading-companion/editable-project.json
 output/reading-companion/qa-*.jpg
 output/spanish-*/screenshots.zip

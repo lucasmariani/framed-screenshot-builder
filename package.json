@@ -1,0 +1,10 @@
+{
+  "name": "omato-framed-screenshot-builder",
+  "private": true,
+  "scripts": {
+    "test": "node tools/check_editor.cjs && node tools/generate_embedded_device_assets.mjs --check"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "1.0.13"
+  }
+}
