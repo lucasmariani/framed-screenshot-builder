@@ -30,5 +30,77 @@ function context(source){const c=vm.createContext({console,Image,URLSearchParams
  const old=context(baseline), project=JSON.parse(fs.readFileSync('projects/reading-companion.json'));
  for(const ctx of [old,c]){ctx.fixture=structuredClone(project);ctx.canvas=createCanvas(1,1);await vm.runInContext('state.project=fixture;renderSceneToCanvas(state.project.scenes[0],canvas)',ctx);}
  assert.ok(old.canvas.toBuffer('image/png').equals(c.canvas.toBuffer('image/png')),'Legacy App Store render changed');
- console.log('PASS: valid sizes, proportional fitting, exact exports, preview-only guides, missing asset failure, unchanged legacy ASC pixels.');
+
+ const editable = context(fs.readFileSync('editor.js', 'utf8'));
+ editable.console = { warn() {}, error() {} };
+ editable.fixture = structuredClone(project);
+ vm.runInContext(`
+   window.clearTimeout = () => {};
+   localStorage.setItem = () => { throw new Error('Storage quota exceeded'); };
+   syncOutputControls = () => {};
+   renderGallery = async () => {};
+   selectScene = async (id) => { globalThis.displayedScene = id; };
+   setStatus = (message) => { globalThis.statusMessage = message; };
+ `, editable);
+ await vm.runInContext("openProjectFile({ name: 'portable.json', text: async () => JSON.stringify(fixture) })", editable);
+ assert.equal(editable.displayedScene, project.scenes[0].id, 'Opening a project must render even when autosave fails');
+ assert.match(editable.statusMessage, /Autosave unavailable/);
+
+ await vm.runInContext(`(async () => {
+   const scene = currentScene();
+   state.selectedLayerId = scene.layers.find(layer => layer.type === 'image').id;
+   const previous = selectedLayer();
+   const sourceBeforeImport = previous.src;
+   const layerCountBeforeImport = scene.layers.length;
+   fileAsDataUrl = async () => 'data:image/png;base64,invalid';
+   loadImage = async () => { throw new Error('Invalid PNG'); };
+   const file = { type: 'image/png', name: 'broken.png' };
+   await addImageFromFile(file, true);
+   await addImageFromFile(file);
+   globalThis.imageImportPreservedProject = previous.src === sourceBeforeImport
+     && scene.layers.length === layerCountBeforeImport;
+ })()`, editable);
+ assert.ok(editable.imageImportPreservedProject, 'Undecodable images must leave existing layers intact');
+ assert.match(editable.statusMessage, /Could not load image: broken.png/);
+
+ await vm.runInContext(`(async () => {
+   const pending = new Map();
+   const layer = selectedLayer();
+   fileAsDataUrl = async (file) => file.name;
+   loadImage = (src) => new Promise((resolve) => pending.set(src, resolve));
+   commitVisualChange = async () => {};
+   renderLayerList = () => {};
+   const first = addImageFromFile({ type: 'image/png', name: 'first.png' }, true);
+   await Promise.resolve();
+   const second = addImageFromFile({ type: 'image/png', name: 'second.png' }, true);
+   await Promise.resolve();
+   pending.get('second.png')();
+   await second;
+   pending.get('first.png')();
+   await first;
+   globalThis.replacementSource = layer.src;
+ })()`, editable);
+ assert.equal(editable.replacementSource, 'second.png', 'An older decode must not overwrite the latest replacement');
+
+ await vm.runInContext(`(async () => {
+   state.project = {
+     output: { width: 1200, height: 628 },
+     scenes: [{ name: 'First', filename: 'first.png' }, { name: 'Second', filename: 'second.png' }]
+   };
+   globalThis.exportedScenes = [];
+   exportScene = async (scene, output) => {
+     exportedScenes.push(scene.name + ':' + output.width + 'x' + output.height);
+     state.project = { output: { width: 100, height: 100 }, scenes: [] };
+   };
+   buildTar = async () => ({});
+   downloadBlob = (_archive, filename) => { globalThis.archiveName = filename; };
+   await exportAllScenes();
+ })()`, editable);
+ assert.deepEqual(Array.from(editable.exportedScenes), ['First:1200x628', 'Second:1200x628']);
+ assert.equal(editable.archiveName, 'omato-screenshots-1200x628.tar');
+ await assert.rejects(vm.runInContext(`
+   state.project = { scenes: [{ filename: 'sample.png' }, { filename: 'SAMPLE.png' }] };
+   exportAllScenes();
+ `, editable), /Use unique screenshot filenames/);
+ console.log('PASS: canvas and export checks, unchanged legacy ASC pixels, import and autosave recovery, and consistent batch exports.');
 })().catch(e=>{console.error(e);process.exitCode=1;});

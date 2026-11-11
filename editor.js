@@ -222,13 +222,15 @@ const elements = {
   exportAll: document.getElementById('export-all')
 };
 
+const restoredProject = loadStoredProject();
 const state = {
-  project: loadStoredProject() ?? clone(BUILT_IN_PROJECT),
+  project: restoredProject ?? clone(BUILT_IN_PROJECT),
   selectedSceneId: null,
   selectedLayerId: 'title',
   view: 'editable',
   canvasScale: 'fit',
   imageCache: new Map(),
+  imageReplacements: new WeakMap(),
   drag: null,
   saveTimer: null,
   renderToken: 0,
@@ -288,6 +290,7 @@ function syncOutputControls() {
 // Uniform fitting preserves device and typography proportions. Art direction stays editable.
 function resizeProject(project, next) {
   const previous = outputSize(project);
+  if (next.width === previous.width && next.height === previous.height) return;
   const factor = Math.min(next.width / previous.width, next.height / previous.height);
   const dx = (next.width - previous.width * factor) / 2;
   const dy = (next.height - previous.height * factor) / 2;
@@ -398,6 +401,9 @@ function loadImage(src) {
       : encodeURI(resolvedSource);
   });
   state.imageCache.set(src, promise);
+  promise.catch(() => {
+    if (state.imageCache.get(src) === promise) state.imageCache.delete(src);
+  });
   return promise;
 }
 
@@ -577,13 +583,14 @@ function drawTextLayer(ctx, layer) {
 
 async function renderSceneToCanvas(targetScene, canvas, options = {}) {
   const token = ++state.renderToken;
-  canvas.width = options.width ?? outputSize().width;
-  canvas.height = options.height ?? outputSize().height;
+  const output = options.output ?? outputSize();
+  canvas.width = options.width ?? output.width;
+  canvas.height = options.height ?? output.height;
   const ctx = canvas.getContext('2d', { alpha: false });
   ctx.imageSmoothingEnabled = true;
   ctx.imageSmoothingQuality = 'high';
-  const scaleX = canvas.width / outputSize().width;
-  const scaleY = canvas.height / outputSize().height;
+  const scaleX = canvas.width / output.width;
+  const scaleY = canvas.height / output.height;
 
   if (options.reference && targetScene.referenceSrc) {
     try {
@@ -687,7 +694,7 @@ async function renderGallery() {
       width: 132,
       height: Math.round(132 * outputSize().height / outputSize().width),
       reference: true
-    });
+    }).catch(console.warn);
   }
 }
 
@@ -832,15 +839,18 @@ async function selectLayer(layerId) {
 
 function scheduleProjectUpdate(message = 'Changes saved locally') {
   window.clearTimeout(state.saveTimer);
-  state.saveTimer = window.setTimeout(() => {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.project));
-      setStatus(message);
-    } catch (error) {
-      console.warn('Autosave failed', error);
-      setStatus('Project changed · use Save project to keep custom image data');
-    }
-  }, 180);
+  state.saveTimer = window.setTimeout(() => saveLocalProject(message), 180);
+}
+
+function saveLocalProject(message) {
+  window.clearTimeout(state.saveTimer);
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state.project));
+    setStatus(message);
+  } catch (error) {
+    console.warn('Autosave failed', error);
+    setStatus('Autosave unavailable. Use Save project to keep your changes.');
+  }
 }
 
 async function commitVisualChange(message) {
@@ -893,36 +903,43 @@ function fileAsDataUrl(file) {
 }
 
 async function addImageFromFile(file, replace = false) {
-  if (!file?.type?.startsWith('image/')) {
-    return;
-  }
-  const src = await fileAsDataUrl(file);
+  if (!file?.type?.startsWith('image/')) return;
+  const project = state.project;
   const targetScene = currentScene();
-  if (replace && selectedLayer()?.type === 'image') {
-    const layer = selectedLayer();
-    state.imageCache.delete(layer.src);
-    layer.src = src;
-    layer.name = file.name.replace(/\.[^.]+$/, '') || layer.name;
-    await loadImage(src);
-    await commitVisualChange(`Replaced ${layer.name}`);
-    renderLayerList();
-    elements.replaceImage.value = '';
-    return;
-  }
+  const previous = replace ? selectedLayer() : null;
+  if (replace && previous?.type !== 'image') return;
+  const request = Symbol();
+  if (previous) state.imageReplacements.set(previous, request);
+  const input = replace ? elements.replaceImage : elements.addImage;
+  input.value = '';
+  const isCurrent = () => state.project === project && currentScene() === targetScene &&
+    (!previous || (selectedLayer() === previous && state.imageReplacements.get(previous) === request));
 
-  const layer = imageLayer(uid('image'), file.name.replace(/\.[^.]+$/, '') || 'Image', src, {
-    x: 210,
-    y: 700,
-    width: 900,
-    rotation: 0,
-    opacity: 1
-  });
-  targetScene.layers.push(layer);
-  state.selectedLayerId = layer.id;
-  await loadImage(src);
-  renderLayerList();
-  await commitVisualChange(`Added ${layer.name}`);
-  elements.addImage.value = '';
+  try {
+    const src = await fileAsDataUrl(file);
+    await loadImage(src);
+    if (!isCurrent()) return;
+
+    const name = file.name.replace(/\.[^.]+$/, '');
+    if (previous) {
+      state.imageCache.delete(previous.src);
+      previous.src = src;
+      previous.name = name || previous.name;
+      await commitVisualChange(`Replaced ${previous.name}`);
+    } else {
+      const layer = imageLayer(uid('image'), name || 'Image', src, {
+        x: 210, y: 700, width: 900, rotation: 0, opacity: 1
+      });
+      targetScene.layers.push(layer);
+      state.selectedLayerId = layer.id;
+      await commitVisualChange(`Added ${layer.name}`);
+    }
+    renderLayerList();
+  } catch (error) {
+    if (!isCurrent()) return;
+    console.warn('Image import failed', error);
+    setStatus(`Could not load image: ${file.name}`);
+  }
 }
 
 function downloadBlob(blob, filename) {
@@ -994,37 +1011,44 @@ async function buildTar(files) {
   return new Blob(chunks, { type: 'application/x-tar' });
 }
 
-async function exportScene(targetScene) {
+async function exportScene(targetScene, output) {
   const canvas = document.createElement('canvas');
   await ensureSceneAssets(targetScene);
-  await renderSceneToCanvas(targetScene, canvas);
+  await renderSceneToCanvas(targetScene, canvas, { output });
   return canvasAsBlob(canvas);
 }
 
 async function exportCurrentScene() {
-  const targetScene = currentScene();
+  const targetScene = clone(currentScene());
+  const output = { ...outputSize() };
   setStatus(`Rendering ${targetScene.name}…`);
-  const blob = await exportScene(targetScene);
+  const blob = await exportScene(targetScene, output);
   downloadBlob(blob, sanitizeFilename(targetScene.filename));
   setStatus(`Exported ${sanitizeFilename(targetScene.filename)}`);
 }
 
 async function exportAllScenes() {
+  const project = clone(state.project);
+  const { width, height } = outputSize(project);
+  const filenames = project.scenes.map((scene, index) => sanitizeFilename(scene.filename, `screenshot-${index + 1}.png`));
+  if (filenames.some(name => name.length > 100) || new Set(filenames.map(name => name.toLowerCase())).size !== filenames.length) {
+    throw new Error('Use unique screenshot filenames of 100 characters or fewer before exporting.');
+  }
   const files = [];
   elements.exportAll.disabled = true;
   elements.exportCurrent.disabled = true;
   try {
-    for (let index = 0; index < state.project.scenes.length; index += 1) {
-      const targetScene = state.project.scenes[index];
-      setStatus(`Rendering ${index + 1} of ${state.project.scenes.length}: ${targetScene.name}…`);
+    for (let index = 0; index < project.scenes.length; index += 1) {
+      const targetScene = project.scenes[index];
+      setStatus(`Rendering ${index + 1} of ${project.scenes.length}: ${targetScene.name}…`);
       files.push({
-        filename: sanitizeFilename(targetScene.filename, `screenshot-${index + 1}.png`),
-        blob: await exportScene(targetScene)
+        filename: filenames[index],
+        blob: await exportScene(targetScene, { width, height })
       });
     }
     const archive = await buildTar(files);
-    downloadBlob(archive, `omato-${state.project.formatId || 'screenshots'}-${outputSize().width}x${outputSize().height}.tar`);
-    setStatus(`Exported all ${files.length} screenshots at ${outputSize().width} × ${outputSize().height}`);
+    downloadBlob(archive, `omato-${project.formatId || 'screenshots'}-${width}x${height}.tar`);
+    setStatus(`Exported all ${files.length} screenshots at ${width} × ${height}`);
   } finally {
     elements.exportAll.disabled = false;
     elements.exportCurrent.disabled = false;
@@ -1057,6 +1081,7 @@ function isValidProject(project) {
 }
 
 async function openProjectFile(file) {
+  if (!file) return;
   try {
     const parsed = JSON.parse(await file.text());
     if (!isValidProject(parsed)) {
@@ -1070,10 +1095,10 @@ async function openProjectFile(file) {
       ?? state.project.scenes[0].layers.at(-1)?.id
       ?? null;
     state.imageCache.clear();
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state.project));
+    window.clearTimeout(state.saveTimer);
     await renderGallery();
     await selectScene(state.selectedSceneId);
-    setStatus(`Opened ${file.name}`);
+    if (state.project === parsed) saveLocalProject(`Opened ${file.name}`);
   } catch (error) {
     console.error(error);
     setStatus(error.message || 'Project could not be opened');
@@ -1091,7 +1116,12 @@ async function resetProject() {
   state.selectedSceneId = state.project.scenes[0].id;
   state.selectedLayerId = 'title';
   state.imageCache.clear();
-  localStorage.removeItem(STORAGE_KEY);
+  window.clearTimeout(state.saveTimer);
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+  } catch (error) {
+    console.warn('Could not clear autosave', error);
+  }
   await renderGallery();
   await selectScene(state.selectedSceneId);
   setStatus('Project reset to the built-in Omato set');
@@ -1431,6 +1461,16 @@ function wireActions() {
 }
 
 async function init() {
+  if (USE_EMBEDDED_ASSETS) {
+    await new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = 'embedded-device-assets.js?v=20260808a';
+      script.onload = resolve;
+      script.onerror = () => reject(new Error('Embedded device images could not be loaded'));
+      document.head.appendChild(script);
+    });
+  }
+  let appliedProjectPolicy = false;
   if (PROJECT_PATH || CAMPAIGN === 'reading-companion') {
     if (PROJECT_PATH && !/^projects\/[a-zA-Z0-9_-]+\.json$/.test(PROJECT_PATH)) throw new Error('Use a project JSON in the projects folder.');
     const response = await fetch(PROJECT_PATH || 'projects/reading-companion.json');
@@ -1438,7 +1478,7 @@ async function init() {
     const project = await response.json();
     if (!isValidProject(project)) throw new Error('The Reading Companion project is invalid');
     defaultProject = project;
-    state.project = loadStoredProject() ?? clone(defaultProject);
+    state.project = restoredProject ?? clone(defaultProject);
     // Apply explicit project policy to restored edits without resetting their layout.
     const omittedLayerIds = new Set(defaultProject.editorPolicy?.omittedLayerIds ?? []);
     if (omittedLayerIds.size) {
@@ -1446,7 +1486,7 @@ async function init() {
       for (const scene of state.project.scenes) {
         scene.layers = scene.layers.filter(layer => !omittedLayerIds.has(layer.id));
       }
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.project));
+      appliedProjectPolicy = true;
     }
     state.selectedSceneId = state.project.scenes[0].id;
   }
@@ -1462,7 +1502,11 @@ async function init() {
   await renderGallery();
   await selectScene(state.selectedSceneId);
   syncPanelHeightToViewport();
-  setStatus(loadStoredProject() ? 'Restored local edits' : 'Omato screenshot project ready');
+  if (restoredProject && appliedProjectPolicy) {
+    saveLocalProject('Restored local edits');
+  } else {
+    setStatus(restoredProject ? 'Restored local edits' : 'Omato screenshot project ready');
+  }
 }
 
 init().catch((error) => {
