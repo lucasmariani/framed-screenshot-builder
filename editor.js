@@ -230,6 +230,7 @@ const state = {
   view: 'editable',
   canvasScale: 'fit',
   imageCache: new Map(),
+  imageReplacements: new WeakMap(),
   drag: null,
   saveTimer: null,
   renderToken: 0,
@@ -907,11 +908,17 @@ async function addImageFromFile(file, replace = false) {
   const targetScene = currentScene();
   const previous = replace ? selectedLayer() : null;
   if (replace && previous?.type !== 'image') return;
+  const request = Symbol();
+  if (previous) state.imageReplacements.set(previous, request);
+  const input = replace ? elements.replaceImage : elements.addImage;
+  input.value = '';
+  const isCurrent = () => state.project === project && currentScene() === targetScene &&
+    (!previous || (selectedLayer() === previous && state.imageReplacements.get(previous) === request));
+
   try {
     const src = await fileAsDataUrl(file);
     await loadImage(src);
-    if (state.project !== project || currentScene() !== targetScene ||
-        (replace && selectedLayer() !== previous)) return;
+    if (!isCurrent()) return;
 
     const name = file.name.replace(/\.[^.]+$/, '');
     if (previous) {
@@ -929,11 +936,9 @@ async function addImageFromFile(file, replace = false) {
     }
     renderLayerList();
   } catch (error) {
+    if (!isCurrent()) return;
     console.warn('Image import failed', error);
     setStatus(`Could not load image: ${file.name}`);
-  } finally {
-    const input = replace ? elements.replaceImage : elements.addImage;
-    input.value = '';
   }
 }
 

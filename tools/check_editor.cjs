@@ -64,6 +64,25 @@ function context(source){const c=vm.createContext({console,Image,URLSearchParams
  assert.match(editable.statusMessage, /Could not load image: broken.png/);
 
  await vm.runInContext(`(async () => {
+   const pending = new Map();
+   const layer = selectedLayer();
+   fileAsDataUrl = async (file) => file.name;
+   loadImage = (src) => new Promise((resolve) => pending.set(src, resolve));
+   commitVisualChange = async () => {};
+   renderLayerList = () => {};
+   const first = addImageFromFile({ type: 'image/png', name: 'first.png' }, true);
+   await Promise.resolve();
+   const second = addImageFromFile({ type: 'image/png', name: 'second.png' }, true);
+   await Promise.resolve();
+   pending.get('second.png')();
+   await second;
+   pending.get('first.png')();
+   await first;
+   globalThis.replacementSource = layer.src;
+ })()`, editable);
+ assert.equal(editable.replacementSource, 'second.png', 'An older decode must not overwrite the latest replacement');
+
+ await vm.runInContext(`(async () => {
    state.project = {
      output: { width: 1200, height: 628 },
      scenes: [{ name: 'First', filename: 'first.png' }, { name: 'Second', filename: 'second.png' }]
